@@ -115,7 +115,7 @@
 		</div>
 	</div>
 	<div class="right_blue">
-		<p><a href="https://9p99aa.com/static/t111/html/download/index.html" style="color:#fff;font-size:14px;">立即下载</a></p>
+		<p><a href="https://9p99cc.com/static/t111/html/download/index.html" style="color:#fff;font-size:14px;">立即下载</a></p>
 	</div>
 </div>
 <div class="user">
@@ -135,7 +135,7 @@
 		height: 21px;
 		line-height: 20px;
 		margin-top: 5px;">重新检测</a></div>
-			<ul>
+			<ul class="website">
 				<li>
 					<div class="checktype">线路1</div>
 					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
@@ -170,16 +170,16 @@
 		</div>
 	</main>
 	<footer class="foot">
-    <a class="footer-item" href="https://9p99aa.com/m/#/admin/login">
+    <a class="footer-item" href="https://9p99cc.com/m/#/admin/login">
         <i style="display: block;">&#xe61a;</i>
         <span>注册/登录</span>
     </a>
-    <a class="footer-item" href="https://9p99aa.com/static/t111/html/download/index.html" style="color: #bbb3d6">
+    <a class="footer-item" href="https://9p99cc.com/static/t111/html/download/index.html" style="color: #bbb3d6">
         <i style="display: block;">&#xe618;</i>
         <span>APP下载</span>
     </a>
 
-    <a class="footer-item" href="https://9p99aa.com/m/#/agent-doc" style="color: #bbb3d6">
+    <a class="footer-item" href="https://9p99cc.com/m/#/agent-doc" style="color: #bbb3d6">
         <i style="display: block;">&#xe617;</i>
         <span>代理加盟</span>
     </a>
@@ -230,12 +230,18 @@
     setInterval("tim++",100)
     b=1
     var autourl=new Array()
-    autourl[1]="9p99aa.com"
-    autourl[2]="9p99ff.com"
+    autourl[1]="9p99cc.com"
+    autourl[2]="9p99dd.com"
     autourl[3]="9p99ee.com"
-    autourl[4]="9p99dd.com"
+    autourl[4]="9p99ff.com"
 	  autourl[5]="9p99hh.com"
-	  autourl[6]="9p99cc.com"
+	  autourl[6]="9p99aa.com"
+
+	 document.querySelectorAll('.website li').forEach(function (item, index) {
+		 item.children[2].children[0].href = 'https://' + autourl[index + 1]
+		 // item.children[0].children[1].innerText = arr[index]
+	 })
+
     function auto(url){
         $('.check>ul li').eq(b-1).find('span').text(tim*10);
         b++
