@@ -1,157 +1,495 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta http-equiv="Content-Language" content="zh-cn">
-		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-		<meta name="author" content="welcome">
-		<meta name="generator" content="WebStorm Version 2017">
-		<title>Welcome</title>
-		<meta name="keywords" content="">
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-		<meta name="HandheldFriendly" content="True">
-		<meta name="MobileOptimized" content="480">
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<meta name="apple-mobile-web-app-title" content="welcome">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-		<link rel="stylesheet" type="text/css" href="static/ct.css">
-		<link type="text/css" href="static/pace-theme-minimal.css" rel="stylesheet">
-		<style type="text/css">
-			#container > p {width:100%;float:left;position:relative;top:50%;transform:translateY(-40%);}
-			#container > p > img {width:80%;max-width:606px;float:left;position:relative;left:50%;transform:translateX(-50%);}
-			#container > p > a {width:50%;max-width:344px;float:left;position:relative;left:50%;transform:translate(-50%, -20%);clear:both;}
-			#container > p > a > img {width:100%;float:left;}
-		</style>
-	</head>
-	<body>
-		<div id="container">
-			<p>
-				<img src="static/image01.png" >
-				<a href="https://xianludh.github.io/xianlu/amxpjdc/index.html"><img src="static/image02.png" ></a>
-			</p>
-		</div>
-		<h1 id="h1" class="transition-in"></h1>
-		<h2 id="h2" class="transition-in" style="font-family: microsoft yahei"></h2>
-		<canvas id="canvas" width="1920" height="856"></canvas> 
-		<script src="static/ct1.js"></script>
-		<script src="static/ct2.js"></script>
-		<script>
-			
-			// var screenWidth = document.body.offsetWidth;
-			// var url = './down';
-			// if (screenWidth < 750) url = './down/wap';
-			// var toDown = function() {
-			// 	window.location.href = url;
-			// };
-						//宇宙特效
-"use strict";
-var canvas = document.getElementById('canvas'),
-  ctx = canvas.getContext('2d'),
-  w = canvas.width = window.innerWidth,
-  h = canvas.height = window.innerHeight,
+    <title>澳门新葡京导航</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-  hue = 217,
-  stars = [],
-  count = 0,
-  maxStars = 1300;//星星数量
+    <meta name="keywords" content="澳门新葡京导航"/>
+    <!-- 引入 Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+<!--<link rel="shortcut icon" href="img/ico.png">-->
+    <style>
 
-var canvas2 = document.createElement('canvas'),
-  ctx2 = canvas2.getContext('2d');
-canvas2.width = 100;
-canvas2.height = 100;
-var half = canvas2.width / 2,
-  gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
-gradient2.addColorStop(0.025, '#CCC');
-gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
-gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
-gradient2.addColorStop(1, 'transparent');
+    </style>
+</head>
+<body style="font-size: 14px">
+<nav class="navbar navbar-default" role="navigation" style="height: 90px;padding-top: 22.5px;margin-bottom: 0;
+">
+    <div class="container-fluid">
+        <div class="navbar-header" style="margin-left: 10%; margin-top: -8px;">
+            <a href="javascript:void (0)"><img src="img/logo.png"  style="height: 56px"></a>
+        </div>
+        <ul class="header-nav">
+            <li>
+                <a href="https://x2446.com/?register=1" target="_blank">
+                    <i>&#xe61a;</i>
+                    <span>注册/登录</span>
+                </a>
+            </li>
+            <li>
+                <a  href="https://x2446.com/static/fhcp/html/download/index.html" target="_blank">
+                    <i>&#xe618;</i>
+                    <span>APP下载</span>
+                </a>
+            </li>
+            <li>
+                <a  href="https://x2446.com/#/home/about/partner" target="_blank">
+                    <i>&#xe617;</i>
+                    <span>代理加盟</span>
+                </a>
+            </li>
+            <li>
+            <li>
+                <a href="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5001108&planId=109#" target="_blank">
+                    <i>&#xe61c;</i>
+                    <span>在线客服</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="content">
+    <div class="aside">
+        <ul>
+            <li class="on">
+                <img src="img/home.png">
+                <span>主页</span>
+            </li>
+            <li>
+                <img src="img/wangyin.png" >
+                <span>常用网银</span>
+            </li>
+            <li>
+                <img src="img/net.png" >
+                <span>常用网址</span>
+            </li>
+            <li>
+                <img src="img/explorer.png" >
+                <span>常用浏览器</span>
+            </li>
+            <li>
+                <img src="img/news.png" >
+                <span>常用资讯</span>
+            </li>
+            <li>
+                <img src="img/videos.png" >
+                <span style="margin-top:-10px">视频影音</span>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+        <ul class="check" style="display: block">
+            <div class="reload"><span><i style="color: #8c8ffa">&#xe62f;</i> 澳门新葡京导航线路入口</span><a class="reloadBtn" href="javascript:window.location.reload();" >重新检测</a></div>
+            <ul>
+                <li>
+                    <div class="checktype">线路1</div>
+                    <div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
+                    <div class="checkInter"><a href="https://x2446.com/#/home?agent=106129" target="_blank">立即进入</a></div>
+                </li>
+                <li>
+                    <div class="checktype">线路2</div>
+                    <div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
+                    <div class="checkInter"><a href="https://x0994.com/#/home?agent=518165" target="_blank">立即进入</a></div>
+                </li>
+                <li>
+                    <div class="checktype">线路3</div>
+                    <div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
+                    <div class="checkInter"><a href="https://x4994.com/#/home?agent=975921" target="_blank">立即进入</a></div>
+                </li>
+                <li>
+                    <div class="checktype">线路4</div>
+                    <div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
+                    <div class="checkInter"><a href="https://x4995.com/#/home?agent=247576" target="_blank">立即进入</a></div>
+                </li>
+                <li>
+                    <div class="checktype">线路5</div>
+                    <div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
+                    <div class="checkInter"><a href="https://x0884.com/#/home?agent=902768" target="_blank">立即进入</a></div>
+                </li>
+                <li>
+                    <div class="checktype">线路6</div>
+                    <div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
+                    <div class="checkInter"><a href="https://x4885.com/#/home?agent=698704" target="_blank">立即进入</a></div>
+                </li>
+            </ul>
+        </ul>
+        <ul>
+            <li>
+                <a href="http://www.icbc.com.cn/icbc/" target="_blank">
+                    <img src="img/gsyhIcon.png" >
+                    <div>工商银行</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.boc.cn/" target="_blank">
+                    <img src="img/zgyh.png" >
+                    <div>中国银行</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.ccb.com/">
+                    <img src="img/jsyh.png"  target="_blank">
+                    <div>建设银行</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.abchina.com/" target="_blank">
+                    <img src="img/nyyh.png" >
+                    <div>农业银行</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.psbc.com/" target="_blank">
+                    <img src="img/yzyh.png" >
+                    <div>邮政储蓄</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.cmbchina.com/" target="_blank">
+                    <img src="img/zsyh.png" >
+                    <div>招商银行</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.cebbank.com/" target="_blank">
+                    <img src="img/gdyh.png" >
+                    <div>光大银行</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.cib.com.cn/" target="_blank">
+                    <img src="img/xyyh.png" >
+                    <div>兴业银行</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.hxb.com.cn/" target="_blank">
+                    <img src="img/hxyh.png" >
+                    <div>华夏银行</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.bankcomm.com/" target="_blank">
+                    <img src="img/jtyh.png" >
+                    <div>交通银行</div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="http://www.baidu.com/" target="_blank">
+                    <img src="img/baiduIcon.png" >
+                    <div>百度</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.qq.com/" target="_blank">
+                    <img src="img/tengxunIcon.png" >
+                    <div>腾讯QQ</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.ifeng.com/" target="_blank">
+                    <img src="img/fenghuangIcon.png" >
+                    <div>凤凰网</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.sohu.com/" target="_blank">
+                    <img src="img/souhuIcon.png" >
+                    <div>搜狐</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.youku.com/" target="_blank">
+                    <img src="img/youkuIcon.png" >
+                    <div>优酷</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.163.com/" target="_blank">
+                    <img src="img/wangyin.png" >
+                    <div>网易</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.taobao.com/" target="_blank">
+                    <img src="img/taobaoIcon.png" >
+                    <div>淘宝网</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.jd.com/" target="_blank">
+                    <img src="img/JDIcon.png" >
+                    <div>京东商城</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.12306.cn/" target="_blank" >
+                    <img src="img/12306Icon.png" >
+                    <div>12306</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.ctrip.com/" target="_blank">
+                    <img src="img/xiechengIcon.png" >
+                    <div>携程网</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.4399.com/" target="_blank">
+                    <img src="img/4399Icon.png" >
+                    <div>4399</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.58.com/" target="_blank">
+                    <img src="img/58Icon.png" >
+                    <div>58同城</div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="http://www.maxthon.cn/mx5/" target="_blank">
+                <img src="img/aoyouIcon.png" >
+                <div>遨游</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.google.cn/intl/zh-CN/chrome/" target="_blank">
+                <img src="img/googleIcon.png" >
+                <div>谷歌</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://browser.qq.com/" target="_blank">
+                <img src="img/qqIcon.png" >
+                <div>QQ</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.firefox.com.cn/" target="_blank">
+                <img src="img/huohuIcon.png" >
+                <div>火狐</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://ie.sogou.com/" target="_blank">
+                <img src="img/sougouIcon.png" >
+                <div>搜狗</div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="http://news.sina.com.cn/" target="_blank">
+                <img src="img/xinlangIcon.png" >
+                <div>新浪新闻</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://news.ifeng.com/" target="_blank">
+                 <img src="img/fenghuangIcon.png" >
+                <div>凤凰资讯</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://news.qq.com/" target="_blank">
+                 <img src="img/tengxunshipingIcon.png" >
+                <div>腾讯视频</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://news.sohu.com/" target="_blank">
+                    <img src="img/souhushipingIcon.png" >
+                    <div>搜狐视频</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://news.163.com/" target="_blank">
+                <img src="img/wangyiIcon.png" >
+                <div>网易新闻</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://news.baidu.com/" target="_blank">
+                <img src="img/baiduIcon.png" >
+                <div>百度新闻</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.zaobao.com.sg/" target="_blank">
+                 <img src="img/lianheIcon.png" >
+                <div>联合早报</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.people.com.cn/" target="_blank">
+                 <img src="img/renminIcon.png" >
+                <div>人民网</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.china.com/" target="_blank">
+                 <img src="img/zhonghuaIcon.png" >
+                <div>中华网</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://news.cctv.com/" target="_blank">
+                 <img src="img/CTVVICon.png" >
+                <div>CTVV新闻</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.xinhuanet.com/" target="_blank">
+                 <img src="img/xinhuaIcon.png" >
+                <div>新华网</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.huanqiu.com/" target="_blank">
+                 <img src="img/huanqiuIcon.png" >
+                <div>环球时报</div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="http://www.iqiyi.com/" target="_blank">
+                 <img src="img/aiqiyiIcon.png" >
+                <div>爱奇艺</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.youku.com/" target="_blank">
+                 <img src="img/youkuIcon.png" >
+                <div>优酷</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.kankan.com/" target="_blank">
+                 <img src="img/tiantianIcon.png" >
+                <div>天天看看</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.le.com/" target="_blank">
+                 <img src="img/leshiIcon.png" >
+                <div>乐视网</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.pptv.com/" target="_blank">
+                 <img src="img/PPTVIcon.png" >
+                <div>PPTV</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.pps.tv/" target="_blank">
+                 <img src="img/PPSIcon.png" >
+                <div>PPS</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://tv.sohu.com/" target="_blank">
+                 <img src="img/souhushipingIcon.png" >
+                <div>搜狐视频</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://v.qq.com/" target="_blank">
+                 <img src="img/tengxunshipingIcon.png" >
+                <div>腾讯视频</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.tudou.com/" target="_blank">
+                 <img src="img/tudouIcon.png" >
+                <div>土豆网</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.baofeng.com/" target="_blank">
+                 <img src="img/baofengyingyinIcon.png" >
+                <div>暴风影音</div>
+                </a>
+            </li>
+        </ul>
 
-ctx2.fillStyle = gradient2;
-ctx2.beginPath();
-ctx2.arc(half, half, half, 0, Math.PI * 2);
-ctx2.fill();
+    </div>
+</div>
+<footer style="font-size: 12px;text-align: center;padding: 20px 0;color: #999999">
+    <p style="font-size: 14px">赌博委员会监管服务条款/隐私政策/责任博彩/安全性/免责声明 </p>
+    <p>COPYRIGHT@2016LOTTERY CARPARINTCN.AII RTGHIS RESCRVCD</p>
+</footer>
+<script type='text/javascript' src='js/jquery.js' charset='utf-8'></script>
+<script>
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+            "SymbianOS", "Windows Phone",
+            "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
 
-// End cache
+        return flag;
+    }
+    if(IsPC()){
 
-function random(min, max) {
-  if (arguments.length < 2) {
-    max = min;
-    min = 0;
-  }
+    }else{
+        var domain = window.location.host;
+        window.location.href="./m"
+    }
+    $(function () {
 
-  if (min > max) {
-    var hold = max;
-    max = min;
-    min = hold;
-  }
+        $('.aside ul li').click(function () {
+            $('.aside ul li').removeClass('on');
+            $(this).addClass('on');
+            $(".main>ul").hide();
+            $(".main>ul").eq($(this).index()).show();
+        })
 
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+    })
+    tim=1
+    setInterval("tim++",100)
+    b=1
+    var autourl=new Array()
+    autourl[1]="x2446.com/#/home"
+    autourl[2]="x0994.com/#/home"
+    autourl[3]="x4994.com/#/home"
+    autourl[4]="x4995.com/#/home"
+    autourl[5]="x0884.com/#/home"
+    autourl[6]="x4885.com/#/home"
+    function auto(url){
 
-function maxOrbit(x, y) {
-  var max = Math.max(x, y),
-    diameter = Math.round(Math.sqrt(max * max + max * max));
-  return diameter / 2;
-  //星星移动范围，值越大范围越小，
-}
+        if(tim>200){
+            $('.check>ul li').eq(b-1).find('span').text('链接超时');}
+        else{
+            $('.check>ul li').eq(b-1).find('span').text(tim*10);
+        }
+        b++
+    }
+    function run(){for(var i=1;i<autourl.length;i++)document.write("<img src=https://"+autourl[i]+"/"+Math.random()+" width=1 height=1 onerror=auto('https://"+autourl[i]+"')>")}
+    run()
 
-var Star = function() {
 
-  this.orbitRadius = random(maxOrbit(w, h));
-  this.radius = random(60, this.orbitRadius) / 8; 
-  //星星大小
-  this.orbitX = w / 2;
-  this.orbitY = h / 2;
-  this.timePassed = random(0, maxStars);
-  this.speed = random(this.orbitRadius) / 200000; 
-  //星星移动速度
-  this.alpha = random(2, 10) / 10;
 
-  count++;
-  stars[count] = this;
-}
-
-Star.prototype.draw = function() {
-  var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX,
-    y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY,
-    twinkle = random(10);
-
-  if (twinkle === 1 && this.alpha > 0) {
-    this.alpha -= 0.05;
-  } else if (twinkle === 2 && this.alpha < 1) {
-    this.alpha += 0.05;
-  }
-
-  ctx.globalAlpha = this.alpha;
-  ctx.drawImage(canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
-  this.timePassed += this.speed;
-}
-
-for (var i = 0; i < maxStars; i++) {
-  new Star();
-}
-
-function animation() {
-  ctx.globalCompositeOperation = 'source-over';
-  ctx.globalAlpha = 0.5; //尾巴
-  ctx.fillStyle = 'hsla(' + hue + ', 64%, 6%, 2)';
-  ctx.fillRect(0, 0, w, h)
-
-  ctx.globalCompositeOperation = 'lighter';
-  for (var i = 1, l = stars.length; i < l; i++) {
-    stars[i].draw();
-  };
-
-  window.requestAnimationFrame(animation);
-}
-
-animation();
-			
-		
-		</script>
-	</body>
-
+</script>
+</body>
 </html>
