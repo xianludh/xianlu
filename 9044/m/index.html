@@ -1,605 +1,144 @@
-
-<!doctype html>
-<html lang="zh-cn">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>澳门新葡京导航</title>
-    <meta name="description" content="澳门新葡京导航">
-    <meta name="keywords" content="澳门新葡京导航">
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta content="black" name="apple-mobile-web-app-status-bar-style">
-    <meta content="telephone=no" name="format-detection">
-    <meta name="screen-orientation" content="portrait"><!-- uc强制竖屏 -->
-    <meta name="x5-orientation" content="portrait"><!-- QQ强制竖屏 -->
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="stylesheet" href="css/index.css">
-<!--<link rel="shortcut icon" href="img/ico.png">-->
-    <style>
-	body{
-		padding:0
-	}
-	.user{
-		padding:0 15px
-	}
-	.top_tips {
-		overflow: hidden;
-		display: block;
-		z-index: 12;
-	}
-	.top_tips .left_black {
-		width: 80%;
-		padding: 10px 0 10px 10px;
-		float: left;
-		background: #333333;
-		height: 60px;
-		font-size: 16px;
-		overflow: hidden;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-	.top_tips .right_blue {
-		width: 20%;
-		background: #1e9fff;
-		float: right;
-		text-align: center;
-		padding: 10px 0;
-		height: 60px;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-	.top_tips .close_icon {
-		width: 23px;
-		height: 23px;
-		margin-right: 6px;
-		float: left;
-		font-size: 12px;
-		line-height: 23px;
-		text-align: center;
-		border-radius: 30px;
-		color: #fff;
-		margin-top: 9px;
-		background: url(img/delete.png);
-		background-size: 100%;
-	}
-	.top_tips .whh_logo {
-		width: 40px;
-		vertical-align: bottom;
-		float: left;
-	}
-	.p_box {
-		float: left;
-		margin-left: 5%;
-	}
-	@media only screen and (min-device-width: 320px){
-		.p_box {
-			font-size: 12px !important;
-			margin-left: 1%;
-		}
-		.p_box_subtitle {
-			font-size: 12px !important;
-		}
-	}
-	.right_blue {
-		width: 20%;
-		background: #b89a5a;
-		float: right;
-		text-align: center;
-
-		height: 60px;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-	.right_blue p {
-		font-size: 16px;
-		line-height: 2.65;
-	}
-    </style>
+<meta charset="utf-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>澳门新葡京</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<script type="text/javascript" src="js/flexible.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script>
+$(function(){
+  var arrs = ["http://1110122.com/",
+        "http://1115012.com/",
+        "http://1115677.com/",
+        "http://1116123.com/",
+        "http://1116567.com/",
+        "http://1118567.com/",
+        "http://2220121.com/",
+        "http://2220125.com/",
+        ];
+  /*$('.gameUl li a,.lis a').on('click',function () {
+		var i = Math.floor(Math.random()*arrs.length);
+		$(this).attr('href',arrs[i]);
+  });*/
+/*$(".gameUl li a,.lis a").each(function () {
+	$(this).attr('href',arrs[Math.floor(Math.random()*arrs.length)])
+});*/
+	$(".gameUl li a").each(function () {
+		$(this).attr('href',arrs[Math.floor(Math.random()*arrs.length)])
+	});
+	$(".lis a.home").each(function () {
+		$(this).attr('href',arrs[Math.floor(Math.random()*arrs.length)])
+	});
+	$(".lis a.zhuce").each(function () {
+		$(this).attr('href',arrs[Math.floor(Math.random()*arrs.length)] + 'm/#/admin/login')
+	});
+	$(".lis a.daili").each(function () {
+		$(this).attr('href',arrs[Math.floor(Math.random()*arrs.length)] + 'm/#/agent-doc')
+	});
+	$(".downApp").each(function () {
+		$(this).attr('href',arrs[Math.floor(Math.random()*arrs.length)] + 'm/#/download')
+	});
+	$('.hLogo a').each(function () {
+			$(this).attr('href',arrs[Math.floor(Math.random()*arrs.length)])
+		});
+	$('.tabBox').hide();
+	$('.tabBox').eq(0).show();
+	$('.tabUl li a.tabs').on('click',function(){
+		var ind=$(this).parent('li').index();
+		$(this).parent('li').addClass('on').siblings().removeClass('on');
+		$('.tabBox').hide();		
+		$('.tabBox:eq('+ind+')').show();
+		return false;
+	});	
+});
+</script>
 </head>
 <body>
-<div class="top_tips" style="display:block;">
-	<div class="left_black">
-		<div class="left_box">
-			<i class="close_icon" onclick="javascript:document.querySelector('.top_tips').style.display = 'none' "></i>
-			<img class="whh_logo" src="img/app_logo.png" alt="">
-			<div class="p_box">
-				<span style="display: block;color:#fff;font-size: 16px;margin-left: 5px;">澳门新葡京 客户端下载</span>
-				<span class="p_box_subtitle" style="color:#fff;font-size:14px;margin-left: 5px;">国内首家现金娱乐</span>
-			</div>
-		</div>
-	</div>
-	<div class="right_blue">
-		<p><a href="https://x2446.com/static/amxpjdc/html/download/index.html" style="color:#fff;font-size:14px;">立即下载</a></p>
-	</div>
+<!--[if lt IE 8]>
+<p class="browserupgrade">当前浏览器版本太低,建议升级道最新版本</p>
+<![endif]-->
+<div class="header clearfix">
+	<div class="hImg"><img src="images/h_img01.png" alt=""></div>
+	<div class="hLogo"><a href="javascript:void(0);" target="_blank" class="logo"><img src="images/logo.png" alt=""></a></div>
+	<div class="hService"><a href="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5000763&planId=267#"><img src="images/h_img02.png" alt=""></a></div>
 </div>
-<div class="user">
-	<div class="header" style="padding-top: 12px">
-
-		<div class="logo">
-
-		</div>
+<div id="main">
+	<ul class="tabUl clearfix">
+		<li class="li01 on"><a class="tabs" href="javascript:void (0)"><span>线路检测</span></a></li>
+		<li class="li02"><a class="tabs" href="javascript:void (0)"><span>热门游戏</span></a></li>
+		<li class="li03"><a class="tabs" href="javascript:void (0)"><span>热门优惠</span></a></li>
+		<li class="li04"><a class="downApp" href="javascript:void (0)"><span>APP下载</span></a></li>
+	</ul>
+	<div class="tabBox">
+		<ul class="speedlist">
+			<li> <span class="ms" id="lineMs0">检测中</span> <img src="images/icon02.png" class="icon01" alt=""> <span class="url">1110122.com</span> <img src="images/icon03.png" class="icon02" alt=""> <span class="btn-open"><a href="http://1110122.com" target="_blank">打开网站</a></span> </li>
+			<li> <span class="ms" id="lineMs1">检测中</span> <img src="images/icon02.png" class="icon01" alt=""> <span class="url">1115012.com</span> <img src="images/icon03.png" class="icon02" alt=""> <span class="btn-open"><a href="http://1115012.com" target="_blank">打开网站</a></span> </li>
+			<li> <span class="ms" id="lineMs2">检测中</span> <img src="images/icon02.png" class="icon01" alt=""> <span class="url">1115677.com</span> <img src="images/icon03.png" class="icon02" alt=""> <span class="btn-open"><a href="http://1115677.com" target="_blank">打开网站</a></span> </li>
+			<li> <span class="ms" id="lineMs3">检测中</span> <img src="images/icon02.png" class="icon01" alt=""> <span class="url">1116123.com</span> <img src="images/icon03.png" class="icon02" alt=""> <span class="btn-open"><a href="http://1116123.com" target="_blank">打开网站</a></span> </li>
+			<li> <span class="ms" id="lineMs4">检测中</span> <img src="images/icon02.png" class="icon01" alt=""> <span class="url">1116567.com</span> <img src="images/icon03.png" class="icon02" alt=""> <span class="btn-open"><a href="http://1116567.com" target="_blank">打开网站</a></span> </li>
+			<li> <span class="ms" id="lineMs5">检测中</span> <img src="images/icon02.png" class="icon01" alt=""> <span class="url">1118567.com</span> <img src="images/icon03.png" class="icon02" alt=""> <span class="btn-open"><a href="http://1118567.com" target="_blank">打开网站</a></span> </li>
+			<li> <span class="ms" id="lineMs6">检测中</span> <img src="images/icon02.png" class="icon01" alt=""> <span class="url">2220121.com</span> <img src="images/icon03.png" class="icon02" alt=""> <span class="btn-open"><a href="http://2220121.com" target="_blank">打开网站</a></span> </li>
+			<li> <span class="ms" id="lineMs7">检测中</span> <img src="images/icon02.png" class="icon01" alt=""> <span class="url">2220125.com</span> <img src="images/icon03.png" class="icon02" alt=""> <span class="btn-open"><a href="http://2220125.com" target="_blank">打开网站</a></span> </li>
+			<!--<li> <span class="ms" id="lineMs8">检测中</span> <img src="images/icon02.png" class="icon01" alt=""> <span class="url">www.566670099.com</span> <img src="images/icon03.png" class="icon02" alt=""> <span class="btn-open"><a href="https://566670099.com:2018/ target="_blank">打开网站</a></span> </li>
+			<li> <span class="ms" id="lineMs9">检测中</span> <img src="images/icon02.png" class="icon01" alt=""> <span class="url">www.566671100.com</span> <img src="images/icon03.png" class="icon02" alt=""> <span class="btn-open"><a href="https://566671100.com:2018/" target="_blank">打开网站</a></span> </li>-->
+		</ul>
 	</div>
-	<main style="padding-bottom: 60px">
-		<div class="withdraw check" style="border-radius: 10px 10px 0 0;margin-top: 25px">
-			<div style="height: 40px;line-height: 40px;font-size: 16px"><span><i style="color: #8c8ffa;  margin-left:10px;">&#xe62f;</i> 澳门新葡京导航-游戏入口</span><a class="reloadBtn" href="javascript:window.location.reload();"  style="float: right;
-		padding: 4px 10px;
-		border-radius: 20px;
-		color: #fff;
-		background: linear-gradient(to right,#ffab9a,#ff91bc);
-		height: 21px;
-		line-height: 20px;
-		margin-top: 5px;">重新检测</a></div>
-			<ul>
-				<li>
-					<div class="checktype">线路1</div>
-					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-					<div><a class="checkInter" href="https://x2446.com/#/home?agent=106129" target="_blank">立即进入</a></div>
-				</li>
-				<li>
-					<div class="checktype">线路2</div>
-					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-					<div><a class="checkInter" href="https://x0994.com/#/home?agent=518165" target="_blank">立即进入</a></div>
-				</li>
-				<li>
-					<div class="checktype">线路3</div>
-					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-					<div><a class="checkInter" href="https://x4994.com/#/home?agent=975921" target="_blank">立即进入</a></div>
-				</li>
-				<li>
-					<div class="checktype">线路4</div>
-					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-					<div><a class="checkInter" href="https://x4995.com/#/home?agent=247576" target="_blank">立即进入</a></div>
-				</li>
-				<li>
-					<div class="checktype">线路5</div>
-					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-					<div><a class="checkInter" href="https://x0884.com/#/home?agent=902768" target="_blank">立即进入</a></div>
-				</li>
-				<li>
-					<div class="checktype">线路6</div>
-					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-					<div><a class="checkInter" href="https://x4885.com/#/home?agent=698704" target="_blank">立即进入</a></div>
-				</li>
-			</ul>
-		</div>
-		<div class="withdraw tab" style="margin-top: 10px;border-radius: 0">
-			<div class="on">
-				<div class="tab-item"></div>
-				<div>常用</div>
-			</div>
-			<div>
-				<div class="tab-item"></div>
-				<div>银行</div>
-			</div>
-			<div>
-				<div class="tab-item"></div>
-				<div>浏览器</div>
-			</div>
-			<div>
-				<div class="tab-item" style="height: 44px;width: 44px;margin-bottom: 3px"></div>
-				<div>资讯</div>
-			</div>
-			<div>
-				<div class="tab-item"></div>
-				<div>视频</div>
-			</div>
-		</div>
-		<div class="withdraw content" style="padding: 0;margin-top: 10px;border-radius: 0 0 10px 10px">
-			<ul>
-				<li class="contentItem net">
-					<h5><i style="color: #a095fa">&#xe616;</i> 常用网址</h5>
-					<ul style="padding: 10px">
-						<li>
-							<a href="http://www.baidu.com/" target="_blank">
-							<div class="icon"></div>
-							<div>百度</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.qq.com/" target="_blank">
-							<div class="icon"></div>
-							<div>腾讯QQ</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.ifeng.com/" target="_blank">
-							<div class="icon"></div>
-							<div>凤凰网</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.sohu.com/" target="_blank">
-							<div class="icon"></div>
-							<div>搜狐</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.youku.com/" target="_blank">
-							<div class="icon"></div>
-							<div>优酷</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.163.com/" target="_blank">
-							<div class="icon"></div>
-							<div>网易</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.taobao.com/" target="_blank">
-							<div class="icon"></div>
-							<div>淘宝网</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.jd.com/" target="_blank">
-							<div class="icon"></div>
-							<div>京东商城</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.12306.cn/" target="_blank">
-							<div class="icon"></div>
-							<div>12306</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.ctrip.com/" target="_blank">
-							<div class="icon"></div>
-							<div>携程网</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.4399.com/" target="_blank">
-							<div class="icon"></div>
-							<div>4399</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.58.com/" target="_blank">
-							<div class="icon"></div>
-							<div>58同城</div>
-							</a>
-						</li>
-					</ul>
-				</li>
-				
-				<li class="contentItem bank"  style="display: none">
-					<h5 style=""><i style="color: #a095fa">&#xe619;</i> 网上银行</h5>
-					<ul style="padding: 10px">
-						<li>
-							<a href="http://www.icbc.com.cn/icbc/" target="_blank">
-							<div class="icon"></div>
-							<div>工商银行</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.boc.cn/" target="_blank">
-							<div class="icon"></div>
-							<div>中国银行</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.ccb.com/" target="_blank">
-							<div class="icon"></div>
-							<div>建设银行</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.abchina.com/" target="_blank">
-							<div class="icon"></div>
-							<div>农业银行</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.psbc.com/" target="_blank">
-							<div class="icon"></div>
-							<div>邮政储蓄</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.cmbchina.com/" target="_blank">
-							<div class="icon"></div>
-							<div>招商银行</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.cebbank.com/" target="_blank">
-							<div class="icon"></div>
-							<div>光大银行</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.cib.com.cn/" target="_blank">
-							<div class="icon"></div>
-							<div>兴业银行</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.hxb.com.cn/" target="_blank">
-							<div class="icon"></div>
-							<div>华夏银行</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.bankcomm.com/" target="_blank">
-							<div class="icon"></div>
-							<div>交通银行</div>
-							</a>
-						</li>
-
-					</ul>
-				</li>
-				
-				<li class="contentItem explorer"  style="display: none">
-					<h5><i style="color: #a095fa">&#xe61f;</i> 热门浏览器</h5>
-					<ul style="padding: 10px">
-						<li>
-							<a href="http://www.maxthon.cn/mx5/" target="_blank">
-							<div class="icon"></div>
-							<div>遨游</div>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.google.cn/intl/zh-CN/chrome/" target="_blank">
-							<div class="icon"></div>
-							<div>谷歌</div>
-							</a>
-						</li>
-						<li>
-							<a href="https://browser.qq.com/" target="_blank">
-							<div class="icon"></div>
-							<div>QQ</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.firefox.com.cn/" target="_blank">
-							<div class="icon"></div>
-							<div>火狐</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="https://ie.sogou.com/" target="_blank">
-							<div class="icon"></div>
-							<div>搜狗</div>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li class="contentItem news" style="display: none">
-					<h5><i style="color: #a095fa">&#xe61e;</i> 新闻名站</h5>
-					<ul style="padding: 10px">
-						<li>
-							<a href="http://news.sina.com.cn/" target="_blank">
-							<div class="icon"></div>
-							<div>新浪新闻</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://news.ifeng.com/" target="_blank">
-							<div class="icon"></div>
-							<div>凤凰资讯</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://news.qq.com/" target="_blank">
-							<div class="icon"></div>
-							<div>腾讯新闻</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://news.sohu.com/" target="_blank">
-							<div class="icon"></div>
-							<div>搜狐新闻</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://news.163.com/" target="_blank">
-							<div class="icon"></div>
-							<div>网易新闻</div>
-							</a>
-						</li>
-						<li>
-							<a href="https://news.baidu.com/" target="_blank">
-							<div class="icon"></div>
-							<div>百度新闻</div>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.zaobao.com.sg/" target="_blank">
-							<div class="icon"></div>
-							<div>联合早报</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.people.com.cn/" target="_blank">
-							<div class="icon"></div>
-							<div>人民网</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.china.com/" target="_blank">
-							<div class="icon"></div>
-							<div>中华网</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://news.cctv.com/" target="_blank">
-							<div class="icon"></div>
-							<div>CTVV新闻</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.xinhuanet.com/" target="_blank">
-							<div class="icon"></div>
-							<div>新华网</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.huanqiu.com/" target="_blank">
-							<div class="icon"></div>
-							<div>环球时报</div>
-							</a>
-						</li>
-
-					</ul>
-				</li>
-				<li class="contentItem vedio" style="display: none">
-					<h5><i style="color: #a095fa">&#xe61d;</i> 视频综合</h5>
-					<ul style="padding: 10px">
-						<li>
-							<a href="http://www.iqiyi.com/" target="_blank">
-							<div class="icon"></div>
-							<div>爱奇艺</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.youku.com/" target="_blank">
-							<div class="icon"></div>
-							<div>优酷</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.kankan.com/" target="_blank">
-							<div class="icon"></div>
-							<div>天天看看</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.le.com/" target="_blank">
-							<div class="icon"></div>
-							<div>乐视网</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.pptv.com/" target="_blank">
-							<div class="icon"></div>
-							<div>PP视频</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.pps.tv/" target="_blank">
-							<div class="icon"></div>
-							<div>PPS</div>
-							</a>
-						</li>
-						<li>
-							<a href="https://tv.sohu.com/" target="_blank">
-							<div class="icon"></div>
-							<div>搜狐视频</div>
-							</a>
-						</li>
-						<li>
-							<a href="https://v.qq.com/" target="_blank">
-							<div class="icon"></div>
-							<div>腾讯视频</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.tudou.com/" target="_blank">
-							<div class="icon"></div>
-							<div>土豆网</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.baofeng.com/" target="_blank">
-							<div class="icon"></div>
-							<div>暴风影音</div>
-							</a>
-						</li>
-
-					</ul>
-				</li>
-			</ul>
-		</div>
-	</main>
-	<footer class="foot">
-    <a class="footer-item" href="https://x2446.com/m/#/home?register=1">
-        <i style="display: block;">&#xe61a;</i>
-        <span>注册/登录</span>
-    </a>
-    <a class="footer-item" href="https://x2446.com/static/fhcp/html/download/index.html" style="color: #bbb3d6">
-        <i style="display: block;">&#xe618;</i>
-        <span>APP下载</span>
-    </a>
-
-    <a class="footer-item" href="https://x2446.com/m/#/agent-doc" style="color: #bbb3d6">
-        <i style="display: block;">&#xe617;</i>
-        <span>代理加盟</span>
-    </a>
-    <a class="footer-item" href="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5001108&planId=109#"  target="_blank" style="color: #bbb3d6">
-        <i style="display: block;">&#xe61c;</i>
-        <span>在线客服</span>
-    </a>
-
-</footer>
+	<div class="tabBox tabBox02">
+		<ul class="gameUl clearfix">
+		<li><a href="http://1110122.com"><img src="images/g01.png" alt=""><span>AG贵宾厅</span></a></li>
+		<li><a href="http://1110122.com"><img src="images/g02.png" alt=""><span>BBIN旗舰厅</span></a></li>
+		<li><a href="http://1110122.com"><img src="images/g03.png" alt=""><span>DS视讯厅</span></a></li>
+		<li><a href="http://1110122.com"><img src="images/g04.png" alt=""><span>开元棋牌</span></a></li>
+		<li><a href="http://1110122.com"><img src="images/g05.png" alt=""><span>AG老虎机</span></a></li>
+		<li><a href="http://1110122.com"><img src="images/g06.png" alt=""><span> MG老虎机</span></a></li>
+		<li><a href="http://1110122.com"><img src="images/g07.png" alt=""><span>捕鱼游戏</span></a></li>
+		<li><a href="http://1110122.com"><img src="images/g08.png" alt=""><span>FG老虎机</span></a></li>
+		<li><a href="http://1110122.com"><img src="images/g09.png" alt=""><span>JDB老虎机</span></a></li>
+		<li><a href="http://1110122.com"><img src="images/g10.png" alt=""><span>快速时时彩</span></a></li>
+		<li><a href="http://1110122.com"><img src="images/g11.png" alt=""><span>快速赛车</span></a></li>
+		<li><a href="http://1110122.com"><img src="images/g12.png" alt=""><span>北京PK10</span></a></li>
+		</ul>
+	</div>
+	<div class="tabBox tabBox03">
+		<ul class="gameUl clearfix">
+		<li class="hot"><a href="http://1110122.com"><img src="images/yh01.png" alt=""><span>视讯金管家</span></a></li>
+			<li><a href="http://1110122.com"><img src="images/yh03.png" alt=""><span>棋牌金管家</span></a></li>
+			<li><a href="http://1110122.com"><img src="images/yh02.png" alt=""><span>电子金管家</span></a></li>
+		<li><a href="http://1110122.com"><img src="images/yh04.png" alt=""><span>彩票金管家</span></a></li>
+		<li class="hot"><a href="http://1110122.com"><img src="images/yh05.png" alt=""><span>免息借呗</span></a></li>
+		<li class="tui"><a href="http://1110122.com"><img src="images/yh06.png" alt=""><span>账号买卖</span></a></li>
+		<li><a href="http://1110122.com"><img src="images/yh07.png" alt=""><span>12期亿元现金</span></a></li>
+		<li><a href="http://1110122.com"><img src="images/yh08.png" alt=""><span>实时返水</span></a></li>
+		<li><a href="http://1110122.com"><img src="images/yh09.png" alt=""><span>更多优惠</span></a></li>
+		</ul>
+	</div>
+	<div class="tabBox tabBox04">
+	<p class="title"><img src="images/imgtext01.png" alt=""></p>
+	<p class="text"><img src="images/imgtext02.png" alt=""></p>
+	<ul class="downUl clearfix">
+	<li class="li01"><img src="images/and.png" alt=""><p><span>安卓下载</span></p></li>
+	<li class="li02"><img src="images/ios.png" alt=""><p><span>苹果下载</span></p></li>
+	</ul>
+	</div>
+	
+	<ul class="ulLink clearfix">
+		<li class="lis"><a href="http://1110122.com" class="home"><img src="images/img05.png" alt=""><span>官方首页</span></a></li>
+		<li class="lis"><a href="http://1110122.com" class="zhuce"><img src="images/img06.png" alt=""><span>免费注册</span></a></li>
+		<li class="lis"><a href="http://1110122.com" class="daili"><img src="images/img07.png" alt=""><span>代理登入</span></a></li>
+		<li><a href="https://gzz833.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=1072641&configID=41615&jid=5509606658&s=1"><img src="images/img08.png" alt=""><span>在线客服</span></a></li>
+	</ul>
 </div>
-<script type='text/javascript' src='jquery.js' charset='utf-8'></script>
-<script>
-	 function IsPC() {
-        var userAgentInfo = navigator.userAgent;
-        var Agents = ["Android", "iPhone",
-            "SymbianOS", "Windows Phone",
-            "iPad", "iPod"];
-        var flag = true;
-        for (var v = 0; v < Agents.length; v++) {
-            if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                flag = false;
-                break;
-            }
-        }
-
-        return flag;
-    }
-    if(IsPC()){
-		var domain = window.location.host;
-        window.location.href="../"
-    }else{
-		
-    }
-
-
-    $(function () {
-        $('.tab>div').click(function () {
-            $('.tab>div').removeClass('on');
-            $(this).addClass('on')
-            $(".content>ul>li").hide()
-            $(".content>ul>li").eq($(this).index()).show()
-        })
-        $('.reload').click(function () {
-
-        })
-    })
-    tim=1
-    setInterval("tim++",100)
-    b=1
-    var autourl=new Array()
-    autourl[1]="x2446.com/#/home"
-    autourl[2]="x0994.com/#/home"
-    autourl[3]="x4994.com/#/home"
-    autourl[4]="x4995.com/#/home"
-    autourl[5]="x0884.com/#/home"
-    autourl[6]="x4885.com/#/home"
-    function auto(url){
-        $('.check>ul li').eq(b-1).find('span').text(tim*10);
-        b++
-    }
-	function auto(url){
-		if(tim>200){
-		$('.check>ul li').eq(b-1).find('span').text('链接超时');}
-		else{
-		$('.check>ul li').eq(b-1).find('span').text(tim*10);
-		}
-		
-		b++
-	}
-    function run(){for(var i=1;i<autourl.length;i++)document.write("<img src=https://"+autourl[i]+"/"+Math.random()+" width=1 height=1 onerror=auto('https://"+autourl[i]+"')>")}
-    run()
-</script>
+</div>
+<div id="footer">
+	<p class="copyright">copyright © 2018 澳门新葡京 reserved</p>
+</div>
+<script type="text/javascript" src="js/ms.js"></script>
 </body>
 </html>
