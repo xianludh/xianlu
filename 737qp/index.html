@@ -20,7 +20,7 @@
   </script>
   <link rel="stylesheet" href="./css/games_pc_seo.css">
   <style>
-    .u_android_down, .u_ios_down, .u_web {
+    .u_android_down, .u_ios_down {
       width: 176px;
       height: 36px;
       line-height: 36px;
@@ -30,22 +30,19 @@
       position: absolute;
       z-index: 1;
       top: 209px;
-      /*right: 20px;*/
       /*background: url(./img/button.png) no-repeat;*/
       background:rgba(45,159,255,1);
       border-radius:18px;
       display: block;
     }
-    .u_android_down {
-      /*top: 56px;*/
-      left: 27px;
-    }
+   .u_android_down {
+     left: 27px;
+   }
     .u_android_down:hover {
       /*background-position: 0 -73px;*/
       background:rgba(45,159,255,0.8);
     }
     .u_ios_down {
-      /*top: 125px;*/
       left: 237px;
       /*background-position: 0 -219px;*/
       background:rgba(253,151,39,1);
@@ -53,15 +50,6 @@
     .u_ios_down:hover {
       /*background-position: 0 -292px;*/
       background:rgba(253,151,39,0.8);}
-    .u_web {
-      top: 200px;
-      /*background-position: 0 -219px;*/
-      background:rgba(59, 159, 174,1);
-    }
-    .u_web:hover {
-      /*background-position: 0 -292px;*/
-      background:rgba(59, 159, 174,0.8);}
-
   </style>
 </head>
 <body>
@@ -85,23 +73,12 @@
   </div>-->
   <div class="top_bg">
     <div class="w_1920">
-      <!--
-      <div class="m_down_box" style="width: 439px;height: 266px; background-image: url(./img/bg_qr.png);background-size: 100% 100%;position: absolute;left: 1082px; top: 382px;">
-        <div class="code" id="code1" style="position: absolute;left: 18px;top: 46px;z-index: 2;padding: 3px;background-color: #fff;"></div>
-&lt;!&ndash;        <div class="code" id="code2" style="position: absolute;left: 251px;top: 46px;z-index: 2;padding: 3px;background-color: #fff;"></div>&ndash;&gt;
-        <a href="javascript:void (0)" class="u_android_down">安卓版扫描下载</a>
-        <a href="javascript:void (0)" class="u_ios_down">苹果版扫描下载</a>
-        <a href="https://1qp839.com" class="u_web" id="u_web" target="_blank">点击进入网页版</a>
-      </div>
-    -->
-
       <div class="m_down_box" style="width: 439px;height: 266px; background-image: url(./img/bg_qr.png);background-size: 100% 100%;position: absolute;left: 1082px; top: 382px;">
         <div class="code" id="code1" style="position: absolute;left: 41px;top: 46px;z-index: 2;padding: 3px;background-color: #fff;"></div>
         <div class="code" id="code2" style="position: absolute;left: 251px;top: 46px;z-index: 2;padding: 3px;background-color: #fff;"></div>
         <a href="javascript:void (0)" class="u_android_down">安卓版扫描下载</a>
         <a href="javascript:void (0)" class="u_ios_down">苹果版扫描下载</a>
       </div>
-
     </div>
   </div>
 </div>
@@ -188,18 +165,6 @@
 
 
 <script>
-  var webs = [
-    'https://632vip1.com/#/home?channelCode=333572',
-    'https://632vip2.com/#/home?channelCode=333572',
-    'https://632vip3.com/#/home?channelCode=333572',
-    'https://632vip4.com/#/home?channelCode=333572',
-    'https://632vip5.com/#/home?channelCode=333572',
-    'https://632vip6.com/#/home?channelCode=333572',
-    'https://632vip7.com/#/home?channelCode=333572',
-    'https://632vip8.com/#/home?channelCode=333572',
-    'https://632vip9.com/#/home?channelCode=333572'
-  ];
-  // document.getElementById('u_web').href = webs[Math.floor(Math.random()*webs.length)]
   var swiper = new Swiper('.swiper-container',{
 
     autoplay : 3000,
