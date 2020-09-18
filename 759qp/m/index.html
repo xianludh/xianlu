@@ -151,21 +151,24 @@
     top: 14.3rem;
     right: 0;
     z-index: 8;"><img src="static/picture/kf.png" alt=""></a>
-  <script type="text/javascript" charset="utf-8" src="//www.shareinstall.com.cn/js/page/jshareinstall.min.js"></script>
+  <script src="https://res.sharetrace.com/sharetrace.min.js"></script>
   <script>
-    var data = ShareInstall.parseUrlParams()//openinstall.js中提供的工具函数，解析url中的所有查询参数
-    var openInstall = new ShareInstall({
-      /*appKey必选参数，openinstall平台为每个应用分配的ID*/
-      appKey: 'BKBK6E67A7F72A',
-      apkFileName: 'kyqp.apk',
-      onready: function () {
-        /*var m = this
-        m.schemeWakeup()*/
-      }
-    }, data)
+    function GetQueryString (name) {
+      var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
+      var r = window.location.search.substr(1).match(reg)
+      if (r != null) return unescape(r[2])
+      return null
+    }
+    let str=window.location.href;
+    let code = GetQueryString('channelCode');
+    let codeMum = code ? "channelCode="+code : "channelCode=null";
+    ShareTrace.init({
+        appkey: "cfb9d4fa5cd3a20e", // 此值必填
+        param: codeMum,
+    });
 
     function downApp (type) {
-      openInstall.wakeupOrInstall()
+      ShareTrace.download();
     }
   </script>
   <script type="text/javascript" src="./static/js/script.js"></script>
