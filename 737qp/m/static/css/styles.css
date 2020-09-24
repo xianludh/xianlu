@@ -20,17 +20,8 @@ img,input{border:0;max-width:100%;vertical-align:middle;margin:0;padding:0}
 h3{font-size:1.6rem}
 td,th{font-size:1.4rem}
 .out-mask{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.8);z-index:50}
-.out-panel{    position: absolute;
-    left: 0;
-    right: 0;
-    top: 25%;
-    margin: 0 auto;
-    max-width: 660px;
-    padding: 15px 15px 0;}
-.out-panel .out-close{    position: absolute;
-    right: 20px;
-    top: -20px;
-    width: 40px;}
+.out-panel{position:absolute;left:0;right:0;top:25%;width:100%;margin:0 auto;}
+.out-panel .out-close{position:absolute;right:-0.5rem;top:1.6rem;width:35px;z-index: 999;color:#dfbe85}
 .out-panel .out-bg{width:100%}
 .out-panel .rule-open{position:absolute;display:inline-block;width:50%;text-align:center;height:1rem;font-size:.35rem;line-height:1rem;max-height:30px;bottom:15%;left:25%;color:#80787c}
 .out-panel .game-down{position:absolute;display:inline-block;width:50%;height:2.2rem;max-height:58px;bottom:.2rem;left:25%}
@@ -96,12 +87,11 @@ input.text:focus,textarea:focus{border:#bdc5c9 1px solid;color:#23527c;border-ra
 .webs {
     position: absolute;
     left: 5vw;
-    top: 39vw;
+    top: 35vw;
     width: 90vw;
     /*margin: 0 auto;*/
 }
 .webs li {
-    position: relative;
     height: 6.66vw;
     line-height: 6.66vw;
     margin-bottom: 2.66vw;
@@ -109,48 +99,44 @@ input.text:focus,textarea:focus{border:#bdc5c9 1px solid;color:#23527c;border-ra
     font-size: 15px;
 }
 .webs li .times {
-    color: rgb(255,288,4);
+    color: #ffffff;
     float: left;
     display: inline-block;
-    width: 14.53vw;
-    height: 7.33vw;
-    line-height: 7.33vw;
+    width: 12.8vw;
+    height: 6.66vw;
+    line-height: 6.66vw;
     /*font-weight: 500;*/
-    background-color: rgb(162,12,16);
-    border-radius:1.2vw 0 0 1.2vw;
-    border: 1px solid rgb(255,288,4);
+    background-color: rgb(0,74,167);
+    border-radius:3.33vw 0 0 3.33vw;
+    border: 2px solid rgb(222,160,104);
     border-right: none;
-}
-.webs li .border {
-    float: left;
-    position: absolute;
-    left: 14.53vw;
-    top: 0.56vw;
-    width: 2px;
-    height: 6.2vw;
-    background: rgb(255,288,4);
 }
 .webs li .web {
     float: left;
     display: inline-block;
     width: 42.66vw;
-    height: 7.33vw;
-    line-height: 7.33vw;
+    height: 6.66vw;
+    line-height: 6.66vw;
     font-size: 12px;
     /*font-weight: bold;*/
     color: #ffffff;
-    background-color: rgb(162,12,16);
-    border-radius:0 1.2vw 1.2vw 0;
-    border: 1px solid rgb(255,288,4);
+    background-color: #a90000;
+    border-radius:0 3.33vw 3.33vw 0;
+    border: 2px solid rgb(222,160,104);
     border-left: none;
 }
 .webs li a {
+    font-size: 16px;
     float: right;
     display: inline-block;
-    width: 26.66vw;
-    height: 7.73vw;
-    line-height: 7.73vw;
-    background-image: url(../picture/btn.png);
+    width: 27.73vw;
+    height: 6.66vw;
+    line-height: 6.66vw;
+    border-radius: 3.33vw;
+    border: 2px solid rgb(222,160,104);
+    /*background-image: url(../images/btn.png);*/
+    background-image: linear-gradient( 90deg, rgb(170,0,5) 0%, rgb(236,28,53) 100%);
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    color: rgb(255,231,207);
 }

@@ -1,4 +1,4 @@
-/*jconfirm.defaults = {
+jconfirm.defaults = {
   title: '提示',
   titleClass: '',
   useBootstrap: false,
@@ -30,7 +30,7 @@ setTimeout(function () {
       }
     }
   })
-},5000)*/
+},5000)
 function GetQueryString (name) {
   var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
   var r = window.location.search.substr(1).match(reg)
@@ -42,7 +42,7 @@ b = GetQueryString('channelCode')
 
 if (b == null) {
   url = window.location.href
-  a = url + '?channelCode=552620&code=1'
+  a = url + '?channelCode=407934&code=1'
   window.location.href = a
 }
 

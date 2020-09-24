@@ -1,11 +1,11 @@
 function initOpenInstall(key,code) {
     var appKey = key;
     var channelCode = code;
-    var data = OpenInstall.parseUrlParams() || {};
+    var data = ShareInstall.parseUrlParams() || {};
     if (!data.channelCode) {
         data.channelCode = channelCode;
     }
-    return new OpenInstall({
+    return new ShareInstall({
         appKey: appKey,
         channelCode: data.channelCode,
         onready: function () {
