@@ -20,8 +20,17 @@ img,input{border:0;max-width:100%;vertical-align:middle;margin:0;padding:0}
 h3{font-size:1.6rem}
 td,th{font-size:1.4rem}
 .out-mask{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.8);z-index:50}
-.out-panel{position:absolute;left:0;right:0;top:25%;width:100%;margin:0 auto;}
-.out-panel .out-close{position:absolute;right:-0.5rem;top:1.6rem;width:35px;z-index: 999;color:#dfbe85}
+.out-panel{    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25%;
+    margin: 0 auto;
+    max-width: 660px;
+    padding: 15px 15px 0;}
+.out-panel .out-close{    position: absolute;
+    right: 20px;
+    top: -20px;
+    width: 40px;}
 .out-panel .out-bg{width:100%}
 .out-panel .rule-open{position:absolute;display:inline-block;width:50%;text-align:center;height:1rem;font-size:.35rem;line-height:1rem;max-height:30px;bottom:15%;left:25%;color:#80787c}
 .out-panel .game-down{position:absolute;display:inline-block;width:50%;height:2.2rem;max-height:58px;bottom:.2rem;left:25%}

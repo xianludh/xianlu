@@ -39,8 +39,17 @@
   <script src="static/js/jquery-confirm.min.js"></script>
   <script src="static/js/swiper.min.js"></script>
   <script src="static/js/clipboard.min.js"></script>
-
-
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?0549fa32aaf23b789ac7f03e83c592b9";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    
+    
 </head>
 
 <body>
@@ -97,10 +106,13 @@
       <img src="static/picture/m_2.jpg" alt="">
       <img src="static/picture/m_3.jpg" alt="">
     </div> -->
+    <!-- <div class="agent_list">
+      <img src="static/picture/biaoge.jpg" alt="">
+    </div> -->
     <div id="game_list">
       <img src="static/picture/content1.jpg" alt="" >
     </div>
-    <p style="background: #a90000;color: #cccccc;text-align: center;height:30px;font-size:18px;">关注财产安全，远离赌博</p>
+    <!-- <p style="background: #a90000;color: #cccccc;text-align: center;height:30px;font-size:18px;">关注财产安全，远离赌博</p> -->
 
 <p></p>
 
@@ -113,11 +125,12 @@
     <img src="static/picture/bar.gif" alt="">
   </div>
 </div>
-<div class="out-mask">
-  <div class="out-panel"><div class="out-close"><img src="static/picture/gb.png" style="position: absolute;right:0;width:36px;"></div>
-    <a href="javascript:;" id="down_btn_ios3" data-agl-cvt="6"><img src="static/picture/img01.png" class="out-bg"></a>
-    <a href="javascript:void(0)" class="game-down" id="down_btn_ios4" data-agl-cvt="6"></a></div>
-</div>
+  <div class="out-mask">
+    <div class="out-panel"><img src="static/picture/close2.png" alt="" class="out-close">
+      <img src="static/picture/fh_img.png" class="out-bg">
+      <a href="javascript:void(0)" class="game-down" onclick="downApp();" data-agl-cvt="6"><img src="static/picture/fh_btn.png" alt=""></a>
+    </div>
+  </div>
 <div id="xinren_list" style="background: rgba(58,41,23,.9);z-index: 999999;">
   <div class="w750">
     <a href="javascript:hideXinRen()"><img src="static/picture/close.png" alt=""></a>
@@ -159,17 +172,17 @@
       if (r != null) return unescape(r[2])
       return null
     }
-    let str=window.location.href;
     let code = GetQueryString('channelCode');
     let codeMum = code ? "channelCode="+code : "channelCode=null";
-    ShareTrace.init({
-        appkey: "cfb9d4fa5cd3a20e", // 此值必填
-        param: codeMum,
+    // 初始化
+		ShareTrace.init({
+			appkey: "cfb9d4fa5cd3a20e", // 此值必填
+			param: codeMum,
+			
     });
-
-    function downApp (type) {
-      ShareTrace.download();
-    }
+		function downApp(){
+			ShareTrace.download();
+		}
   </script>
   <script type="text/javascript" src="./static/js/script.js"></script>
   <script>
@@ -207,19 +220,19 @@ $('#xinren_list').show()
   $('#closeBtn').on('click',function () {
     $('#open_safari').fadeOut();
   });
-  //function setHistory() {
-  //  history.pushState(null, null, document.URL);
-  //  setTimeout(function () {
-  //    window.addEventListener('popstate', function () {
-  //      $(".out-mask").show();
-  //      history.pushState(null, null, document.URL);
-  //    });
-  //  }, 0);
-  //}
-  //$('.out-close').click(function () {
-  //  $(".out-mask").hide();
-  //})
-  //setHistory();
+  function setHistory() {
+   history.pushState(null, null, document.URL);
+   setTimeout(function () {
+     window.addEventListener('popstate', function () {
+       $(".out-mask").show();
+       history.pushState(null, null, document.URL);
+     });
+   }, 0);
+  }
+  $('.out-close').click(function () {
+   $(".out-mask").hide();
+  })
+  setHistory();
   var swiper = new Swiper('.top .swiper-container', {
     loop: true,
     autoplay: {

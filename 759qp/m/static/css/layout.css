@@ -26,6 +26,6 @@
 #open_safari .safari_info{max-width: 70vw;margin: 20px auto;}
 #app .bar{position: fixed;width: 100%;left: 0;top: 0;}
 .top{
-    background: url(../picture/top.jpg) no-repeat center top;
+    background: url(../picture/top.png) no-repeat center top;
     background-size: 100% 100%;
 }
