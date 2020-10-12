@@ -68,7 +68,7 @@ body, html {
     -webkit-overflow-scrolling: touch;
 }
 body{
-    background: url('../img/1BG.png') top center/100%;color: #fff;padding: 0.75rem;font-size: 14px;position: relative;overflow: auto;
+    background: url('../img/1BG.png') no-repeat top center/100%;color: #fff;padding: 0.75rem;font-size: 14px;position: relative;overflow: auto;
 }
 header {
     height: 44px;
@@ -168,16 +168,18 @@ header .btn_setting i {
     padding-left: 20px;
     background: #e7edff;
     border-radius: 40px 0 0 40px;
-    color: #949494;
+    color: black;
+    font-weight: bold;
 }
 .check .checkInter{
     width: 80px;
     border-radius: 0 40px 40px 0;
-    background:url(../img/1click.png);
+    background:url(../img/2click.png);
     display: block;
     height: 100%;
     text-align: center;
-    color: #fff;
+    color: black;
+    font-weight: bold;
 }
 .check .checkTime{
     flex: 1;
