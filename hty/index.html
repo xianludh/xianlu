@@ -1,287 +1,215 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>红太阳导航</title>
-  <!--<link rel="stylesheet" href="./css/iconfont.css">-->
-  <style>
+<!doctype html>
+<html class="no-js" lang="zh-cmn-Hans">
 
-    html, body {
-      height: 100%;
-      width: 100%;
-      margin: 0;
-      padding: 0;
+<head>
+    <meta charset="utf-8">
+    <title>澳门金沙棋牌-诚信第一品牌！</title>
+    <link rel="shortcut icon" target="_blank" href="favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" target="_blank" href="css/style.css">
+    <link rel="stylesheet" target="_blank" href="css/animate.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.superslide.2.1.1.js"></script>
+    <script src="js/uaredirect.js"></script>
+    <script type="text/javascript">
+    uaredirect("./m/index.html");
+    </script>
+    <script type="text/javascript">
+    $(function() {
 
-    }
-
-    ul, li {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-
-    .divBox {
-      width: 100%;
-      height: 100%;
-      background: url("./hty/bg.png") no-repeat;
-      background-size: cover;
-      overflow: hidden;
-    }
-
-    .contentBox {
-      /* min-width:1200px;
-      max-width:1920px; */
-      width: 1100px;
-      margin: 165px auto 0;
-      /* background-color: #fff; */
-      overflow: hidden;
-
-    }
-
-    .rightContent {
-      width: 370px;
-      /*width:275px;*/
-      height: 633px;
-      background: url("./hty/rbg.png") no-repeat;
-      background-size: 100% 100%;
-      /* background-color: yellow; */
-      /*padding-top:72px;*/
-      box-sizing: border-box;
-      float: right;
-    }
-
-    .logoBox {
-      width: 409px;
-      height: 609px;
-      /* margin-top:32px; */
-      margin-left: -38px;
-      background: url("./img/logo.png") no-repeat;
-      background-size: 100% 100%;
-    }
-
-    .leftContent {
-      float: left;
-    }
-
-    .website {
-      overflow: hidden;
-      width: 668px;
-    }
-
-    .website li {
-      float: left;
-      width: 210px;
-      height: 76px;
-      margin-right: 19px;
-      margin-bottom: 20px;
-      box-sizing: border-box;
-    }
-
-    .website li:nth-child(3n) {
-      margin-right: 0;
-    }
-
-    .website li a {
-      display: block;
-      position: relative;
-    }
-
-    .website li a span {
-      display: inline-block;
-      position: absolute;
-      right: 24px;
-      top: 44px;
-      color: #cf181c;
-      font-weight: bold;
-    }
-
-    .website li img {
-      width: 100%;
-    }
-
-    .btnUl {
-      width: 668px;
-      height: 40px;
-      /*background:linear-gradient(0deg,rgba(229,210,210,1),rgba(255,255,255,1));*/
-      /*border-radius:35px;*/
-      overflow: hidden;
-      /*padding:0 40px;*/
-      /*box-sizing: border-box;*/
-      margin-top: 30px;
-      /*margin-left:58px;*/
-    }
-
-    .btnUl li {
-      /* width:120px; */
-      width: 150px;
-      /*padding:7px 25px;*/
-      float: left;
-      margin-right: 23px;
-      /*box-sizing: border-box;*/
-
-    }
-
-    .btnUl li:last-child {
-      margin-right: -1px;
-    }
-
-    .btnUl li a {
-      text-decoration: none;
-      overflow: hidden;
-      display: block;
-      text-align: center;
-    }
-
-    .btnUl li a i {
-      display: inline-block;
-      /* width:100%; */
-      width: 29px;
-      /* height:25px; */
-      font-size: 29px;
-      color: #CF181C;
-      text-align: center;
-
-    }
-
-    .btnUl li span {
-      /* width:64px;   */
-      width: 100%;
-      display: block;
-      /* height:16px; */
-      font-size: 16px;
-      font-family: MicrosoftYaHei;
-      font-weight: 400;
-      color: rgba(229, 103, 107, 1);
-      line-height: 16px;
-      margin-top: 9px;
-    }
-
-    .headerLogo {
-      /*margin-left:212px;*/
-      text-align: center;
-    }
-
-    .byweb {
-      width: 414px;
-      height: 26px;
-      margin-left: 129px;
-      margin-top: 22px;
-      margin-bottom: 38px;
-    }
-
-    .byweb img {
-      width: 100%;
-    }
-  </style>
+        $('.tabBox').hide();
+        $('.tabBox').eq(0).show();
+        $('.tabUl li a').hover(function() {
+            var ind = $(this).parent('li').index();
+            $(this).parent('li').addClass('on').siblings().removeClass('on');
+            $('.tabBox').hide();
+            $('.tabBox:eq(' + ind + ')').show();
+            return false;
+        });
+    })
+    </script>
 </head>
+
 <body>
-<div class="divBox">
-  <div class="contentBox">
-    <div class="leftContent">
-      <div class="headerLogo">
-        <img src="./hty/title.png" alt="">
-      </div>
-      <div class="byweb">
-        <img src="./hty/byweb.png" alt="">
-      </div>
-      <ul class="website">
-        <li>
-          <a href="http://2345i.vip/" target="_blank">
-            <img src="./hty/line1.png" alt="">
-            <span>2345i.vip</span>
-          </a>
-        </li>
-        <li>
-          <a href="http://2345b.vip/" target="_blank">
-            <img src="./hty/line2.png" alt="">
-            <span>2345b.vip</span>
-          </a>
-        </li>
-        <li>
-          <a href="http://2345c.vip/" target="_blank">
-            <img src="./hty/line3.png" alt="">
-            <span>2345c.vip</span>
-          </a>
-        </li>
-        <li>
-          <a href="http://2345d.vip/" target="_blank">
-            <img src="./hty/line4.png" alt="">
-            <span>2345d.vip</span>
-          </a>
-        </li>
-        <li>
-          <a href="http://2345e.vip/" target="_blank">
-            <img src="./hty/line5.png" alt="">
-            <span>2345e.vip</span>
-          </a>
-        </li>
-        <li>
-          <a href="http://2345f.vip/" target="_blank">
-            <img src="./hty/line6.png" alt="">
-            <span>2345f.vip</span>
-          </a>
-        </li>
-      </ul>
-      <ul class="btnUl">
-        <li>
-          <a href="http://2345i.vip/#/home?agent=340324" target="_blank">
-            <img src="./hty/zhuce.png" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="http://2345i.vip/static/hty/html/download/index.html" target="_blank">
-            <img src="./hty/app.png" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="http://2345i.vip/#/home/agent?agent=340324" target="_blank">
-            <img src="./hty/daili.png" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5001097&planId=98#" target="_blank">
-            <img src="./hty/kefu.png" alt="">
-          </a>
-        </li>
-      </ul>
+    <div id="container">
+        <div id="header" class="clearfix">
+            <!-- <h1 class="wow bounceInLeft"><a target="_blank" href="index.html"><img src="images/logo.png" alt=""></a></h1> -->
+            <div class="imgText wow flipInX"><img src="images/h_img01.png" alt=""></div>
+            <div class="link wow bounceInRight"><img src="images/h_img023.png" alt=""></div>
+        </div>
+        <div class="newSection">
+            <div class="newsBox">
+                <dl class="clearfix bd">
+                    <dt>最新公告:</dt>
+                    <dd>
+                        <ul>
+                            <li><marquee scrolldelay="150" direction= "left" onmouseover="this.stop()" onmouseout="this.start()">
+                                澳门金沙棋牌欢迎您的到来，我们的优惠不像“高利贷”那么高，但资金一定永远像“瑞士银行”一样安全。我们发誓承诺为每一位客户提供最安全、最公平、最公正的博彩游戏，绝不黑玩家1分钱，日提款支持3000万，顶级信誉，绝对大额无忧。我们7x24小时在线客服将竭诚为您服务，欢迎您的咨询，祝您游戏愉快!
+                                </marquee></li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div id="main">
+            <div class="wrap">
+                <div class="section wow fadeInUp">
+                    <h2 class="clearfix"><span class="lText">247.cc - 澳门金沙棋牌 </span><span class="rText">诚信打造非凡金沙</span></h2>
+                    <div class="inner clearfix">
+                        <div class="photoBox"><a target="_blank" href="https://2345i.vip/static/hty/html/download/index.html"><img src="picture/photo01.jpg" alt="">
+						<div class="hov"><span>进入网站</span></div>
+						</a></div>
+                        <ul class="loadUl clearfix" id="xl">
+                            <li><a target="_blank" href="https://2345w.vip">VIP线路一</a></li>
+                            <li><a target="_blank" href="https://2345x.vip">VIP线路二</a></li>
+                            <li><a target="_blank" href="https://2345y.vip">VIP线路三</a></li>
+                            <li><a target="_blank" href="https://2345z.vip">VIP线路四</a></li>
+                            <li><a target="_blank" href="https://2345i.vip/static/hty/html/download/index.html">苹果IOS客户端下载</a></li>
+                            <li><a target="_blank" href="https://2345i.vip/static/hty/html/download/index.html">安卓Android端下载</a></li>
+                        </ul>
+                        <div class="linkBox">
+                            <ul class="clearfix" id='dh'>
+                                <li><a target="_blank" href="https://2345i.vip"><img src="images/1.png" alt="">
+								    <p>官方网址<span>website</span></p>
+                                    </a>
+                                </li>
+                                <li><a target="_blank" href="https://2345i.vip"><img src="images/2.png" alt="">
+								    <p>免费开户<span>register</span></p>
+                                    </a>
+                                </li>
+                                <li><a target="_blank" href="https://2345i.vip/#/home/youhui"><img src="images/3.png" alt="">
+								    <p>活动大厅<span>EventHall</span></p>
+                                    </a>
+                                </li>
+                                <li><a target="_blank" href=" https://2345i.vip/static/hty/html/active/cpjgj/index.html"><img src="images/4.png" alt="">
+								    <p>金管家<span>GoldenButler</span></p>
+                                    </a>
+                                </li>
+                                <li><a target="_blank" href=" https://2345i.vip/static/hty/html/download/index.html"><img src="images/5.png" alt="">
+								    <p>手机投注<span>mobilePhone</span></p>
+                                    </a>
+                                </li>
+                                <li><a target="_blank" href="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5001097&planId=98#"><img src="images/6.png" alt="">
+								    <p>在线客服<span>onlineService</span></p>
+                                    </a>
+                                </li>
+                                    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="icon01"><img src="picture/icon01.png" alt=""></div>
+                    <div class="icon02"><img src="picture/icon02.png" alt=""></div>
+                    <div class="icon03"><img src="picture/icon03.png" alt=""></div>
+                    <div class="icon04"><img src="picture/icon04.png" alt=""></div>
+                </div>
+                <div class="section section02">
+                    <h2 class="clearfix"><span class="lText">澳门金沙棋牌  - 推荐浏览器<i>由于360恶意提示风险网站，严重影响游戏体验，推荐使用以下浏览器进行游戏</i> </span><span class="rText">THE BROWSER</span></h2>
+                    <ul class="linkUl clearfix wow fadeInUp">
+                        <li><a target="_blank" href="https://www.ub66.com/"><img src="picture/img07.png" alt="">寰宇浏览器</a></li>
+                        <li><a target="_blank" href="http://www.google.cn/chrome/browser/desktop/index.html"><img src="picture/img08.png" alt="">谷歌浏览器</a></li>
+                        <li><a target="_blank" href="http://www.maxthon.cn/"><img src="picture/img09.png" alt="">遨游浏览器</a></li>
+                        <li><a target="_blank" href="https://liulanqi.baidu.com/"><img src="picture/img10.png" alt="">百度浏览器</a></li>
+                        <li><a target="_blank" href="http://www.firefox.com.cn/"><img src="picture/img11.png" alt="">火狐浏览器</a></li>
+                        <li><a target="_blank" href="http://ie.sogou.com/"><img src="picture/img12.png" alt="">搜狗浏览器</a></li>
+                    </ul>
+                    <div class="icon01"><img src="picture/icon01.png" alt=""></div>
+                    <div class="icon02"><img src="picture/icon02.png" alt=""></div>
+                    <div class="icon03"><img src="picture/icon03.png" alt=""></div>
+                    <div class="icon04"><img src="picture/icon04.png" alt=""></div>
+                </div>
+                <div class="section section03">
+                    <ul class="tabUl clearfix">
+                        <li class="on"><a target="_blank" href="#">澳门金沙棋牌  - 常用银行</a></li>
+                        <li><a target="_blank" href="#">澳门金沙棋牌  - 常用网址</a></li>
+                    </ul>
+                    <div class="tabBox tabBox01">
+                        <ul class="linkUl clearfix wow fadeInUp">
+                            <li><a target="_blank" href="http://www.boc.cn/" target="_blank"><img src="picture/img13.png" alt="">中国银行</a></li>
+                            <li><a target="_blank" href="http://www.icbc.com.cn/" target="_blank"><img src="picture/img14.png" alt="">中国工商银行</a></li>
+                            <li><a target="_blank" href="http://www.ccb.com/cn/home/indexv3.html" target="_blank"><img src="picture/img15.png" alt="">中国建设银行</a></li>
+                            <li><a target="_blank" href="http://www.abchina.com/cn/" target="_blank"><img src="picture/img16.png" alt="">中国农业银行</a></li>
+                            <li><a target="_blank" href="http://www.bankcomm.com/" target="_blank"><img src="picture/img17.png" alt="">交通银行</a></li>
+                            <li><a target="_blank" href="http://www.cmbchina.com/" target="_blank"><img src="picture/img18.png" alt="">招商银行</a></li>
+                            <li><a target="_blank" href="http://www.psbc.com/cn/index.html" target="_blank"><img src="picture/img19.png" alt="">中国邮政储蓄</a></li>
+                            <li><a target="_blank" href="http://www.cebbank.com/" target="_blank"><img src="picture/img20.png" alt="">光大银行</a></li>
+                            <li><a target="_blank" href="http://www.cib.com.cn/cn/index.html" target="_blank"><img src="picture/img21.png" alt="">兴业银行</a></li>
+                            <li><a target="_blank" href="http://www.cgbchina.com.cn/" target="_blank"><img src="picture/img22.png" alt="">广发银行</a></li>
+                            <li><a target="_blank" href="https://www.alipay.com/" target="_blank"><img src="picture/img23.png" alt="">支付宝</a></li>
+                            <li><a target="_blank" href="https://pay.weixin.qq.com/" target="_blank"><img src="picture/img24.png" alt="">微信支付</a></li>
+                        </ul>
+                    </div>
+                    <div class="tabBox tabBox02">
+                        <ul class="linkUl clearfix">
+                            <li><a target="_blank" href="http://www.qq.com/" target="_blank"><img src="picture/img25.png" alt="">腾讯网</a></li>
+                            <li><a target="_blank" href="http://www.sina.com.cn/" target="_blank"><img src="picture/img26.png" alt="">新浪网</a></li>
+                            <li><a target="_blank" href="http://www.163.com/" target="_blank"><img src="picture/img27.png" alt="">网易</a></li>
+                            <li><a target="_blank" href="http://www.sohu.com/" target="_blank"><img src="picture/img28.png" alt="">搜狐网</a></li>
+                            <li><a target="_blank" href="http://www.ctrip.com/" target="_blank"><img src="picture/img29.png" alt="">携程网</a></li>
+                            <li><a target="_blank" href="http://news.ifeng.com/" target="_blank"><img src="picture/img30.png" alt="">凤凰新闻</a></li>
+                            <li><a target="_blank" href="https://www.taobao.com/" target="_blank"><img src="picture/img31.png" alt="">淘宝网</a></li>
+                            <li><a target="_blank" href="https://www.jd.com/" target="_blank"><img src="picture/img32.png" alt="">京东商城</a></li>
+                            <li><a target="_blank" href="http://www.youku.com/" target="_blank"><img src="picture/img33.png" alt="">优酷</a></li>
+                            <li><a target="_blank" href="http://sofang.com/" target="_blank"><img src="picture/img34.png" alt="">搜房网</a></li>
+                            <li><a target="_blank" href="http://www.iqiyi.com/" target="_blank"><img src="picture/img35.png" alt="">爱奇艺</a></li>
+                            <li><a target="_blank" href="http://www.58.com/" target="_blank"><img src="picture/img36.png" alt="">58同城</a></li>
+                        </ul>
+                    </div>
+                    <div class="icon01"><img src="picture/icon01.png" alt=""></div>
+                    <div class="icon02"><img src="picture/icon02.png" alt=""></div>
+                    <div class="icon03"><img src="picture/icon03.png" alt=""></div>
+                    <div class="icon04"><img src="picture/icon04.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p class="copyright">Copyright &copy; 澳门金沙棋牌 reserved</p>
+        </div>
     </div>
-    <div class="rightContent">
-      <div class="logoBox">
+    <script src="js/wow.js"></script>
+    <script>
+    wow = new WOW({
+        animateClass: 'animated',
+        offset: 10,
+        callback: function(box) {
+            console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+    });
+    wow.init();
+    </script>
+    <script>
+        var arr = ['2345x.vip', '2345w.vip', '2345y.vip', '2345z.vip']
+        document.querySelectorAll('.loadUl li').forEach(function (item, index) {
+            item.children[0].href = 'https://' + arr[index] + '/#/home?agent=340324'
+            item.children[0].children[1].innerText = arr[index]
+        })
+        function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+        if(IsPC()){
+    
+        }else{
+            var domain = window.location.host;
+            window.location.href="./m"
+        }
 
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-  var arr = ['2345i.vip', '2345b.vip', '2345c.vip', '2345d.vip', '2345e.vip', '2345f.vip']
-  document.querySelectorAll('.website li').forEach(function (item, index) {
-    item.children[0].href = 'https://' + arr[index] + '/#/home?agent=340324'
-    item.children[0].children[1].innerText = arr[index]
-  })
+    </script>
+</body>
 
-  function IsPC () {
-    var userAgentInfo = navigator.userAgent
-    var Agents = ['Android', 'iPhone',
-      'SymbianOS', 'Windows Phone',
-      'iPad', 'iPod']
-    var flag = true
-    for (var v = 0; v < Agents.length; v++) {
-      if (userAgentInfo.indexOf(Agents[v]) > 0) {
-        flag = false
-        break
-      }
-    }
-
-    return flag
-  }
-
-  if (IsPC()) {
-
-  } else {
-    window.location.href = './m'
-  }
-
-</script>
-
-<div id="cli_dialog_div"></div></body></html>
+</html>
+</body>
+<span style="display:none"><script language="javascript" src="http://count50.51yes.com/click.aspx?id=503459000&amp;logo=12" charset="gb2312"></script></span>
+</span>
+</html>
