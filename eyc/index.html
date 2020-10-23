@@ -1,495 +1,314 @@
+<script type="text/javascript">
+    // 检查浏览器版本
+    var browser={
+        versions:function(){
+            var u = navigator.userAgent, app = navigator.appVersion;
+            return {
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+                weixin: u.indexOf('MicroMessenger') > -1, //是否微信
+                qq: u.match(/\sQQ/i) == " qq" //是否QQ
+            };
+        }(),
+        language:(navigator.browserLanguage || navigator.language).toLowerCase()
+    };
+    if(browser.versions.mobile || browser.versions.ios || browser.versions.android ||
+        browser.versions.iPhone || browser.versions.iPad){
+        window.equipment='mobile';
+    }
+
+    // 检查操作系统
+    var os = function() {
+        var ua = navigator.userAgent,
+            isWindowsPhone = /(?:Windows Phone)/.test(ua),
+            isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+            isAndroid = /(?:Android)/.test(ua),
+            isFireFox = /(?:Firefox)/.test(ua),
+            isChrome = /(?:Chrome|CriOS)/.test(ua),
+            isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (isFireFox && /(?:Tablet)/.test(ua)),
+            isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+            isPc = !isPhone && !isAndroid && !isSymbian;
+        return {
+            isTablet: isTablet,
+            isPhone: isPhone,
+            isAndroid : isAndroid,
+            isPc : isPc
+        };
+    }();
+    if(os.isTablet || os.isAndroid || os.isPhone) {
+        window.equipment = 'mobile';
+    }
+
+    // 检查手机型号
+    if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE|HTC|SGH|SHARP|PANASONIC|BLACKBERRY|MEIZU|NETFRONT|UCWEB|WINDOWSCE|PALM|OPERAMINI|OPERAMOBI|OPENWAVE|NEXUSONE|CLDC|WAP/.test(navigator.userAgent))){
+        window.equipment = 'mobile';
+    }
+    if(window.equipment=='mobile') window.location.href='m/index.html';
+</script>
 
 <!DOCTYPE html>
-<html>
+<!-- saved from url=(0021)http://www.hsxianlu.com/ -->
+<html lang="zh">
 <head>
-    <title>E赢彩导航</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Keywords" content="" />
+    <meta name="description" content="" />
+    <title>彩票网-网投领导者-官方线路备用网!</title>
+    <meta name="description" content="彩票网亚洲最大的网上娱乐公司" />
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css" tppabs="http://hsxianlu.com/css/style.css" />
+    <!--<base target="_blank">-->
+    <!--<xbasehref="." target="_blank" />-->
+    <script src="js/jquery.js" tppabs="http://hsxianlu.com/js/jquery.js"></script>
+    <script src="js/main.js" tppabs="http://hsxianlu.com/js/main.js"></script>
+    <script src="js/share.js" tppabs="http://hsxianlu.com/js/share.js"></script>
+    <style type="text/css">
+        #bd #detail a.rr-taobao-big {
+            float: left;
+            line-height: 38px;
+            padding: 0 15px;
+            font-size: 14px;
+            border-radius: 2px;
+            margin-left: 8px;
+            border: 1px #f40 solid;
+        }
 
-    <meta name="keywords" content="E赢彩导航"/>
-    <!-- 引入 Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
-    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-<!--<link rel="shortcut icon" href="img/ico.png">-->
-    <style>
+        #bd #detail a.rrfl-before-big {
+            background: #f40;
+            color: #fff;
+        }
 
+        #bd #detail a.rrfl-before-big:hover {
+            background: #f20;
+        }
+
+        #bd #detail a.rrfl-after-big {
+            background: #fff;
+            color: #f40;
+        }
+
+        #bd #detail a.rrfl-after-big:hover {
+            background: #fff;
+        }
+
+        #bd #detail a.rr-taobao-normal {
+            display: inline-block;
+            padding: 0 5px;
+            border-radius: 2px;
+            line-height: 23px;
+            margin-left: 5px;
+            border: 1px #ff8e1b solid;
+        }
+
+        #bd #detail a.rr-taobao-normal:hover {
+            background: #f60;
+        }
+
+        #bd #detail a.rrfl-before-normal {
+            background: #ff8e1b;
+            color: #fff;
+        }
+
+        #bd #detail a.rrfl-before-normal:hover {
+            background: #f60;
+        }
+
+        #bd #detail a.rrfl-after-normal {
+            background: #fff;
+            color: #ff8e1b;
+        }
+
+        #bd #detail a.rrfl-after-normal:hover {
+            background: #fff;
+        }
+
+        #page a.rr-tmall-big, #page a.rr-tmall-normal {
+            display: inline-block;
+            line-height: 30px;
+            padding: 0 10px;
+            border-radius: 2px;
+            margin-left: 12px;
+            border: 1px #c40000 solid;
+        }
+
+        #page .tb-attention a.rr-tmall-big, #page .tb-attention a.rr-tmall-normal {
+            position: absolute;
+            right: 50px;
+        }
+
+        #page a.rrfl-after-big, #page a.rrfl-after-normal {
+            background: #fff;
+            color: #c40000;
+        }
+
+        #page a.rrfl-after-big:hover, #page a.rrfl-after-normal:hover {
+            background: #fff;
+            text-decoration: none;
+        }
+
+        #page a.rrfl-before-big, #page a.rrfl-before-normal {
+            background: #c40000;
+            color: #fff;
+        }
+
+        #page a.rrfl-before-big:hover, #page a.rrfl-before-normal:hover {
+            background: #c40000;
+            text-decoration: none;
+        }
+
+        #itemInfo #choose-btn-append a.rr-jd-big, #itemInfo #choose-btn-append a.rr-jd-normal {
+            line-height: 36px;
+            background-color: rgb(222, 53, 60);
+            color: #f0f0f0;
+            padding: 0 10px;
+            border-radius: 2px;
+            text-shadow: 1px 1px 1px #999;
+        }
+
+        #itemInfo #choose-btn-append a.rr-jd-big:hover, #itemInfo #choose-btn-append a.rr-jd-normal:hover {
+            background-color: rgb(237, 82, 87);
+            color: #f0f0f0;
+            padding: 0 10px;
+            border-radius: 2px;
+            text-shadow: 1px 1px 1px #999;
+        }
     </style>
+    <link rel="stylesheet" href="css/share_style0_24.css"/>
+    <link rel="stylesheet" href="css/share_popup.css"/>
+    <link rel="stylesheet" href="css/select_share.css"/>
 </head>
-<body style="font-size: 14px">
-<nav class="navbar navbar-default" role="navigation" style="height: 90px;padding-top: 22.5px;margin-bottom: 0;
-">
-    <div class="container-fluid">
-        <div class="navbar-header" style="margin-left: 10%; margin-top: -8px;">
-            <a href="javascript:void (0)"><img src="img/logo.png"  style="height: 56px"></a>
+<body style="zoom: 1;">
+<div id="header">
+    <div class="wrapper">
+        <header>
+            <h1 id="logo"><a target="_self" title="彩票网-网投领导者-官方线路备用网!"><img src="images/logo.png" alt="彩票网-网投领导者-官方线路备用网!" data-bd-imgshare-binded="1"/></a></h1>
+        </header>
+        <div id="search">
+            <form action="https://www.baidu.com/s">
+            </form>
         </div>
-        <ul class="header-nav">
-            <li>
-                <a href="http://8881971.com/#/home/register?agent=980286" target="_blank">
-                    <i>&#xe61a;</i>
-                    <span>注册/登录</span>
-                </a>
-            </li>
-            <li>
-                <a  href="http://8881971.com/static/eyc/html/download/index.html" target="_blank">
-                    <i>&#xe618;</i>
-                    <span>APP下载</span>
-                </a>
-            </li>
-            <li>
-                <a  href="http://8881971.com/#/home?agent=980286" target="_blank">
-                    <i>&#xe617;</i>
-                    <span>代理加盟</span>
-                </a>
-            </li>
-            <li>
-            <li>
-                <a href="https://gzz833.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=83358&configID=41301&jid=2035288252&s=1" target="_blank">
-                    <i>&#xe61c;</i>
-                    <span>在线客服</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<div class="content">
-    <div class="aside">
-        <ul>
-            <li class="on">
-                <img src="img/home.png">
-                <span>主页</span>
-            </li>
-            <li>
-                <img src="img/wangyin.png" >
-                <span>常用网银</span>
-            </li>
-            <li>
-                <img src="img/net.png" >
-                <span>常用网址</span>
-            </li>
-            <li>
-                <img src="img/explorer.png" >
-                <span>常用浏览器</span>
-            </li>
-            <li>
-                <img src="img/news.png" >
-                <span>常用资讯</span>
-            </li>
-            <li>
-                <img src="img/videos.png" >
-                <span style="margin-top:-10px">视频影音</span>
-            </li>
-        </ul>
-    </div>
-    <div class="main">
-        <ul class="check" style="display: block">
-            <div class="reload"><span><i style="color: #8c8ffa">&#xe62f;</i> E赢彩导航线路入口</span><a class="reloadBtn" href="javascript:window.location.reload();" >重新检测</a></div>
-            <ul>
-                <li>
-                    <div class="checktype">线路1</div>
-                    <div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-                    <div class="checkInter"><a href="http://8881971.com/#/home?agent=980286" target="_blank">立即进入</a></div>
-                </li>
-                <li>
-                    <div class="checktype">线路2</div>
-                    <div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-                    <div class="checkInter"><a href="http://8881972.com/#/home?agent=980286" target="_blank">立即进入</a></div>
-                </li>
-                <li>
-                    <div class="checktype">线路3</div>
-                    <div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-                    <div class="checkInter"><a href="http://8881973.com/#/home?agent=980286" target="_blank">立即进入</a></div>
-                </li>
-                <li>
-                    <div class="checktype">线路4</div>
-                    <div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-                    <div class="checkInter"><a href="http://8881976.com/#/home?agent=980286" target="_blank">立即进入</a></div>
-                </li>
-                <li>
-                    <div class="checktype">线路5</div>
-                    <div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-                    <div class="checkInter"><a href="http://8881981.com/#/home?agent=980286" target="_blank">立即进入</a></div>
-                </li>
-                <li>
-                    <div class="checktype">线路6</div>
-                    <div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-                    <div class="checkInter"><a href="http://8881971.com/#/home?agent=980286" target="_blank">立即进入</a></div>
-                </li>
-            </ul>
-        </ul>
-        <ul>
-            <li>
-                <a href="http://www.icbc.com.cn/icbc/" target="_blank">
-                    <img src="img/gsyhIcon.png" >
-                    <div>工商银行</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.boc.cn/" target="_blank">
-                    <img src="img/zgyh.png" >
-                    <div>中国银行</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.ccb.com/">
-                    <img src="img/jsyh.png"  target="_blank">
-                    <div>建设银行</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.abchina.com/" target="_blank">
-                    <img src="img/nyyh.png" >
-                    <div>农业银行</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.psbc.com/" target="_blank">
-                    <img src="img/yzyh.png" >
-                    <div>邮政储蓄</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.cmbchina.com/" target="_blank">
-                    <img src="img/zsyh.png" >
-                    <div>招商银行</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.cebbank.com/" target="_blank">
-                    <img src="img/gdyh.png" >
-                    <div>光大银行</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.cib.com.cn/" target="_blank">
-                    <img src="img/xyyh.png" >
-                    <div>兴业银行</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.hxb.com.cn/" target="_blank">
-                    <img src="img/hxyh.png" >
-                    <div>华夏银行</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.bankcomm.com/" target="_blank">
-                    <img src="img/jtyh.png" >
-                    <div>交通银行</div>
-                </a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="http://www.baidu.com/" target="_blank">
-                    <img src="img/baiduIcon.png" >
-                    <div>百度</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.qq.com/" target="_blank">
-                    <img src="img/tengxunIcon.png" >
-                    <div>腾讯QQ</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.ifeng.com/" target="_blank">
-                    <img src="img/fenghuangIcon.png" >
-                    <div>凤凰网</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.sohu.com/" target="_blank">
-                    <img src="img/souhuIcon.png" >
-                    <div>搜狐</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.youku.com/" target="_blank">
-                    <img src="img/youkuIcon.png" >
-                    <div>优酷</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.163.com/" target="_blank">
-                    <img src="img/wangyin.png" >
-                    <div>网易</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.taobao.com/" target="_blank">
-                    <img src="img/taobaoIcon.png" >
-                    <div>淘宝网</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.jd.com/" target="_blank">
-                    <img src="img/JDIcon.png" >
-                    <div>京东商城</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.12306.cn/" target="_blank" >
-                    <img src="img/12306Icon.png" >
-                    <div>12306</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.ctrip.com/" target="_blank">
-                    <img src="img/xiechengIcon.png" >
-                    <div>携程网</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.4399.com/" target="_blank">
-                    <img src="img/4399Icon.png" >
-                    <div>4399</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.58.com/" target="_blank">
-                    <img src="img/58Icon.png" >
-                    <div>58同城</div>
-                </a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="http://www.maxthon.cn/mx5/" target="_blank">
-                <img src="img/aoyouIcon.png" >
-                <div>遨游</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.google.cn/intl/zh-CN/chrome/" target="_blank">
-                <img src="img/googleIcon.png" >
-                <div>谷歌</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://browser.qq.com/" target="_blank">
-                <img src="img/qqIcon.png" >
-                <div>QQ</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.firefox.com.cn/" target="_blank">
-                <img src="img/huohuIcon.png" >
-                <div>火狐</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://ie.sogou.com/" target="_blank">
-                <img src="img/sougouIcon.png" >
-                <div>搜狗</div>
-                </a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="http://news.sina.com.cn/" target="_blank">
-                <img src="img/xinlangIcon.png" >
-                <div>新浪新闻</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://news.ifeng.com/" target="_blank">
-                 <img src="img/fenghuangIcon.png" >
-                <div>凤凰资讯</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://news.qq.com/" target="_blank">
-                 <img src="img/tengxunshipingIcon.png" >
-                <div>腾讯视频</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://news.sohu.com/" target="_blank">
-                    <img src="img/souhushipingIcon.png" >
-                    <div>搜狐视频</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://news.163.com/" target="_blank">
-                <img src="img/wangyiIcon.png" >
-                <div>网易新闻</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://news.baidu.com/" target="_blank">
-                <img src="img/baiduIcon.png" >
-                <div>百度新闻</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.zaobao.com.sg/" target="_blank">
-                 <img src="img/lianheIcon.png" >
-                <div>联合早报</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.people.com.cn/" target="_blank">
-                 <img src="img/renminIcon.png" >
-                <div>人民网</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.china.com/" target="_blank">
-                 <img src="img/zhonghuaIcon.png" >
-                <div>中华网</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://news.cctv.com/" target="_blank">
-                 <img src="img/CTVVICon.png" >
-                <div>CTVV新闻</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.xinhuanet.com/" target="_blank">
-                 <img src="img/xinhuaIcon.png" >
-                <div>新华网</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.huanqiu.com/" target="_blank">
-                 <img src="img/huanqiuIcon.png" >
-                <div>环球时报</div>
-                </a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="http://www.iqiyi.com/" target="_blank">
-                 <img src="img/aiqiyiIcon.png" >
-                <div>爱奇艺</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.youku.com/" target="_blank">
-                 <img src="img/youkuIcon.png" >
-                <div>优酷</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.kankan.com/" target="_blank">
-                 <img src="img/tiantianIcon.png" >
-                <div>天天看看</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.le.com/" target="_blank">
-                 <img src="img/leshiIcon.png" >
-                <div>乐视网</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.pptv.com/" target="_blank">
-                 <img src="img/PPTVIcon.png" >
-                <div>PPTV</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.pps.tv/" target="_blank">
-                 <img src="img/PPSIcon.png" >
-                <div>PPS</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://tv.sohu.com/" target="_blank">
-                 <img src="img/souhushipingIcon.png" >
-                <div>搜狐视频</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://v.qq.com/" target="_blank">
-                 <img src="img/tengxunshipingIcon.png" >
-                <div>腾讯视频</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.tudou.com/" target="_blank">
-                 <img src="img/tudouIcon.png" >
-                <div>土豆网</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.baofeng.com/" target="_blank">
-                 <img src="img/baofengyingyinIcon.png" >
-                <div>暴风影音</div>
-                </a>
-            </li>
-        </ul>
-
+        <div class="tools">
+            <a href="index.html" class="icon-favor" title="加入收藏">按 Ctrl+D 收藏导航</a>
+        </div>
     </div>
 </div>
-<footer style="font-size: 12px;text-align: center;padding: 20px 0;color: #999999">
-    <p style="font-size: 14px">赌博委员会监管服务条款/隐私政策/责任博彩/安全性/免责声明 </p>
-    <p>COPYRIGHT@2016LOTTERY CARPARINTCN.AII RTGHIS RESCRVCD</p>
-</footer>
-<script type='text/javascript' src='js/jquery.js' charset='utf-8'></script>
-<script>
-    function IsPC() {
-        var userAgentInfo = navigator.userAgent;
-        var Agents = ["Android", "iPhone",
-            "SymbianOS", "Windows Phone",
-            "iPad", "iPod"];
-        var flag = true;
-        for (var v = 0; v < Agents.length; v++) {
-            if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                flag = false;
-                break;
-            }
-        }
+<div id="content">
+    <div class="guide">
+        <div class="wrapper" style="display: flex; display: -moz-flex;">
+            <span class="mark"> <i class="mark-hot">最热</i> <i class="mark-new">最新</i> </span>
+            <!--<nav class="site-list">
+                <a class="item" href="http://6J5.com" target="_blank">浏览器下载</a>
+                <a style="color:#FA5F5F;" target="_blank" href="http://6J5.com" class="item">常见问题</a>
+            </nav>-->
 
-        return flag;
-    }
-    if(IsPC()){
+            <span style="width: 965px; position: relative; padding-left: 15px;">
+                <img src="images/icon_1.png" style="position: absolute; top: 10px; width: 24px; height: 24px;">
+                <marquee align="middle" direction="left" loop="-1" scrollamount="3" onmouseout="this.start()"
+                           onmouseover="this.stop()" style="font-size: 15px; line-height: 44px; margin-left: 27px; width: 925px;">
+                            【彩票网】：最具实力的品牌优势、最优质的客户服务、最快捷的存取款服务、最丰富的平台优势、最负责任的网投领导者！</marquee>
+            </span>
 
-    }else{
-        var domain = window.location.host;
-        window.location.href="./m"
-    }
-    $(function () {
-
-        $('.aside ul li').click(function () {
-            $('.aside ul li').removeClass('on');
-            $(this).addClass('on');
-            $(".main>ul").hide();
-            $(".main>ul").eq($(this).index()).show();
-        })
-
-    })
-    tim=1
-    setInterval("tim++",100)
-    b=1
-    var autourl=new Array()
-    autourl[1]="8881971.com/#/home?agent=980286"
-    autourl[2]="8881972.com/#/home?agent=980286"
-    autourl[3]="8881973.com/#/home?agent=980286"
-    autourl[4]="8881976.com/#/home?agent=980286"
-    autourl[5]="8881981.com/#/home?agent=980286"
-    autourl[6]="8881971.com/#/home?agent=980286"
-    function auto(url){
-
-        if(tim>200){
-            $('.check>ul li').eq(b-1).find('span').text('链接超时');}
-        else{
-            $('.check>ul li').eq(b-1).find('span').text(tim*10);
-        }
-        b++
-    }
-    function run(){for(var i=1;i<autourl.length;i++)document.write("<img src=http://"+autourl[i]+"/"+Math.random()+" width=1 height=1 onerror=auto('http://"+autourl[i]+"')>")}
-    run()
-
-
-
-</script>
+            <!--<section class="estab">-->
+                <!--<header class="title">-->
+                    <!--分享到：-->
+                <!--</header>-->
+                <!--<ul class="list">-->
+                    <!--<div class="bdsharebuttonbox bdshare-button-style0-24" data-bd-bind="1469072814575">-->
+                        <!--<a href="http://www.hsxianlu.com/#" class="bds_more" data-cmd="more"></a>-->
+                        <!--<a title="分享到微信" href="http://www.hsxianlu.com/#" class="bds_weixin" data-cmd="weixin"></a>-->
+                        <!--<a title="分享到QQ空间" href="http://www.hsxianlu.com/#" class="bds_qzone" data-cmd="qzone"></a>-->
+                        <!--<a title="分享到新浪微博" href="http://www.hsxianlu.com/#" class="bds_tsina" data-cmd="tsina"></a>-->
+                    <!--</div>-->
+                    <!--<script>-->
+                        <!--window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["weixin","qzone","tsina"],"viewText":"分享到：","viewSize":"24"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["weixin","qzone","tsina"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];-->
+                    <!--</script>-->
+                <!--</ul>-->
+            <!--</section>-->
+        </div>
+    </div>
+    <div class="wrapper">
+        <div id="catalog" class="catalog">
+            <section>
+                <header>
+                    <h2 class="bmw"><i></i>线路专区</h2>
+                </header>
+                <ul class="website-list">
+                    <li> <a href="https://e6207.com/" target="_blank"> <img src="images/a1.jpg" data-bd-imgshare-binded="1" /> 彩票网主站 </a> </li>
+                    <li> <a href="https://e6208.com/" target="_blank"> <img src="images/a2.jpg" data-bd-imgshare-binded="1" /> 彩票网Ⅰ站 </a> </li>
+                    <li> <a href="https://e6874.com/" target="_blank"> <img src="images/a3.jpg" data-bd-imgshare-binded="1" /> 彩票网Ⅱ站 </a> </li>
+                    <li> <a href="https://e6875.com/" target="_blank"> <img src="images/a4.jpg" data-bd-imgshare-binded="1" /> 彩票网Ⅲ站 </a> </li>
+                    <li> <a href="https://e6207.com/#/home/register" target="_blank"> <img src="images/bmw-5.jpg" data-bd-imgshare-binded="1" /> 彩票网注册 </a> </li>
+                    <li> <a onClick="window.open('https://tx01.comm800.com/standalone.html?appId=912223','_blank','width=960,height=740,toolbar=no, status=no')" style="cursor: pointer;"> <img src="images/onlinecs2.jpg" data-bd-imgshare-binded="1" /> 在线客服 </a> </li>
+                </ul>
+            </section>
+            <section>
+                <header>
+                    <h2 class="general"><i></i>常用网址</h2>
+                </header>
+                <ul class="website-list">
+                    <li> <a href="http://www.qq.com/"> <img src="images/qq.jpg" c="1" /> 腾讯 </a> </li>
+                    <li> <a href="http://www.sina.com.cn/"> <img src="images/sina.jpg" data-bd-imgshare-binded="1" /> 新浪 </a> </li>
+                    <li> <a href="http://www.163.com/"> <img src="images/163.jpg" data-bd-imgshare-binded="1" /> 网易 </a> </li>
+                    <li> <a href="http://www.sohu.com/"> <img src="images/sohu.jpg" data-bd-imgshare-binded="1" /> 搜狐 </a> </li>
+                    <li> <a href="http://www.ifeng.com/"> <img src="images/ifeng.jpg" data-bd-imgshare-binded="1" /> 凤凰 </a> </li>
+                    <li> <a href="http://www.hupu.com/"> <img src="images/hupu.jpg" data-bd-imgshare-binded="1" /> 虎扑体育 </a> </li>
+                    <li> <a href="http://www.taobao.com/"> <img src="images/taobao1.jpg" data-bd-imgshare-binded="1" /> 淘宝网 </a> </li>
+                    <li> <a href="http://www.jd.com/"> <img src="images/jd.jpg" data-bd-imgshare-binded="1" /> 京东商城 </a> </li>
+                    <li> <a href="http://www.tmall.com/"> <img src="images/tmall.jpg" data-bd-imgshare-binded="1" /> 淘宝天猫 </a> </li>
+                    <li> <a href="http://www.youku.com/"> <img src="images/youku.jpg" data-bd-imgshare-binded="1" /> 优酷 </a> </li>
+                    <li> <a href="http://www.fang.com/"> <img src="images/fang.jpg" data-bd-imgshare-binded="1" /> 搜房网 </a> </li>
+                    <li> <a href="http://www.autohome.com/"> <img src="images/autohome.jpg" data-bd-imgshare-binded="1" /> 汽车之家 </a> </li>
+                </ul>
+            </section>
+            <section>
+                <header>
+                    <h2 class="bank"><i></i>常用银行</h2>
+                </header>
+                <ul class="website-list">
+                    <li> <a href="http://www.icbc.com.cn/"> <img src="images/icbc.jpg" data-bd-imgshare-binded="1" /> 工商银行 </a> </li>
+                    <li> <a href="http://www.abchina.com/"> <img src="images/abc.jpg" data-bd-imgshare-binded="1" /> 农业银行 </a> </li>
+                    <li> <a href="http://www.ccb.com/"> <img src="images/ccb.jpg" data-bd-imgshare-binded="1" /> 建设银行 </a> </li>
+                    <li> <a href="http://www.boc.cn/"> <img src="images/boc.jpg" data-bd-imgshare-binded="1" /> 中国银行 </a> </li>
+                    <li> <a href="http://www.bankcomm.com/"> <img src="images/bocc.jpg" data-bd-imgshare-binded="1" /> 交通银行 </a> </li>
+                    <li> <a href="http://www.cmbchina.com/"> <img src="images/cmb.jpg" data-bd-imgshare-binded="1" /> 招商银行 </a> </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
+<div style="margin:0px auto;text-align:center;" id="sponsor">
+    <footer id="footer"></footer>
+    <div style="font-size: 0;height: 0;line-height: 0; position:absolute; bottom:20px;">
+    </div>
+    <div id="divtip" class="uk-notify uk-notify-top-center" style="display: none;">
+        <div class="uk-notify-message alert-dismissable alert alert-normal" style=" margin-top: 0px; margin-bottom: 10px;">
+            <a class="close" onClick="closetip();" style="cursor: pointer;">&times;</a>
+            <div>
+                即将上线
+            </div>
+        </div>
+    </div>
+</div>
+<!--<script id="J_MMTScript_XYZ" type="text/javascript" charset="utf-8" async="" qid="0001" cid="1E98A211BA6810AB2730F6C9D50D65B5" src="js/action.js"></script>-->
+<!--<iframe frameborder="0" id="bdSharePopup_selectshare1469072814581bg" class="bdselect_share_bg" style="display:none;"></iframe>-->
+<!--<div id="bdSharePopup_selectshare1469072814581box" style="display: none;" share-type="selectshare" class="bdselect_share_box" data-bd-bind="1469072814581">-->
+    <!--<div class="selectshare-mod-triangle">-->
+        <!--<div class="triangle-border"></div>-->
+        <!--<div class="triangle-inset"></div>-->
+    <!--</div>-->
+    <!--<div class="bdselect_share_head">-->
+        <!--<span>分享到</span>-->
+        <!--<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>-->
+        <!--<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>-->
+    <!--</div>-->
+<!--</div>-->
 </body>
 </html>

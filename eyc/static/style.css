@@ -78,7 +78,7 @@ header, nav, footer, aside, section {
 /*头部*/
 #header {
     height: 110px;
-    background:url(../images/tb.jpg)/*tpa=http://hsxianlu.com/images/tb.jpg*/ no-repeat center;
+    background:url(./tb.jpg)/*tpa=http://hsxianlu.com/images/tb.jpg*/ no-repeat center;
 }
 /*logo*/
 #header header {
@@ -163,7 +163,7 @@ header, nav, footer, aside, section {
 }
 /*主体内容*/
 #content {
-    background:#fff url(../images/conbg.jpg)/*tpa=http://hsxianlu.com/images/conbg.jpg*/ no-repeat center top;
+    background:#fff url(./conbg.jpg)/*tpa=http://hsxianlu.com/images/conbg.jpg*/ no-repeat center top;
 }
 .inside{
     background-color:#f1f7fa!important;
