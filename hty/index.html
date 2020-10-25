@@ -181,7 +181,7 @@
     <script>
         var arr = ['8824466.com', '8824477.com', '8824499.com', '8824111.com']
         document.querySelectorAll('.loadUl li').forEach(function (item, index) {
-            item.children[0].href = 'http://' + arr[index] + '/#/home?agent=340324'
+            if(index!=4&&index!=5) item.children[0].href = 'http://' + arr[index] + '/#/home?agent=340324'
             // item.children[0].children[1].innerText = arr[index]
         })
         function IsPC() {
