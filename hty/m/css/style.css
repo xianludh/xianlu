@@ -1,21 +1,21 @@
 body{font-family: PingFang-SC-Bold;}
-.header{height: 0.9rem;display: flex;align-items: center;justify-content:center;background: #000;}
+.header{height: 1.1rem;display: flex;align-items: center;justify-content:center;background: #000;}
 #gg{height: 0.5rem; line-height: 0.5rem;background-color: #fff;position: relative;padding:0 0.1rem;overflow: hidden;}
 #gg marquee{position: absolute;font-size: 0.20rem;width: 100%;overflow-y: auto;-webkit-overflow-scrolling : touch;}
 .number{width: 0.5rem;height: 0.5rem;line-height: 0.5rem;border-radius: 50px; background-color: rgba(224,224,224,1);text-align: center;margin: 0.2rem 0.2rem 0 0;color:#1D2429}
 .line{line-height: 0.57rem;}
-.mui-media-body h4{font-size: 0.0.38rem; color:white;}
-.mui-media-body h6{display: flex;align-items: center;font-size: 0.24rem;color:#0099FF}
-.mui-media-body h6 img{width: 0.24rem;}
+.mui-media-body h4{white-space:nowrap;box-sizing: border-box;line-height:0.5rem;font-size: 0.30rem; color:gold; border:0.01rem solid;padding: 0.1rem 0.4rem;border-radius: 0.2rem;margin-right: 0.5rem;}
+.mui-media-body h6{white-space:nowrap;box-sizing:border-box;flex:1;color:gold; text-align: center;align-items: center;line-height:0.5rem;font-size: 0.30rem; border:0.01rem solid;padding: 0.1rem 0.2rem;border-radius: 0.2rem;margin-right: 0.5rem;}
+.mui-media-body h6 img{width: 0.3rem;}
 .checkul{margin-top: 0.08rem;padding-top:0.2rem;background: black;}
 .checkli{line-height: 0.4rem;font-size: 0.18rem;}
 .check{font-size: 0.3rem;border-left:solid #000 0.06rem;margin-left: 0.1rem;padding-left:0.1rem}
 .mui-bar-tab .mui-tab-item.mui-active {color:#EAD07C;}
 .mui-bar-tab{background: #1D2527;height: 0.9rem;}
-.mui-bar-nav~.mui-content {padding: 0.9rem 0;background: black;}
+.mui-bar-nav~.mui-content {padding: 1.1rem 0 0.9rem 0;background: black;}
 .mui-bar-tab .mui-tab-item .mui-icon{width: 28px;height: 28px;}
-.btn{position: absolute;top:0.28rem;right:0.5rem;width:1.52rem;height:0.59rem;line-height:0.59rem;text-align: center; background:rgba(27,123,205,1);border-radius:10px;color:#FEFEFE;font-size: 0.26rem;}
-
+.btn{top:0.28rem;right:0.5rem;width:1.82rem;font-weight: bold;font-size: 0.3rem;height:0.7rem;line-height:0.7rem;text-align: center; border:0.01rem solid;margin: 5px 0; border-radius:10px;color:gold;font-size: 0.26rem;}
+.btn a {color:gold;}
 .mui-bar-nav{box-shadow: none;}
 #title{width: 100%;height: 5.47rem;position: relative; background: #FFFFFF;border-radius:30px;box-shadow:-0.01rem 0.02rem 0.08rem 0 rgba(0, 0, 0, 0.2);}
 #titleUp{width: 100%;height:2.77rem;background: url(../img/bj.png) no-repeat #ED8755;background-size: 100% 100%;display: flex;justify-content: space-around;padding-top: 0.1rem;}
@@ -99,8 +99,34 @@ html{min-height: 100%;}
 
 .mui-table-view-cell>a:not(.mui-btn) {position: unset;}
 
+.h6 span{
+    color:gold
+}
+.num {
+    display: inline-block;
+    width: 0.42rem;
+    height: 0.42rem;
+    line-height: 0.4rem;
+    border-radius: 0.4rem;
+    text-align: center;
+    border:0.01rem solid ;
+    box-sizing: border-box;
+    margin-left: 5px;
+    font-size: 0.24rem;
+}
+.mui-media-body {
+    display: flex;
+}
+.hService {
+    width: 25vw;
+    text-align: center;
+    float: right;
+}
+.hService img {
+    width: 100%;
+}
 
-
+/* color:#0099FF; */
 
 
 
