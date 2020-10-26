@@ -31,6 +31,9 @@ body {
     overflow: hidden;
     margin: 0;
     padding: 0;
+    position: absolute;
+    background: url(../images/bg2.png) no-repeat top center;
+    background-size: cover;
 }
 a {
     text-decoration: none;
@@ -117,6 +120,7 @@ a, a:hover, a:focus, a:active{
 .main{
     width: 1000px;
     margin: auto;
+    /* position: absolute; */
 }
 .main>ul {
     overflow: hidden;
