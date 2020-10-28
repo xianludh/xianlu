@@ -14,11 +14,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     margin: 0;
     padding: 0;
 }
-
+html {
+    background-color: black;
+    min-height: 100%;
+}
 html, body {
     font-family: "Microsoft YaHei", Helvetica Neue, Tahoma, Arial;
 }
-
+body {
+    min-height: 100%;
+    width: 100%;
+    /* background: black; */
+}
+.content {
+    position: absolute;
+    width: 100%;
+    background: url(../images/11.png) no-repeat  top center;
+    background-size:cover ;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -42,7 +58,7 @@ img{
     font-family: 'iconfont';  /* project id 689131 */
     src: url('iconfont.eot');
     src: url('iconfont.eot?#iefix') format('embedded-opentype'),
-    url('iconfont.woff') format('woff'),
+    /* url('iconfont.woff') format('woff'), */
     url('iconfont.ttf') format('truetype'),
     url('iconfont.svg#iconfont') format('svg');
 }
@@ -55,10 +71,16 @@ i{
 a, a:hover, a:focus, a:active{
     text-decoration: none;
 }
+.navbar {
+    background: black;
+    height: 110px;
+    margin-bottom: 0;
+}
 .header-nav{
     overflow: hidden;
     margin-left: 40%;
-    color: #bbb3d6;
+    color: #e2d775;
+    padding-top:30px ;
 }
 .header-nav li{
     float: left;
@@ -72,20 +94,14 @@ a, a:hover, a:focus, a:active{
     text-decoration: none;
 }
 .header-nav i {
-    display: block;font-size: 20px;margin-bottom: 5px;
+    display: block;font-size: 26px;margin-bottom: 5px;
+}
+.header-nav span {
+    font-size: 16px;
 }
 .header-nav a:focus,.header-nav a:hover {
-    color: #9c86fc;
+    color: #b8ad4a;
     text-decoration: none;
-}
-.content{
-    display: flex;
-}
-.content .aside{
-    width: 180px;
-}
-.content .main{
-    flex: 1;
 }
 .aside li{
     text-align: center;
@@ -102,11 +118,12 @@ a, a:hover, a:focus, a:active{
     display: block;
 }
 .main{
-    background: url("../img/bg.png") no-repeat right #f1ebff;
+    width: 1000px;
+    margin: auto;
 }
 .main>ul {
     overflow: hidden;
-    width: 1000px;
+    width: 100%;
     display: none;
 }
 .main>ul>li {
@@ -121,13 +138,13 @@ a, a:hover, a:focus, a:active{
 }
 .check{
     width: 60%;
-    padding: 40px 65px;
+    padding: 30px 65px;
 }
 .check ul li {
     display: flex;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 50px;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 48px;
     border: 1px solid #e3e3e3;
     margin-top: 10px;
 }
@@ -136,39 +153,60 @@ a, a:hover, a:focus, a:active{
     padding-left: 20px;
     background: #e7edff;
     border-radius: 50px 0 0 50px;
-    color: #949494;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
 }
 .check .checkInter{
     width: 80px;
-    border-radius: 0 50px 50px 0;
-    background: #9293fd;
+    /* border-radius: 0 50px 50px 0; */
+    /* background: #9293fd; */
+    background-image: url(../images/3enter.png);
     display: block;
-    text-align: center;
-    color: #fff;
+    /* text-align: center; */
+    /* color: #fff; */
 }
 .check .checkInter a{
     width: 100%;
     height: 100%;
     display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
 }
 .check .checkInter a:hover, .check .checkInter a:focus{
-    color: #FFEB3B;
+    color: #898567;
 }
 .check .checkTime{
     flex: 1;
     text-align: center;
+    color:white;
+    /* border-bottom: 1px solid white;
+    border-top: 1px solid white; */
 }
 .check .reload {
     height: 40px;
     line-height: 40px;
     font-size: 16px;
 }
+.check .reload span{
+    display: inline-block;
+    padding: 0 10px;
+    height: 34px;
+    vertical-align: middle;
+    line-height: 34px;
+    border-radius: 20px;
+    color:#b8ad4a;
+    border:1px solid #b8ad4a;
+    box-sizing: border-box;
+}
 .check .reload a {
     float: right;
     padding: 4px 10px;
     border-radius: 20px;
-    color: #fff;
-    background: linear-gradient(to right,#ffab9a,#ff91bc);
+    color: black;
+    background: linear-gradient(to right,#b8ad4a,#e2d775);
+    background-color:#e2d775 ;
     height: 30px;
     line-height: 21px;
     margin-top: 8px;

@@ -99,10 +99,31 @@
 		font-size: 16px;
 		line-height: 2.65;
 	}
+	.btnBox {
+	/*position: absolute;*/
+	/*top: 136.53vw;*/
+	width: 100%;
+	margin-top: 3.5vw;
+	display: flex;
+    justify-content: space-around;
+   
+
+  }
+
+  .btnBox .left, .btnBox .right {
+	width: 45.26%;
+	animation: heart_beat .8s infinite linear;
+  }
+  .btnBox .downApp{
+	display: inline-block
+  }
+   .btnBox img {
+	width: 100% ;
+  }
     </style>
 </head>
 <body>
-<div class="top_tips" style="display:block;">
+<!-- <div class="top_tips" style="display:block;">
 	<div class="left_black">
 		<div class="left_box">
 			<i class="close_icon" onclick="javascript:document.querySelector('.top_tips').style.display = 'none' "></i>
@@ -116,7 +137,7 @@
 	<div class="right_blue">
 		<p><a href="https://v0564.com/static/aqvns/html/download/index.html" style="color:#fff;font-size:14px;">立即下载</a></p>
 	</div>
-</div>
+</div> -->
 <div class="user">
 	<div class="header" style="padding-top: 12px">
 
@@ -125,43 +146,56 @@
 		</div>
 	</div>
 	<main style="padding-bottom: 60px">
-		<div class="withdraw check" style="border-radius: 10px 10px 0 0;margin-top: 25px">
-			<div style="height: 40px;line-height: 40px;font-size: 16px"><span><i style="color: #8c8ffa;  margin-left:5px;">&#xe62f;</i> 澳门威尼斯人导航-游戏入口</span><a class="reloadBtn" href="javascript:window.location.reload();"  style="float: right;
-		padding: 4px 8px;
+		<div class="btnBox">
+			<div class="left">
+			  <a class="downApp" href="https://v0564.com/static/aqvns/html/download/index.html">
+				<img class="img" src="img/1botton2.png">
+			  </a>
+			</div>
+			<div class="right">
+			  <a class="downApp" href="https://v0564.com/static/aqvns/html/download/index.html">
+				<img class="img" src="img/1botton.png">
+			  </a>
+			</div>
+		</div>
+		<div class="withdraw check" style="border-radius: 10px 10px 0 0;margin-top: 15px">
+			<div style="height: 40px;line-height: 40px;font-size: 14px"><span class="init">澳门威尼斯人导航-游戏入口</span><a class="reloadBtn" href="javascript:window.location.reload();"  style="float: right;
+		padding: 4px 13px;
 		border-radius: 20px;
-		color: #fff;
-		background: linear-gradient(to right,#ffab9a,#ff91bc);
+		color: black;
+		background: linear-gradient(to right,#b8ad4a,#e2d775);
 		height: 21px;
 		line-height: 20px;
-		margin-top: 5px;">重新检测</a></div>
+		margin-top: 5px;
+		">重新检测</a></div>
 			<ul>
 				<li>
-					<div class="checktype">线路1</div>
+					<div class="checktype" style="background-image: url(./img/h5_line.png);">线路1</div>
 					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
 					<div><a class="checkInter" href="https://v0551.com/?agent=821413" target="_blank">立即进入</a></div>
 				</li>
 				<li>
-					<div class="checktype">线路2</div>
+					<div class="checktype" style="background-image: url(./img/h5_line.png);">线路2</div>
 					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
 					<div><a class="checkInter" href="https://v0554.com/?agent=821413" target="_blank">立即进入</a></div>
 				</li>
 				<li>
-					<div class="checktype">线路3</div>
+					<div class="checktype" style="background-image: url(./img/h5_line.png);">线路3</div>
 					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
 					<div><a class="checkInter" href="https://v0564.com/?agent=821413" target="_blank">立即进入</a></div>
 				</li>
 				<li>
-					<div class="checktype">线路4</div>
+					<div class="checktype" style="background-image: url(./img/h5_line.png);">线路4</div>
 					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
 					<div><a class="checkInter" href="https://v0570.com/?agent=821413" target="_blank">立即进入</a></div>
 				</li>
 				<li>
-					<div class="checktype">线路5</div>
+					<div class="checktype" style="background-image: url(./img/h5_line.png);">线路5</div>
 					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
 					<div><a class="checkInter" href="https://v0584.com/?agent=821413" target="_blank">立即进入</a></div>
 				</li>
 				<li>
-					<div class="checktype">线路6</div>
+					<div class="checktype" style="background-image: url(./img/h5_line.png);">线路6</div>
 					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
 					<div><a class="checkInter" href="https://v0604.com/?agent=821413" target="_blank">立即进入</a></div>
 				</li>
@@ -422,12 +456,12 @@
 							<div>人民网</div>
 							</a>
 						</li>
-						<li style="border-bottom:none">
+						<!-- <li style="border-bottom:none">
 							<a href="http://www.china.com/" target="_blank">
 							<div class="icon"></div>
 							<div>中华网</div>
 							</a>
-						</li>
+						</li> -->
 						<li style="border-bottom:none">
 							<a href="http://news.cctv.com/" target="_blank">
 							<div class="icon"></div>
@@ -519,20 +553,20 @@
 		</div>
 	</main>
 	<footer class="foot">
-    <a class="footer-item" href="https://v0564.com/m/#/admin/register?agent=821413">
+    <a class="footer-item" href="https://v0564.com/m/#/admin/register?agent=821413" style="color: #e2d775">
         <i style="display: block;">&#xe61a;</i>
         <span>注册/登录</span>
     </a>
-    <a class="footer-item" href="https://v0564.com/static/aqvns/html/download/index.html" style="color: #bbb3d6">
+    <a class="footer-item" href="https://v0564.com/static/aqvns/html/download/index.html" style="color: white">
         <i style="display: block;">&#xe618;</i>
         <span>APP下载</span>
     </a>
 
-    <a class="footer-item" href="https://v0564.com/m/#/agent-doc?agent=821413" style="color: #bbb3d6">
+    <a class="footer-item" href="https://v0564.com/m/#/agent-doc?agent=821413" style="color: white">
         <i style="display: block;">&#xe617;</i>
         <span>代理加盟</span>
     </a>
-    <a class="footer-item" href="https://tx01.comm800.com/standalone.html?appId=720193"  target="_blank" style="color: #bbb3d6">
+    <a class="footer-item" href="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5001082&planId=83#"  target="_blank" style="color: white">
         <i style="display: block;">&#xe61c;</i>
         <span>在线客服</span>
     </a>
@@ -583,8 +617,8 @@
 	 autourl[2]="https://v0554.com/?agent=821413"
 	 autourl[3]="https://v0564.com/?agent=821413"
 	 autourl[4]="https://v0570.com/?agent=821413"
-	 autourl[5]="https://v0578.com/?agent=821413"
-	 autourl[6]="https://v0584.com/?agent=821413"
+	 autourl[5]="https://v0584.com/?agent=821413"
+	 autourl[6]="https://v0604.com/?agent=821413"
     function auto(url){
         $('.check>ul li').eq(b-1).find('span').text(tim*10);
         b++
@@ -598,7 +632,7 @@
 		
 		b++
 	}
-    function run(){for(var i=1;i<autourl.length;i++)document.write("<img src=http://"+autourl[i]+"/"+Math.random()+" width=1 height=1 onerror=auto('http://"+autourl[i]+"')>")}
+    function run(){for(var i=1;i<autourl.length;i++)document.write("<img src="+autourl[i]+"/"+Math.random()+" width=1 height=1 onerror=auto('"+autourl[i]+"')>")}
     run()
 </script>
 </body>

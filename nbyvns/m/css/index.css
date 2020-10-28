@@ -53,7 +53,7 @@ img{
     font-family: 'iconfont';  /* project id 689131 */
     src: url('iconfont.eot');
     src: url('iconfont.eot?#iefix') format('embedded-opentype'),
-    url('iconfont.woff') format('woff'),
+    /* url('iconfont.woff') format('woff'), */
     url('iconfont.ttf') format('truetype'),
     url('iconfont.svg#iconfont') format('svg');
 }
@@ -68,7 +68,7 @@ body, html {
     -webkit-overflow-scrolling: touch;
 }
 body{
-    background: url('../img/bg.png') no-repeat top center/100%;color: #fff;padding: 0.75rem;background-color: #f3f5ff;font-size: 14px;position: relative;overflow: auto;
+    background: url('../img/1BG.png') no-repeat top center/100%;color: #fff;padding: 0.75rem;font-size: 14px;position: relative;overflow: auto;
 }
 header {
     height: 44px;
@@ -123,7 +123,7 @@ header .btn_setting i {
     margin: 0 auto;
 }
 .foot{
-    position: fixed;bottom: 0;left: 0;right: 0;height: 3.75rem;background: #fff;box-shadow: 0px -2px 4px 0px #e0e1ec;color: #8a85fe;
+    position: fixed;bottom: 0;left: 0;right: 0;height: 3.75rem;background: black;box-shadow: 0px -1px 2px 0px #e0e1ec;color: #8a85fe;
 }
 .foot i {
     font-size: 20px;
@@ -137,18 +137,30 @@ header .btn_setting i {
 }
 .withdraw {
     border-radius: 10px;
-    background: #fff;
+    /* background: #fff; */
+    border:1px solid white;
     color: #979797;
     padding: 10px;
     margin-top: 40px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.23);-webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.23);
+}
+.init {
+    display: inline-block;
+    padding: 0 10px;
+    border:1px solid #e2d775;
+    color:#e2d775;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+    border-radius: 17px;
+    box-sizing: border-box;
 }
 .check ul li {
     display: flex;
     height: 40px;
     line-height: 40px;
     border-radius: 40px;
-    border: 1px solid #e3e3e3;
+    /* border: 1px solid #e3e3e3; */
     margin-top: 7px;
 }
 .check .checktype{
@@ -156,23 +168,29 @@ header .btn_setting i {
     padding-left: 20px;
     background: #e7edff;
     border-radius: 40px 0 0 40px;
-    color: #949494;
+    color: black;
+    font-weight: bold;
 }
 .check .checkInter{
     width: 80px;
     border-radius: 0 40px 40px 0;
-    background: #9293fd;
+    background:url(../img/2click.png);
     display: block;
+    height: 100%;
     text-align: center;
-    color: #fff;
+    color: black;
+    font-weight: bold;
 }
 .check .checkTime{
     flex: 1;
     text-align: center;
+    color:#e2dede;
+    border-top:1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
 }
 .tab{
     display: flex;
-    color: #000;
+    color: #fff;
 }
 .tab>div{
     flex:1;
@@ -200,10 +218,10 @@ header .btn_setting i {
     background: url("../img/shipingicon.png") no-repeat center/100% 100%;
 }
 .tab .on {
-   color:#18b1ff
+   color:#e2d775
 }
 .content .contentItem h5{
-    height: 35px;line-height: 35px;background: #fafafa;color: #6b6b6b;padding-left: 19px;border-bottom: 1px solid #eeeeee;
+    height: 35px;line-height: 35px;color: white;padding-left: 19px;border-bottom: 1px solid #eeeeee;
 }
 .content .contentItem ul{
     overflow: hidden;
@@ -215,6 +233,9 @@ header .btn_setting i {
     width: 30px;
     height: 30px;
     margin: 0 auto 8px;
+}
+.content .contentItem ul li div{
+    color:white
 }
 .content .bank ul li:nth-child(1) .icon{
     background: url("../img/gsyhIcon.png") no-repeat center/100% 100%;
@@ -326,16 +347,16 @@ header .btn_setting i {
 .content .news ul li:nth-child(8) .icon{
     background: url("../img/renminIcon.png") no-repeat center/100% 100%;
 }
-.content .news ul li:nth-child(9) .icon{
+/* .content .news ul li:nth-child(9) .icon{
     background: url("../img/zhonghuaIcon.png") no-repeat center/100% 100%;
-}
-.content .news ul li:nth-child(10) .icon{
+} */
+.content .news ul li:nth-child(9) .icon{
     background: url("../img/CTVVICon.png") no-repeat center/100% 100%;
 }
-.content .news ul li:nth-child(11) .icon{
+.content .news ul li:nth-child(10) .icon{
     background: url("../img/xinhuaIcon.png") no-repeat center/100% 100%;
 }
-.content .news ul li:nth-child(12) .icon{
+.content .news ul li:nth-child(11) .icon{
     background: url("../img/huanqiuIcon.png") no-repeat center/100% 100%;
 }
 
@@ -379,3 +400,4 @@ header .btn_setting i {
         width: 55% !important;
     }
 }
+
