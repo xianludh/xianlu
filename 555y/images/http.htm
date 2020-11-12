@@ -1,0 +1,93 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<style>
+.httphttp{
+	margin:0;
+	padding:12px 0 12px 61px;
+	height:45px;
+	/* overflow:hidden; */
+	width: 100%;
+}
+.httphttp img {
+	vertical-align: middle !important;
+}
+.httpms,.httpurl{
+	color:#ffc177;
+	height:45px;
+	line-height:45px;	
+	background: #202020;
+	border: 1px solid #494949;
+	margin:0 5px;
+	padding:0 0 0 8px;
+	/* vertical-align:bottom; */
+	box-sizing: border-box;
+}
+.httpms {
+	width: 116px;
+}
+.httpurl {
+	width: 462px;
+}
+.httpgo{
+	border:0;
+	width:115.6px;
+	height:45px;
+	line-height:45px;
+	margin:0;
+	padding:0;
+	background:url(4.png) no-repeat;
+	background-size: cover;
+	vertical-align:bottom;
+	cursor: pointer;
+}
+.httpgo:hover{
+	background:url(2.png) no-repeat;
+	background-size: cover;
+}
+</style>
+<body style="padding:0; margin:0;">
+<form id="httpll">
+<script language="JavaScript" type="text/javascript">
+tim=1;
+setInterval("tim++",100);
+b=0;
+var autourl=new Array();
+href=document.location.href;
+if(href.substring(href.indexOf('http.htm'))=='http.htm'){document.location.href='http.htm'};
+httpone=href.substring(href.indexOf('#')+1);
+http = httpone.split(",");
+function butt(){
+for(var i=0;i<http.length;i++)document.write("<div class='httphttp'><input readonly='readonly' type=text name=txt"+i+" class='httpms' value='获取中...' size=8><img style='vertical-align:bottom;' src='hg.jpg'/><input type=text readonly='readonly' class='httpurl' name=url"+i+" size=50><input type=button class='httpgo' onclick=window.open(this.form.url"+i+".value)></div>")
+}
+butt();
+function auto(url){
+document.forms[0]["url"+b].value=url;
+if(tim>200)
+{document.forms[0]["txt"+b].value="链接超时"}
+else
+{document.forms[0]["txt"+b].value=tim*10+"ms"}
+b++
+};
+function run(){for(var i=0;i<http.length;i++)document.write("<img src="+http[i]+"/"+Math.random()+" width=1 height=1 onerror=auto('"+http[i]+"') style='display:none'>")}
+run();
+ </script>              
+</form>
+</body>
+
+</html>
+<script>
+	var s = window.screen.width / 1920;
+   
+    document.getElementsByClassName('httphttp')[0].style.zoom=s;
+		document.getElementsByClassName('httphttp')[1].style.zoom=s;
+		document.getElementsByClassName('httphttp')[2].style.zoom=s;
+		document.getElementsByClassName('httphttp')[3].style.zoom=s;
+		document.getElementsByClassName('httphttp')[4].style.zoom=s;
+		document.getElementsByClassName('httphttp')[5].style.zoom=s;
+		document.getElementsByClassName('httphttp')[6].style.zoom=s;
+    
+</script>
