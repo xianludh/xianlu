@@ -1,581 +1,295 @@
+<!DOCTYPE html><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- saved from url=(0039)http://0102677.com:2100/api/index/index --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
-<!doctype html>
-<html lang="zh-cn">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>新葡京棋牌导航</title>
-    <meta name="description" content="新葡京棋牌导航">
-    <meta name="keywords" content="新葡京棋牌导航">
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta content="black" name="apple-mobile-web-app-status-bar-style">
-    <meta content="telephone=no" name="format-detection">
-    <meta name="screen-orientation" content="portrait"><!-- uc强制竖屏 -->
-    <meta name="x5-orientation" content="portrait"><!-- QQ强制竖屏 -->
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="stylesheet" href="css/index.css">
-<!--<link rel="shortcut icon" href="img/ico.png">-->
-    <style>
-	body{
-		padding:0
-	}
-	.user{
-		padding:0 15px
-	}
-	.top_tips {
-		overflow: hidden;
-		display: block;
-		z-index: 12;
-	}
-	.top_tips .left_black {
-		width: 80%;
-		padding: 10px 0 10px 10px;
-		float: left;
-		background: #333333;
-		height: 60px;
-		font-size: 16px;
-		overflow: hidden;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-	.top_tips .right_blue {
-		width: 20%;
-		background: #1e9fff;
-		float: right;
-		text-align: center;
-		padding: 10px 0;
-		height: 60px;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-	.top_tips .close_icon {
-		width: 23px;
-		height: 23px;
-		margin-right: 6px;
-		float: left;
-		font-size: 12px;
-		line-height: 23px;
-		text-align: center;
-		border-radius: 30px;
-		color: #fff;
-		margin-top: 9px;
-		background: url(img/delete.png);
-		background-size: 100%;
-	}
-	.top_tips .whh_logo {
-		width: 40px;
-		vertical-align: bottom;
-		float: left;
-	}
-	.p_box {
-		float: left;
-		margin-left: 5%;
-	}
-	@media only screen and (min-device-width: 320px){
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>新葡京棋牌-诚信第一品牌！</title>
+	<script src="./js/mui.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+    <link href="./css/mui.min.css" rel="stylesheet"/>
+	<link href="./css/style.css" rel="stylesheet">
+	<link href="./css/swiper.min.css" rel="stylesheet">
+	<script>
+		(function (doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function () {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					if(clientWidth>=750){
+						docEl.style.fontSize = '100px';
+					}else{
+						docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+					}
+				};
+
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+	 <style>
+		body{
+			padding:0
+		}
+		.user{
+			padding:0 15px
+		}
+		.top_tips {
+			overflow: hidden;
+			display: block;
+			z-index: 12;
+		}
+		.top_tips .left_black {
+			width: 100%;
+			/* padding: 10px 0 10px 10px; */
+			float: left;
+			background: red;
+			height: 1rem;
+			line-height: 1rem;
+			overflow: hidden;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		.top_tips .right_blue {
+			width: 20%;
+			background: #1e9fff;
+			float: right;
+			text-align: center;
+			/* padding: 10px 0; */
+			height: 100%;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		.top_tips .close_icon {
+			width: 23px;
+			height: 23px;
+			margin-right: 6px;
+			float: left;
+			font-size: 12px;
+			line-height: 23px;
+			text-align: center;
+			border-radius: 30px;
+			color: #fff;
+			margin-top: 9px;
+			background: url(img/delete.png);
+			background-size: 100%;
+		}
+		.top_tips .whh_logo {
+			width: 40px;
+			vertical-align: bottom;
+			float: left;
+		}
 		.p_box {
-			font-size: 12px !important;
-			margin-left: 1%;
+			float: left;
+			margin-left: 5%;
 		}
-		.p_box_subtitle {
-			font-size: 12px !important;
+		@media only screen and (min-device-width: 320px){
+			.p_box {
+				font-size: 12px !important;
+				margin-left: 1%;
+			}
+			.p_box_subtitle {
+				font-size: 12px !important;
+			}
 		}
-	}
-	.right_blue {
-		width: 20%;
-		background: #b89a5a;
-		float: right;
-		text-align: center;
-
-		height: 60px;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-	.right_blue p {
-		font-size: 16px;
-		line-height: 2.65;
-	}
-	.btnBox {
-	/*position: absolute;*/
-	/*top: 136.53vw;*/
-	width: 100%;
-	margin-top: 3.5vw;
-	display: flex;
-    justify-content: space-around;
-   
-
-  }
-
-  .btnBox .left, .btnBox .right {
-	width: 45.26%;
-	animation: heart_beat .8s infinite linear;
-  }
-  .btnBox .downApp{
-	display: inline-block
-  }
-   .btnBox img {
-	width: 100% ;
-  }
-    </style>
+		.right_blue {
+			width: 20%;
+			background: #b89a5a;
+			float: right;
+			text-align: center;
+			height: 1rem;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		/* .right_blue p {
+			font-size: 16px;
+			line-height: 2;
+		} */
+		.btnBox {
+		/*position: absolute;*/
+		/*top: 136.53vw;*/
+		width: 100%;
+		margin-top: 3.5vw;
+		display: flex;
+		justify-content: space-around;
+	   
+	
+	  }
+	
+	  .btnBox .left, .btnBox .right {
+		width: 45.26%;
+		animation: heart_beat .8s infinite linear;
+		padding: 0 15px;
+	  }
+	  .btnBox .downApp{
+		display: inline-block
+	  }
+	   .btnBox img {
+		width: 100% ;
+	  }
+		</style>
+	<style>
+		*{font-family: PingFang-SC-Medium;}
+		#back{width:0.48rem;}
+	</style>
 </head>
 <body>
-<!-- <div class="top_tips" style="display:block;">
-	<div class="left_black">
-		<div class="left_box">
-			<i class="close_icon" onclick="javascript:document.querySelector('.top_tips').style.display = 'none' "></i>
-			<img class="whh_logo" src="img/app_logo.png" alt="">
-			<div class="p_box">
-				<span style="display: block;color:#fff;font-size: 16px;margin-left: 5px;">新葡京棋牌 客户端下载</span>
-				<span class="p_box_subtitle" style="color:#fff;font-size:14px;margin-left: 5px;">国内首家现金娱乐</span>
+
+<!-- 头部 -->
+<header class="mui-bar mui-bar-nav header" id="header">
+	<img src="./img/logo.png" style='width:45vw' alt="">
+	<!-- <div style="width:40vw;margin-left:5vw">
+		<img src="./img/h_img01.png" style='width:100%' alt="">
+	</div> -->
+</header>
+
+
+<div class="mui-content">
+	<!-- 首页 -->
+	<div id="indexhtml" style="display: show;">
+		<!-- 轮播 -->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+			  <div class="swiper-slide"><a target="_blank" href="http://737d.cc/m/#/download"><img width='100%' src='./img/lunbo1.png' /></a></div>
+			  <!-- <div class="swiper-slide">><img width='100%' src='./img/1sider.png' /></div>
+			  <div class="swiper-slide">><img width='100%' src='./img/1sider.png' /></div> -->
 			</div>
 		</div>
-	</div>
-	<div class="right_blue">
-		<p><a href="https://v0564.com/static/aqvns/html/download/index.html" style="color:#fff;font-size:14px;">立即下载</a></p>
-	</div>
-</div> -->
-<div class="user">
-	<div class="header" style="padding-top: 12px">
-
-		<div class="logo">
-
+		<!-- 公告 -->
+		<div id="gg">
+			<img src="./img/gg.png" alt="" style="width:0.31rem">
+			<marquee  direction="left" id="marquee" scrolldelay='200'>
+				新葡京棋牌www.737a.cc欢迎您的到来，我们的优惠不像“高利贷”那么高，但资金一定永远像“瑞士银行”一样安全。我们发誓承诺为每一位客户提供最安全、最公平、最公正的博彩游戏，绝不黑玩家1分钱，日提款支持3000万，顶级信誉，绝对大额无忧。我们7x24小时在线客服将竭诚为您服务，欢迎您的咨询，祝您游戏愉快!
+			</marquee>
 		</div>
-	</div>
-	<main style="padding-bottom: 60px">
+		<!-- <div class="top_tips" style="display:block;">
+			<div class="left_black">
+				<div class="left_box">
+					<div class="p_box">
+						<img style="height:0.9rem;vertical-align: middle;margin-left:5px" src='img/logo2.png' />
+						<span style="display:inline-block;color:gold;margin-left: 5px;vertical-align: top;">新葡京棋牌 注册即送<span style="font-size:16px;color:gold">8824</span>元</span>
+						 <span class="p_box_subtitle" style="color:#fff;font-size:14px;margin-left: 5px;">国内首家现金娱乐,</span>
+						
+					</div>
+					<div class="right_blue">
+						<a href="http://737d.cc/m/#/download" style="color:gold;font-size:14px;height: 100%;display: inline-block;">立即下载</a>
+					</div>
+				</div>
+			</div>
+			
+		</div> -->
+		<!-- 线路 -->
 		<div class="btnBox">
 			<div class="left">
-			  <a class="downApp" href="http://csdf.9161252.com/m/#/download">
-				<img class="img" src="img/1botton2.png">
+			  <a class="downApp" href="http://737d.cc/m/#/download">
+				<img class="img" width='30vw' src="img/1botton2.png">
 			  </a>
 			</div>
 			<div class="right">
-			  <a class="downApp" href="http:///csdf.9161252.com/m/#/download">
-				<img class="img" src="img/1botton.png">
+			  <a class="downApp" href="http://737d.cc/m/#/download">
+				<img class="img" width='30vw' src="img/1botton.png">
 			  </a>
 			</div>
 		</div>
-		<div class="withdraw check" style="border-radius: 10px 10px 0 0;margin-top: 15px">
-			<div style="height: 40px;line-height: 40px;font-size: 14px"><span class="init">新葡京棋牌导航-游戏入口</span><a class="reloadBtn" href="javascript:window.location.reload();"  style="float: right;
-		padding: 4px 13px;
-		border-radius: 20px;
-		color: black;
-		background: linear-gradient(to right,#b8ad4a,#e2d775);
-		height: 21px;
-		line-height: 20px;
-		margin-top: 5px;
-		">重新检测</a></div>
-			<ul>
-				<li>
-					<div class="checktype" style="background-image: url(./img/h5_line.png);">线路1</div>
-					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-					<div><a class="checkInter" href="http://737a.cc" target="_blank">立即进入</a></div>
-				</li>
-				<li>
-					<div class="checktype" style="background-image: url(./img/h5_line.png);">线路2</div>
-					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-					<div><a class="checkInter" href="http://737b.cc" target="_blank">立即进入</a></div>
-				</li>
-				<li>
-					<div class="checktype" style="background-image: url(./img/h5_line.png);">线路3</div>
-					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-					<div><a class="checkInter" href="http://737c.cc" target="_blank">立即进入</a></div>
-				</li>
-				<li>
-					<div class="checktype" style="background-image: url(./img/h5_line.png);">线路4</div>
-					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-					<div><a class="checkInter" href="http://737d.cc" target="_blank">立即进入</a></div>
-				</li>
-				<li>
-					<div class="checktype" style="background-image: url(./img/h5_line.png);">线路5</div>
-					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-					<div><a class="checkInter" href="http://737g.cc" target="_blank">立即进入</a></div>
-				</li>
-				<li>
-					<div class="checktype" style="background-image: url(./img/h5_line.png);">线路6</div>
-					<div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-					<div><a class="checkInter" href="http://737h.cc" target="_blank">立即进入</a></div>
-				</li>
-			</ul>
-		</div>
-		<div class="withdraw tab" style="margin-top: 10px;border-radius: 0">
-			<div class="on">
-				<div class="tab-item"></div>
-				<div>常用</div>
-			</div>
-			<div>
-				<div class="tab-item"></div>
-				<div>银行</div>
-			</div>
-			<div>
-				<div class="tab-item"></div>
-				<div>浏览器</div>
-			</div>
-			<div>
-				<div class="tab-item" style="height: 44px;width: 44px;margin-bottom: 3px"></div>
-				<div>资讯</div>
-			</div>
-			<div>
-				<div class="tab-item"></div>
-				<div>视频</div>
-			</div>
-		</div>
-		<div class="withdraw content" style="padding: 0;margin-top: 10px;border-radius: 0 0 10px 10px">
-			<ul>
-				<li class="contentItem net">
-					<h5><i style="color: #a095fa">&#xe616;</i> 常用网址</h5>
-					<ul style="padding: 10px">
-						<li>
-							<a href="http://www.baidu.com/" target="_blank">
-							<div class="icon"></div>
-							<div>百度</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.qq.com/" target="_blank">
-							<div class="icon"></div>
-							<div>腾讯QQ</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.ifeng.com/" target="_blank">
-							<div class="icon"></div>
-							<div>凤凰网</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.sohu.com/" target="_blank">
-							<div class="icon"></div>
-							<div>搜狐</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.youku.com/" target="_blank">
-							<div class="icon"></div>
-							<div>优酷</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.163.com/" target="_blank">
-							<div class="icon"></div>
-							<div>网易</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.taobao.com/" target="_blank">
-							<div class="icon"></div>
-							<div>淘宝网</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.jd.com/" target="_blank">
-							<div class="icon"></div>
-							<div>京东商城</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.12306.cn/" target="_blank">
-							<div class="icon"></div>
-							<div>12306</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.ctrip.com/" target="_blank">
-							<div class="icon"></div>
-							<div>携程网</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.4399.com/" target="_blank">
-							<div class="icon"></div>
-							<div>4399</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.58.com/" target="_blank">
-							<div class="icon"></div>
-							<div>58同城</div>
-							</a>
-						</li>
-					</ul>
-				</li>
+		<ul class="mui-table-view checkul" id="checkul">
+			<li class="checkli" style="color:gold"><b class="check">线路检测</b> ms数值越小，访问越快</li>
+			<li class="mui-table-view-cell mui-media">
+				<div class="mui-media-body line">
+					<h4>VIP线路<span class="num">1</span></h4>
+					<h6><img src="./img/ybp.png" alt=""><span class="xl" style="color:gold"></span>ms</h6>
+					<p class="btn"><a target="_blank" href="http://737a.cc">进入游戏</a></p>
+				</div>
 				
-				<li class="contentItem bank"  style="display: none">
-					<h5 style=""><i style="color: #a095fa">&#xe619;</i> 网上银行</h5>
-					<ul style="padding: 10px">
-						<li>
-							<a href="http://www.icbc.com.cn/icbc/" target="_blank">
-							<div class="icon"></div>
-							<div>工商银行</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.boc.cn/" target="_blank">
-							<div class="icon"></div>
-							<div>中国银行</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.ccb.com/" target="_blank">
-							<div class="icon"></div>
-							<div>建设银行</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.abchina.com/" target="_blank">
-							<div class="icon"></div>
-							<div>农业银行</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.psbc.com/" target="_blank">
-							<div class="icon"></div>
-							<div>邮政储蓄</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.cmbchina.com/" target="_blank">
-							<div class="icon"></div>
-							<div>招商银行</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.cebbank.com/" target="_blank">
-							<div class="icon"></div>
-							<div>光大银行</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.cib.com.cn/" target="_blank">
-							<div class="icon"></div>
-							<div>兴业银行</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.hxb.com.cn/" target="_blank">
-							<div class="icon"></div>
-							<div>华夏银行</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.bankcomm.com/" target="_blank">
-							<div class="icon"></div>
-							<div>交通银行</div>
-							</a>
-						</li>
-
-					</ul>
-				</li>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<div class="mui-media-body line">
+					<h4>VIP线路<span class="num">2</span></h4>
+					<h6><img src="./img/ybp.png" alt=""><span class="xl" style="color:gold"></span>ms</h6>
+					<p class="btn"><a target="_blank" href="http://737b.cc ">进入游戏</a></p>
+				</div>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<div class="mui-media-body line">
+					<h4>VIP线路<span class="num">3</span></h4>
+					<h6><img src="./img/ybp.png" alt=""><span class="xl" style="color:gold"></span>ms</h6>
+					<p class="btn"><a target="_blank" href="http://737c.cc">进入游戏</a></p>
+				</div>
 				
-				<li class="contentItem explorer"  style="display: none">
-					<h5><i style="color: #a095fa">&#xe61f;</i> 热门浏览器</h5>
-					<ul style="padding: 10px">
-						<li>
-							<a href="http://www.maxthon.cn/mx5/" target="_blank">
-							<div class="icon"></div>
-							<div>遨游</div>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.google.cn/intl/zh-CN/chrome/" target="_blank">
-							<div class="icon"></div>
-							<div>谷歌</div>
-							</a>
-						</li>
-						<li>
-							<a href="https://browser.qq.com/" target="_blank">
-							<div class="icon"></div>
-							<div>QQ</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.firefox.com.cn/" target="_blank">
-							<div class="icon"></div>
-							<div>火狐</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="https://ie.sogou.com/" target="_blank">
-							<div class="icon"></div>
-							<div>搜狗</div>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li class="contentItem news" style="display: none">
-					<h5><i style="color: #a095fa">&#xe61e;</i> 新闻名站</h5>
-					<ul style="padding: 10px">
-						<li>
-							<a href="http://news.sina.com.cn/" target="_blank">
-							<div class="icon"></div>
-							<div>新浪新闻</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://news.ifeng.com/" target="_blank">
-							<div class="icon"></div>
-							<div>凤凰资讯</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://news.qq.com/" target="_blank">
-							<div class="icon"></div>
-							<div>腾讯新闻</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://news.sohu.com/" target="_blank">
-							<div class="icon"></div>
-							<div>搜狐新闻</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://news.163.com/" target="_blank">
-							<div class="icon"></div>
-							<div>网易新闻</div>
-							</a>
-						</li>
-						<li>
-							<a href="https://news.baidu.com/" target="_blank">
-							<div class="icon"></div>
-							<div>百度新闻</div>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.zaobao.com.sg/" target="_blank">
-							<div class="icon"></div>
-							<div>联合早报</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.people.com.cn/" target="_blank">
-							<div class="icon"></div>
-							<div>人民网</div>
-							</a>
-						</li>
-						<!-- <li style="border-bottom:none">
-							<a href="http://www.china.com/" target="_blank">
-							<div class="icon"></div>
-							<div>中华网</div>
-							</a>
-						</li> -->
-						<li style="border-bottom:none">
-							<a href="http://news.cctv.com/" target="_blank">
-							<div class="icon"></div>
-							<div>CTVV新闻</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.xinhuanet.com/" target="_blank">
-							<div class="icon"></div>
-							<div>新华网</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.huanqiu.com/" target="_blank">
-							<div class="icon"></div>
-							<div>环球时报</div>
-							</a>
-						</li>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<div class="mui-media-body line">
+					<h4>VIP线路<span class="num">4</span></h4>
+					<h6><img src="./img/ybp.png" alt=""><span class="xl" style="color:gold"></span>ms</h6>
+					<p class="btn"><a target="_blank" href="http://737d.cc">进入游戏</a></p>
+				</div>
+				
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<div class="mui-media-body line">
+					<h4>VIP线路<span class="num">5</span></h4>
+					<h6><img src="./img/ybp.png" alt=""><span class="xl" style="color:gold"></span>ms</h6>
+					<p class="btn"><a target="_blank" href="http://737h.cc">进入游戏</a></p>
+				</div>
+				
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<div class="mui-media-body line">
+					<h4>VIP线路<span class="num">6</span></h4>
+					<h6><img src="./img/ybp.png" alt=""><span class="xl" style="color:gold"></span>ms</h6>
+					<p class="btn"><a target="_blank" href="http://737g.cc">进入游戏</a></p>
+				</div>
+				
+			</li>
+			<!-- //style="color:#E06B42" -->
+			<!-- <li class="mui-table-view-cell mui-media">
+				<span  class="mui-pull-left number">5</span>
+				<div class="mui-media-body line"><h4>苹果IOS客户端下载</h4><h6><img src="./img/ybp.png" alt=""><span class="xl" ></span>ms</h6></div>
+				<a  target="_blank" href="http://737d.cc/m/#/download"><p class="btn">点击下载</p></a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<span class="mui-pull-left number">6</span>
+				<div class="mui-media-body line"><h4>安卓Android端下载</h4><h6><img src="./img/ybp.png" alt=""><span class="xl"></span>ms</h6></div>
+				<a target="_blank" href="http://737d.cc/m/#/download"><p class="btn">点击下载</p></a>
+			</li> -->
+		</ul>
+		
+	</div>
 
-					</ul>
-				</li>
-				<li class="contentItem vedio" style="display: none">
-					<h5><i style="color: #a095fa">&#xe61d;</i> 视频综合</h5>
-					<ul style="padding: 10px">
-						<li>
-							<a href="http://www.iqiyi.com/" target="_blank">
-							<div class="icon"></div>
-							<div>爱奇艺</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.youku.com/" target="_blank">
-							<div class="icon"></div>
-							<div>优酷</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.kankan.com/" target="_blank">
-							<div class="icon"></div>
-							<div>天天看看</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.le.com/" target="_blank">
-							<div class="icon"></div>
-							<div>乐视网</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.pptv.com/" target="_blank">
-							<div class="icon"></div>
-							<div>PP视频</div>
-							</a>
-						</li>
-						<li>
-							<a href="http://www.pps.tv/" target="_blank">
-							<div class="icon"></div>
-							<div>PPS</div>
-							</a>
-						</li>
-						<li>
-							<a href="https://tv.sohu.com/" target="_blank">
-							<div class="icon"></div>
-							<div>搜狐视频</div>
-							</a>
-						</li>
-						<li>
-							<a href="https://v.qq.com/" target="_blank">
-							<div class="icon"></div>
-							<div>腾讯视频</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.tudou.com/" target="_blank">
-							<div class="icon"></div>
-							<div>土豆网</div>
-							</a>
-						</li>
-						<li style="border-bottom:none">
-							<a href="http://www.baofeng.com/" target="_blank">
-							<div class="icon"></div>
-							<div>暴风影音</div>
-							</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-	</main>
-	<footer class="foot">
-    <a class="footer-item" href="http://csdf.9161252.com/m/#/admin/vns-login" style="color: #e2d775">
-        <i style="display: block;">&#xe61a;</i>
-        <span>注册/登录</span>
-    </a>
-    <a class="footer-item" href="http://csdf.9161252.com/static/dqr/html/download/index.html" style="color: white">
-        <i style="display: block;">&#xe618;</i>
-        <span>APP下载</span>
-    </a>
+<!-- 底部 -->
+<nav class="mui-bar mui-bar-tab" id="menu">
+	<a class="mui-tab-item mui-active" href="http://737b.cc/m/#/home" id="index"> 
+		<span class="mui-icon"><img src="./img/cysy.png" alt="" style="width: 0.42rem;" id="indeximg"></span><span class="mui-tab-label">首页</span>
+	</a>
+  	<a target="_blank" class="mui-tab-item" href="http://737b.cc/m/#/activity">
+		<span class="mui-icon"><img src="./img/yh.png" alt="" style="width: 0.42rem;"></span><span class="mui-tab-label">优惠活动</span>
+	</a>
+	<a target="_blank" class="mui-tab-item" href="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5001075&planId=76#">
+		<span class="mui-icon"><img src="./img/kf.png" alt="" style="width: 0.42rem;"></span><span class="mui-tab-label">在线客服</span>
+	</a>
+	<a class="mui-tab-item" href="http://737b.cc/m/#/activity" id="me">
+		<span class="mui-icon"><img src="./img/wd.png" alt="" style="width: 0.42rem;" id="meimg"></span><span class="mui-tab-label">活动中心</span>
+	</a>
+</nav>
 
-    <a class="footer-item" href="http://csdf.9161252.com/m/#/activity" style="color: white">
-		<i style="display: block;">&#xe616;</i>
-		<!-- <img src="images/line_sj_42.png"> -->
-        <span>热门优惠</span>
-    </a>
-    <a class="footer-item" href="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5001075&planId=76#"  target="_blank" style="color: white">
-        <i style="display: block;">&#xe61c;</i>
-        <span>在线客服</span>
-    </a>
-
-</footer>
-</div>
-<script type='text/javascript' src='jquery.js' charset='utf-8'></script>
-<script>
-	 function IsPC() {
+<script type='text/javascript' src='./js/jquery.js' charset='utf-8'></script>
+<script type="text/javascript" charset="utf-8">
+var mySwiper = new Swiper('.swiper-container', {
+	autoplay: true,//可选选项，自动滑动
+	Swiper : 300
+})
+// var arr = ['http://737a.cc', 'http://737b.cc', 'http://737c.cc', 'http://737d.cc','http://737h.cc','http://737g.cc']
+// 	document.querySelectorAll('.checkul li .line').forEach(function (item, index) {
+// 		if(item.children[2]){
+// 			item.children[2].children[0].href = arr[index] + '/#/home?agent=340324'
+// 		// item.children[1].children[0].innerText = arr[index]
+// 		}
+// 	})
+function IsPC() {
         var userAgentInfo = navigator.userAgent;
         var Agents = ["Android", "iPhone",
             "SymbianOS", "Windows Phone",
@@ -613,27 +327,30 @@
     setInterval("tim++",100)
     b=1
     var autourl=new Array()
-	autourl[1] = 'http://737a.cc';
-    autourl[2] = 'http://737b.cc';
-    autourl[3] = 'http://737c.cc';
-    autourl[4] = 'http://737d.cc';
-    autourl[5] = 'http://737g.cc';
-    autourl[6] = 'http://737h.cc';
+	 autourl[1]="http://737a.cc"
+	 autourl[2]="http://737a.cc"
+	 autourl[3]="http://737b.cc"
+	 autourl[4]="http://737c.cc"
+	 autourl[5]="http://737d.cc"
+	 autourl[6]="http://737g.cc"
+	 autourl[7]="http://737h.cc"
     function auto(url){
-        $('.check>ul li').eq(b-1).find('span').text(tim*10);
+        $('.checkul li').eq(b-1).find('.xl').text(tim*10);
         b++
     }
 	function auto(url){
 		if(tim>200){
-		$('.check>ul li').eq(b-1).find('span').text('链接超时');}
+		$('.checkul> li').eq(b-1).find('.xl').text('链接超时');}
 		else{
-		$('.check>ul li').eq(b-1).find('span').text(tim*10);
+		$('.checkul li').eq(b-1).find('.xl').text(tim*10);
 		}
 		
 		b++
 	}
     function run(){for(var i=1;i<autourl.length;i++)document.write("<img src="+autourl[i]+"/"+Math.random()+" width=1 height=1 onerror=auto('"+autourl[i]+"')>")}
     run()
+
 </script>
+<!-- <span style="display:none"><script language="javascript" src="./../count50.51yes.com/click.aspx@id=503459000&logo=12" charset="gb2312"></script></span> -->
 </body>
 </html>
