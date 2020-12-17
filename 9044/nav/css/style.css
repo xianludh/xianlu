@@ -1,0 +1,308 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+a {
+	font-size: 12px;
+	color: #fff;
+	text-decoration: none
+}
+body {
+	font: 14px/1.6 "Microsoft Yahei";
+	color: #555555;
+	background-color: #1B1B1B;
+}
+.w1000 {
+	width: 1000px;
+	margin: 0 auto
+}
+ul li {
+	list-style: none
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+.clearfix {
+*+height:1%;
+}
+* html .clearfix {
+	zoom: 1;
+} /* IE6 */
+*+html .clearfix {
+	zoom: 1;
+} /* IE7 */
+.fL {
+	float: left !important;
+}
+.fR {
+	float: right !important;
+}
+/*---------------index--------------*/
+#header {
+	padding: 20px 0 34px;
+	background: #131213 url(../img/head_bg.jpg) no-repeat center top;
+}
+#header .hBox {
+	width: 1000px;
+	margin: 0 auto 10px;
+}
+#header .hBox .logo {
+	margin-right: 93px;
+	float: left;
+	margin-top: 18px;
+}
+#header .hBox .logo img{
+	width: 279px;
+	height: 60px;
+}
+
+#header .hBox .logo a {
+	display: block;
+}
+#header .hBox .ttlImg {
+	margin: 14px 112px 0 0;
+	float: left;
+}
+#header .hBox .hText {
+	margin-top: 10px;
+	float: left;
+}
+#header h2 {
+	margin-bottom: 20px;
+}
+#header .link {
+	text-align: center;
+}
+#header .link a {
+	display: inline-block;
+	padding-right: 30px;
+	color: #ffd053;
+	line-height: 30px;
+	background: url(../img/img01.png) no-repeat right center;
+}
+#header .list {
+	margin-bottom: 30px;
+}
+.wrap {
+	width: 1000px;
+	margin: 0 auto;
+}
+.inner {
+	padding: 40px 0 63px;
+	background: url(../img/inner_bg.png) no-repeat bottom center;
+}
+.inner .infoBox {
+	padding: 10px 10px 10px;
+	border: 1px solid #252525;
+}
+.inner .videoBox {
+	float: left;
+}
+.inner .videoBox {
+	width: 640px;
+	height: 245px;
+}
+.inner .sliderBox li {
+	float: left;
+}
+.foopage {
+	margin-top: -30px;
+	text-align: center;
+	z-index: 999;
+	position: relative;
+}
+
+.foopage a {
+	margin: 0 5px;
+	display: inline-block;
+	background: url(../img/icon06.png) no-repeat;
+	width: 12px;
+	height: 12px;
+}
+
+.foopage a.selected {
+	background: url(../img/icon07.png) no-repeat;
+}
+
+.foopage a span {
+	display: none;
+}
+
+.inner .ulList {
+	width: 340px;
+	float: right;
+	margin-right: -10px;
+}
+.inner .ulList li {
+	margin: 0 10px 10px 0;
+	width: 160px;
+	float: left;
+}
+.inner .ulList li a {
+	padding: 24px 20px 24px 30px; 
+	display: block;
+	overflow: hidden;
+	zoom: 1;
+	background-color: #242424;
+}
+.inner .ulList li a img {
+	margin-right: 10px;
+	float: left;
+}
+.inner .ulList li p {
+	float: left;
+	font-size: 14px;
+}
+.inner .ulList li span {
+	display: block;
+}
+.inner .ulList .list05,
+.inner .ulList .list06 {
+	margin-bottom: 0 !important;
+}
+.inner .ulList .list05 a {
+	padding: 24px 20px 24px 24px; 
+}
+.inner .ulList li a:hover p {
+	color: #ffd053;
+}
+.inner .ulList li a:hover img {
+	visibility: hidden;
+}
+.inner .ulList .list01 a:hover {
+	background: #242424 url(../img/img02.png) no-repeat 23px 24px;
+}
+.inner .ulList .list02 a:hover {
+	background: #242424 url(../img/img02.png) no-repeat -146px 24px;
+}
+.inner .ulList .list03 a:hover {
+	background: #242424 url(../img/img02.png) no-repeat 23px -63px;
+}
+.inner .ulList .list04 a:hover {
+	background: #242424 url(../img/img02.png) no-repeat -145px -62px;
+}
+.inner .ulList .list05 a:hover {
+	background: #242424 url(../img/img02.png) no-repeat 24px -149px;
+}
+.inner .ulList .list06 a:hover {
+	background: #242424 url(../img/img02.png) no-repeat -145px -146px;
+}
+.section {
+	padding: 50px 0 30px;
+	border-top: 2px solid #252525;
+	background-color: #191919;
+}
+.section .lBox {
+	width: 340px;
+	float: left;
+}
+.section .img {
+	float: left;
+}
+.section .rBox {
+	width: 356px;
+	float: left;
+}
+.section .lBox li {
+	margin-bottom: 60px;
+	overflow: hidden;
+	zoom: 1;
+}
+.section .lBox li img {
+	margin-right: 10px;
+	float: left;
+}
+.section li p {
+	margin-top: 7px;
+	float: left;
+	color: #707070;
+	font-size: 12px;
+}
+.section li span {
+	margin-bottom: 2px;
+	display: block;
+	color: #dcdcdc;
+	font-weight: bold;
+	font-size: 16px;
+}
+.section .rBox li {
+	margin-bottom: 60px;
+	overflow: hidden;
+	zoom: 1;
+}
+.section .rBox img {
+	float: right;
+}
+.section .rBox p {
+	width: 280px;
+	float: left;
+	text-align: right;
+}
+#footer {
+	padding: 20px 0;
+	clear: both;
+	border-top: 2px solid #252525;
+}
+#footer .copyright {
+	color: #707070;
+	text-align: center;
+	font-size: 12px;
+}
+.mb0 {
+	margin-bottom: 0 !important;
+}
+#footer .fBox {
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+#footer .fBox .mp3 {
+	position: absolute;
+	top: 13px;
+	right: 235px;
+}
+
+
+
+@keyframes rotate{
+from{-webkit-transform:rotate(0deg)}
+to{-webkit-transform:rotate(360deg)}
+}
+@-webkit-keyframes rotate{
+from{-webkit-transform:rotate(0deg)}
+to{-webkit-transform:rotate(360deg)}
+}
+@-moz-keyframes rotate{
+from{-moz-transform:rotate(0deg)}
+to{-moz-transform:rotate(360deg)}
+}
+@-ms-keyframes rotate{
+from{-ms-transform:rotate(0deg)}
+to{-ms-transform:rotate(360deg)}
+}
+@-o-keyframes rotate{
+from{-o-transform:rotate(0deg)}
+to{-o-transform:rotate(360deg)}
+}
+
+.list { width: 1060px; margin-top: 6px;height: 116px;}
+.list li{ float:left;width:116px; height: 116px; position:relative; margin-right:60px;}
+.list li a{ display:block; width:116px; height:116px; text-align:center; color:#fff100; position: absolute; left: 0; top: 0; z-index: 999;}
+.list li a .item{font-size:18px; color:#eee; position:absolute; top:30px; height:20px; line-height: 20px; width: 116px; text-align: center;}
+.list li a h6{top:60px; color:#ffe469; font-size:12px;font-family:"Arial"; text-align:center;position: absolute; width: 116px; text-align: center;}
+.list li a em{font-size:12px; top:83px;position: absolute; left: 0; width: 116px; text-align: center;color: #fff;font-style: normal;}
+.list li .libg{ background: url(../img/img17.png) no-repeat center top;animation:2s linear 0s normal forwards infinite rotate;-webkit-animation:2s linear 0s normal forwards infinite rotate; width: 116px; height: 116px; position: absolute; left: 0; top: 0}
+.list li.stop .libg{animation-play-state:paused;-webkit-animation-play-state:paused; }
+.list li a:hover {
+	background: url(../img/img16.png) no-repeat center top;
+}
+
+
+
+
+
+
