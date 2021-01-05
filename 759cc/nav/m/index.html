@@ -301,7 +301,7 @@ function find (str, cha, num) {
 }
 let str = window.location.href;
 let agent = GetQueryString('channelCode') || GetQueryString('agent');
-let codeMum = agent ? "channelCode=" + agent + "&channelDomain=" + str.substring(0, find(str, '/', 2)) : "channelDomain=" + str.substring(0, find(str, '/', 2));
+let codeMum = agent ? "channelCode=" + agent : "channelCode=878648";
 // 初始化
 ShareTrace.init({
     appkey: "60187f21a570393c", // 此值必填
