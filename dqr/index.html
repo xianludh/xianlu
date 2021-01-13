@@ -1,158 +1,96 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>澳门威尼斯人导航</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-
-    <meta name="keywords" content="澳门威尼斯人导航"/>
-    <!-- 引入 Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
-    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-<!--<link rel="shortcut icon" href="img/ico.png">-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,user-scalable=no,minimal-ui">
+<title>welcome</title>
 </head>
-<body style="font-size: 14px">
-    <nav class="navbar" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header" style="margin-left: 10%; margin-top: 16px;">
-                <a href="javascript:void (0)"><img src="img/logo.png"  style="height: 80px"></a>
+
+<style>
+*{ margin: 0;padding: 0;}
+body{width:100%;background: #000; overflow: hidden;}
+span{width:30px; height:30px; position:absolute;background: url("./xx.png") no-repeat; background-size: 100% 100%;
+    animation: show 1s alternate infinite }
+@keyframes show {
+ 0%{opacity:0%;}
+100%{opacity: 100%;}
+}
+span:hover{transform:scale(3,3) rotate(180deg) !important;transition: all 1s!important;}
+        .box {
+            width: 100%;
+            height: 100%;
+        }
+
+        .middleBox {
+            width: 100%;
+            height: 233px;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+        }
+
+
+        .btnBox {
+            width: 100%;
+            margin-top: 100px;
+        }
+
+        #btn {
+            width: 566px;
+            height: 233px;
+            margin: auto;
+            cursor: pointer;
+        }
+
+        #btn img {
+            width: 100%;
+            height: 100%;
+        }
+
+</style>
+
+<body>
+    <div class="box">
+        <div class="middleBox" id="middleBox">
+            <div class="btnBox">
+                <div id="btn" onclick="goGw()">
+                    <img src="./btn.png" alt="">
+                </div>
             </div>
-            <ul class="header-nav">
-                <li>
-                    <a href="http://2207321.com/#/?register=1" target="_blank">
-                        <i>&#xe61a;</i>
-                        <span>注册/登录</span>
-                    </a>
-                </li>
-                <li>
-                    <a  href="http://2207321.com/static/dqr/html/download/index.html" target="_blank">
-                        <i>&#xe618;</i>
-                        <span>APP下载</span>
-                    </a>
-                </li>
-                <li>
-                    <a  href="http://2207321.com/#/home/youhui" target="_blank">
-                        <!-- <i>&#xe617;</i> -->
-                        <i>&#xe616;</i>
-                        <span>热门优惠</span>
-                    </a>
-                </li>
-                <li>
-                <li>
-                    <a href="https://vuecn.livehelpu.chat/chatWindow.aspx?siteId=5001107&planId=108#" target="_blank">
-                        <i>&#xe61c;</i>
-                        <span>在线客服</span>
-                    </a>
-                </li>
-            </ul>
         </div>
-    </nav>
-
-<div class="content">
-    <img style="width:100%" src='./images/1BG.jpg' />
-    <div class="main">
-        <ul class="check" style="display: block">
-            <div class="reload"><span>澳门威尼斯人导航-游戏入口</span><a class="reloadBtn" href="javascript:window.location.reload();" >重新检测</a></div>
-            <ul>
-                <li>
-                    <div class="checktype" style="background-image: url(./images/pc_line.png);">线路1</div>
-                    <div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-                    <div class="checkInter"><a href="http://2207321.com" target="_blank">立即进入</a></div>
-                </li>
-                <li>
-                    <div class="checktype" style="background-image: url(./images/pc_line.png);">线路2</div>
-                    <div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-                    <div class="checkInter"><a href="http://2207456.com" target="_blank">立即进入</a></div>
-                </li>
-                <li>
-                    <div class="checktype" style="background-image: url(./images/pc_line.png);">线路3</div>
-                    <div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-                    <div class="checkInter"><a href="http://2207789.com" target="_blank">立即进入</a></div>
-                </li>
-                <li>
-                    <div class="checktype" style="background-image: url(./images/pc_line.png);">线路4</div>
-                    <div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-                    <div class="checkInter"><a href="http://2207567.com" target="_blank">立即进入</a></div>
-                </li>
-                <li>
-                    <div class="checktype" style="background-image: url(./images/pc_line.png);">线路5</div>
-                    <div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-                    <div class="checkInter"><a href="http://2207111.com" target="_blank">立即进入</a></div>
-                </li>
-                <li>
-                    <div class="checktype" style="background-image: url(./images/pc_line.png);">线路6</div>
-                    <div class="checkTime"><i>&#xe61b;</i> 检测: <span></span>ms</div>
-                    <div class="checkInter"><a href="http://2207865.com" target="_blank">立即进入</a></div>
-                </li>
-            </ul>
-        </ul>
     </div>
-</div>
-<script type='text/javascript' src='js/jquery.js' charset='utf-8'></script>
-<script>
-    var s = window.screen.width / 1920;
-    if(s>1) {
-        document.getElementsByClassName('navbar')[0].style.zoom=s;
-        document.getElementsByClassName('content')[0].style.zoom=s;
-    }
-    function IsPC() {
-        var userAgentInfo = navigator.userAgent;
-        var Agents = ["Android", "iPhone",
-            "SymbianOS", "Windows Phone",
-            "iPad", "iPod"];
-        var flag = true;
-        for (var v = 0; v < Agents.length; v++) {
-            if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                flag = false;
-                break;
-            }
-        }
-        return flag;
-    }
-    if(IsPC()){
 
-    }else{
-        var domain = window.location.host;
-        window.location.href="./m"
-    }
-    $(function () {
+<script type="text/javascript">
+var screenW=document.documentElement.clientWidth-30;
+var screenH=document.documentElement.clientHeight-30;
+for(var i=0;i<100;i++)
+{
+	var span=document.createElement("span");//创建一个span
+	document.body.appendChild(span);
 
-        $('.aside ul li').click(function () {
-            $('.aside ul li').removeClass('on');
-            $(this).addClass('on');
-            $(".main>ul").hide();
-            $(".main>ul").eq($(this).index()).show();
-        })
+	var x=parseInt(Math.random()*screenW);
+	var y=parseInt(Math.random()*screenH);
+	span.style.left=x+"px";
+	span.style.top=y+"px";
+    var num = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ? 1.1 : 2;
+	var scale=Math.random()*num
+	span.style.transform="scale("+scale+","+scale+")";
 
-    })
-    tim=1
-    setInterval("tim++",100)
-    b=1
-    var autourl=new Array()
-    autourl[1] = 'http://2207321.com';
-    autourl[2] = 'http://2207456.com';
-    autourl[3] = 'http://2207789.com';
-    autourl[4] = 'http://2207567.com';
-    autourl[5] = 'http://2207111.com';
-    autourl[6] = 'http://2207865.com';
-    function auto(url){
+	//动画延迟闪烁
+	span.style.animationDelay=scale+"s";
 
-        if(tim>200){
-            $('.check>ul li').eq(b-1).find('span').text('链接超时');}
-        else{
-            $('.check>ul li').eq(b-1).find('span').text(tim*10);
-        }
-        b++
-    }
-    function run(){for(var i=1;i<autourl.length;i++)document.write("<img src="+autourl[i]+"/"+Math.random()+" width=1 height=1 onerror=auto('"+autourl[i]+"')>")}
-    run()
+}
+if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            document.getElementById('middleBox').style.top = '25%'
+            document.getElementById('btn').style.width = '283px'
+            document.getElementById('btn').style.height = '116px'
+      }
+function goGw() {
+    window.location.href = './nav/index.html'
+}
 </script>
+
 </body>
 </html>
