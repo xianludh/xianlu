@@ -42,14 +42,24 @@ body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
   justify-content: space-around;
   z-index: 1000;
 }
-.content .banner .xz a {
+.content .banner .xz div {
   display: block;
-  animation: heart_beat .8s infinite linear;
-}
-.content .banner .xz a img {
   width:4rem;
   height: 1.1rem;
+  animation: heart_beat .8s infinite linear;
 }
+.content .banner .xz div:first-child {
+  background:url(../images/ios.png);
+  background-size:100% 100%;
+}
+.content .banner .xz div:nth-child(2) {
+  background:url(../images/android.png);
+  background-size:100% 100%;
+}
+/* .content .banner .xz div img {
+  width:4rem;
+  height: 1.1rem;
+} */
 @keyframes heart_beat {
   0% {
     transform: scale(.95)
