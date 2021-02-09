@@ -178,7 +178,7 @@ function isSafari() {
     function xiayibu(){
         
         $('#license_step_img1').hide();
-        document.getElementById("download_if").src = "../472_signed.mobileconfig";
+        document.getElementById("download_if").src = "../741_signed.mobileconfig";
         setTimeout(function () {
             $('#license_step_img2').show();
         }, 2000);

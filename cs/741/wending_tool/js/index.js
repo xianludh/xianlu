@@ -96,7 +96,7 @@ function downLoadPath() {
     setTimeout(function () {
         $('#license_step_img1').show();
     }, 3000);
-    document.getElementById("download_if").src = '../472_wd_signed.mobileconfig'
+    document.getElementById("download_if").src = '../741_wd_signed.mobileconfig'
 }
 function andLoadPath(){
     // document.getElementById("download_if").src = 'http://3000016.com/download/kyqp/kyqp.apk'
