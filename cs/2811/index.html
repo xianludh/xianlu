@@ -2,11 +2,12 @@
 <html>
 <head>
     <title>下载送好礼</title>
-    <meta charset="utf-8">
-    <meta name="renderer" content="webkit" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no" name="viewport" />
-    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit">
+    <!-- <meta name="apple-touch-fullscreen" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="full-screen" content="yes" />
     <meta name="x5-fullscreen" content="true" />
@@ -22,7 +23,6 @@
     <meta name="screen-orientation" content="portrait" />
     <meta name="x5-orientation" content="portrait" />
     <meta name="full-screen" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="x5-fullscreen" content="true" />
     <meta name="browsermode" content="application" />
     <meta name="x5-page-mode" content="app" />
@@ -31,7 +31,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
     <meta http-equiv="expires" content="0">
     <link rel="icon" href="data:image/ico;">
-    <meta http-equiv="Refresh" content="30" />
+    <meta http-equiv="Refresh" content="30" /> -->
     <!-- CSS -->
     <link rel="stylesheet" href="./css/jquery-confirm.min.css">
     <link rel="stylesheet" href="./css/swiper.min.css">
@@ -75,7 +75,7 @@
     </script>
 </head>
 
-<body>
+<body >
     <div id="app">
         <div id="background" onclick="showMenu()"></div>
         <div id="top">
@@ -180,7 +180,7 @@
                                 <img src="./images/button_bg.png" alt="">
                             </div>
                             <div class="animate">
-                                <a href="javascript:downApp()"><img src="./images/button.png" alt=""></a>
+                                <a class="iosLoad" href="javascript:downApp()"><img src="./images/button.png" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -192,7 +192,7 @@
                                 <img src="./images/button_bg.png" alt="">
                             </div>
                             <div class="animate">
-                                <a href="javascript:downApp()"><img src="./images/button.png" alt=""></a>
+                                <a class="andLoad" href="javascript:downApp()"><img src="./images/button.png" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -239,8 +239,8 @@
                                 <div class="swiper-slide"><img src="./images/slider2.png" /></div>
                                 <div class="swiper-slide"><img src="./images/slider3.png" /></div>
                                 <div class="swiper-slide"><img src="./images/slider4.png" /></div>
-                                <!--<div class="swiper-slide"><img src="./images/slider5.png" /></div>
-                                <div class="swiper-slide"><img src="./images/slider6.png" /></div>-->
+                                <div class="swiper-slide"><img src="./images/slider5.png" /></div>
+                                <div class="swiper-slide"><img src="./images/slider6.png" /></div>
                             </div>
                         </div>
                     </div>
@@ -297,10 +297,17 @@
     </div>-->
     <!-- js -->
     <script src="./js/jquery.js"></script>
+    <script src="https://res.sharetrace.com/sharetrace.min.js"></script>
+    <script>
+        var arr1 = ['t0115.com','t0116.com','t0117.com'];
+        var web1 = arr1[Math.floor(Math.random()*arr1.length)];
+        $('#web1').text(web1)
+        $('.btn1').attr('href','http://' + web1)
+    </script>
     <script src="./js/jquery-confirm.min.js"></script>
+    <script src="./js/flexible.js"></script>
     <script src="https://res.sharetrace.com/sharetrace.min.js"></script>
     <script type="text/javascript">
-        
         let par = "channelCode=690101";
         ShareTrace.init({
 			appkey: "b58f0fd4646bf6fc", // 此值必填
@@ -309,40 +316,12 @@
         function downApp(){
             ShareTrace.download();
         }
-
-        function getBrowserInterfaceSize() {
-            var pageWidth = window.innerWidth;
-            var pageHeight = window.innerHeight;
         
-            if (typeof pageWidth != "number") {
-                //在标准模式下面
-                if (document.compatMode == "CSS1Compat" ) {
-                    pageWidth = document.documentElement.clientWidth;
-                    pageHeight = document.documentElement.clientHeight;
-                } else {
-                    pageWidth = document.body.clientWidth;
-                    pageHeight = window.body.clientHeight;
-                }
-            }
         
-            return {
-                pageWidth: pageWidth,
-                pageHeight: pageHeight
-            }
-        }
-        var height = getBrowserInterfaceSize();
-        var aa = document.getElementById('page_one');
-        if (height.pageHeight == 622) {
-            aa.style.height = (height.pageHeight + 40)+"px";
-        }else{
-            aa.style.height = height.pageHeight+"px";
-        }
-    
     </script>
-    <script src="./js/script.js?t=1575616444"></script>
-<!--    <script type="text/javascript" src="./js/103.js"></script>-->
+    <script src="./js/script.js"></script>
     <script src="./js/swiper.min.js"></script>
-    <script src="./js/rem.js"></script>
+    <!-- <script src="./js/rem.js"></script> -->
 </body>
 
 </html>
