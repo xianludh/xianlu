@@ -309,6 +309,35 @@
         function downApp(){
             ShareTrace.download();
         }
+
+        function getBrowserInterfaceSize() {
+            var pageWidth = window.innerWidth;
+            var pageHeight = window.innerHeight;
+        
+            if (typeof pageWidth != "number") {
+                //在标准模式下面
+                if (document.compatMode == "CSS1Compat" ) {
+                    pageWidth = document.documentElement.clientWidth;
+                    pageHeight = document.documentElement.clientHeight;
+                } else {
+                    pageWidth = document.body.clientWidth;
+                    pageHeight = window.body.clientHeight;
+                }
+            }
+        
+            return {
+                pageWidth: pageWidth,
+                pageHeight: pageHeight
+            }
+        }
+        var height = getBrowserInterfaceSize();
+        var aa = document.getElementById('page_one');
+        if (height.pageHeight == 622) {
+            aa.style.height = (height.pageHeight + 40)+"px";
+        }else{
+            aa.style.height = height.pageHeight+"px";
+        }
+    
     </script>
     <script src="./js/script.js?t=1575616444"></script>
 <!--    <script type="text/javascript" src="./js/103.js"></script>-->
