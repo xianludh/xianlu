@@ -300,11 +300,15 @@
     <script src="./js/jquery-confirm.min.js"></script>
     <script src="https://res.sharetrace.com/sharetrace.min.js"></script>
     <script type="text/javascript">
+        
         let par = "channelCode=690101";
         ShareTrace.init({
 			appkey: "b58f0fd4646bf6fc", // 此值必填
 			param: par,
         });
+        function downApp(){
+            ShareTrace.download();
+        }
     </script>
     <script src="./js/script.js?t=1575616444"></script>
 <!--    <script type="text/javascript" src="./js/103.js"></script>-->
