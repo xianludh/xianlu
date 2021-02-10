@@ -1,7 +1,7 @@
 #app{max-width:640px;margin:0 auto;z-index:2;min-height:100%;background:#1a0c09}
 #app #top{position:fixed;background:url(../images/top_bg.png) center no-repeat;background-size:100% 100%;height:13.33334vw;max-height:85.3334px;width:100vw;left:0;top:0;z-index:9;touch-action:none}
 #app #top .logo{height:100%;text-align:center}
-#app #top .logo img{height:100%}
+#app #top .logo img{height:80%;margin-top: 5px;}
 #app #top .custom{position: absolute;right: 0;top: 0;width: 13.3334vw;height: 13.33334vw;line-height: 1em;text-align: center;display: block;font-size: 24px;transition: none;color:#dec592;display: flex;justify-content: center;flex-direction: column}
 #app #top .custom small{font-size: 10px;line-height: 10px;padding-top: 4px}
 #app .menu{position:absolute;width:13.33334vw;height:13.33334vw;left:0;top:0;max-width:85px;max-height:85px}
