@@ -1,0 +1,265 @@
+@charset "utf-8";html{background:#fff;color:#000}
+article,aside,blockquote,body,button,code,dd,details,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}
+body,button,input,select,textarea{font:12px \5b8b\4f53,arial,sans-serif}
+body,html{width:100%;font-family:"微软雅黑",arial,sans-serif;background-color:#202020;position:relative;overflow-x:hidden;overflow-y:auto}
+html{-o-overflow-style:-o-autohiding-scrollbar;-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;-moz-overflow-scrolling:touch;-o-overflow-scrolling:touch;overflow-scrolling:touch}
+img{border:0;display:inline-block;max-width:100%;vertical-align:middle}
+input,select,textarea{font-size:100%;font-family:"微软雅黑";line-height:20px;display:inline-block;outline:0}
+input:focus,select:focus,textarea:focus{border:1px solid #735a6f}
+button{background:0 0;border:none;cursor:pointer}
+table{border-collapse:collapse;border-spacing:0}
+th{text-align:inherit}
+fieldset,img{border:none}
+iframe{display:block}
+abbr,acronym{border:none;font-variant:normal}
+del{text-decoration:line-through}
+i{font-style:normal}
+address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}
+q:after,q:before{content:''}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+a{color:#000;}
+a:hover{text-decoration:none}
+a,ins{text-decoration:none}
+a:focus{outline:0}
+.clearfix:after,.clearfix:before{content:"";display:table}
+.clearfix:after{clear:both;overflow:hidden}
+.clearfix{zoom:1}
+.clear{clear:both;display:block;font-size:0;height:0;line-height:0;overflow:hidden}
+.hide{display:none}
+.block{display:block}
+.fl,.fr{display:inline}
+.fl{float:left}
+.fr{float:right}
+
+body {
+    background: #fff;
+}
+body ::-webkit-scrollbar {
+    display: none;
+}
+.container {
+    width: 100%;
+}
+.container .header {
+    width: 100%;
+    height: 113px;
+    background: #ffffff;
+}
+.container .header .header-box{
+    width:1200px;
+    height: 100%;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+}
+.container .header .header-box .header-text {
+    margin:0 286px 0 156px;
+}
+.content {
+    width:100%;
+}
+
+.content .banner-box {
+    width:100%;
+}
+.content .banner-box img {
+    width:100%;
+}
+
+ .content .nav {
+    width:1200px;
+    margin:0 auto;
+    height: 100px;
+    margin-top:10px;
+    background: #fff;
+    background:url('../images/nav_bg.png') #fff no-repeat;
+    position: relative;
+} 
+/* .content .nav p {
+    width:50px;
+    height: 50px;
+}
+.content .nav p img {
+
+} */
+ .kf {
+    width:156px;
+    height: 228px;
+    background:url('../images/zx_kf.png');
+    position: absolute;
+    top: 280px;
+    right:20px;
+    z-index: 1000;
+    transition: all .3s ease;
+}
+ .kf a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+ .content .nav ul {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ .content .nav ul li {
+    width: 150px;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:5px;
+}
+ .content .nav ul li:not(:last-child) {
+    border-right: 1px solid #42C9E8;
+}
+ .content .nav ul li a {
+    display: block;
+    text-align: center;
+}
+ .content .nav ul li a span {
+    display: block;
+    margin-top:5px;
+    font-size: 14px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #fff;
+}
+
+.content .line {
+    width:1400px;
+    margin:0 auto;
+}
+.content .line .line-top {
+    text-align: center;
+    margin-left:30px;
+}
+.content .line .line-box {
+    width:1200px;
+    margin:-24px auto 0;
+}
+.content .line .line-box ul {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+.content .line .line-box ul li {
+    width:200px;
+    text-align: center;
+}
+.content .line .line-box ul li .box {
+    width:172px;
+    height: 304px;
+    background: url(../images/line_box.png);
+    text-align: center;
+    position: relative;
+    margin:0 auto;
+}
+.content .line .line-box ul li .box span {
+    display: block;
+    /* margin-top:180px; */
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background: linear-gradient(0deg, #44CEE8 0%, #36A6E5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top:180px;
+    left:0;
+    bottom: 0;
+    right: 0;
+    margin:auto;
+}
+.content .line .line-box ul li .box p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFFFFF;
+    position: absolute;
+    top:270px;
+    left:0;
+    bottom: 0;
+    right: 0;
+    margin:auto;
+}
+.content .line .line-box ul li .enter {
+    display: block;
+    width:194px;
+    height: 60px;
+    line-height: 50px;
+    background: url(../images/enter.png) no-repeat;
+    margin-top:15px;
+    font-size: 20px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-align: center;
+    margin-left:6px;
+}
+.content .line .line-box ul li .enter:hover{
+    background: url(../images/enter_h.png) no-repeat;
+    color: #000;
+}
+
+.content .jc-btn {
+   width:1200px;
+   margin:48px auto 0;
+
+}
+.content .jc-btn p {
+    font-size: 17px;
+    color: #36A6E5;
+    text-align: center;
+}
+.content .jc-btn a {
+    display: block;
+    width:480px;
+    height: 81px;
+    margin:10px auto 0;
+    background: url('../images/check.png');
+}
+.content .Carousel {
+    width: 1200px;
+    margin:20px auto 0;
+}
+.content .Carousel .title {
+    width:100%;
+    text-align: center;
+}
+.content .hot {
+    width:1189px;
+    height: 203px;
+    background:url(../images/hot.png);
+    margin:23px auto 0;
+    display: flex;
+    justify-content: space-between;
+    padding:50px 20px 0 20px;
+    box-sizing: border-box;
+}
+.content .hot a {
+    display: block;
+    text-align: center;
+}
+.content .hot a span {
+    display: block;
+    font-size: 18px;
+    color: #000;
+    margin-top:10px;
+}
+.content .footer {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #40cae7;
+    margin-top:60px;
+}
+
+
