@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>欢迎光临-葡京娱乐场</title>
+    <link rel="stylesheet icon" href="images/favicon.ico" type="image/x-icon">
+   
+    <link href="css/base.css" rel="stylesheet"><script>
+    if (/AppleWebKit.*Mobile/i.test(navigator.userAgent)
+      || /Android/i.test(navigator.userAgent)
+      || /BlackBerry/i.test(navigator.userAgent)
+      || /IEMobile/i.test(navigator.userAgent)
+      || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+        window.location.href = "m/index.html";
+    }
+</script>
+
+    <script src="./js/jquery-2.0.0.min.js"></script>
+    <script src="./js/qrcode.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <a href="https://vue.livelyhelp.chat/chatWindow.aspx?&UIID=59p6as-s2a9ss-s364d5&siteId=5000705&numbet=0415&news&planId=208#" target="_blank" class="kf" id="kf"><img src="./images/kf.png" alt=""></a>
+        <div class="header">
+            <div class="box">
+                <img src="./images/logo.png" alt="">
+                <img src="./images/url.png" alt="">
+                <a href="https://vue.livelyhelp.chat/chatWindow.aspx?&UIID=59p6as-s2a9ss-s364d5&siteId=5000705&numbet=0415&news&planId=208#" target="_blank"><img src="./images/h_kf.png" alt=""></a>
+            </div>
+        </div>
+        <div class="lxkf">网站打不开，跳出非官网，请点击<a href="https://vue.livelyhelp.chat/chatWindow.aspx?&UIID=59p6as-s2a9ss-s364d5&siteId=5000705&numbet=0415&news&planId=208#" target="_blank" style="color: #00A2FF;">联系客服</a></div>
+        <div class="content">
+            <div class="line">
+                <div class="title"><img src="./images/title.png" alt=""></div>
+                <ul class="speedlist">
+                    <li>
+                        <span class="url">www.g1120.com</span>
+                        <span class="ms">1ms</span>
+                        <span class="link"><a href="">进入网站</a></span>
+                    </li>
+                    <li>
+                        <span class="url">www.g1120.com</span>
+                        <span class="ms">1ms</span>
+                        <span class="link"><a href="">进入网站</a></span>
+                    </li>
+                    <li>
+                        <span class="url">www.g1120.com</span>
+                        <span class="ms">1ms</span>
+                        <span class="link"><a href="">进入网站</a></span>
+                    </li>
+                    <li>
+                        <span class="url">www.g1120.com</span>
+                        <span class="ms">1ms</span>
+                        <span class="link"><a href="">进入网站</a></span>
+                    </li>
+                    <li>
+                        <span class="url">www.g1120.com</span>
+                        <span class="ms">1ms</span>
+                        <span class="link"><a href="">进入网站</a></span>
+                    </li>
+                </ul>
+                <div class="check" id="refresh"><img src="./images/reCheck.png" alt=""></div>
+            </div>
+            <div class="code">
+                <div class="code-img"><div class="ma"></div></div>
+            </div>
+            <div class="game"><img src="./images/game.png" alt=""></div>
+        </div>
+        <div class="footer">
+            <img src="./images/footer.png" alt="">
+        </div>
+    </div>
+     <script type="text/javascript">
+      var autourl = new Array()
+         autourl[0] = 'p901.com'
+         autourl[1] = 'p0054.com'
+         autourl[2] = 'p0079.com'
+         autourl[3] = 'p0097.com'
+         autourl[4] = 'p3999.com'
+         autourl[5] = 'p0053.com'
+     
+      
+       document.querySelectorAll('.speedlist li').forEach(function (item, index) {
+         item.children[0].innerText ='wwww.' + autourl[index]
+         item.children[2].children[0].href ='https://'+ autourl[index]
+       })
+      
+     
+       function speed (element) {
+             for (var i of  document.querySelectorAll(element)) {
+                 i.innerText ='检测中'
+             }  
+             setTimeout(function(){
+                 var tim = 1;
+                 for (var i of  document.querySelectorAll(element)) {
+                 i.innerText = 3 + tim + Math.ceil(Math.random() * 10) + 'ms'
+                 tim += 2
+                 }
+             },500)
+       }
+       speed('.ms')
+     
+       document.getElementById('refresh').onclick = function () {
+         speed('.ms')
+         } 
+
+         $().ready(function(){
+           $(window).scroll(function() {
+             window.setTimeout(function(){
+             var bodyTop = 0;
+             if (typeof window.pageYOffset != 'undefined') {
+               bodyTop = window.pageYOffset;
+             } else if (typeof document.compatMode != 'undefined' && document.compatMode != 'BackCompat') {
+               bodyTop = document.documentElement.scrollTop;
+             }
+             else if (typeof document.body != 'undefined') {
+               bodyTop = document.body.scrollTop;
+             }
+             $("#kf").css("top", 260 + bodyTop)
+             },100)
+           })
+         });
+
+         function createDownloadQRCode(arr) {
+        let  el=arr.el1;
+        let  url=arr.url1;
+        let  size=arr.size1;
+        if (Object.prototype.toString.call(el) === '[object HTMLDivElement]') {
+
+        } else if (Object.prototype.toString.call(document.getElementById[el]) === '[object HTMLDivElement]') {
+        el = document.getElementById[el]
+        } else {
+        el = document.querySelector(el)
+        if (Object.prototype.toString.call(el) !== '[object HTMLDivElement]') {
+            console.log(Object.prototype.toString.call(el))
+            console.error('el参数不是DOM对象,也不是可查找的选择器,创建二维码失败!')
+            console.warn('el:', el)
+            return false
+        }
+        }
+
+        // console.log(el.style.height)
+
+        return new QRCode(el, {
+        text: url,
+        width: size,
+        height: size,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+        })
+  }
+  let el1=document.getElementsByClassName("ma")[0];
+  let  json1={
+      el1: el1,
+      url1:'https://p0054.com/m/#/download',
+			// url1: window.location.origin + '/APP/qygj/m/index.html',
+      size1: 130
+  }
+  
+  setTimeout(function(){
+			createDownloadQRCode(json1);
+  })
+     </script>
+</body>
+</html>
