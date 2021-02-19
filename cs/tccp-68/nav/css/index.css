@@ -68,7 +68,7 @@ body ::-webkit-scrollbar {
   height: 1020px;
   background-position-y: -93px;
   width: 1920px;
-    margin: 0 auto;
+  margin: -30px auto 0;
 }
 .de{
   width: 385px;
@@ -116,6 +116,7 @@ body ::-webkit-scrollbar {
 .gameCon >a >span:last-child{
   line-height: 22px;
   margin-top: 5px;
+  text-align: left;
 }
 .gameCon >a >span:last-child span:first-child{
   color: #E2BF81;
@@ -185,6 +186,112 @@ body ::-webkit-scrollbar {
 }
 .conTentBox .reBtn img {
   cursor: pointer;
+}
+.line {
+  width: 1200px;
+  margin:0 auto;
+  position: relative;
+  top:620px;
+}
+.line .title{
+  width: 480px;
+  margin:37px auto 0;
+}
+.line .title img {
+  vertical-align: middle;
+}
+.line .title span {
+  font-size: 16px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #E18738;
+  margin:0 10px;
+}
+.line .title span a {
+  display: inline;
+}
+.line .address-list {
+  margin-top:27px;
+}
+.line .address-list li{
+float: left;
+width: 200px;
+height: 100px;
+background-color: #510065;
+position: relative;
+transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  text-align: center;
+  color: #fff;
+}
+.line .address-list li:nth-child(2){
+background-color: #410052;
+}
+
+.line .address-list li:nth-child(4){
+background-color: #410052;
+}
+
+.line .address-list li:nth-child(6){
+background-color: #410052;
+}
+
+.line .address-list li:nth-child(7){
+background-color: #410052;
+}
+
+.line .address-list li:nth-child(9){
+background-color: #410052;
+}
+.line .address-list li:nth-child(11){
+background-color: #410052;
+}
+
+.line .address-list li .times{
+  display: block;
+  font-size: 12px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  margin-top:5px;
+}
+.line .address-list li .address{
+  font-size: 16px;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+text-align: center;
+margin-top: 36px;
+transition: all .4s ease-in-out;
+-webkit-transition: all .4s ease-in-out;
+}
+.line .address-list li .btn{
+  width: 100%;
+  height: 100%;
+display: block;
+  opacity: 0;
+  position: absolute;
+  top:0;
+  cursor: pointer;
+}
+.line .address-list li:hover{
+background-size: 100% 100%;
+}
+.line .address-list li:hover .address{
+color: #E18738;
+}
+.line .address-list li:hover .btn{
+opacity: 1;
+}
+ .jc-btn {
+  width:100%;
+  height: 46px;
+  margin-top:25px;
+}
+ .jc-btn a {
+  display: block;
+  width:297px;
+  height: 65px;
+  margin:0 auto;
+  background: url('../image/reCheck.png');
 }
 .liveSlide{
   width: 1125px;
