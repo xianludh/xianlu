@@ -64,8 +64,8 @@ body ::-webkit-scrollbar {
     position: relative;
 }
 .conTentBox{
-  background: url('../image/allbg.png') no-repeat;
-  height: 1020px;
+  background: url('../image/banner.png') no-repeat;
+  height: 1159px;
   background-position-y: -93px;
   width: 1920px;
   margin: -30px auto 0;
@@ -73,12 +73,12 @@ body ::-webkit-scrollbar {
 .de{
   width: 385px;
   background: rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 3px 7px 0px rgb(201 173 126 / 17%);
+  /* box-shadow: 0px 3px 7px 0px rgb(201 173 126 / 17%); */
 }
 .hotGame {
   position: absolute;
-  right: 0;
-  top: 140px;
+  right: -30px;
+  top: 230px;
 }
 .hotGame p{
   width: 385px;
@@ -89,13 +89,22 @@ body ::-webkit-scrollbar {
   text-align: center;
   font-size: 16px;
 }
+.hotGame P.txt {
+  background: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #FFFBF3;
+  padding:10px 0;
+}
 .gameCon{
   width: 365px;
-  border-bottom: 1px dashed #fff;
+  height: 70px;
+  margin:0 auto;
+  border-bottom: 1px dashed #504948;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 20px;
-  margin: 0 auto;
+  margin-top:20px;
+  box-sizing: border-box;
 }
 .gameCon >a{
   display: block;
@@ -295,7 +304,7 @@ opacity: 1;
 }
 .liveSlide{
   width: 1125px;
-  margin: 0 auto;
+  margin: -140px auto 0;
 }
 .container .header {
     width: 100%;
@@ -546,7 +555,7 @@ li a {
   background: url('../image/kf.png');
   position: absolute;
   top:260px;
-  right:20px;
+  right:132px;
   z-index: 1000;
   transition: all .3s ease;
 }
