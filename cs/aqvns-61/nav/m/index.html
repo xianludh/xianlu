@@ -175,7 +175,7 @@
         </div>
         
     </div>
-    <footer class="footer" id="footer">
+    <footer class="footer"  onclick="downApp()">
         <a id="download"><img src="./images/footer.gif" alt=""></a>
     </footer>
     <!-- <footer class="footer">
@@ -252,19 +252,9 @@
         }
         var gonggao = document.getElementsByClassName("van-notice-bar__content")[0];
         
-        document.getElementById('footer').onclick= function(){
-                // var u = navigator.userAgent;
-                // var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-                // var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
-                // if(isiOS){
-                //     // window.open("http://s01555.com/m/#/home?down=1",'_blank');
-                //     window.location.href='http://2264a1.com/m/#/home?down=1'
-                // }else if(isAndroid){
-                //     // window.open("http://s01555.com/#/?register=1",'_blank');
-                //     window.location.href='http://2264a1.com/#/?register=1'
-                // }
-                downApp();
-        }
+        // document.getElementById('footer').onclick= function(){
+        //         downApp();
+        // }
         document.getElementById('downApp').onclick= function(){
             downApp();
         }
