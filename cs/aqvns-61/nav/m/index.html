@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width ,initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+    <!-- <meta name="viewport" content="width=device-width ,initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no"> -->
     <title>澳门威尼斯人</title>
     <link rel="stylesheet icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
@@ -175,9 +175,9 @@
         </div>
         
     </div>
-    <footer class="footer" id="footer">
+    <button class="footer" id="footer" onclick="down()">
         <a id="download"><img src="./images/footer.gif" alt=""></a>
-    </footer>
+    </button>
     <!-- <footer class="footer">
         <ul class="ul3">
             <li><a href="https://vue.livelyhelp.chat/chatWindow.aspx?&j69=325963&siteId=60000502&planId=e297305b-5ad5-4718-8865-6933f8a21993"
@@ -251,22 +251,9 @@
             speed('.ms')
         }
         var gonggao = document.getElementsByClassName("van-notice-bar__content")[0];
-        
-        document.getElementById('footer').onclick= function(){
-                // var u = navigator.userAgent;
-                // var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-                // var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
-                // if(isiOS){
-                //     // window.open("http://s01555.com/m/#/home?down=1",'_blank');
-                //     window.location.href='http://2264a1.com/m/#/home?down=1'
-                // }else if(isAndroid){
-                //     // window.open("http://s01555.com/#/?register=1",'_blank');
-                //     window.location.href='http://2264a1.com/#/?register=1'
-                // }
-                downApp();
-        }
+      
         document.getElementById('downApp').onclick= function(){
-            downApp();
+            down();
         }
     </script>
      <script src="https://res.sharetrace.com/sharetrace.min.js"></script>
@@ -285,7 +272,7 @@
              param: codeMum,
          });
      
-         function downApp (type) {
+         function down (type) {
            ShareTrace.download();
          }
      </script>
