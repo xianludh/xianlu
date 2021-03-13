@@ -97,20 +97,21 @@
 
 
 <script type="text/javascript">
-//   if(!document.querySelector('.statistics')) {
-//       let head = document.head || document.getElementsByTagName('head')[0];
-//       let script = document.createElement('script');
-//       let div = document.createElement('div');
-//       div.classList = 'statistics'
-//       div.style.position = 'fixed'
-//       div.style.left = '-9999px'
-//       div.style.top = '-9999px'
-//       script.setAttribute("src", "https://s9.cnzz.com/z_stat.php?id=1279736643&web_id=1279736643");
-//       div.appendChild(script);
-//       head.appendChild(div);
-//     }
+  if(!document.querySelector('.statistics')) {
+      let head = document.head || document.getElementsByTagName('head')[0];
+      let script = document.createElement('script');
+      let div = document.createElement('div');
+      div.classList = 'statistics'
+      div.style.position = 'fixed'
+      div.style.left = '-9999px'
+      div.style.top = '-9999px'
+      script.setAttribute("src", "https://js.users.51.la/21081115.js");
+      div.appendChild(script);
+      head.appendChild(div);
+    }
   function go () {
-    window.location.href = 'http://2264r2.com?register=1'
+    var urllink=['http://226415.com?register=1','http://226416.com?register=1'];
+    window.location.href = urllink[Math.floor((Math.random()*urllink.length))];
   }
 </script>
 
