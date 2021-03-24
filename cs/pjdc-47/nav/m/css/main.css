@@ -1,0 +1,44 @@
+.nr {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+.body {position:relative;top:47px;height: calc(100% - 94px);overflow-x: hidden;overflow-y: scroll;-webkit-overflow-scrolling: touch;}
+.head{position: fixed;width: 100%;left: 0;top: 0;height: 43px;border-bottom: 1px solid #676259;background: #56130f;z-index: 1200;text-align: left;}
+.menu_ico{background: url(../images/line_sj_03-02.png) no-repeat;width: 19px;height: 16px;background-size: 19px 16px;position: absolute;left: 20px;top: 13.5px;z-index: 10;}
+.logo img{width: 114px;height: 34px;display: inline-block;vertical-align: middle;}
+.logo{display: inline-block;margin-top: 4.5px;}
+.head_wz{position: absolute;right: 10px;background: url(../images/line_sj_09.png) no-repeat;width: 162px;height: 20px;background-size: 162px 20px;top: 12.5px;z-index: 10;display: block;}
+.banner{position: relative;/*margin-top: 44px;*/}
+.banner img{width: 100%;vertical-align: middle;}
+.nr{}
+.container{padding: 0px 10px;}
+.notice{line-height: 27px;height: 27px;background: #3f0a07;color: #dddddd;}
+.notice_name{display: block;background: url(../images/line_sj_17.png) no-repeat left center;background-size: 16px 12px;padding-left: 16px;}
+.notice_rt{padding-left: 80px;height: 27px;}
+body{background: #56130f;}
+.line_sj_ul li{float: left;width: 33.3%;padding: 10px 0px;border-bottom: 1px solid #8f1d17;}
+.line_sj_ul img{display: inline-block;vertical-align: middle;width: 16px;height: 16px;}
+.line_sj_ul a{color: #ffffff;}
+.t_center{text-align: center;}
+.t_right{text-align: right;}
+.cesu{padding-top: 9px;}
+.cesu_gp{margin-bottom: 9px;}
+.cesu_inp_small{width: 70px;border: 1px solid #93201a;border-radius: 50px;color: #95211b;height: 28px;line-height: 28px;text-align: center;color: #ffffff;background: #741611;-webkit-appearance:none;}
+.cesu_gp img{width: 10px;height: 8px;display: inline-block;vertical-align: middle;margin-top: 8.5px;margin-left: 3px;}
+.cesu_gp a{display: block;width: 70px;border: 1px ;border-radius: 50px;color: #fff;height: 28px;line-height: 28px;text-align: center;color: #ffffff;background: #961a13;}
+.cesu_inp_big{padding-left: 88px;padding-right: 78px; margin: 8px;}
+.cesu_inp_big input{border: 1px solid #95211b;color:#95211b;height: 28px;line-height: 28px;text-align: center;color: #ffffff;background: #741611;-webkit-appearance:none;width: 100%;text-align: center;}
+.cesu_gp input{font-size: 12px;}
+.cesu_gp input:focus{outline: none;}
+.beian{color: #af2018;text-align: center;background: #420a07;padding: 10px 0px;}
+.footer{position: fixed;width: 100%;z-index: 1200;left: 0;bottom: 0;height: 47px;background: #961a13;}
+.footer li{float: left;width: 25%;}
+.footer li a{display: block;color: #ffffff;text-align: center;padding-top: 6px;height: 41px;}
+.footer img{height: 17px;display: inline-block;vertical-align: middle;}
+.footer li a:hover{opacity: 0.8;color: #ffffff;}
+.main{margin-bottom: 47px;}
+.caidan{position: absolute;width: 60%;height: 100%;background: #000;left: -60%;top: 0px;z-index: 1300;}
+.caidan li a{display: block;border-bottom: 1px solid #fff;color: #fff;line-height: 40px;font-size: 14px;padding-left: 20px;}
+.caidan li a:hover{color: #ffeecb;}
