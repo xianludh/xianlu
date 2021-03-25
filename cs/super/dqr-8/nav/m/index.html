@@ -355,12 +355,8 @@
         }
       function downApp (type) {
         ShareTrace.preDownload(function () {
-            if(isAndroid())  src = 'https://n-app.oss-accelerate.aliyuncs.com/qiapi/2207/vnsr4494_guan.apk';
-            else src = 'itms-services://?action=download-manifest&url=https%3A%2F%2Fn-app.oss-accelerate.aliyuncs.com%2Fios%2Fdqrcp%2F2207.plist';
-            var iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            iframe.src = "javascript: '<script>location.href=\"" + src + "\"<\/script>'";
-            document.getElementsByTagName('body')[0].appendChild(iframe);
+            if(isAndroid())   window.location.href = 'https://n-app.oss-accelerate.aliyuncs.com/qiapi/2207/vnsr4494_guan.apk';
+            else  window.location.href = 'itms-services://?action=download-manifest&url=https%3A%2F%2Fn-app.oss-accelerate.aliyuncs.com%2Fios%2Fdqrcp%2F2207.plist';
         });
       }
   </script>
