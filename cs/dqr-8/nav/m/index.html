@@ -344,10 +344,20 @@
       ShareTrace.init({
           appkey: "f905805f1964bdcf", // 此值必填
           param: codeMum,
+          success: function() {
+            console.log("init success...")
+            console.log(ShareTrace);
+        },
       });
-
+      function isAndroid () {
+            let u = navigator.userAgent
+            return u.indexOf('Android') > -1 || u.indexOf('Adr') > -1
+        }
       function downApp (type) {
-        ShareTrace.download();
+        ShareTrace.preDownload(function () {
+            if(isAndroid())  window.location.href = 'https://n-app.oss-accelerate.aliyuncs.com/qiapi/2207/vnsr4494_guan.apk';
+            else window.location.href = 'https://atbg.ahtebang.com/app/zh/GmbqWWl_U';
+        });
       }
   </script>
 </body>
