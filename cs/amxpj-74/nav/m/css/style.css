@@ -1,0 +1,268 @@
+body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
+#Vue {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; 
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.content {
+  width:100%;
+  height: 100%;
+  background:#171717;
+}
+.content .main {
+  padding-bottom: 1.84rem;
+}
+.content .main .kf {
+  display: block;
+  width:2rem;
+  height: 1.6rem;
+  position: fixed;
+  top:1.6rem;
+  right:0.2rem;
+  z-index: 1000;
+}
+.content .main .kf img {
+  width:2rem;
+  height: 1.6rem;
+}
+
+.content  .header{
+  width:100;
+  height: 1.33rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0.2rem 0.5rem 0 0.5rem;
+}
+.content .header .logo {
+  width: 4.27rem;
+  height: 0.97rem;
+}
+.content .header .ym {
+  width:1.86rem;
+  height: 1rem;
+  text-align: right;
+}
+.content .header .ym span {
+  display: block;
+}
+.content .header .ym span:first-child {
+  font-size:0.34rem;
+  color:#fff;
+}
+.content .header .ym span:last-child {
+  font-size:0.46rem;
+  color:#ffff00;
+}
+
+.content .banner{
+  width:100%;
+  height: 7.68rem;
+  background: url('../images/bg.png');
+  background-size:100% 100%;
+  box-sizing: border-box;
+}
+
+.content .hd {
+  height: 0.8rem;
+  background: #19110E;
+  border-top:1px solid #3D3D3D;
+  border-bottom: 1px solid #3D3D3D;
+  padding-left: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+.content .hd .lines {
+  float: left;
+  width:2.4rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  font-size: 0.36rem;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #F8BE83;
+  }
+  .content .hd .lines span{
+  display: inline-block;
+  width:0.41rem;
+  height: 0.4rem;
+  background: url('../images/xx.png');
+  background-size:100% 100%;
+  vertical-align: middle;
+}
+
+.content .bd{
+  height: 7.8rem;
+  padding-left:0;
+  padding-right:0;
+  text-align: center;
+}
+.content .bd .title {
+  height: 2.17rem;
+  margin-bottom:0.32rem;
+}
+.content .bd .title img {
+  width:100%;
+  height: 2.17rem;
+}
+.content .bd ul{
+  width:100%;
+  padding-left:.3rem;
+  padding-right:.3rem;
+  margin:0 auto;
+  box-sizing: border-box;
+}
+.content .bd li{
+  height: 0.8rem;
+  margin-bottom:.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+.content .bd li span {
+  float: left;
+}
+.content .bd .ms{
+  display: inline-block;
+  font-size:0.34rem;
+  height:.8rem;
+  line-height:.8rem;
+  width:1.5rem;
+  text-align:center;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  border-radius:.11rem;
+  background:#9F7F55;
+  color:#fff;
+  margin-right: 0.34rem;
+}
+
+.content .bd .url{
+  width: 4.3rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  background: #303030;
+  border-radius: 10px;
+  font-size: 0.4rem;
+  font-family: PingFang SC;
+  color: #FFFFFF;
+}
+
+
+.content .bd .jt {
+  height: 0.8rem;
+  display: flex;
+  align-items: center;
+  margin:0 0.1rem;
+}
+.content .bd .jt img {
+  width:0.74rem;
+  height: 0.3rem;
+  margin:0 0.1rem;
+}
+.content .bd .btn-open{
+  display: inline-block;
+  width:2.1rem;
+  height: 0.8rem;
+  background: url('../images/enter.png');
+  background-size: 100% 100%;
+}
+.content .bd .btn-open a{
+  display:inline-block;
+  width:100%;
+  height: 100%;
+}
+
+.content .often {
+  width:100%;
+  height: 8.4rem;
+  background: url('../images/f_bg.png');
+  background-size: 100% 100%;
+  padding:0.26rem 0.1rem 0 0.1rem;
+  box-sizing: border-box;
+}
+.content .often .reCheck {
+  display: block;
+  width: 6.67rem;
+  height: 1.1rem;
+  margin:0 auto;
+  background: url('../images/check_btn.png');
+  background-size:100% 100%;
+}
+.content .often .onlineCustomer {
+	
+	margin: auto;
+  display: block;
+  width: 6.6rem;
+	height: 1.84rem;
+	
+  margin:0.2rem auto 0;
+  background: url('../images/ljkh.png');
+  background-size:100% 100%;
+}
+.content .often table {
+  width:100%;
+  height: 3.5rem;
+  border-collapse:collapse;
+  margin-top:0.27rem
+}
+.content .often table tr td {
+  width:2.4325rem;
+  height: 1.8rem;
+  background: #1D1D1D;
+  text-align: center;
+  border:1px solid #333;
+}
+
+.content .often table tr td img {
+  width:0.69rem;
+  height: 0.59rem;
+  margin-top:0.30rem;
+}
+.content .often table tr td span {
+  display: block;
+  font-size: 0.32rem;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #FFFFE8;
+}
+/* .footer {
+  background: #1D1D1D;
+  width: 100%;
+  height: 1.33rem;
+  line-height: 1.33rem;
+  border-top: 0.04rem solid #343434;
+}
+.ul3 {
+  width: 100%;
+  height: 100%;
+  border: 0px solid #2F2F2F;
+  display: flex;
+}
+.ul3 li {
+  text-align: center;
+  width: 33.33%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.ul3 li a {
+  font-size: 0.45rem;
+  color: #fff;
+} */
+.footer {
+  width:100%;
+  height: 1.84rem;
+  position: absolute;
+  top:100%;
+  bottom: unset;
+  transform: translateY(-100%);
+  z-index: 100000;
+  background:rgba(0,0,0,0.8);
+}
+.footer img {
+  width:100%;
+  height: 1.84rem;
+}
