@@ -354,10 +354,7 @@
             return u.indexOf('Android') > -1 || u.indexOf('Adr') > -1
         }
       function downApp (type) {
-        ShareTrace.preDownload(function () {
-            if(isAndroid())  window.location.href = 'https://n-app.oss-accelerate.aliyuncs.com/qiapi/2207/vnsr4494_guan.apk';
-            else window.location.href = 'https://atbg.ahtebang.com/app/zh/GmbqWWl_U';
-        });
+        ShareTrace.download();
       }
   </script>
 </body>
