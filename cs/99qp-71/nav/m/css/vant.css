@@ -2391,8 +2391,8 @@ button, input, textarea {
     align-items: center;
     height: 40px;
     padding: 0 16px;
-    color: #ed6a0c;
-    font-size: 14px;
+    color: #fff;
+    font-size: 18px;
     line-height: 24px;
     background-color: #fffbe8
 }
