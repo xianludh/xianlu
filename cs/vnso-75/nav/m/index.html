@@ -177,8 +177,8 @@
         </div>
     </div>
   </div>
-  <footer class="footer">
-    <a href="http://t0139.com/#/home?adminDownload=1"><img src="./images/footer.gif" alt=""/></a>
+  <footer class="footer"> 
+    <a href="javascript:void (0)" onclick="downApp()"><img src="./images/footer.gif" alt=""/></a>
 </footer>
   <script type="text/javascript">
 
@@ -273,7 +273,26 @@
             }
         })
 </script>
+<script src="https://res.sharetrace.com/sharetrace.min.js"></script>
+<script type="text/javascript">
+  function GetQueryString (name) {
+      var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
+      var r = window.location.search.substr(1).match(reg)
+      if (r != null) return unescape(r[2])
+      return null
+    }
+    let str=window.location.href;
+    let code = GetQueryString('channelCode');
+    let codeMum = code ? "channelCode="+code : "channelCode=851302";
+    ShareTrace.init({
+        appkey: "86d30dc0d6c57a7f", // 此值必填
+        param: codeMum,
+    });
 
+    function downApp (type) {
+      ShareTrace.download();
+    }
+</script>
 
 </body>
 
