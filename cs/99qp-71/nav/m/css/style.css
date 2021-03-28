@@ -79,7 +79,7 @@ body{ background:#131313;font-family:Arial,Helvetica,sans-serif;}
 
 #wind{position: fixed!important;}
 .gg {
-  color:white;
+  /* color:white; */
   display: flex;
   height: 0.85rem;
   line-height: 0.85rem;

@@ -2394,7 +2394,7 @@ button, input, textarea {
     color: #fff;
     font-size: 18px;
     line-height: 24px;
-    background-color: #fffbe8
+    /* background-color: #fffbe8 */
 }
 
 .van-notice-bar__left-icon, .van-notice-bar__right-icon {

@@ -180,8 +180,8 @@
         </div>
         
     </div>
-    <footer class="footer">
-        <a id="download"><img src="./images/footer.gif" alt=""></a>
+    <footer class="footer" >
+        <a id="download"><img src="./images/footer.gif" alt="" onclick="downApp()"></a>
     </footer>
     <!-- <footer class="footer">
         <ul class="ul3">
@@ -257,19 +257,19 @@
         }
         var gonggao = document.getElementsByClassName("van-notice-bar__content")[0];
         
-        document.getElementById('download').onclick= function(){
-                downApp()
-                // var u = navigator.userAgent;
-                // var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-                // var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
-                // if(isiOS){
-                //     // window.open("http://s090.com/m/#/home?down=1",'_blank');
-                //     window.location.href='http://s090.com/m/#/home?down=1'
-                // }else if(isAndroid){
-                //     // window.open("http://s090.com/#/?register=1",'_blank');
-                //     window.location.href='http://s090.com/#/?register=1'
-                // }
-        }
+        // document.getElementById('download').onclick= function(){
+        //         downApp()
+        //         // var u = navigator.userAgent;
+        //         // var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+        //         // var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+        //         // if(isiOS){
+        //         //     // window.open("http://s090.com/m/#/home?down=1",'_blank');
+        //         //     window.location.href='http://s090.com/m/#/home?down=1'
+        //         // }else if(isAndroid){
+        //         //     // window.open("http://s090.com/#/?register=1",'_blank');
+        //         //     window.location.href='http://s090.com/#/?register=1'
+        //         // }
+        // }
         
     </script>
      <script src="https://res.sharetrace.com/sharetrace.min.js"></script>
@@ -289,7 +289,12 @@
          });
      
          function downApp (type) {
-           ShareTrace.download();
+            var u = navigator.userAgent;
+            var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+            ShareTrace.preDownload(function () {
+                if(isiOS) window.location.href="itms-services://?action=download-manifest&url=https%3A%2F%2Fqpqpqpqpqp.oss-cn-hongkong.aliyuncs.com%2F99qp_xmy_0_wd.plist"
+                else  window.location.href="https://n-app.oss-accelerate.aliyuncs.com/qiapi/20210319/a99_zero.apk"
+            });
          }
         
 
