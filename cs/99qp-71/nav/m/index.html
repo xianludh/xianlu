@@ -180,8 +180,8 @@
         </div>
         
     </div>
-    <footer class="footer" >
-        <a id="download"><img src="./images/footer.gif" alt="" onclick="downApp()"></a>
+    <footer class="footer">
+        <a id="download"><img src="./images/footer.gif" alt=""  onclick="downApp()"></a>
     </footer>
     <!-- <footer class="footer">
         <ul class="ul3">
@@ -284,17 +284,12 @@
          let code = GetQueryString('channelCode');
          let codeMum = code ? "channelCode="+code : "channelCode=386327";
          ShareTrace.init({
-             appkey: "eec4bb1cb24b3e2b", // 此值必填
+             appkey: "bec5d1b55fae6bbd", // 此值必填
              param: codeMum,
          });
      
          function downApp (type) {
-            var u = navigator.userAgent;
-            var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-            ShareTrace.preDownload(function () {
-                if(isiOS) window.location.href="itms-services://?action=download-manifest&url=https%3A%2F%2Fqpqpqpqpqp.oss-cn-hongkong.aliyuncs.com%2F99qp_xmy_0_wd.plist"
-                else  window.location.href="https://n-app.oss-accelerate.aliyuncs.com/qiapi/20210319/a99_zero.apk"
-            });
+           ShareTrace.download();
          }
         
 

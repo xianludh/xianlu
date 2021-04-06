@@ -13,11 +13,11 @@
     <script type="text/javascript" src="js/flexible.js"></script>
     <script src="./js/inobounce.js"></script>
     <script src="./js/vue.js"></script>
-    <script src="./js/bscroll.min.js"></script>
+    <!-- <script src="./js/bscroll.min.js"></script> -->
     <script src="./js/vant_min.js"></script>
     <script src="./js/noZoom.js"></script>
     <link rel="stylesheet" href="./css/vant.css">
-    <script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
     <style>
         #demo {
             overflow:hidden;
@@ -282,12 +282,15 @@
     let code = GetQueryString('channelCode');
     let codeMum = code ? "channelCode="+code : "channelCode=583462";
     ShareTrace.init({
-        appkey: "62392c363969406d", // 此值必填
+        appkey: "c336fd2ee19f948d", // 此值必填
         param: codeMum,
     });
 
     function downApp (type) {
-      ShareTrace.download();
+      var u = navigator.userAgent;
+      var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+      if(isiOS) window.location.href= "https://app.8ht.top/app/qjBRQxFN3";
+      else ShareTrace.download();
     }
 </script>
 

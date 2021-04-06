@@ -343,10 +343,7 @@
       });
   
       function downApp (type) {
-        var u = navigator.userAgent;
-       var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-       if(isiOS) window.location.href='itms-services:///?action=download-manifest&amp;url=https://app-m2.oss-accelerate.aliyuncs.com/m2.plist'
-       else  ShareTrace.download();
+       ShareTrace.download();
       }
   </script>
 </body>
