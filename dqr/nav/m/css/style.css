@@ -24,7 +24,7 @@ body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
 }
 .content {
   width:100%;
-  background:#EEE8DE;
+  background:#131313;
   padding-bottom: 1.73rem;
 }
 .content .banner{
@@ -152,7 +152,7 @@ body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
   display: inline-block;
   width:1.73rem;
   height: 0.95rem;
-  background: url('../images/enter.png');
+  background: url('../images/btn_bg.png');
   background-size: 100% 100%;
 }
 .content .bd .btn-open a{
@@ -184,13 +184,13 @@ body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom:1px dashed #333;
+  border-bottom:1px solid #C89958;;
 }
 .content .hot .title span {
   font-size: 0.34rem;
   font-family: Microsoft YaHei;
   font-weight: bold;
-  color: #2C2111;
+  color: #fff;
 }
 .content .hot .title span img {
   width:0.62rem;
@@ -203,7 +203,7 @@ body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
   font-family: Microsoft YaHei;
   font-weight: 400;
   font-style: italic;
-  color: #2C2111;
+  color: #FEEFC3;
 }
 .content .hot ul {
   padding:0.36rem 0.53rem 0 0.53rem;
@@ -215,7 +215,7 @@ body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
   width:1.9rem;
   height: 1.7rem;
   border-radius: 10px;
-  background:#fff;
+  background:#282828;
   margin-bottom: 0.26rem;
   text-align: center;
 }
@@ -229,7 +229,7 @@ body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
   font-size: 0.26rem;
   font-family: Microsoft YaHei;
   font-weight: 400;
-  color: #3B1313;
+  color: #fff;
   margin-top:-0.1rem;
 }
 
@@ -239,13 +239,13 @@ body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom:1px dashed #333;
+  border-bottom:1px solid #C89958;
 }
 .content .often .title span {
   font-size: 0.34rem;
   font-family: Microsoft YaHei;
   font-weight: bold;
-  color: #2C2111;
+  color: #fff;
 }
 .content .often .title span img {
   width:0.62rem;
@@ -258,7 +258,7 @@ body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
   font-family: Microsoft YaHei;
   font-weight: 400;
   font-style: italic;
-  color: #2C2111;
+  color: #FEEFC3;
 }
 .content .often ul {
   padding:0.36rem 0.53rem 0 0.53rem;
@@ -269,12 +269,22 @@ body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
 .content .often ul li {
   width:2.2rem;
   height: 1.7rem;
-  background: #fff;
+  /* background: #fff; */
   margin-bottom: 0.05rem;
   text-align: center;
+  border: 1px solid #FDEEBF;
+}
+.content .often ul li:nth-child(5),.content .often ul li:nth-child(6) ,.content .often ul li:nth-child(7) ,.content .often ul li:nth-child(8){
+  border-top: none;
 }
 .content .often ul li:nth-child(1) {
   border-top-left-radius: 10px;
+}
+.content .often ul li:nth-child(2),.content .often ul li:nth-child(6){
+  border-left: none;
+}
+.content .often ul li:nth-child(3),.content .often ul li:nth-child(7){
+  border-left: none;border-right: none;
 }
 .content .often ul li:nth-child(4) {
   border-top-right-radius: 10px;
@@ -295,12 +305,12 @@ body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
   font-size: 0.32rem;
   font-family: Source Han Sans CN;
   font-weight: 400;
-  color: #432B22;
+  color: #fff;
   margin-top:-0.1rem;
 }
 .content .footer {
   height: 1rem;
-  background: #997D4D;
+  /* background: #997D4D; */
   margin-top:0.56rem;
   display: flex;
   align-items: center;
