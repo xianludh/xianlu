@@ -207,6 +207,18 @@
             </div>
             <ul class="address-list clearfix">
                 <script>
+                  var urllink= [
+                      '3331565.com',
+                      '3331568.com',
+                      '3331582.com',
+                      '3331612.com',
+                      '3331621.com',
+                      '3331626.com',
+                      '3331631.com',
+                      '3331672.com',
+                      '3331785.com',
+                      '449417.com'
+                ]
                   var autourl = new Array()
                     autourl[0] = '449417.com'
                     autourl[1] = '449419.com'
@@ -214,25 +226,9 @@
                     autourl[3] = '449421.com'
                     autourl[4] = '449423.com'
                     autourl[5] = '449425.com'
-                    // autourl[6] = '6663980.com'
-                    // autourl[7] = '6665013.com'
-                    // autourl[8] = '6665037.com'
-                    // autourl[9] = '6665062.com'
-                    // autourl[10] = '6665063.com'
-                    // autourl[11] = '6668207.com'
-
-
-                  /*autourl[9] = "blr11222.com/m";
-                  autourl[10] = "blr77111.com/myhot.php";*/
-
-
-                  // function go(url) {
-                  //     var _url = 'http://' + url + '.com';
-                  //     window.open(_url);
-                  // }
-
                   function go2 (i) {
-                    var _url = 'http://' + autourl[i]
+                    if(i==0) var _url = 'http://' + urllink[Math.floor((Math.random()*urllink.length))]
+                    else var _url = 'http://' + autourl[i]
                     window.open(_url)
                   }
 

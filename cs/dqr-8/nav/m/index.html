@@ -293,11 +293,27 @@
     autourl[2] = 'http://449420.com'
     autourl[3] = 'http://449421.com'
     autourl[4] = 'http://449425.com'
-
-
+    var urllink= [
+                '3331565.com',
+                '3331568.com',
+                '3331582.com',
+                '3331612.com',
+                '3331621.com',
+                '3331626.com',
+                '3331631.com',
+                '3331672.com',
+                '3331785.com',
+                '449417.com'
+        ]
     document.querySelectorAll('.speedlist li').forEach(function (item, index) {
-        item.children[4].children[0].href = autourl[index]
-         item.children[2].children[1].innerText ='www.' + autourl[index].split('//')[1]
+        console.log(item);
+        if(index==0) {
+            item.children[4].children[0].href = 'http://' + urllink[Math.floor((Math.random()*urllink.length))]
+            item.children[2].children[1].innerText ='www.' +  urllink[Math.floor((Math.random()*urllink.length))]
+        }else{
+            item.children[4].children[0].href = autourl[index]
+            item.children[2].children[1].innerText ='www.' + autourl[index].split('//')[1]
+        }
     })
 
     function speed (element) {
