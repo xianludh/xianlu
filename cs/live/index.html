@@ -102,9 +102,23 @@
     <div class="footer">
         <img src="./images/750-132.gif" onclick="load()" style="width: 100%;" alt="">
     </div>
+    <script src="https://res.sharetrace.com/sharetrace.min.js"></script>
     <script>
+        function GetQueryString (name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
+            var r = window.location.search.substr(1).match(reg)
+            if (r != null) return unescape(r[2])
+            return null
+        }
+        let str=window.location.href;
+        let code = GetQueryString('channelCode');
+        let codeMum = code ? "channelCode="+code : "channelCode=601391";
+        ShareTrace.init({
+            appkey: "aba048fb8735b6fa", // 此值必填
+            param: codeMum,
+        });
         function load(){
-            window.location.href = 'https://xianludh.github.io/xianlu/cs/tccp-68/nav/index.html'
+            ShareTrace.download();
         }
     </script>
 
