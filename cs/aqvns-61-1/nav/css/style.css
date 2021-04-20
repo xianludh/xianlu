@@ -47,6 +47,7 @@ body ::-webkit-scrollbar {
     max-width: 1920px;
     background: url('../images/c_bg.png') no-repeat;
     background-position-y: -90px;
+    margin: 0 auto;
 }
 .container .header {
     width: 100%;
