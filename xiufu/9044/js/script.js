@@ -29,7 +29,7 @@ b = GetQueryString('channelCode')
 
 if (b == null) {
     url = window.location.href
-    a = url + '?channelCode=913862&code=1'
+    a = url 
     window.location.href = a
 }
 $(document).ready(function() {
