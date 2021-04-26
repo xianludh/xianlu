@@ -27,11 +27,11 @@ function GetQueryString (name) {
 
 b = GetQueryString('channelCode')
 
-if (b == null) {
-    url = window.location.href
-    a = url 
-    window.location.href = a
-}
+// if (b == null) {
+//     url = window.location.href
+//     a = url 
+//     window.location.href = a
+// }
 $(document).ready(function() {
     // $('#fullpage').fullpage({
     //   continuousVertical: true
