@@ -1,0 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Kanit:600);
+html{height:100%;display:-webkit-box;display:-ms-flexbox;display:flex}body{margin:auto}html,body{background:#black;color:#fff;font:normal Kanit, sans-serif;text-align:center}.rainbow-text .char{color:hsl(calc(360deg * var(--char-percent)), 90%, 65%)}.rainbow-text.animated .char{-webkit-animation:rainbow-colors 2s linear infinite;animation:rainbow-colors 2s linear infinite;-webkit-animation-delay:calc(-2s * var(--char-percent));animation-delay:calc(-2s * var(--char-percent))}@-webkit-keyframes rainbow-colors{0%{color:#54cdfc}25%{color:#ffffff}50%{color:#f7a6b6}75%{color:#f65755}100%{color:#f65855}}@keyframes rainbow-colors{0%{color:#54cdfc}25%{color:#ffffff}50%{color:#f7a6b6}75%{color:#f65755}100%{color:#f65855}}body{background-color:black}
+
+
+
