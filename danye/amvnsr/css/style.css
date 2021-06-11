@@ -1,0 +1,138 @@
+body{ background:#000000;font-family:Arial,Helvetica,sans-serif;height: 100%;}
+* {
+  box-sizing: border-box;
+}
+#Vue {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; 
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.main {
+  /* margin-bottom: 1.84rem; */
+  background: url('../images/main.png') no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+}
+
+.main-bg img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.kf {
+  display: block;
+  width: 2.2rem;
+  height: 3.2rem;
+  position: fixed;
+  top:1.4rem;
+  right:0.7rem;
+  z-index: 1000;
+}
+.kf img {
+  width: 2.2rem;
+  height: 3.2rem;
+}
+.header {
+  width:100%;
+  height: 1.16rem;
+  background: transparent;
+  padding:0 0.16rem 0 0.44rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo{
+  width:3.13rem;
+  height: 0.73rem;
+}
+.header .url{
+  width: 3.65rem;
+  height: 1.03rem;
+}
+.content {
+  margin-top: -1.4rem;
+}
+.banner {
+  height: 5.48rem;
+}
+/* .nav {
+  margin-top:-0.9rem;
+}
+.nav img {
+  width:100%;
+  height: 4.86rem;
+} */
+.bonus {
+  position: relative;
+  height: 6.67rem;
+}
+
+.bonus-bg img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 6.67rem;
+}
+
+.bonus .text {
+  position: relative;
+  z-index: 0;
+  font-size: 0.31rem;
+  color: #ffffff;
+  top: 2rem;
+  padding: 0 0.9rem 0 1rem;
+  line-height: 0.5rem;
+}
+
+.bonus .block {
+  margin-bottom: 0.3rem;
+}
+
+.bonus .text .title {
+  color: #FFA200;
+  margin-bottom: 0.1rem;
+}
+
+.bonus .text .active {
+  color: #E60012;
+}
+
+.enter {
+  text-align: center;
+  margin-bottom: 0.6rem;
+  width: 100%;
+  height: 1.33rem;
+  display: block;
+}
+
+.enter img {
+  width: 4.49rem;
+  height: 1.33rem;
+}
+
+.hot {
+  margin-top: 0.16rem;
+  padding: 0 0.22rem;
+}
+
+.hot img {
+  width: 100%;
+}
+
+.footer {
+  color: #FFFFE8;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  letter-spacing: 0.4rem;
+  padding: 0.15rem 0;
+}
+
+.footer .text {
+  margin-right: -0.2rem;
+}
