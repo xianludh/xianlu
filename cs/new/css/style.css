@@ -67,10 +67,9 @@ li {
   /*position: absolute;*/
   /*top: 136.53vw;*/
   width: 100%;
-  margin-bottom: 4.8vw;
+  margin: 4.8vw 0;
   display: flex;
   justify-content: space-around;
-
 }
 
 .btnBox .first {
@@ -110,7 +109,7 @@ li {
 }
 .webs li {
   height: 8vw;
-  line-height: 8vw;
+  line-height: 4vw;
   margin-bottom: 4.13vw;
   text-align: center;
   font-size: 4.2vw;
@@ -145,26 +144,23 @@ li {
   background-image: linear-gradient(to bottom, #FDF6CB,#986237);
   color: #000;
 }
+#slider {
+  position: relative;
+}
 
- #slider {
-  /*position: absolute;*/
-  /*left: 0;*/
-  /*top: 0;*/
+
+.kf{
+  position: fixed;
+  top: 5%;
+  right: 0.3rem;
+  background-image:  url(../images/kf.png);
+  width: 4.3rem;
+  height: 5rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   z-index: 9999;
-  width: 78vw;
-   margin: 0 auto;
 }
-#certify .swiper-slide {
-  /*width: 45vw;*/
-  width: 35vw;
-  text-align: center;
-}
-#slider img {
-  border: 0;
-  max-width: 100%;
-  /*max-width: 70%;*/
-  vertical-align: middle;
-}
+
 .bottom {
   position: fixed;
   bottom: 0;
@@ -193,6 +189,7 @@ li {
   width: 100vw;
   height: 27.6vw;
   margin-right: 4.5vw;
+  margin-bottom: 4vw;
   background-image: url(../images/theme.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -448,7 +445,7 @@ video {
 
 .introduction{
   width: 92vw;
-  height: 90vw;
+  height: 102vw;
   margin: 4vw;
   background-image: url(../images/bg_Introduction.png);
   background-size: 100% 100%;
@@ -456,18 +453,18 @@ video {
   
 }
 .introduction .text{
-  padding-top: 20vw;
+  padding-top: 22vw;
   padding-left: 1rem;
   padding-right: 1rem;
   text-align: left;
   word-break: break-all;
   font-size: 4vw;
   color: #fff;
-  line-height: 2rem;
+  line-height: 1.4rem;
 }
 
 .snnip-logo{
-  margin-top: 1rem ;
+  margin: 1rem 0;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -475,20 +472,6 @@ video {
 .snnip-title {
   width: 65vw;
   height: 15.06vw;
-}
-
-.picture  {
-  margin: 3.6vw auto 4.9vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.picture  .logo1 {
-  width: 96vw;
-  height: 50vw;
-  background-image: url(../images/snnip.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
 
 .task{
@@ -508,4 +491,67 @@ video {
 .task .row2{
   display: flex;
   justify-content: space-around;
+}
+
+.swiper-container.qhswiper {
+  /* width: 100%; margin:auto; padding:0rem 0;
+  height: 100%;position: absolute;
+left: 0%;
+top: 0;
+z-index: 999; */
+
+}
+.swiper-container.qhswiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+ 
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+transition: 300ms;
+transform: scale(0.8);
+}
+
+.swiper-container.qhswiper .swiper-slide-active,.swiper-container.qhswiper .swiper-slide-duplicate-active{
+  transform: scale(1); z-index:999999
+} 
+.swiper-container.qhswiper .swiper-slide {width:170px;}
+.swiper-container.qhswiper .swiper-slide img{ background:none}
+.swiper-container.qhswiper .swiper-slide img{ display:block; width:100%}
+
+.swiper-container.imgswiper {
+  top:5%;
+ width:91%;
+ border-radius: 20px;
+ border: 2px solid #ffd99b
+}
+
+.swiper-container.imgswiper .swiper-slide {
+ text-align: center;
+ font-size: 18px;
+ background: #fff;
+ /* Center slide text vertically */
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: -webkit-flex;
+ display: flex;
+ -webkit-box-pack: center;
+ -ms-flex-pack: center;
+ -webkit-justify-content: center;
+ justify-content: center;
+ -webkit-box-align: center;
+ -ms-flex-align: center;
+ -webkit-align-items: center;
+ align-items: center;
 }
