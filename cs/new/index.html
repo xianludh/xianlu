@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script src="./js/jroll-lite.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style></style>
+  </head>
+  <body>
+    <div id="scroll">
+      <div class="container" id="container">
+        <div class="head-logo">
+          <img class="logo-title" src="./images/title.png" />
+        </div>
+        <div class="header"></div>
+        <div class="main">
+          <div class="section0">
+            <div class="logo1"></div>
+            <div class="logo2"></div>
+          </div>
+          <div class="section1">
+            <div class="btn">
+              <div class="text1">下周工资派发倒计时</div>
+              <div class="text2">00天00:00:00</div>
+            </div> 
+            <div class="btn">
+              <div class="text1">下周工资派发倒计时</div>
+              <div class="text2">00天00:00:00</div>
+            </div> 
+          </div>
+          </div>
+          <div id="install">
+            <img src="./images/anzhuang.png" alt="">
+          </div>
+          <div class="btnBox">
+            <div class="first">
+              <a href="javascript:downApp();" class="href">
+                <img src="images/downloadBtn.png">
+              </a>
+            </div>
+          </div>
+          <ul class="webs">
+            <li><span class="times"></span><span class="web"></span><a href="" target="_blank">点击进入</a></li>
+            <li><span class="times"></span><span class="web"></span><a href="" target="_blank">点击进入</a></li>
+            <li><span class="times"></span><span class="web"></span><a href="" target="_blank">点击进入</a></li>
+          </ul>
+
+          <div id="slider">
+            <div id="certify">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./images/slider1.png"/></div>
+                  <div class="swiper-slide"><img src="./images/slider2.png"/></div>
+                  <div class="swiper-slide"><img src="./images/slider3.png"/></div>
+                  <div class="swiper-slide"><img src="./images/slider4.png"/></div>
+                  <div class="swiper-slide"><img src="./images/slider5.png"/></div>
+                  <div class="swiper-slide"><img src="./images/slider6.png"/></div>
+                  <div class="swiper-slide"><img src="./images/slider7.png"/></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="introduction">
+            <div class="text">
+              全新顶级线上娱乐中心，10年经典品牌。2019年全新精心打造，每日同时在线玩家上万人，随时随地可与全国各地的玩家在澳门皇冠切磋。
+              <span style="color: #FFEA00;">澳门皇冠</span>
+              唯一指定官网：
+              <span style="color: #FFEA00;">551.com 注册下载APP即送38元!</span>
+              拥有最全的：
+              <span style="color: #FFEA00;">棋牌游戏、电子游艺、捕鱼游戏、体育赛事投注、真人视讯、彩票游戏</span>
+              （AG、BBIN等国际知名平台），全面支持支付宝 微信 银行卡等充值；
+              <span style="color: #FFEA00;">真钱1:1存提秒到账！</span>
+              24小时在线客服为您解决各种难题！
+            </div>
+          </div>
+          <div class="task">
+            <div class="row1">
+              <img src="./images/task-item1.png" />
+              <img src="./images/task-item2.png" />
+              <img src="./images/task-item3.png" />
+            </div>
+            <div class="row2">
+              <img src="./images/task-item4.png" />
+              <img src="./images/task-item5.png" />
+              <img src="./images/task-item6.png" />
+            </div>
+          </div>
+          <div class="snnip-logo">
+            <img class="snnip-title" src="./images/snnip-title.png" />
+          </div>
+          <div class="picture">
+            <div class="logo1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      var jroll = new JRoll('#scroll')
+      setTimeout(function () {
+        jroll.refresh()
+      }, 1000)
+      document.documentElement.addEventListener('touchstart', function (event) {
+        if (event.touches.length > 1) {
+          event.preventDefault()
+        }
+      }, false)
+
+      var lastTouchEnd = 0
+      document.documentElement.addEventListener('touchend', function (event) {
+        var now = Date.now()
+        if (now - lastTouchEnd <= 300) {
+          event.preventDefault()
+        }
+        lastTouchEnd = now
+      }, false)
+      document.addEventListener('gesturestart', function (event) {
+        event.preventDefault()
+      })
+      var ua = window.navigator.userAgent.toLowerCase()
+      if (/iphone/.test(ua) || /ipad/.test(ua)) {
+        $('#install').show()
+      } else if (/android/.test(ua)) {
+        $('#install').hide()
+      } else {
+
+      }
+      $('#install').on('click', function () {
+        $('#xinren_list').attr('style', 'display:block;')
+      })
+      $('#closeImg').click(function (e) {
+        $('#xinren_list').attr('style', 'display:none;')
+      })
+
+      setTimeout(function () {
+        $('.times').eq(0).html(2 + Math.ceil(Math.random() * 3) + 'ms')
+      }, 1000)
+      setTimeout(function () {
+        $('.times').eq(1).html(5 + Math.ceil(Math.random() * 2) + 'ms')
+      }, 1500)
+      setTimeout(function () {
+        $('.times').eq(2).html(8 + Math.ceil(Math.random() * 3) + 'ms')
+      }, 2000)
+      /*tim = 1
+      setInterval('tim++', 100)
+      ba = 1
+
+      function auto (url) {
+        if (tim > 200) {
+          document.querySelectorAll('.webs li')[ba-1].children[0].innerText = '链接超时'
+        } else {
+          document.querySelectorAll('.webs li')[ba-1].children[0].innerText = tim *10 + 'ms'
+        }
+        ba++
+      }
+
+      function run () {for (var i = 0; i < autourl.length; i++) document.write('<img src=' + autourl[i] + '/' + Math.random() + ' width=0 height=0 onerror=auto(\'' + autourl[i] + '\')>')}
+
+      run()*/
+
+      var container = document.getElementById('container')
+      document.body.addEventListener('touchmove', function (e) {
+        // console.log($('#container').offset().top)
+        // console.log(-window.screen.height)
+        if ($('#container').offset().top <= -window.screen.height * 0.7) {
+          document.querySelector('#bottom').style.display = 'block'
+        } else {
+          document.querySelector('#bottom').style.display = 'none'
+        }
+      }, { passive: false })
+
+    </script>
+    <!-- <script type="text/javascript" src="//www.shareinstall.com.cn/js/page/jshareinstall.min.js"></script> -->
+    <script src="https://res.sharetrace.com/sharetrace.min.js"></script>
+    <script type="text/javascript">
+      function GetQueryString (name) {
+        var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
+        var r = window.location.search.substr(1).match(reg)
+        if (r != null) return unescape(r[2])
+        return null
+		  }
+
+		  b = GetQueryString('agent') || GetQueryString('channelCode');
+      let str=window.location.href;
+		  let par = b ? b : '790010';
+      ShareTrace.init({
+        appkey: "", // 此值必填
+        param: "channelCode="+ par,
+      });
+      
+      function downApp (type) {
+        ShareTrace.download();
+      }
+    </script>
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script>
+      var autourl = new Array()
+      autourl[0] = 'https://1qp935.com'
+      autourl[1] = 'https://2qp935.com'
+      autourl[2] = 'https://3qp935.com'
+      let code = b ? b : '790010'
+      document.querySelectorAll('.webs li').forEach(function (item, index) {
+        item.children[2].href = autourl[index] + '/m/#/home?channelCode=' + code
+        item.children[1].innerText = autourl[index]
+      })
+    </script>
+  </body>
+</html>
