@@ -41,7 +41,7 @@ li {
   position: relative;
   width: 100vw;
   
-  padding-bottom: 19vw;
+  padding-bottom: 15vw;
 }
 .head-logo{
   margin-top: 1rem ;
@@ -52,7 +52,7 @@ li {
 }
 .logo-title {
   width: 60vw;
-  height: 24.06vw;
+  height: 18vw;
 }
 
 .header {
@@ -445,7 +445,7 @@ video {
 
 .introduction{
   width: 92vw;
-  height: 102vw;
+  height: 21rem;
   margin: 4vw;
   background-image: url(../images/bg_Introduction.png);
   background-size: 100% 100%;
@@ -477,20 +477,26 @@ video {
 .task{
   display: flex;
   flex-direction: column;
+  height: 9rem;
 }
 .task .row1 img{
   width: 30%;
+  height: auto;
+  object-fit: contain;
 }
 .task .row2 img{
   width: 24%;
+  object-fit: contain;
 }
 .task .row1{
   display: flex;
   justify-content: space-around;
+  height: 7rem;
 }
 .task .row2{
   display: flex;
   justify-content: space-around;
+  height: 3rem;
 }
 
 .swiper-container.qhswiper {
