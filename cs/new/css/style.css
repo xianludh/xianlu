@@ -761,8 +761,12 @@ transform: scale(0.8);
   color: #000;
 }
 #slider {
+  padding-bottom: 35px;
+}
+#slider2 {
   position: relative;
   margin-top: -3px;
+  padding-bottom: 35px;
 }
 .introduction-container{
   display:flex;
@@ -826,6 +830,7 @@ transform: scale(0.8);
   width: 60%;
   height: 11%;
 }
+
 .kf{
   width: 126px;
   height: 162px;
