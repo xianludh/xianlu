@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Welcome</title>
     <script src="./js/jquery-1.11.3.min.js"></script>
+    <script src="./js/moment.js"></script>
     <script src="./js/jroll-lite.min.js"></script>
     <script src="./js/swiper.min.js"></script>
     <link rel="stylesheet" href="./css/swiper.min.css">
@@ -14,12 +15,18 @@
     <style></style>
   </head>
   <body>
+    <div class="kf" onclick="window.open(`https://vue.livelyhelp.chat/chatWindow.aspx?siteId=60002155&planId=9a687353-bc75-4649-98df-a2cae839ad5c#`, '_blank');">
+    </div>
     <div id="scroll">
       <div class="container" id="container">
         <div class="head-logo">
           <img class="logo-title" src="./images/title.png" />
         </div>
-        <div class="header"></div>
+        <div class="header">
+          <div class="bg">
+          
+          </div>
+        </div>
         <div class="main">
           <div class="section0">
             <div class="logo1"></div>
@@ -28,11 +35,11 @@
           <div class="section1">
             <div class="btn">
               <div class="text1">下周工资派发倒计时</div>
-              <div class="text2">00天00:00:00</div>
+              <div class="text2 z-left zt">00天00:00:00</div>
             </div> 
             <div class="btn">
-              <div class="text1">下周工资派发倒计时</div>
-              <div class="text2">00天00:00:00</div>
+              <div class="text1">下月工资派发倒计时</div>
+              <div class="text2 y-left zt">00天00:00:00</div>
             </div> 
           </div>
           </div>
@@ -40,10 +47,10 @@
             <img src="./images/anzhuang.png" alt="">
           </div>
           <div class="btnBox">
-            <div class="first">
-              <a href="javascript:downApp();" class="href">
+            <div class="first"  onclick="downApp()">
+             
                 <img src="images/downloadBtn.png">
-              </a>
+              
             </div>
           </div>
           <ul class="webs">
@@ -53,31 +60,31 @@
           </ul>
 
           <div id="slider">
-            <div id="certify">
-              <div class="swiper-container">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="./images/slider1.png"/></div>
-                  <div class="swiper-slide"><img src="./images/slider2.png"/></div>
-                  <div class="swiper-slide"><img src="./images/slider3.png"/></div>
-                  <div class="swiper-slide"><img src="./images/slider4.png"/></div>
-                  <div class="swiper-slide"><img src="./images/slider5.png"/></div>
-                  <div class="swiper-slide"><img src="./images/slider6.png"/></div>
-                  <div class="swiper-slide"><img src="./images/slider7.png"/></div>
-                </div>
+            <div class="swiper-container qhswiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/slider1.png"/></div>
+                <div class="swiper-slide"><img src="./images/slider2.png"/></div>
+                <div class="swiper-slide"><img src="./images/slider3.png"/></div>
+                <div class="swiper-slide"><img src="./images/slider4.png"/></div>
+                <div class="swiper-slide"><img src="./images/slider5.png"/></div>
+                <div class="swiper-slide"><img src="./images/slider6.png"/></div>
+                <div class="swiper-slide"><img src="./images/slider7.png"/></div>
               </div>
             </div>
           </div>
-          <div class="introduction">
-            <div class="text">
-              全新顶级线上娱乐中心，10年经典品牌。2019年全新精心打造，每日同时在线玩家上万人，随时随地可与全国各地的玩家在澳门皇冠切磋。
-              <span style="color: #FFEA00;">澳门皇冠</span>
-              唯一指定官网：
-              <span style="color: #FFEA00;">551.com 注册下载APP即送38元!</span>
-              拥有最全的：
-              <span style="color: #FFEA00;">棋牌游戏、电子游艺、捕鱼游戏、体育赛事投注、真人视讯、彩票游戏</span>
-              （AG、BBIN等国际知名平台），全面支持支付宝 微信 银行卡等充值；
-              <span style="color: #FFEA00;">真钱1:1存提秒到账！</span>
-              24小时在线客服为您解决各种难题！
+          <div class="introduction-container">
+            <div class="introduction">
+              <div class="text">
+                全新顶级线上娱乐中心，10年经典品牌。2019年全新精心打造，每日同时在线玩家上万人，随时随地可与全国各地的玩家在澳门皇冠切磋。
+                <span style="color: #FFEA00;">澳门皇冠</span>
+                唯一指定官网：
+                <span style="color: #FFEA00;">551.com 注册下载APP即送38元!</span>
+                拥有最全的：
+                <span style="color: #FFEA00;">棋牌游戏、电子游艺、捕鱼游戏、体育赛事投注、真人视讯、彩票游戏</span>
+                （AG、BBIN等国际知名平台），全面支持支付宝 微信 银行卡等充值；
+                <span style="color: #FFEA00;">真钱1:1存提秒到账！</span>
+                24小时在线客服为您解决各种难题！
+              </div>
             </div>
           </div>
           <div class="task">
@@ -95,12 +102,24 @@
           <div class="snnip-logo">
             <img class="snnip-title" src="./images/snnip-title.png" />
           </div>
-          <div class="picture">
-            <div class="logo1"></div>
+          <div id="slider">
+            <div class="swiper-container imgswiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/snnip.png"/></div>
+                <div class="swiper-slide"><img src="./images/snnip2.png"/></div>
+                <div class="swiper-slide"><img src="./images/snnip3.png"/></div>
+                <div class="swiper-slide"><img src="./images/snnip4.png"/></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="xinren_list">
+          <div class="w750">
+            <a href="javascript:;" id="closeImg"><img src="./images/close.png" alt=""></a>
+            <img src="./images/help.png" alt="">
           </div>
         </div>
       </div>
-    </div>
 
 
     <script>
@@ -127,17 +146,18 @@
       })
       var ua = window.navigator.userAgent.toLowerCase()
       if (/iphone/.test(ua) || /ipad/.test(ua)) {
-        $('#install').show()
+        
+        // $('#install').show()
       } else if (/android/.test(ua)) {
-        $('#install').hide()
+        // $('#install').hide()
       } else {
 
       }
       $('#install').on('click', function () {
-        $('#xinren_list').attr('style', 'display:block;')
+        window.open('download.html','_blank')
       })
       $('#closeImg').click(function (e) {
-        $('#xinren_list').attr('style', 'display:none;')
+        
       })
 
       setTimeout(function () {
@@ -190,9 +210,9 @@
 
 		  b = GetQueryString('agent') || GetQueryString('channelCode');
       let str=window.location.href;
-		  let par = b ? b : '790010';
+		  let par = b ? b : '328799';
       ShareTrace.init({
-        appkey: "", // 此值必填
+        appkey: "4c811010c940142d", // 此值必填
         param: "channelCode="+ par,
       });
       
@@ -203,14 +223,67 @@
     <script type="text/javascript" src="./js/script.js"></script>
     <script>
       var autourl = new Array()
-      autourl[0] = 'https://1qp935.com'
-      autourl[1] = 'https://2qp935.com'
-      autourl[2] = 'https://3qp935.com'
-      let code = b ? b : '790010'
+      autourl[0] = 'https://732570.com'
+      autourl[1] = 'https://h2166.com'
+      autourl[2] = 'https://h2166.com'
+      let code = b ? b : '328799'
       document.querySelectorAll('.webs li').forEach(function (item, index) {
         item.children[2].href = autourl[index] + '/m/#/home?channelCode=' + code
         item.children[1].innerText = autourl[index]
       })
     </script>
+     <script>
+    var swiper = new Swiper('.qhswiper ', {
+      slidesPerView:3,
+      spaceBetween:-50,
+	  centeredSlides: true,
+	  loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+    var swiper2 = new Swiper('.imgswiper');
+  </script>
+  <script>
+      //周俸祿
+    
+      //倒计时
+      var now = moment().utcOffset(8);
+      console.log(now)
+      var nextTuesday = moment().utcOffset(8).day(2).hour(0).minute(0).second(0);
+
+      if (now > nextTuesday) {
+        nextTuesday = nextTuesday.add(1, 'weeks');
+      }
+
+      var nextMonth = moment().utcOffset(8).date(1).hour(0).minute(0).second(0);
+      if (now > nextMonth) {
+        nextMonth = nextMonth.add(1, 'months');
+      }
+      setInterval(function () {
+        now = moment().utcOffset(8);
+        if (now >= nextTuesday) {
+          nextTuesday = nextTuesday.add(1, 'weeks');
+        }
+        var d1 = moment.duration(nextTuesday.diff(now));
+        var day1 = d1.days() < 10 ? '0' + d1.days() : d1.days();
+        var h1 = d1.hours() < 10 ? '0' + d1.hours() : d1.hours();
+        var m1 = d1.minutes() < 10 ? '0' + d1.minutes() : d1.minutes();
+        var s1 = d1.seconds() < 10 ? '0' + d1.seconds() : d1.seconds();
+        $('.z-left').html(`${day1}<span>天</span>${h1}:${m1}:${s1}`)
+        if (now >= nextMonth) {
+          nextMonth = nextMonth.add(1, 'months');
+        }
+        var d2 = moment.duration(nextMonth.diff(now));
+        var day2 = d2.days() < 10 ? '0' + d2.days() : d2.days();
+        var h2 = d2.hours() < 10 ? '0' + d2.hours() : d2.hours();
+        var m2 = d2.minutes() < 10 ? '0' + d2.minutes() : d2.minutes();
+        var s2 = d2.seconds() < 10 ? '0' + d2.seconds() : d2.seconds();
+        $('.y-left').html(`${day2}<span>天</span>${h2}:${m2}:${s2}`)
+
+      }, 1000);
+    
+  </script>
   </body>
 </html>
