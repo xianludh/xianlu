@@ -1,0 +1,157 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="澳门新葡京">
+  <meta name="description" content="澳门新葡京">
+  <link rel="shortcut icon" href="./favicon.ico"/>
+  <meta id="viewport" name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <title>澳门新葡京</title>
+  <script src="https://res.sharetrace.com/sharetrace.min.js"></script>
+  <script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="./js/layer.min.js"></script>
+  <style>* {
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+    }
+    .top-img {
+      width: 80%;
+      margin: 10vw auto 5vw;
+      display: block;
+    }
+    .install-text {
+      font-size: 15px;
+      color: #FF5151;
+      width: 85%;
+      margin: 0 auto 4vw;
+    }
+    .step1 {
+      background: url('./images/download_step1.png') no-repeat;
+      background-size: 100%;
+      height: 154vw;
+      position: relative;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .step2 {
+      background: url('./images/download_step2.png') no-repeat;
+      background-size: 100%;
+      height: 167vw;
+      position: relative;
+      width: 93%;
+      margin: 0 auto;
+    }
+    .tf-btn {
+      background: url('./images/tf-btn.png') no-repeat;
+      background-size: 100% 100%;
+      height: 9.8vw;
+      width: 48vw;
+      position: absolute;
+      left: 0;
+      top: 58vw;
+      right: 0;
+      margin: auto;
+    }
+    .download-btn {
+      background: url('./images/ios_store_download_btn.png') no-repeat;
+      background-size: 100% 100%;
+      height: 9.8vw;
+      width: 40vw;
+      position: absolute;
+      left: 0;
+      top: 58vw;
+      right: 0;
+      margin: auto;
+    }
+    .layui-layer-setwin {
+      right: 5vw;
+    }
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      height: 100%;
+      background-image: url('./images/bg.png');
+      background-size: 100% 100%;
+      overflow-y: scroll;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <img src="./images/top-img.png" class="top-img">
+  <p class="install-text">图文安装说明，请仔细阅读完本说明再操作安装后首次启动请断开美国线路 VPN，激活APP。</p>
+  <div class="step1">
+    <div class="tf-btn" onclick="download_btn();"></div>
+  </div>
+  <div class="step2">
+    <div class="download-btn click-pp" onclick="download_btn();"></div>
+  </div>
+</div>
+</body>
+<script>
+  var $userAgent = window.navigator.userAgent
+  function GetQueryString(name) {
+		var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
+		var r = window.location.search.substr(1).match(reg)
+		if (r != null) return unescape(r[2])
+		return null
+	}
+  function find (str, cha, num) {
+    var x = str.indexOf(cha);
+    for(var i = 0; i < num; i++) {
+        x = str.indexOf(cha, x+1);
+    }
+    return x;
+  }
+  var downloadUrl = GetQueryString('downloadUrl')
+  var ShareTraceType = GetQueryString('ShareTrace')
+  var ShareTraceOk = false
+  var clickDownload = false
+  // h5页面已成功统计
+  if(ShareTraceType) {
+    ShareTraceOk = true
+  }else {
+    var str = GetQueryString('windowHref');
+    var agent = GetQueryString('agent')?GetQueryString('agent'):'328799';
+    var par1 = "channelCode=" + agent + "&channelDomain=" + str.substring(0, find(str, '/', 2));
+    var par2 = "channelDomain=" + str.substring(0, find(str, '/', 2));
+    ShareTrace.init({
+    	appkey: '4c811010c940142d', // 此值必填
+    	param: agent ? par1 : par2,
+    	success: function () {
+    		ShareTrace.preDownload(function () {
+          ShareTraceOk = true
+          layer.closeAll('loading');
+          if(clickDownload) {
+            download_btn()
+          }
+        })
+    	}
+    });
+  }
+  function download_btn() {
+    if(ShareTraceOk) {
+      if ($userAgent.includes('iPhone') && $userAgent.includes('SogouMobileBrowser')) {
+        window.history.pushState(window.location.href, null, window.location.href)
+        window.location.replace(downloadUrl,'_blank')
+      } else {
+        window.open(downloadUrl,'_blank')
+      }
+    }else {
+      layer.load(1);
+      clickDownload = true
+    }
+  }
+</script>
+</html>

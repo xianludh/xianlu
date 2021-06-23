@@ -140,17 +140,18 @@
       })
       var ua = window.navigator.userAgent.toLowerCase()
       if (/iphone/.test(ua) || /ipad/.test(ua)) {
-        $('#install').show()
+        
+        // $('#install').show()
       } else if (/android/.test(ua)) {
-        $('#install').hide()
+        // $('#install').hide()
       } else {
 
       }
       $('#install').on('click', function () {
-        $('#xinren_list').attr('style', 'display:block;')
+        window.open('download.html','_blank')
       })
       $('#closeImg').click(function (e) {
-        $('#xinren_list').attr('style', 'display:none;')
+        
       })
 
       setTimeout(function () {
