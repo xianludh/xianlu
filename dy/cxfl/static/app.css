@@ -54,8 +54,8 @@ a:active {
 
 .slide-hd {
     text-align: center;
-    height: 66px;
-    line-height: 66px;
+    height: 50px;
+    /* line-height: 50px; */
     border-bottom: 2px solid #E5E5E5;
 }
 
@@ -79,9 +79,9 @@ a:active {
 .slide-hd a {
     cursor: pointer;
     display: inline-block;
-    line-height: 66px;
+    line-height: 40px;
     font-size: 17px;
-    height: 66px;
+    height: 45px;
     color: #5C5C5C;
     font-weight: bold;
     position: relative;
@@ -149,7 +149,7 @@ a:active {
 
 .down {
     background: url(./down.png) no-repeat;
-    width: 70px;
+    width: 69px;
     background-size: contain;
     height: 35px;
     display: block;
@@ -335,12 +335,12 @@ a:active {
     }
 
     .slide-hd {
-        margin-top: -0.4rem;
+        /* margin-top: -0.4rem; */
     }
 }
 
-@media screen and (min-width:768px) {
+/* @media screen and (min-width:768px) {
     .pc {
         display: show;
     }
-}
+} */

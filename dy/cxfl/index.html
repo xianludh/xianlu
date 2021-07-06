@@ -15,12 +15,28 @@
 <style>
     @media screen and (min-width: 768px) {
         .g-list img {
-           width: 1rem;
-           height: 1rem;
+           width: 0.96rem;
+           height: 0.96rem;
         }
-      .g-list p{
-      	 font-size: 0.2rem;
-      }
+		.g-list p{
+			font-size: 0.2rem;
+		}
+		.slide-hd {
+			text-align: center;
+			height: 60px;
+			/* line-height: 60px; */
+			border-bottom: 2px solid #E5E5E5;
+        }
+		.slide-hd a {
+			cursor: pointer;
+			display: inline-block;
+			line-height: 50px;
+			font-size: 17px;
+			height: 55px;
+			color: #5C5C5C;
+			font-weight: bold;
+			position: relative;
+        }
     }  
   </style><style id="cs_cursor_css_no_hd">#css_cs_pointer, .cs_pointer, * a, * button, a *, button *, input[type=range] *, [data-cur=pointer] *, [data-cur=pointer], [data-cur=pointer]:hover, [data-cur=pointer] *:hover {cursor: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAADLUlEQVQ4T62Ta0iTYRTHz3nfzenMJEUblVjJRF2l5S0znZJaH7xEGnRhSR9Mg+pLBIYS0oUk6O4XjaCLU3OuILPSLhtdGOEWJt20NCychSgqmdvevc8T79zU0WYQnU/P+7zn+Z3zPxcEL6aOUGfyHJ8vkorCiI3cnlw0qSk1lXLe/F336MmhSX4j2spRQ6GhMBBZpO9q3tp71D2Nqr49xf8ErF95PTfhWFKLXBUpEQAISNWR6lZVn6rgn4Gb6nO0ocmhPtNAAHVkw93/CmyQNzxZ2t+3JROq7PNl6bGGGyvbcy/tTdTGLg+cyVCToOFlKTKamnW8E37+OA0UKQ/cV0lxT/fcAB6B0PI8T6dco00PWiB2SdaX6HnllQwGpoYpbc1DUJTY0HRzymIiCv+al+Y/u9zWme3LM7wlP/6pR2CpnihrMxigAFSzEaBQR3FogpLsU0gXSr7A4FiNeKjuIoJOJ8IxycekAL/woV82HAGstNi4T4+VqxrdMpwBUqDNGwCLdBRYX+Tjy4E1VgPJOcnx779tRdC+yNyxJPieOilSyhMKd8yj3E7j54EnaTHh6cEBs5I9AymJL0fGVI10cJTa11cWoEhrSE0J9u/QpymkghzBqnvN9oSgBSQrZKGjKYLp9+lJRp0gmQLVpFIs1AOyErDHHUG26wzA93HgEo/mI1RRBuJeddXEhCn2R8gY4bGVJ8AggpiZ7Zl11AqSIMecA/waBpCGTJ+/jwPIAucAnRlEtb82GDNXJ/sxTorn/oNLhWPaBRNUCeeJEUJPbCuYfdZm2iIjfFv/5rWMhGGmnTyZC+D65/ymvbcsYDxR5PaMvW3YfXB5yLWzsStEXrfBWWe3DAXnpnXjjI8l2T0PoZ5rDOceRi0ry5YvkcCcGs4bYGSUhw7lB1b1fvWfwmqN4oHa5oqllVvLsSDZ2YX5theAXn5AbQMVYdLzbwY9VoouVvnbGb/72HAoDdOjvVVzpopEcfiZ+OOFDNeaeg1vP3DVilXbHcMtzJ+bITruyK4LPO02l/n8qL36V6A1uPgoGxKYQoEgENeYUAABxjIAdh6YSe4Ra6675Ar2G3jIVDVaj5q+AAAAAElFTkSuQmCC ) 7 1,auto !important;}        #css_cs_cursor, .cs_cursor, body, html, input, [data-cur=cursor]:hover, [data-cur=cursor] *:hover {cursor: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAACaUlEQVQ4T63UW0gUYRQH8HNmZtVWEkkokQqhMqx9yVaLaFEpSMmgfBiIFKmHyPCpwgv4sA+hRoqBsNhu5vaQlXbZJBMNUtsycZeIrS11MzbQEm9oFy+7M9+JeZA2d1dmqe9pYL7zm/93Zs4gBKzm5OaYYyWm2oTEhVtY4HYE3lN7jYEbm7Y0JWVc3OlN3XDWx8fgdhTdE2qhlX1BoL5U79UVxgmsq4jAP5mrKRjqjgQNDRbv1igI68j3C36vAd67HGgEpgYODZ7XaYAIYGmWwFmzAONdF/hTbvO/g4gAzE9s8DLjxmxlHKZeQ7FNXgsOnzCwikkAn+4tV3vN9ZW5LysiB5UeKun+WgTPPrfSg+FGmyXvRX44dO0eBqEA3aN34ZHHPOTT4h5rdu/SaljdkVdVDYx3kdVVPWjJs+//L6CCdI7elttHbjp9U5BlPf0nqeqE/WOdkm34Bi+RBBo+CoAAvvtmPgpa3GfK7v259qSsfIckEU27GG7cy3+Ydsimt5UD2ijpeF1273TkL0VeJnJWLdBYj5Y78RyBE6i8RwRp9mtsvfh6MTKwMF6gV6WM5t9lcXy0SAdNJZiYga7Jfun6m8rSxqN99arB9HOxX1KT66YEzXw6iiPj1KLbxHYUeiDt0nplHEeLy/tSLLVZqsBWaOVzzFfPQPSPh3FFQzNKERmBk7fteoInXUcAkaMrj8nf0JO57luDPRS6ehxCPphadKK8OacFD9TwMDnHKK1igjfMbcW24LlWBxKgfD9zBg83xVNZxy/W7vZUTSTpjWAM+qWpApXYi3dSDAITDgmehKdotA+G6+FvyXYsJLbeBu4AAAAASUVORK5CYII= ) 4 1,auto !important;}</style><script id="cs_cursor_template"> </script><input type="hidden" id="_w_tusk"><script type="text/javascript" src="chrome-extension://dbjbempljhcmhlfpfacalomonjpalpko/scripts/inspector.js"></script><style type="text/css">
       @font-face {
@@ -36,13 +52,14 @@
 			<img src="./static/logo.jpg">
 			<span style="position: absolute;top: 0px;right: 0px;color: #fff;margin-top: 0.35rem;"></span>
 		</div>
-		<div class="notice"><marquee>公告：本站所有APP亲测无毒，无侵犯隐私狼友放心免费下载</marquee></div>
+		<div class="noticeBox"><div class="notice"><marquee>公告：本站所有APP亲测无毒，无侵犯隐私狼友放心免费下载</marquee></div></div>
+		
 		<!-- <p style="font-size: 0.3rem; color: red;text-align: center;">本站所有APP亲测无毒无侵犯隐私狼友放心免费下载</p> -->
 		<div class="slide-hd">
 			<ul style="position: relative;">
 				<li><a class="on">热门推荐</a></li>
 				<li><a>涩情APP</a></li>
-				<li><a>涩情直播</a></li>
+				<li><a>福利直播</a></li>
 				<li><a>赚钱娱乐</a></li>
 			</ul>
 		</div>
@@ -572,7 +589,7 @@
 			<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
 		</div>
 		<div class="g-slide">
-		    <p style="font-size: 0.28rem; color: red;text-align: center;">站主亲测严格把控所有APP无捆绑无毒免费下载只为涩友谋取福利提供安全保密</p>
+		    <!-- <p style="font-size: 0.28rem; color: red;text-align: center;">站主亲测严格把控所有APP无捆绑无毒免费下载只为涩友谋取福利提供安全保密</p> -->
 			  <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
 			    <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-2040px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="3" style="width: 500px; margin-right: 10px;">
                     <a href="https://h2433.com:8663?register=1" target="_blank">
@@ -623,7 +640,7 @@
 						<p>下载次数：<span>7631641</span>次</p>
 					</dd>
 					<dd>
-						<a href="https://h2433.com:8663?register=1" class="down" target="_blank">下载</a>
+						<a href="https://h2433.com:8663?register=1" class="down  commonDown" target="_blank">下载</a>
 					</dd>
                 </li>   
 								<li>
@@ -1010,11 +1027,18 @@
     	
     })
 </script>
-<style>.notice {
+<style>
+.noticeBox{
+	padding-top: 0.1rem;
+	background:#f7f7f7;
+	padding-bottom: 0.15rem;
+}
+.notice {
 	background:#fff;
 	text-align:center;
 	font-size:.28rem;
 	color:red;
+	height:0.55rem;
 	line-height:0.55rem;
 	margin:5px 0.25rem 0;
 	border-top:1px solid #eee;
