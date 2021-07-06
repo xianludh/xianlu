@@ -55,8 +55,8 @@ a:active {
 .slide-hd {
     text-align: center;
     height: 50px;
-    /* line-height: 50px; */
-    border-bottom: 2px solid #E5E5E5;
+    line-height: 50px;
+    border-bottom: 1px solid #E5E5E5;
 }
 
 .slide-hd ul {
@@ -79,9 +79,9 @@ a:active {
 .slide-hd a {
     cursor: pointer;
     display: inline-block;
-    line-height: 40px;
+    line-height: 50px;
     font-size: 17px;
-    height: 45px;
+    height: 50px;
     color: #5C5C5C;
     font-weight: bold;
     position: relative;
@@ -111,7 +111,7 @@ a:active {
     height: auto;
     overflow: hidden;
     padding-top: 8px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .g-list li {
@@ -156,6 +156,29 @@ a:active {
     margin: 0px auto 8px;
     text-indent: -9999px;
 }
+.newDownBox{
+    display:flex;align-items:center
+}
+.commonDown {
+    width: 70px;
+    display: inline-block;
+    height: 26.84px;
+
+}
+.commonDown img{
+    width: 70px;
+    /* height: 35px; */
+}
+/* .commonDown{
+    background: url(./down.png) 0 60% no-repeat;
+    width: 70px;
+    background-size: contain;
+    height: 35px;
+    display: block;
+    margin: 0px auto 8px;
+    text-indent: -9999px;
+
+} */
 
 .down-list {
     padding: 15px 0;
