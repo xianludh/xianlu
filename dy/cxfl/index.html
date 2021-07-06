@@ -1,32 +1,31 @@
 <!DOCTYPE html>
-<!-- saved from url=(0025)https://www.chunxiao.app/ -->
 <html>
-	<!-- <div class="cs_cursor" id="cs_cursor" style="position: fixed; pointer-events: none; z-index: 2147483647; visibility: hidden;">
-	<img src="chrome-extension://bmjmipppabdlpjccanalncobmbacckjn/resources/static/arrows/5d64f53953611.png" id="cs_cursor_img" style="width: 25px; height: 25px; position: fixed; max-width: 25px; min-width: 25px; max-height: 25px; margin-left: -4px; margin-top: -1px; visibility: hidden;"><img src="chrome-extension://bmjmipppabdlpjccanalncobmbacckjn/resources/static/pointers/5d64f53953632.png" id="cs_cursor_img_p" style="width: 25px; height: 25px; position: fixed; max-width: 25px; min-width: 25px; max-height: 25px; margin-left: -7px; margin-top: -1px; visibility: hidden;">
-	<style>html{font-size:100px;}</style></div><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->
-    <!-- <script src="chrome-extension://bmjmipppabdlpjccanalncobmbacckjn/js/content/main.js" id="cs_script"></script> -->
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>春宵福利导航</title>
+    <title>小黄吖福利导航</title>
     <link rel="stylesheet" type="text/css" href="./static/app.css">
     <script type="text/javascript" src="./static/jquery.min.js.下载"></script>
     <script src="./static/swiper.min.js.下载" type="text/javascript" charset="utf-8"></script>
- 	<script src="./static/rem.js.下载" type="text/javascript" charset="utf-8"></script>   
+ 	<script src="./static/rem.js.下载" type="text/javascript" charset="utf-8"></script> 
+	 <script src="./static/lazyload.min.js.下载" type="text/javascript" charset="utf-8"></script>     
     <link rel="stylesheet" type="text/css" href="./static/swiper.min.css">
 <style>
-    @media screen and (min-width: 768px) {
-        .g-list img {
-           width: 0.96rem;
-           height: 0.96rem;
-        }
-		.g-list p{
+	@media screen and (min-width: 768px) {
+		.g-list img {
+			width: 0.96rem;
+			height: 0.96rem;
+		}
+
+		.g-list p {
 			font-size: 0.2rem;
 		}
+
 		.slide-hd {
 			text-align: center;
 			height: 60px;
-			line-height: 60px; 
+			line-height: 60px;
 			border-bottom: 2px solid #E5E5E5;
-        }
+		}
+
 		.slide-hd a {
 			cursor: pointer;
 			display: inline-block;
@@ -36,25 +35,52 @@
 			color: #5C5C5C;
 			font-weight: bold;
 			position: relative;
-        }
-	
-    }  
-  </style><style id="cs_cursor_css_no_hd">#css_cs_pointer, .cs_pointer, * a, * button, a *, button *, input[type=range] *, [data-cur=pointer] *, [data-cur=pointer], [data-cur=pointer]:hover, [data-cur=pointer] *:hover {cursor: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAADLUlEQVQ4T62Ta0iTYRTHz3nfzenMJEUblVjJRF2l5S0znZJaH7xEGnRhSR9Mg+pLBIYS0oUk6O4XjaCLU3OuILPSLhtdGOEWJt20NCychSgqmdvevc8T79zU0WYQnU/P+7zn+Z3zPxcEL6aOUGfyHJ8vkorCiI3cnlw0qSk1lXLe/F336MmhSX4j2spRQ6GhMBBZpO9q3tp71D2Nqr49xf8ErF95PTfhWFKLXBUpEQAISNWR6lZVn6rgn4Gb6nO0ocmhPtNAAHVkw93/CmyQNzxZ2t+3JROq7PNl6bGGGyvbcy/tTdTGLg+cyVCToOFlKTKamnW8E37+OA0UKQ/cV0lxT/fcAB6B0PI8T6dco00PWiB2SdaX6HnllQwGpoYpbc1DUJTY0HRzymIiCv+al+Y/u9zWme3LM7wlP/6pR2CpnihrMxigAFSzEaBQR3FogpLsU0gXSr7A4FiNeKjuIoJOJ8IxycekAL/woV82HAGstNi4T4+VqxrdMpwBUqDNGwCLdBRYX+Tjy4E1VgPJOcnx779tRdC+yNyxJPieOilSyhMKd8yj3E7j54EnaTHh6cEBs5I9AymJL0fGVI10cJTa11cWoEhrSE0J9u/QpymkghzBqnvN9oSgBSQrZKGjKYLp9+lJRp0gmQLVpFIs1AOyErDHHUG26wzA93HgEo/mI1RRBuJeddXEhCn2R8gY4bGVJ8AggpiZ7Zl11AqSIMecA/waBpCGTJ+/jwPIAucAnRlEtb82GDNXJ/sxTorn/oNLhWPaBRNUCeeJEUJPbCuYfdZm2iIjfFv/5rWMhGGmnTyZC+D65/ymvbcsYDxR5PaMvW3YfXB5yLWzsStEXrfBWWe3DAXnpnXjjI8l2T0PoZ5rDOceRi0ry5YvkcCcGs4bYGSUhw7lB1b1fvWfwmqN4oHa5oqllVvLsSDZ2YX5theAXn5AbQMVYdLzbwY9VoouVvnbGb/72HAoDdOjvVVzpopEcfiZ+OOFDNeaeg1vP3DVilXbHcMtzJ+bITruyK4LPO02l/n8qL36V6A1uPgoGxKYQoEgENeYUAABxjIAdh6YSe4Ra6675Ar2G3jIVDVaj5q+AAAAAElFTkSuQmCC ) 7 1,auto !important;}        #css_cs_cursor, .cs_cursor, body, html, input, [data-cur=cursor]:hover, [data-cur=cursor] *:hover {cursor: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAACaUlEQVQ4T63UW0gUYRQH8HNmZtVWEkkokQqhMqx9yVaLaFEpSMmgfBiIFKmHyPCpwgv4sA+hRoqBsNhu5vaQlXbZJBMNUtsycZeIrS11MzbQEm9oFy+7M9+JeZA2d1dmqe9pYL7zm/93Zs4gBKzm5OaYYyWm2oTEhVtY4HYE3lN7jYEbm7Y0JWVc3OlN3XDWx8fgdhTdE2qhlX1BoL5U79UVxgmsq4jAP5mrKRjqjgQNDRbv1igI68j3C36vAd67HGgEpgYODZ7XaYAIYGmWwFmzAONdF/hTbvO/g4gAzE9s8DLjxmxlHKZeQ7FNXgsOnzCwikkAn+4tV3vN9ZW5LysiB5UeKun+WgTPPrfSg+FGmyXvRX44dO0eBqEA3aN34ZHHPOTT4h5rdu/SaljdkVdVDYx3kdVVPWjJs+//L6CCdI7elttHbjp9U5BlPf0nqeqE/WOdkm34Bi+RBBo+CoAAvvtmPgpa3GfK7v259qSsfIckEU27GG7cy3+Ydsimt5UD2ijpeF1273TkL0VeJnJWLdBYj5Y78RyBE6i8RwRp9mtsvfh6MTKwMF6gV6WM5t9lcXy0SAdNJZiYga7Jfun6m8rSxqN99arB9HOxX1KT66YEzXw6iiPj1KLbxHYUeiDt0nplHEeLy/tSLLVZqsBWaOVzzFfPQPSPh3FFQzNKERmBk7fteoInXUcAkaMrj8nf0JO57luDPRS6ehxCPphadKK8OacFD9TwMDnHKK1igjfMbcW24LlWBxKgfD9zBg83xVNZxy/W7vZUTSTpjWAM+qWpApXYi3dSDAITDgmehKdotA+G6+FvyXYsJLbeBu4AAAAASUVORK5CYII= ) 4 1,auto !important;}</style><script id="cs_cursor_template"> </script><input type="hidden" id="_w_tusk"><script type="text/javascript" src="chrome-extension://dbjbempljhcmhlfpfacalomonjpalpko/scripts/inspector.js"></script><style type="text/css">
-      @font-face {
-          font-family: "element-icons";
-          src: url('chrome-extension://moombeodfomdpjnpocobemoiaemednkg/fonts/element-icons.woff') format('woff'),
-          url('chrome-extension://moombeodfomdpjnpocobemoiaemednkg/fonts/element-icons.ttf ') format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-      }
-  </style></head>
-  
+		}
+
+	}
+</style>
+<style id="cs_cursor_css_no_hd">
+	#css_cs_pointer,
+	.cs_pointer,
+	* a,
+	* button,
+	a *,
+	button *,
+	input[type=range] *,
+	[data-cur=pointer] *,
+	[data-cur=pointer],
+	[data-cur=pointer]:hover,
+	[data-cur=pointer] *:hover {
+		cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAADLUlEQVQ4T62Ta0iTYRTHz3nfzenMJEUblVjJRF2l5S0znZJaH7xEGnRhSR9Mg+pLBIYS0oUk6O4XjaCLU3OuILPSLhtdGOEWJt20NCychSgqmdvevc8T79zU0WYQnU/P+7zn+Z3zPxcEL6aOUGfyHJ8vkorCiI3cnlw0qSk1lXLe/F336MmhSX4j2spRQ6GhMBBZpO9q3tp71D2Nqr49xf8ErF95PTfhWFKLXBUpEQAISNWR6lZVn6rgn4Gb6nO0ocmhPtNAAHVkw93/CmyQNzxZ2t+3JROq7PNl6bGGGyvbcy/tTdTGLg+cyVCToOFlKTKamnW8E37+OA0UKQ/cV0lxT/fcAB6B0PI8T6dco00PWiB2SdaX6HnllQwGpoYpbc1DUJTY0HRzymIiCv+al+Y/u9zWme3LM7wlP/6pR2CpnihrMxigAFSzEaBQR3FogpLsU0gXSr7A4FiNeKjuIoJOJ8IxycekAL/woV82HAGstNi4T4+VqxrdMpwBUqDNGwCLdBRYX+Tjy4E1VgPJOcnx779tRdC+yNyxJPieOilSyhMKd8yj3E7j54EnaTHh6cEBs5I9AymJL0fGVI10cJTa11cWoEhrSE0J9u/QpymkghzBqnvN9oSgBSQrZKGjKYLp9+lJRp0gmQLVpFIs1AOyErDHHUG26wzA93HgEo/mI1RRBuJeddXEhCn2R8gY4bGVJ8AggpiZ7Zl11AqSIMecA/waBpCGTJ+/jwPIAucAnRlEtb82GDNXJ/sxTorn/oNLhWPaBRNUCeeJEUJPbCuYfdZm2iIjfFv/5rWMhGGmnTyZC+D65/ymvbcsYDxR5PaMvW3YfXB5yLWzsStEXrfBWWe3DAXnpnXjjI8l2T0PoZ5rDOceRi0ry5YvkcCcGs4bYGSUhw7lB1b1fvWfwmqN4oHa5oqllVvLsSDZ2YX5theAXn5AbQMVYdLzbwY9VoouVvnbGb/72HAoDdOjvVVzpopEcfiZ+OOFDNeaeg1vP3DVilXbHcMtzJ+bITruyK4LPO02l/n8qL36V6A1uPgoGxKYQoEgENeYUAABxjIAdh6YSe4Ra6675Ar2G3jIVDVaj5q+AAAAAElFTkSuQmCC ) 7 1, auto !important;
+	}
+
+	#css_cs_cursor,
+	.cs_cursor,
+	body,
+	html,
+	input,
+	[data-cur=cursor]:hover,
+	[data-cur=cursor] *:hover {
+		cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAACaUlEQVQ4T63UW0gUYRQH8HNmZtVWEkkokQqhMqx9yVaLaFEpSMmgfBiIFKmHyPCpwgv4sA+hRoqBsNhu5vaQlXbZJBMNUtsycZeIrS11MzbQEm9oFy+7M9+JeZA2d1dmqe9pYL7zm/93Zs4gBKzm5OaYYyWm2oTEhVtY4HYE3lN7jYEbm7Y0JWVc3OlN3XDWx8fgdhTdE2qhlX1BoL5U79UVxgmsq4jAP5mrKRjqjgQNDRbv1igI68j3C36vAd67HGgEpgYODZ7XaYAIYGmWwFmzAONdF/hTbvO/g4gAzE9s8DLjxmxlHKZeQ7FNXgsOnzCwikkAn+4tV3vN9ZW5LysiB5UeKun+WgTPPrfSg+FGmyXvRX44dO0eBqEA3aN34ZHHPOTT4h5rdu/SaljdkVdVDYx3kdVVPWjJs+//L6CCdI7elttHbjp9U5BlPf0nqeqE/WOdkm34Bi+RBBo+CoAAvvtmPgpa3GfK7v259qSsfIckEU27GG7cy3+Ydsimt5UD2ijpeF1273TkL0VeJnJWLdBYj5Y78RyBE6i8RwRp9mtsvfh6MTKwMF6gV6WM5t9lcXy0SAdNJZiYga7Jfun6m8rSxqN99arB9HOxX1KT66YEzXw6iiPj1KLbxHYUeiDt0nplHEeLy/tSLLVZqsBWaOVzzFfPQPSPh3FFQzNKERmBk7fteoInXUcAkaMrj8nf0JO57luDPRS6ehxCPphadKK8OacFD9TwMDnHKK1igjfMbcW24LlWBxKgfD9zBg83xVNZxy/W7vZUTSTpjWAM+qWpApXYi3dSDAITDgmehKdotA+G6+FvyXYsJLbeBu4AAAAASUVORK5CYII= ) 4 1, auto !important;
+	}
+</style>
+<script id="cs_cursor_template"> </script><input type="hidden" id="_w_tusk">
+<script type="text/javascript" src="chrome-extension://dbjbempljhcmhlfpfacalomonjpalpko/scripts/inspector.js"></script>
+<style type="text/css">
+</style>
+</head>
 <body>
 	<div class="wrap">
 		<div class="img-row pr">
 			<img src="./static/logo.jpg">
 			<span style="position: absolute;top: 0px;right: 0px;color: #fff;margin-top: 0.35rem;"></span>
 		</div>
-		<div class="noticeBox"><div class="notice"><marquee>公告：本站所有APP亲测无毒，无侵犯隐私狼友放心免费下载</marquee></div></div>
-		
+		<div class="noticeBox">
+			<div class="notice">
+				<marquee>公告：本站所有APP亲测无毒，无侵犯隐私狼友放心免费下载</marquee>
+			</div>
+		</div>
+
 		<!-- <p style="font-size: 0.3rem; color: red;text-align: center;">本站所有APP亲测无毒无侵犯隐私狼友放心免费下载</p> -->
 		<div class="slide-hd">
 			<ul style="position: relative;">
@@ -66,572 +92,605 @@
 		</div>
 		<div class="sldie-bd" style="transform:translate3d(0,0,0);overflow:hidden;">
 			<!-- Swiper -->
-			<div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-autoheight">
-			    <div class="swiper-wrapper" style="height: 520px; transform: translate3d(0px, 0px, 0px);">
-			      <div class="swiper-slide swiper-slide-active" style="width: 500px; margin-right: 20px;">
-			      	 <div class="g-list">
-			      	 	<ul>
-			      	 	    			      	 		<li>
-			      	 			<a href="https://h2433.com:8663?register=1" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="https://hq86n7.com/1864930cc2d4416f8f6cffd97ef82bec.png">
-			      	 				</div>
-			      	 				<p>
-										澳门皇冠
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://v28887.com:9443?register=1" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="https://weibiaoju6.com/eafdc6fce73a4a64a40dd45bef9558e0.png">
-			      	 				</div>
-			      	 				<p>
-										威尼斯人
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://v28887.com:9443?register=1" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="https://qhpinjiankang.com/14a042aec9fb4984b7aaac239fbf5105.png">
-			      	 				</div>
-			      	 				<p>
-										开元棋牌
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=2" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/pftv.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					六月直播
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=4" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/yingtao.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					凤蝶直播
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=29" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/onn.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					草莓直播
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=6" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/seduoduo.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					樱桃视频
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=26" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/metoo.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					四季直播
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=7" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/xj.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					香蕉视频
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=19" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/ljr.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					青青草
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=21" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/taose.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					91桃色
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=9" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/boluo.png">
-			      	 				</div>
-			      	 				<p>
-			      	 					俏佳人
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=24" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/mitao.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					蜜桃视频
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=25" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/wuye.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					成人直播
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=11" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/rnav.png">
-			      	 				</div>
-			      	 				<p>
-			      	 					日女AV
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=14" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/ytsp.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					色多多
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=10" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/1pb.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					一品鲍
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=12" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/2.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					麻豆AV
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=8" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/huaji.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					花季传媒
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=15" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/douyin.png">
-			      	 				</div>
-			      	 				<p>
-			      	 					抖阴视频
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=16" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/momo.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					陌陌视频
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
+			<div
+				class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-autoheight">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide swiper-slide-active">
+						<div class="g-list">
+							<ul>
+								<li>
+									<a href="https://h2433.com:8663?register=1" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="https://hq86n7.com/1864930cc2d4416f8f6cffd97ef82bec.png">
+										</div>
+										<p>
+											澳门皇冠
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://v28887.com:9443?register=1" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="https://weibiaoju6.com/eafdc6fce73a4a64a40dd45bef9558e0.png">
+										</div>
+										<p>
+											威尼斯人
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://v28887.com:9443?register=1" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="https://qhpinjiankang.com/14a042aec9fb4984b7aaac239fbf5105.png">
+										</div>
+										<p>
+											开元棋牌
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=2" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="./static/pftv.gif">
+										</div>
+										<p>
+											六月直播
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=4" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="./static/yingtao.gif">
+										</div>
+										<p>
+											凤蝶直播
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=29" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="./static/onn.gif">
+										</div>
+										<p>
+											草莓直播
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=6" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="./static/seduoduo.gif">
+										</div>
+										<p>
+											樱桃视频
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=26" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="./static/metoo.gif">
+										</div>
+										<p>
+											四季直播
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=7" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="./static/xj.gif">
+										</div>
+										<p>
+											香蕉视频
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=19" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="./static/ljr.gif">
+										</div>
+										<p>
+											青青草
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=21" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="./static/taose.gif">
+										</div>
+										<p>
+											91桃色
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=9" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="./static/boluo.png">
+										</div>
+										<p>
+											俏佳人
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=24" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="./static/mitao.gif">
+										</div>
+										<p>
+											蜜桃视频
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=25" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="./static/wuye.gif">
+										</div>
+										<p>
+											成人直播
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=11" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="./static/rnav.png">
+										</div>
+										<p>
+											日女AV
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=14" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="./static/ytsp.gif">
+										</div>
+										<p>
+											色多多
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=10" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="./static/1pb.gif">
+										</div>
+										<p>
+											一品鲍
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=12" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="./static/2.gif">
+										</div>
+										<p>
+											麻豆AV
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=8" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="./static/huaji.gif">
+										</div>
+										<p>
+											花季传媒
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=15" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="./static/douyin.png">
+										</div>
+										<p>
+											抖阴视频
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=16" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="./static/momo.gif">
+										</div>
+										<p>
+											陌陌视频
+										</p><span class="down"></span>
+									</a>
+								</li>
 
-			      	        <li>
-			      	 			<a href="https://3653877.com:365/?register=1" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/3e864861aa2f4bc8ab6d8a7b8fc009fb.png">
-			      	 				</div>
-			      	 				<p>
-			      	 				    欧洲杯
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>			      	 	    
-			      	 	</ul>
-			      	 </div>
-			      </div>
-			      <div class="swiper-slide swiper-slide-next" style="width: 500px; margin-right: 20px;">
-			      	 <div class="g-list">
-			      	 	<ul> 
-			      	 					      	 		<li>
-			      	 			<a href="https://h2433.com:8663?register=1" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="https://hq86n7.com/1864930cc2d4416f8f6cffd97ef82bec.png">
-			      	 				</div>
-			      	 				<p>
-										澳门皇冠
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://v28887.com:9443?register=1" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="https://weibiaoju6.com/eafdc6fce73a4a64a40dd45bef9558e0.png">
-			      	 				</div>
-			      	 				<p>
-										威尼斯人
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://k3967.com:9553?register=1" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="https://qhpinjiankang.com/14a042aec9fb4984b7aaac239fbf5105.png">
-			      	 				</div>
-			      	 				<p>
-										开元棋牌
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=21" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/taose.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					91桃色
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=9" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/boluo.png">
-			      	 				</div>
-			      	 				<p>
-			      	 					俏佳人
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=24" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/mitao.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					蜜桃视频
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=11" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/rnav.png">
-			      	 				</div>
-			      	 				<p>
-			      	 					日女AV
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=14" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/ytsp.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					色多多
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=10" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/1pb.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					一品鲍
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=12" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/2.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					麻豆AV
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=28" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/kuaise.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					葫芦娃
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=8" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/huaji.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					花季传媒
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=15" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/douyin.png">
-			      	 				</div>
-			      	 				<p>
-			      	 					抖阴视频
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=16" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/momo.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					陌陌视频
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=27" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/sigua.png">
-			      	 				</div>
-			      	 				<p>
-			      	 					丝瓜视频
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=17" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/mddsp.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					麻豆女优
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=18" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/ccav1.jpg">
-			      	 				</div>
-			      	 				<p>
-			      	 					花样视频
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=20" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/51.jpg">
-			      	 				</div>
-			      	 				<p>
-			      	 					51漫画
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-                        
-			      	 	</ul>
-			      	 </div>
-			      </div>
-			      <div class="swiper-slide" style="width: 500px; margin-right: 20px;">
-			      	 <div class="g-list">
-			      	 	<ul>   		      	 	
-			      	 					      	 		<li>
-			      	 			<a href="https://h2433.com:8663?register=1" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="https://hq86n7.com/1864930cc2d4416f8f6cffd97ef82bec.png">
-			      	 				</div>
-			      	 				<p>
-										澳门皇冠
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://v28887.com:9443?register=1" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="https://weibiaoju6.com/eafdc6fce73a4a64a40dd45bef9558e0.png">
-			      	 				</div>
-			      	 				<p>
-										威尼斯人
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://k3967.com:9553?register=1" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="https://qhpinjiankang.com/14a042aec9fb4984b7aaac239fbf5105.png">
-			      	 				</div>
-			      	 				<p>
-										开元棋牌
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=2" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/pftv.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					六月直播
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=4" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/yingtao.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					凤蝶直播
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=29" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/onn.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					草莓直播
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=26" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/metoo.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					四季直播
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
-			      	 		<li>
-			      	 			<a href="https://www.chunxiao.app/go.php?id=25" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="./static/wuye.gif">
-			      	 				</div>
-			      	 				<p>
-			      	 					成人直播
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>
- 	                          
-			      	 	</ul>
-			      	 </div>
-			      </div>
-			      <div class="swiper-slide" style="width: 500px; margin-right: 20px;">
-			      	 <div class="g-list">
-			      	 	<ul>
-			      	        <li>
-			      	 			<a href="https://h2433.com:8663?register=1" target="_blank">
-			      	 				<div class="img">
-			      	 					<img src="https://hq86n7.com/1864930cc2d4416f8f6cffd97ef82bec.png">
-			      	 				</div>
-			      	 				<p>
-										澳门皇冠
-			      	 				</p><span class="down"></span>
-			      	 			</a>
-			      	 		</li>	
-			      	 		            
-			      	 	</ul>
-			      	 </div>
-			      </div>
-			    </div>
-			<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+								<li>
+									<a href="https://3653877.com:365/?register=1" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"
+												data-original="./static/3e864861aa2f4bc8ab6d8a7b8fc009fb.png">
+										</div>
+										<p>
+											欧洲杯
+										</p><span class="down"></span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="swiper-slide swiper-slide-next">
+						<div class="g-list">
+							<ul>
+								<li>
+									<a href="https://h2433.com:8663?register=1" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="https://hq86n7.com/1864930cc2d4416f8f6cffd97ef82bec.png">
+										</div>
+										<p>
+											澳门皇冠
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://v28887.com:9443?register=1" target="_blank">
+										<div class="img">
+											<img  class="lazy" src="./static/loading.gif" data-original="https://weibiaoju6.com/eafdc6fce73a4a64a40dd45bef9558e0.png">
+										</div>
+										<p>
+											威尼斯人
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://k3967.com:9553?register=1" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="https://qhpinjiankang.com/14a042aec9fb4984b7aaac239fbf5105.png">
+										</div>
+										<p>
+											开元棋牌
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=21" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="./static/taose.gif">
+										</div>
+										<p>
+											91桃色
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=9" target="_blank">
+										<div class="img">
+											<img  class="lazy" src="./static/loading.gif" data-original="./static/boluo.png">
+										</div>
+										<p>
+											俏佳人
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=24" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="./static/mitao.gif">
+										</div>
+										<p>
+											蜜桃视频
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=11" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="./static/rnav.png">
+										</div>
+										<p>
+											日女AV
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=14" target="_blank">
+										<div class="img">
+											<img  class="lazy" src="./static/loading.gif" data-original="./static/ytsp.gif">
+										</div>
+										<p>
+											色多多
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=10" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="./static/1pb.gif">
+										</div>
+										<p>
+											一品鲍
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=12" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="./static/2.gif">
+										</div>
+										<p>
+											麻豆AV
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=28" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="./static/kuaise.gif">
+										</div>
+										<p>
+											葫芦娃
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=8" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="./static/huaji.gif">
+										</div>
+										<p>
+											花季传媒
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=15" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="./static/douyin.png">
+										</div>
+										<p>
+											抖阴视频
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=16" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="./static/momo.gif">
+										</div>
+										<p>
+											陌陌视频
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=27" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="./static/sigua.png">
+										</div>
+										<p>
+											丝瓜视频
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=17" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="./static/mddsp.gif">
+										</div>
+										<p>
+											麻豆女优
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=18" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="./static/ccav1.jpg">
+										</div>
+										<p>
+											花样视频
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=20" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="./static/51.jpg">
+										</div>
+										<p>
+											51漫画
+										</p><span class="down"></span>
+									</a>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="g-list">
+							<ul>
+								<li>
+									<a href="https://h2433.com:8663?register=1" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="https://hq86n7.com/1864930cc2d4416f8f6cffd97ef82bec.png">
+										</div>
+										<p>
+											澳门皇冠
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://v28887.com:9443?register=1" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="https://weibiaoju6.com/eafdc6fce73a4a64a40dd45bef9558e0.png">
+										</div>
+										<p>
+											威尼斯人
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://k3967.com:9553?register=1" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="https://qhpinjiankang.com/14a042aec9fb4984b7aaac239fbf5105.png">
+										</div>
+										<p>
+											开元棋牌
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=2" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="./static/pftv.gif">
+										</div>
+										<p>
+											六月直播
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=4" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="./static/yingtao.gif">
+										</div>
+										<p>
+											凤蝶直播
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=29" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif"  data-original="./static/onn.gif">
+										</div>
+										<p>
+											草莓直播
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=26" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="./static/metoo.gif">
+										</div>
+										<p>
+											四季直播
+										</p><span class="down"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.chunxiao.app/go.php?id=25" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="./static/wuye.gif">
+										</div>
+										<p>
+											成人直播
+										</p><span class="down"></span>
+									</a>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="g-list">
+							<ul>
+								<li>
+									<a href="https://h2433.com:8663?register=1" target="_blank">
+										<div class="img">
+											<img class="lazy" src="./static/loading.gif" data-original="https://hq86n7.com/1864930cc2d4416f8f6cffd97ef82bec.png">
+										</div>
+										<p>
+											澳门皇冠
+										</p><span class="down"></span>
+									</a>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+				<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+			</div>
 		</div>
 		<div class="g-slide">
-		    <!-- <p style="font-size: 0.28rem; color: red;text-align: center;">站主亲测严格把控所有APP无捆绑无毒免费下载只为涩友谋取福利提供安全保密</p> -->
-			  <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
-			    <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-2040px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="3" style="width: 500px; margin-right: 10px;">
-                    <a href="https://h2433.com:8663?register=1" target="_blank">
-                    <img src="https://dk-bamboo.com/2befee4f4ba04b2fac69aa2356a2926b.gif" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0" style="width: 500px; margin-right: 10px;">
-                    <a href="https://h2433.com:8663?register=1" target="_blank">
-                    <img src="https://dk-bamboo.com/2befee4f4ba04b2fac69aa2356a2926b.gif" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide" data-swiper-slide-index="1" style="width: 500px; margin-right: 10px;">
-                    <a href="https://v28887.com:9443?register=1" target="_blank">
-                    <img src="https://yulijuan.net/adce183145bb47c1a7ce7c682de74c76.gif	" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="2" style="width: 500px; margin-right: 10px;">
-                    <a href="https://k3967.com:9553?register=1" target="_blank">
-                    <img src="https://xajyyx.cn/792c9e997a024b3c86b490c2eaa6209b.gif" alt="">
-                    </a>
-                </div>
-                <!-- <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="3" style="width: 500px; margin-right: 10px;">
+			<div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+				<div class="swiper-wrapper"
+					>
+					<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+						data-swiper-slide-index="3">
+						<a href="https://h2433.com:8663?register=1" target="_blank">
+							<img  src="https://dk-bamboo.com/2befee4f4ba04b2fac69aa2356a2926b.gif" alt="">
+						</a>
+					</div>
+					<div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0"
+						>
+						<a href="https://h2433.com:8663?register=1" target="_blank">
+							<img  src="https://dk-bamboo.com/2befee4f4ba04b2fac69aa2356a2926b.gif" alt="">
+						</a>
+					</div>
+					<div class="swiper-slide" data-swiper-slide-index="1">
+						<a href="https://v28887.com:9443?register=1" target="_blank">
+							<img   src="https://yulijuan.net/adce183145bb47c1a7ce7c682de74c76.gif	" alt="">
+						</a>
+					</div>
+					<div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="2"
+						>
+						<a href="https://k3967.com:9553?register=1" target="_blank">
+							<img    src="https://xajyyx.cn/792c9e997a024b3c86b490c2eaa6209b.gif" alt="">
+						</a>
+					</div>
+					<!-- <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="3" style="width: 500px; margin-right: 10px;">
                     <a href="https://www.chunxiao.app/go.php?id=1" target="_blank">
                     <img src="./static/c01.jpg" alt="">
                     </a>
                 </div> -->
-			    <div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" style="width: 500px; margin-right: 10px;">
-                    <a href="https://h2433.com:8663?register=1" target="_blank">
-                    <img src="https://dk-bamboo.com/2befee4f4ba04b2fac69aa2356a2926b.gif" alt="">
-                    </a>
-                </div></div>
-			    <!-- Add Pagination -->
-			    <div class="swiper-pagination swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
-			 
-			 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+					<div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0"
+						>
+						<a href="https://h2433.com:8663?register=1" target="_blank">
+							<img src="https://dk-bamboo.com/2befee4f4ba04b2fac69aa2356a2926b.gif" alt="">
+						</a>
+					</div>
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination swiper-pagination-bullets  paginationNative"><span
+						class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span
+						class="swiper-pagination-bullet"></span><span
+						class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
+
+				<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+			</div>
 		</div>
-		
+
 		<!--下载-->
 		<div class="down-list">
 			<ul>
-			    <li>
+				<li>
 					<dt>
 						<img src="https://hq86n7.com/1864930cc2d4416f8f6cffd97ef82bec.png">
 					</dt>
@@ -640,12 +699,14 @@
 						<p>注册送38元-玩转老虎机-首存送551元</p>
 						<p>下载次数：<span>7631641</span>次</p>
 					</dd>
-					<dd class="newDownBox" >
+					<dd class="newDownBox">
 						<!-- <a href="https://h2433.com:8663?register=1" class="down  commonDown" target="_blank">下载</a> -->
-						<a  href="https://h2433.com:8663?register=1" class="newDown commonDown"  target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://h2433.com:8663?register=1" class="newDown commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-                </li>   
-								<li>
+				</li>
+				<li>
 					<dt>
 						<img src="https://weibiaoju6.com/eafdc6fce73a4a64a40dd45bef9558e0.png">
 					</dt>
@@ -656,9 +717,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://v28887.com:9443?register=1" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://v28887.com:9443?register=1" class="down newDown commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://v28887.com:9443?register=1" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="https://qhpinjiankang.com/14a042aec9fb4984b7aaac239fbf5105.png">
@@ -668,11 +731,13 @@
 						<p>最火热的涩情直播撸管必备</p>
 						<p>下载次数：<span>6774604</span>次</p>
 					</dd>
-					<dd class="newDownBox" >
+					<dd class="newDownBox">
 						<!-- <a href="https://k3967.com:9553?register=1" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://k3967.com:9553?register=1" class="down newDown commonDown" target="_blank"><image src="./static/down.png"></image></a> 
+						<a href="https://k3967.com:9553?register=1" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/massage.gif">
@@ -684,9 +749,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=3" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=3" class="down newDown commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=3" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/pftv.gif">
@@ -698,9 +765,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=2" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=2" class="down newDown commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=2" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/yingtao.gif">
@@ -712,9 +781,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=4" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=4" class="down newDown commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=4" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/onn.gif">
@@ -726,9 +797,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=29" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=29" class="down newDown commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=29" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/seduoduo.gif">
@@ -740,9 +813,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=6" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=6" class="down newDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=6" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/metoo.gif">
@@ -754,9 +829,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=26" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=26" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=26" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/xj.gif">
@@ -768,9 +845,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=7" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=7" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=7" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/ljr.gif">
@@ -782,9 +861,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=19" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=19" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=19" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/taose.gif">
@@ -796,9 +877,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=21" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=21" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=21" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/boluo.png">
@@ -810,9 +893,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=9" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=9" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=9" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/mitao.gif">
@@ -824,9 +909,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=24" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=24" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=24" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/wuye.gif">
@@ -838,9 +925,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=25" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=25" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=25" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/rnav.png">
@@ -852,9 +941,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=11" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=11" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=11" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/ytsp.gif">
@@ -866,9 +957,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=14" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=14" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=14" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/1pb.gif">
@@ -880,9 +973,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=10" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=10" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=10" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/2.gif">
@@ -894,9 +989,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=12" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=12" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=12" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/kuaise.gif">
@@ -908,9 +1005,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=28" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=28" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=28" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/huaji.gif">
@@ -922,9 +1021,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=8" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=8" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=8" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/douyin.png">
@@ -936,9 +1037,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=15" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=15" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=15" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/momo.gif">
@@ -950,9 +1053,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=16" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=16" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=16" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/sigua.png">
@@ -964,9 +1069,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=27" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=27" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=27" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/mddsp.gif">
@@ -978,9 +1085,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=17" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=17" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=17" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/ccav1.jpg">
@@ -992,9 +1101,11 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=18" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=18" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=18" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
+				</li>
 				<li>
 					<dt>
 						<img src="./static/51.jpg">
@@ -1006,78 +1117,80 @@
 					</dd>
 					<dd class="newDownBox">
 						<!-- <a href="https://www.chunxiao.app/go.php?id=20" class="down commonDown" target="_blank">下载</a> -->
-						<a href="https://www.chunxiao.app/go.php?id=20" class="down commonDown" target="_blank"><image src="./static/down.png"></image></a>
+						<a href="https://www.chunxiao.app/go.php?id=20" class=" commonDown" target="_blank">
+							<image class="img" src="./static/down.png"></image>
+						</a>
 					</dd>
-</li>
-              
+				</li>
+
 			</ul>
 		</div>
 
-      	<div style="text-align: center; margin-bottom: 2rem;">		
+		<div style="text-align: center; margin-bottom: 2rem;">
 		</div>
 	</div>
-<!-- <div class="bottommob" id="bottommob">
-<div class="bottom-con">
-<div class="bottom-pic">
-<img src="./static/hy.gif" style="width:100%; height:100%;" alt="">
-</div>
-<div class="bottom-text" id="bottomText">蝴蝶直播</div>
-<div class="bottom-wenan" id="">直播神器 宅男深夜神器</div>
-<div class="bottom-btn">立即下载</div>
-</div>
-<a id="bottomLink" href="https://www.chunxiao.app/go.php?id=1" target="_blank"></a>
-</div> -->
-<script>
-    var mySwiper = new Swiper('.sldie-bd .swiper-container', {
-      autoHeight: true, 
-      spaceBetween: 20,
-      on: {
-	    slideChangeTransitionEnd: function(){
-	    	$(".slide-hd a").removeClass("on")
-	    	$(".slide-hd li").eq(this.activeIndex).find("a").addClass("on")
-	    },
-	  },
-    });
-    var gSwiper = new Swiper('.g-slide .swiper-container', {
-      spaceBetween: 10,
-      autoplay:true,
-      loop:true,
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
-    
-    $(document).on("click",".slide-hd a",function(){
-    	var thisIndex=$(".slide-hd a").index(this)
-    	$(".slide-hd a").removeClass("on")
-	    $(".slide-hd li").eq(thisIndex).find("a").addClass("on")
-    	mySwiper.slideTo(thisIndex, 1000, false);
-    	
-    })
-</script>
-<style>
-.noticeBox{
-	padding-top: 0.1rem;
-	background:#f7f7f7;
-	padding-bottom: 0.1rem;
-}
-.notice {
-	background:#fff;
-	text-align:center;
-	font-size:.28rem;
-	color:red;
-	height:0.58rem;
-	line-height:0.58rem;
-	margin:0 0.25rem 0;
-	border-top:1px solid #eee;
-	border-bottom:1px solid #eee
-}
-@media screen and (min-width: 768px){
-	.notice{
-		height: 40px;
-		line-height: 40px;
-		font-size: 20px;
-	}
-}
-</style>
-<div id="color-picker-wrap" style="display: none; position: fixed; top: 0px; left: 0px; z-index: 9999;"><!----></div></body><div id="elem_ext" style="display: none;"></div></html>
+	<script>
+		$(".lazy").lazyload();
+		var mySwiper = new Swiper('.sldie-bd .swiper-container', {
+			autoHeight: true,
+			spaceBetween: 20,
+			on: {
+				slideChangeTransitionEnd: function () {
+					$(".slide-hd a").removeClass("on")
+					$(".slide-hd li").eq(this.activeIndex).find("a").addClass("on")
+				},
+			},
+		});
+		var gSwiper = new Swiper('.g-slide .swiper-container', {
+			spaceBetween: 10,
+			autoplay: true,
+			loop: true,
+			pagination: {
+				el: '.swiper-pagination',
+			},
+		});
+
+		$(document).on("click", ".slide-hd a", function () {
+			var thisIndex = $(".slide-hd a").index(this)
+			$(".slide-hd a").removeClass("on")
+			$(".slide-hd li").eq(thisIndex).find("a").addClass("on")
+			mySwiper.slideTo(thisIndex, 1000, false);
+			setTimeout(function () {
+				$(".lazy").lazyload();
+			}, 800)
+		})
+	</script>
+	<style>
+		.noticeBox {
+			padding-top: 0.1rem;
+			background: #f7f7f7;
+			padding-bottom: 0.1rem;
+		}
+
+		.notice {
+			background: #fff;
+			text-align: center;
+			font-size: .28rem;
+			color: red;
+			height: 0.58rem;
+			line-height: 0.58rem;
+			margin: 0 0.25rem 0;
+			border-top: 1px solid #eee;
+			border-bottom: 1px solid #eee
+		}
+
+		@media screen and (min-width: 768px) {
+			.notice {
+				height: 40px;
+				line-height: 40px;
+				font-size: 20px;
+			}
+		}
+	</style>
+	<div id="color-picker-wrap" style="display: none; position: fixed; top: 0px; left: 0px; z-index: 9999;">
+		<!---->
+	</div>
+</body>
+<div id="elem_ext" style="display: none;"></div>
+
+</html>

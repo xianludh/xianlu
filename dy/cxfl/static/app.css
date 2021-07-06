@@ -156,29 +156,22 @@ a:active {
     margin: 0px auto 8px;
     text-indent: -9999px;
 }
-.newDownBox{
-    display:flex;align-items:center
-}
+
 .commonDown {
     width: 70px;
     display: inline-block;
-    height: 26.84px;
+    height: 68px;
+  
+    display:flex;align-items:center;
+  
 
 }
-.commonDown img{
+.commonDown .img{
     width: 70px;
-    /* height: 35px; */
+    height: 27px;
+  
 }
-/* .commonDown{
-    background: url(./down.png) 0 60% no-repeat;
-    width: 70px;
-    background-size: contain;
-    height: 35px;
-    display: block;
-    margin: 0px auto 8px;
-    text-indent: -9999px;
 
-} */
 
 .down-list {
     padding: 15px 0;
@@ -367,3 +360,9 @@ a:active {
         display: show;
     }
 } */
+
+.swiper-pagination-bullets{
+    bottom: 5px !important;;
+    left: 0;
+    width: 100%;
+}
