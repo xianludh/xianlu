@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+        content="width=device-width ,initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+    <title>澳门威尼斯人</title>
+    <link rel="stylesheet icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <script type="text/javascript" src="js/inobounce.js"></script>
+    <script type="text/javascript" src="js/noZoom.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="content">
+            <div class="banner">
+                <div class="logo"><img src="./images/logo.png" alt=""></div>
+                <div class="hf"><img src="./images/hf.png" alt=""></div>
+                <div class="down"><img src="./images/down.png" alt=""></div>
+            </div>
+            <div class="downbtn" id="download"><img src="./images/downbtn.png" alt=""></div>
+            <div class="bd">
+                <ul class="speedlist">
+                    <li>
+                        <span class="ms" id="sudu1">线路1</span>
+                        <span class="url">v7851.com</span>
+                        <span class="time">12ms</span>
+                        <span class="btn-open">点击进入<a href="https://v7851.com"></a></span>
+                    </li>
+                    <li>
+                        <span class="ms" id="sudu1">线路1</span>
+                        <span class="url">v7874.com</span>
+                        <span class="time">12ms</span>
+                        <span class="btn-open">点击进入<a href="http://v7874.com"></a></span>
+                    </li>
+                    <li>
+                        <span class="ms" id="sudu1">线路1</span>
+                        <span class="url">v7932.com</span>
+                        <span class="time">12ms</span>
+                        <span class="btn-open">点击进入<a href="http://v7932.com"></a></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="hot">
+                <img src="./images/hotgame.png" alt="">
+            </div>
+            <div class="often">
+                <img src="./images/tj.png" alt="">
+            </div>
+        </div>
+    </div>
+    <footer class="footer-box">
+        <a><img src="./images/footer.gif" alt="" id="download"></a>
+    </footer>
+    <script>
+        function speed(element) {
+            setTimeout(function () {
+                var tim = 1;
+                for (var i of document.querySelectorAll(element)) {
+                    i.innerText = 3 + tim + Math.ceil(Math.random() * 2) + 'ms'
+                    tim += 2
+                }
+            }, 500)
+
+        }
+        speed('.time');
+        document.getElementById('download').onclick = function () {
+            downApp();
+        }
+    </script>
+    <script src="https://res.sharetrace.com/sharetrace.min.js"></script>
+    <script type="text/javascript">
+        function GetQueryString(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
+            var r = window.location.search.substr(1).match(reg)
+            if (r != null) return unescape(r[2])
+            return null
+        }
+        let str = window.location.href;
+        let code = GetQueryString('channelCode');
+        let codeMum = code ? "channelCode=" + code : "channelCode=441898";
+        ShareTrace.init({
+            appkey: "f905805f1964bdcf", // 此值必填
+            param: codeMum,
+        });
+
+        function downApp(type) {
+            ShareTrace.download();
+        }
+    </script>
+</body>
+
+</html>
