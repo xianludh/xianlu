@@ -138,6 +138,9 @@ body{ background:#fff;font-family:Arial,Helvetica,sans-serif;}
   color: #FFFFFE;
   margin-left: 0.1rem;
 }
+.content .bd .btn-open a{
+   display: block;
+}
 .content .hot {
    width: 100%;
    height:  7.55rem;
