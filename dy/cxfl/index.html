@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
+	<meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>小黄吖福利导航</title>
     <link rel="stylesheet" type="text/css" href="./static/app.css">
-    <script type="text/javascript" src="./static/jquery.min.js.下载"></script>
-    <script src="./static/swiper.min.js.下载" type="text/javascript" charset="utf-8"></script>
- 	<script src="./static/rem.js.下载" type="text/javascript" charset="utf-8"></script> 
-	 <script src="./static/lazyload.min.js.下载" type="text/javascript" charset="utf-8"></script>     
+    <script type="text/javascript" src="./static/jquery.min.js"></script>
+    <script src="./static/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+ 	<script src="./static/rem.js" type="text/javascript" charset="utf-8"></script> 
+	 <script src="./static/lazyload.min.js" type="text/javascript" charset="utf-8"></script>     
     <link rel="stylesheet" type="text/css" href="./static/swiper.min.css">
 <style>
 	@media screen and (min-width: 768px) {
@@ -95,8 +96,8 @@
 			<div
 				class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-autoheight">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide swiper-slide-active">
-						<div class="g-list">
+					<div  style="transform:translate3d(0,0,0);overflow:hidden;" class="swiper-slide swiper-slide-active">
+						<div class="g-list" style="transform:translate3d(0,0,0);overflow:hidden;" >
 							<ul>
 								<li>
 									<a href="https://h2433.com:8663?register=1" target="_blank">
@@ -343,8 +344,8 @@
 							</ul>
 						</div>
 					</div>
-					<div class="swiper-slide swiper-slide-next">
-						<div class="g-list">
+					<div style="transform:translate3d(0,0,0)"  class="swiper-slide swiper-slide-next">
+						<div class="g-list" >
 							<ul>
 								<li>
 									<a href="https://h2433.com:8663?register=1" target="_blank">
@@ -530,7 +531,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="swiper-slide">
+					<div style="transform:translate3d(0,0,0)" class="swiper-slide">
 						<div class="g-list">
 							<ul>
 								<li>
@@ -617,7 +618,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="swiper-slide">
+					<div style="transform:translate3d(0,0,0)" class="swiper-slide">
 						<div class="g-list">
 							<ul>
 								<li>
@@ -1133,7 +1134,7 @@
 		// $(".lazy").lazyload();
 		var mySwiper = new Swiper('.sldie-bd .swiper-container', {
 			autoHeight: true,
-			spaceBetween: 20,
+			// spaceBetween: 20,
 			on: {
 				slideChangeTransitionEnd: function () {
 					$(".slide-hd a").removeClass("on")
@@ -1142,7 +1143,7 @@
 			},
 		});
 		var gSwiper = new Swiper('.g-slide .swiper-container', {
-			spaceBetween: 10,
+			// spaceBetween: 10,
 			autoplay: true,
 			loop: true,
 			pagination: {
@@ -1185,6 +1186,10 @@
 				line-height: 40px;
 				font-size: 20px;
 			}
+		}
+		.lazy{
+			transform:translate3d(0,0,0);
+
 		}
 	</style>
 	<div id="color-picker-wrap" style="display: none; position: fixed; top: 0px; left: 0px; z-index: 9999;">
