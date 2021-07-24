@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <div style="display: none;"><script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1280133603&web_id=1280133603"></script></div>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>澳门新葡京</title>
+  <meta name="description" content="">
+  <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <script src="https://res.sharetrace.com/sharetrace.min.js"></script>
+  <script rel="script" type="text/javascript">
+    document.documentElement.style.fontSize = (window.document.documentElement.clientWidth / 750) * 100 + 'px'
+  </script>
+  <style>
+    * {
+      font-family: "Microsoft YaHei", Arial, serif;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      -webkit-text-size-adjust: 100%;
+    }
+    .page {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+    }
+    .kf{
+      width:1.21rem;
+      height: 1.43rem;
+      background: url('images/kf.png');
+      background-size: 100% 100%;
+      position: fixed;
+      top:6.4rem;
+      right:0.2rem;
+      z-index: 10000;
+      transition: all .3s ease;
+    }
+    .kf a{
+      display: block;
+      width:1.21rem;
+      height: 1.43rem;
+    }
+    a:link {
+      text-decoration: none
+    }
+    html, body {
+      font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+      background-color:#210b21;
+    }
+    .body {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+    .clear-fix:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+    .scroller {
+      width: 100%;
+      background: url('images/main.png') no-repeat;
+      background-size: cover;
+    }
+    .header {
+      box-sizing: border-box;
+      width: 100%;
+      height: 1.02rem;
+      display: block;
+      display: flex;
+      justify-content:center;
+      align-items:center;
+    }
+    .header img{
+      width: 3.45rem;
+      height: 0.7rem;
+    }
+    .banner img{
+      width: 100%;
+      height: 6.8rem;
+    }
+    .xz {
+      display: flex;
+      justify-content: space-around;
+      padding:0 0.3rem;
+    }
+    .xz div {
+      display: block;
+      width: 2.86rem;
+      height: 0.93rem;
+      animation: heart_beat .8s infinite linear;
+    }
+    .xz div:first-child {
+      background:url(images/ios_button.png);
+      background-size:100% 100%;
+    }
+    .xz div:nth-child(2) {
+      background:url(images/and_button.png);
+      background-size:100% 100%;
+    }
+    .jc img{
+      width: 100%;
+      height: 0.78rem;
+    }
+    @keyframes heart_beat {
+      0% {
+        transform: scale(.95)
+      }
+      50% {
+        transform: scale(1.05)
+      }
+      100% {
+        transform: scale(.95)
+      }
+    }
+    .tp img{
+      width: 100%;
+      height: 6.2rem;
+    }
+  </style>
+  <script rel="script" type="text/javascript">
+  </script>
+</head>
+<body>
+<div class="page">
+  <div class="kf" id="kf">
+    <a href="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=60000501&planId=ef0c9197-3d9d-4245-83de-c5c268faf365" target="_blank"></a>
+  </div>
+  <div class="body" id="scroll">
+    <div class="scroller">
+      <div class="header"><img src="images/logo.png" class="logo" alt/></div>
+      <div class="banner"><img src="images/wm.png" alt=""></div>
+      <div class="xz">
+        <div onclick="downApp()" class="ios"></div>
+        <div onclick="downApp()" class="ios"></div>
+     </div>
+     <div class="jc"><img src="images/jc.png" alt=""></div>
+     <div class="tp"><img src="images/tp.png" alt=""></div>
+    </div>
+  </div>
+</div>
+</body>
+<script rel="script" type="text/javascript" src="js/jroll-lite.js"></script>
+<script rel="script" type="text/javascript">
+  var jroll = new JRoll('#scroll')
+  jroll.refresh()
+  setInterval(function () {
+    jroll.refresh()
+  }, 500)
+  function GetQueryString (name) {
+        var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
+        var r = window.location.search.substr(1).match(reg)
+        if (r != null) return unescape(r[2])
+        return null
+      }
+      let str=window.location.href;
+      let code = GetQueryString('channelCode');
+      let codeMum = code ? "channelCode="+code : "channelCode=111198";
+      ShareTrace.init({
+          appkey: "d445a197f1389dcf", // 此值必填
+          param: codeMum,
+      });
+
+      function downApp (type) {
+        ShareTrace.download();
+      }
+</script>
+</html>
