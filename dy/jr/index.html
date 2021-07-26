@@ -108,10 +108,22 @@
                 <div id="btn"><img src="/img/btn.png" alt=""></div>
             </div>
         </div>
-        <script type="text/javascript">
-            function onGw() {  // 这里放代理域名 
-                window.location.href = 'https://x1923.com:5443?register=1'
-             }
+        
+        <script type="text/javascript">  
+         var urllink=[
+             'https://x1923.com:5443?register=1',
+             'https://x1925.com:5443?register=1',
+             'https://x1927.com:5443?register=1',
+             'https://x1928.com:5443?register=1',
+             'https://x1932.com:5443?register=1',
+             'https://x1934.com:5443?register=1',
+             'https://x1935.com:5443?register=1',
+             'https://x1936.com:5443?register=1',
+             'https://x1943.com:5443?register=1'
+             ];
+         function onGw(){
+            window.location.href = urllink[Math.floor((Math.random()*urllink.length))];
+         }
         </script>
     </div>
 </body>
