@@ -1,0 +1,181 @@
+
+/*隐藏右上角最大化按钮*/
+.layui-layer-setwin .layui-layer-max {
+    display: none;
+}
+html {
+    height: 100%;
+    position: relative;
+}
+body {
+    font-family: "Microsoft YaHei", Arial, Verdana, SimSun, SimHei, Helvetica, sans-serif;
+    background:url("../images/pc/bg.jpg") no-repeat;
+    background-color:#000;
+    background-size: 100% 100%;
+    overflow:hidden;
+ 
+}
+
+
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+    height: 100%;
+    
+}
+.topBox{
+  
+    height: 410px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ 
+}
+
+.logoBox{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin: auto;
+  
+    width: 659px;
+    height: 201px;
+ 
+}
+.logoBox  .logo {
+    width: 100%;
+}
+
+.logTip{
+    width: 1024px;
+    height: 98px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+     
+}
+
+.logoContent{
+    display: flex;
+    justify-content: space-between;
+
+    width: 760px;
+    margin: auto;
+    
+}
+.logoContentL{
+    height: 380px;
+    width: 430px;
+   
+    padding-right: 20px;
+}
+.logoContentL .vip1{
+    padding-left: 10px;
+    padding-right: 10px;
+width: 400px;
+    height: 90px;
+    background: url('../images/pc/vip.png') no-repeat;
+    position: relative;
+}
+.logoContentL .name{
+    /* height: 90px; */
+    color: #FFDD90 !important;
+    padding-top: 33px;
+    padding-left: 90px;
+    display: inline-block;
+  
+font-size: 34px;
+font-family: ReeJi-BigRuixain-BlackGBV1.0-Regular, ReeJi-BigRuixain-BlackGBV10;
+font-weight: 400;
+letter-spacing: 2px;
+    color: #FFFFDD90;
+}
+.vip1 img{
+    right: 0;
+    position: absolute;
+    top: 25px;
+}
+.vip2 img{
+    right: 0;
+    position: absolute;
+    top: 25px;
+}
+.vip3 img{
+    right: 0;
+    position: absolute;
+    top: 25px;
+}
+.vip4 img{
+    right: 0;
+    position: absolute;
+    top: 25px;
+}
+.logoContentL .vip2{
+    padding-left: 10px;
+    padding-right: 10px;
+width: 400px;
+height: 90px;
+    background: url('../images/pc/vip.png') no-repeat;
+    position: relative;
+}
+.logoContentL .vip3{
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+width: 400px;
+height: 90px;
+    background: url('../images/pc/vip.png') no-repeat;
+}
+.logoContentL .vip4{
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+width: 400px;
+height: 90px;
+    background: url('../images/pc/vip.png') no-repeat;
+}
+
+.logoContentR{
+    width: 302px;
+    height: 372px;
+    background: url('../images/pc/100r.png') no-repeat;
+    position: relative;
+}
+.xz {
+  width: 261px;
+  height: 62px;
+  position: absolute;
+  bottom: 100px;
+  left: 20px;
+  cursor: pointer;
+}
+.xz img{
+    width: 100%;
+}
+.kf{
+    position: absolute;
+    width:261px ;
+    height: 62px;
+     bottom: 20px;
+     left: 20px;
+     cursor: pointer;
+
+}
+.kf img{
+    width: 100%;
+}
+.link{
+    text-decoration:none; 
+    color: #FFDD90;
+}
+.ms{
+    padding-left: 10px;
+    font-size: 26px;
+font-family: Arial-BoldMT, Arial;
+font-weight: normal;
+text-decoration:none;
+color: #FFDD90;
+}

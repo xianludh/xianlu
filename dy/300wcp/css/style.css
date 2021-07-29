@@ -1,0 +1,155 @@
+
+html {
+    height: 100%;
+    position: relative;
+}
+body {
+    font-family: "Microsoft YaHei", Arial, Verdana, SimSun, SimHei, Helvetica, sans-serif;
+    background:url("../images/pc/bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    overflow:hidden;
+}
+
+
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+    height: 100%;
+    
+}
+.topBox{
+  
+    height: 327px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ 
+}
+
+.logoBox{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin: auto;
+  
+    width: 572px;
+    height: 117px;
+ 
+}
+.logoBox  .logo {
+    width: 100%;
+}
+
+.logTip{
+    width: 672px;
+    height: 71px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+     
+}
+
+.logoContent{
+    display: flex;
+    justify-content: space-between;
+
+    width: 760px;
+    margin: auto;
+    
+}
+.logoContentL{
+    height: 380px;
+    width: 430px;
+   
+    padding-right: 20px;
+}
+
+
+.vip1 .left{
+    left: 15px;
+    position: absolute;
+    top: 3px;
+}
+.vip1 .link{
+    padding-left: 60px;
+}
+.link .name{
+    height: 47px;
+    line-height: 47px;
+    font-size: 30px;
+    font-family: FZSuXinShiYiBiao-R-GB;
+    font-weight: bold;
+    color: #3C2617; 
+}
+.vip1 .right{
+    right: 30px;
+    position: absolute;
+    top: 10px;
+}
+.logoContentL .vip1{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 35px;
+    width: 361px;
+    height: 47px;
+    background: url('../images/pc/vip.png')  no-repeat;
+    position: relative;
+}
+
+
+
+.logoContentR{
+    width: 304px;
+    height: 377px;
+    background: url('../images/pc/100r.png') no-repeat;
+    position: relative;
+}
+.logoContentR .p{
+    padding-top: 10px;
+    text-align: center;
+}
+.logoContentR .luck{
+ padding-top: 10px;
+text-align: center;
+}
+.xz {
+  width: 261px;
+  height: 62px;
+  position: absolute;
+  bottom: 110px;
+  left: 20px;
+  cursor: pointer;
+}
+.xz img{
+    width: 100%;
+}
+.kf{
+    position: absolute;
+    width:261px ;
+    height: 62px;
+     bottom: 30px;
+     left: 20px;
+     cursor: pointer;
+
+}
+.kf img{
+    width: 100%;
+}
+.link{
+    text-decoration:none; 
+    color: #FFDD90;
+}
+.ms{
+    padding-left: 10px;
+    font-size: 26px;
+    font-family: Acumin Variable Concept;
+    font-weight: bold;
+    color: #000000;
+    line-height: 34px;
+    background: linear-gradient(180deg, #D3A109 0.9521484375%, #362301 99.31640625%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
