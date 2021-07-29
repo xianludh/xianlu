@@ -195,7 +195,7 @@
       width: 100%;
       margin: 0.16rem auto 0;
       height: 1.04rem;
-      background: url('images/footer.png') no-repeat;
+      background: url('images/footer.png') no-repeat center center;
       background-size: 100% 100%;
     }
    
@@ -266,10 +266,16 @@
   }, 500)
 
   function goPath(type) {
-    if (type == 1) window.location.href = 'https://vip8882.com/sanQianWanCPLoginWeb/app/appDownload'
+    if (type == 1) down()
     else window.location.href = 'https://3591256.com/chatWindow.aspx?siteId=5001089&planId=90#'
   }
-
+  function down() {
+    if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+          window.location.href = 'https://site.djslighting.com/app/zh/GjFXRzPs3'
+        } else if (/(Android)/i.test(navigator.userAgent)) {
+          window.location.href = 'http://appnew-down.ppkp999.com/download/app/app-sanQianWanCP-android.apk'
+        } 
+  }
   function speed(element) {
     setTimeout(function () {
       var tim = 1;
