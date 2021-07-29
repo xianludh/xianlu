@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <div style="display: none;"><script type="text/javascript" src="https://s4.cnzz.com/z_stat.php?id=1280146313&web_id=1280146313"></script></div>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>开心100</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script>
+    if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) ||
+      /Android/i.test(navigator.userAgent) ||
+      /BlackBerry/i.test(navigator.userAgent) ||
+      /IEMobile/i.test(navigator.userAgent) ||
+      (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/
+        .test(navigator.userAgent))) {
+      window.location.href = "mobile/index.html";
+    }
+</script>
+</head>
+
+<body>
+  
+    <div class="container">
+      <div class="topBox">
+  
+        <div class="logoBox">
+          <img class="logo" src="./images/pc/logo.png" alt="">
+         
+        </div>
+        <div class="logTip">
+          <img src="./images/pc/logoTip.png" alt="">
+        </div>
+      </div>
+      <div class="logoContent">
+          <div class="logoContentL">
+              <div class="vip1">
+                <a id="bindUrl" href="" class="link" target="_blank">
+
+                  <span class="name">贵宾一线</span>
+                  <span class="speed ms">5ms</span>
+                </a>
+                <img src="./images/pc/right.png" alt="">
+              </div>
+              <div class="vip2">
+                <a href="http://9298666.com" class="link" target="_blank">
+                  <span class="name">贵宾二线</span>
+                  <span class="speed ms">7ms</span>
+                </a>
+                  <img src="./images/pc/right.png" alt="">
+              
+               
+              </div>
+              <div class="vip3">
+                <a href="http://8812666.com" class="link" target="_blank">
+                <span class="name">贵宾三线</span>
+                <span class="speed ms">8ms</span>
+              </a>
+                <img src="./images/pc/right.png" alt="">
+             
+              </div>
+              <div class="vip4">
+                <a href="http://8322666.com.com" class="link" target="_blank">
+                <span class="name">贵宾四线</span>
+                <span class="speed ms">8ms</span>
+              </a>
+                <img src="./images/pc/right.png" alt="">
+              </div>
+          </div>
+          <div class="logoContentR">
+            <div  onclick="goPath(2)" class="xz"> <img src="./images/pc/xz.png" alt=""></div>
+            <div  onclick="goPath(1)" class="kf"><img src="./images/pc/kf.png" alt=""></div>
+           
+          </div>
+      </div>
+    </div>
+</body>
+<script>
+    function goPath(type) {
+    if (type == 1) window.location.href = 'https://3599267.com/chatWindow.aspx?siteId=5001090&planId=91#'
+    else window.location.href = 'https://vip9925.com/kaiXinYiBaiLoginWeb/app/appDownload'
+  }
+
+  function speed(element) {
+    setTimeout(function () {
+      var tim = 1;
+      for (var i of document.querySelectorAll(element)) {
+        i.innerText = 10 + tim + Math.ceil(Math.random() * 2) + 'ms';
+        tim += 2;
+      }
+    }, 500);
+  }
+  speed('.ms')
+  let urllink = ['https://6322666.com/', 'https://6162666.com/', 'https://6112666.com/', 'https://6515666.com/']
+  document.querySelectorAll('#bindUrl').forEach(function (item) {
+    item.href = urllink[Math.floor((Math.random() * urllink.length))];;
+  });
+</script>
+</html>
