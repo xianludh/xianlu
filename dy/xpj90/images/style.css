@@ -1,0 +1,196 @@
+@charset "utf-8";
+
+body {
+    background:#fff ;
+    font-size: .25rem;
+    padding-bottom: 1.2rem;
+  
+}
+
+.box{
+    background: url(./bg.png) no-repeat;
+    background-size: cover;
+}
+.wrap {
+    padding: 0 .4rem;
+}
+
+.header {
+    height: .8rem;
+    padding: .2rem  .4rem 0 .4rem;
+    background-image: linear-gradient(#07A8F6, #07A8F6);
+}
+
+.header .logo {
+    width: 2.4rem;
+    height: .6rem;
+    margin: auto;
+}
+
+.header .btn {
+    height: .5rem;
+    width: 1.4rem;
+    float: right;
+    margin: 0 0 0 .2rem
+}
+
+.gamelist {
+    width: 100%;
+    overflow: hidden
+}
+
+.gamelist ul {
+    overflow: hidden
+}
+
+.gamelist ul li {
+    width: 2.1rem;
+    height: .66rem;
+    margin: .2rem 0 0 .2rem;
+    overflow: hidden;
+    float: left;
+}
+
+.gamelist ul li img {
+    width: 100%;
+}
+
+.gamelist ul li a {
+    display: block;
+}
+
+.gamelist ul li:nth-child(3n+1) {
+    margin-left: 0;
+}
+
+.word {}
+
+.gonggao {
+    border: 1px solid #dfe5f0;
+    height: .6rem;
+    background: url(./gg.png) center repeat-x;
+    margin: 0.2rem auto ;
+    line-height: .6rem;
+    width: 100%;
+    border-radius: .5rem;
+    padding: 0 .4rem 0 .2rem;
+    box-sizing: border-box;
+    overflow: hidden
+}
+
+.gonggao .tit {
+    height: .4rem;
+    margin-top: 0.09rem;
+    line-height: .6rem;
+    float: left;
+    display: block;
+    width: 0.4rem;
+    color: #666;
+}
+
+.gonggao .tit span {
+    display: inline-block;
+    font-size: 0.26rem;
+    background: url(../img/info.png);
+    vertical-align: middle;
+    margin-right: 0.2rem
+}
+
+.gonggao .gundong {
+    color: #617fad;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.gonggao .gundong a {
+    color: #617fad
+}
+
+.common{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.25rem;
+}
+.common .djxa{
+    width: 4.13rem;
+    height: 1.07rem;
+    padding-right: 0.19rem;
+}
+.common .djzc{
+    width: 4.13rem;
+    height: 1.07rem;
+}
+.djxa,.djzc img{
+    animation: myfirst 1.0s infinite linear;
+}
+.txtMarquee-left {
+    position: relative;
+}
+
+.txtMarquee-left .bd .tempWrap {
+    width: auto !important;
+}
+
+.txtMarquee-left .bd ul {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.txtMarquee-left .bd ul li {
+    margin-right: 20px;
+    float: left;
+    text-align: left;
+    _display: inline;
+    width: auto !important;
+}
+
+.txtMarquee-left .bd ul li span {
+    color: #999;
+}
+
+.title {
+    padding: .2rem 0;
+}
+
+.bottom {
+    text-align: center;
+    padding: .2rem 0;
+}
+
+.rightGx {
+    display: inline-block;
+    height: .7rem;
+    overflow: hidden;
+    width: 2rem;
+}
+
+.rightGx img {
+    height: 100%;
+    animation: myfirst 1.0s infinite linear;
+}
+
+.bottom {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+    background: #fff;
+}
+
+@keyframes myfirst {
+    from {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(0.8)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+.youh2{
+    padding-top: 0.35rem;
+}
