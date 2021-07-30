@@ -1,107 +1,96 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <div style="display: none;"><script type="text/javascript" src="https://s4.cnzz.com/z_stat.php?id=1280146313&web_id=1280146313"></script></div>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>3000万彩票</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <script>
-      if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) ||
-        /Android/i.test(navigator.userAgent) ||
-        /BlackBerry/i.test(navigator.userAgent) ||
-        /IEMobile/i.test(navigator.userAgent) ||
-        (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/
-          .test(navigator.userAgent))) {
-        window.location.href = "mobile/index.html";
-      }
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,user-scalable=no,minimal-ui">
+<title>welcome</title>
 </head>
 
-<body>
-  
-    <div class="container">
-      <div class="topBox">
-  
-        <div class="logoBox">
-          <img class="logo" src="./images/pc/logo.png" alt="">
-         
-        </div>
-        <div class="logTip">
-          <img src="./images/pc/logoTip.png" alt="">
-        </div>
-      </div>
-      <div class="logoContent">
-          <div class="logoContentL">
-              <div class="vip1">
-                <img class="left" src="./images/pc/left.png" alt="">
-                <a  id="bindUrl" href="" class="link" target="_blank">
-                
-                  <span class="name">贵宾一线</span>
-                  <span class="speed ms">5ms</span>
-                </a>
-                <img  class="right" src="./images/pc/right.png" alt="">
-              </div>
-              <div class="vip1">
-                <img class="left" src="./images/pc/left.png" alt="">
-                <a  href="http://9918666.com" class="link" target="_blank">
-                
-                  <span class="name">贵宾二线</span>
-                  <span class="speed ms">7ms</span>
-                </a>
-                <img  class="right" src="./images/pc/right.png" alt="">
-              </div>
-              <div class="vip1">
-                <img class="left" src="./images/pc/left.png" alt="">
-                <a  href="http://8552666.com" class="link" target="_blank">
-                
-                  <span class="name">贵宾三线</span>
-                  <span class="speed ms">6ms</span>
-                </a>
-                <img  class="right" src="./images/pc/right.png" alt="">
-              </div>
-              <div class="vip1">
-                <img class="left" src="./images/pc/left.png" alt="">
-                <a  href="http://8553666.com" class="link" target="_blank">
-                
-                  <span class="name">贵宾四线</span>
-                  <span class="speed ms">8ms</span>
-                </a>
-                <img  class="right" src="./images/pc/right.png" alt="">
-              </div>
-            
-          </div>
-          <div class="logoContentR">
-            <div class="p"> <img src="./images/pc/q.png" alt=""></div>
-            <div class="luck"><img src="./images/pc/luck.png" alt=""></div>
-            <div  onclick="goPath(1)" class="xz"> <img src="./images/pc/xz.png" alt=""></div>
-            <div  onclick="goPath(2)" class="kf"><img src="./images/pc/kf.png" alt=""></div>
-           
-          </div>
-      </div>
-    </div>
-</body>
-<script>
-    function goPath(type) {
-    if (type == 1) window.location.href = 'https://vip8882.com/sanQianWanCPLoginWeb/app/appDownload'
-    else window.location.href = 'https://3591256.com/chatWindow.aspx?siteId=5001089&planId=90#'
-  }
+<style>
+*{ margin: 0;padding: 0;}
+body{width:100%;background: #000; overflow: hidden;}
+span{width:30px; height:30px; position:absolute;background: url("./xx.png") no-repeat; background-size: 100% 100%;
+    animation: show 1s alternate infinite }
+@keyframes show {
+ 0%{opacity:0%;}
+100%{opacity: 100%;}
+}
+span:hover{transform:scale(3,3) rotate(180deg) !important;transition: all 1s!important;}
+        .box {
+            width: 100%;
+            height: 100%;
+        }
 
-  function speed(element) {
-    setTimeout(function () {
-      var tim = 1;
-      for (var i of document.querySelectorAll(element)) {
-        i.innerText = 10 + tim + Math.ceil(Math.random() * 2) + 'ms';
-        tim += 2;
+        .middleBox {
+            width: 100%;
+            height: 233px;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+        }
+
+
+        .btnBox {
+            width: 100%;
+            margin-top: 100px;
+        }
+
+        #btn {
+            width: 566px;
+            height: 233px;
+            margin: auto;
+            cursor: pointer;
+        }
+
+        #btn img {
+            width: 100%;
+            height: 100%;
+        }
+
+</style>
+
+<body>
+    <div class="box">
+        <div class="middleBox" id="middleBox">
+            <div class="btnBox">
+                <div id="btn" onclick="goGw()">
+                    <img src="./btn.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+var screenW=document.documentElement.clientWidth-30;
+var screenH=document.documentElement.clientHeight-30;
+for(var i=0;i<100;i++)
+{
+	var span=document.createElement("span");//创建一个span
+	document.body.appendChild(span);
+
+	var x=parseInt(Math.random()*screenW);
+	var y=parseInt(Math.random()*screenH);
+	span.style.left=x+"px";
+	span.style.top=y+"px";
+    var num = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ? 1.1 : 2;
+	var scale=Math.random()*num
+	span.style.transform="scale("+scale+","+scale+")";
+
+	//动画延迟闪烁
+	span.style.animationDelay=scale+"s";
+
+}
+if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            document.getElementById('middleBox').style.top = '25%'
+            document.getElementById('btn').style.width = '283px'
+            document.getElementById('btn').style.height = '116px'
       }
-    }, 500);
-  }
-  speed('.ms')
-  let urllink = ['https://8559666.com/', 'https://6762666.com/', 'https://6798666.com/', 'https://5662666.com/']
-  document.querySelectorAll('#bindUrl').forEach(function (item) {
-    item.href = urllink[Math.floor((Math.random() * urllink.length))];;
-  });
+function goGw() {
+    window.location.href = './nav/index.html'
+}
 </script>
+
+</body>
 </html>
