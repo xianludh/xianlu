@@ -1,0 +1,126 @@
+* {
+  font-family: "Microsoft YaHei", Arial, serif;
+  padding: 0;
+  margin: 0;
+}
+
+.page {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #2F1D0F;
+}
+.line{
+  width: 1.24rem;
+  height: 1.13rem;
+  background: url('../images/line_btn.png');
+  background-size: 100% 100%;
+  position: fixed;
+  right: 0;
+  top: 9.2rem;
+  z-index: 10000;
+  transition: all .3s ease;
+}
+.line a{
+  display: block;
+  width: 1.03rem;
+  height: 1.09rem;
+}
+.kf {
+  width: 1.24rem;
+  height: 1.36rem;
+  background: url('../images/service_btn.png');
+  background-size: 100% 100%;
+  position: fixed;
+  top: 8.01rem;
+  right: 0;
+  z-index: 10000;
+  transition: all .3s ease;
+}
+
+.kf a {
+  display: block;
+  width: 1.24rem;
+  height: 1.36rem;
+}
+
+a:link {
+  text-decoration: none
+}
+
+.scroller {
+  width: 100%;
+  background: url('../images/bg.png') no-repeat;
+  padding-top: 7.9rem;
+}
+
+.clear-fix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.btn {
+  width: 2.74rem;
+  height: 0.9rem;
+  margin: auto;
+}
+
+.btn .img {
+  width: 100%;
+}
+
+.showCommon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.39rem;
+}
+.show{
+   width: 100%;
+   height: 2.8rem;
+}
+.show img{
+  width: 100%;
+}
+.bogBox{
+  margin-top: 0.9rem;
+}
+.bogBoxbtn {
+   width: 4.16rem;
+   height: 0.96rem;
+   margin: auto;
+}
+.bogBoxbtn img{
+  width: 100%;
+}
+.bogBoxbtn:nth-child(2){
+  margin-top:0.33rem;
+}
+.footer {
+  width: 100%;
+  display: flex;
+  padding: 0.6rem 0.3rem;
+  box-sizing: border-box;
+}
+.footer div{
+  width: 1.25rem;
+  height: 0.69rem;
+  margin-left: 0.17rem;
+}
+.footer div img{
+   width: 100%;
+   vertical-align: top;
+}
