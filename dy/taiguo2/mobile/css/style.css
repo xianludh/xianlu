@@ -22,20 +22,20 @@ body {
   background-color: #2F1D0F;
 }
 .line{
-  width: 1.24rem;
-  height: 1.13rem;
+  width: 0.9rem;
+  height: 0.9rem;
   background: url('../images/line_btn.png');
   background-size: 100% 100%;
   position: fixed;
-  right: 0;
+  right: 0.2rem;
   top: 9.2rem;
   z-index: 10000;
   transition: all .3s ease;
 }
 .line a{
   display: block;
-  width: 1.03rem;
-  height: 1.09rem;
+  width: 0.9rem;
+  height: 0.9rem;
 }
 .kf {
   width: 1.24rem;
@@ -62,7 +62,8 @@ a:link {
 .scroller {
   width: 100%;
   background: url('../images/bg.png') no-repeat;
-  padding-top: 7.9rem;
+  padding-top: 0.4rem;
+  background-size: 100% 100%;
 }
 
 .clear-fix:after {
@@ -70,14 +71,24 @@ a:link {
   display: table;
   clear: both;
 }
+.logo{
+  width: 3.33rem;
+  height: 0.76rem;
+  margin: auto;
+}
+.logo img{
+  width: 100%;
+  vertical-align: top;
+}
 .btn {
   width: 2.74rem;
   height: 0.9rem;
-  margin: auto;
+  margin: 6.62rem auto 0;
 }
 
 .btn .img {
   width: 100%;
+  vertical-align: top;
 }
 
 .showCommon {
