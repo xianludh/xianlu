@@ -96,22 +96,22 @@ letter-spacing: 2px;
 .vip1 img{
     right: 0;
     position: absolute;
-    top: 25px;
+    top: 27px;
 }
 .vip2 img{
     right: 0;
     position: absolute;
-    top: 25px;
+    top: 27px;
 }
 .vip3 img{
     right: 0;
     position: absolute;
-    top: 25px;
+    top: 27px;
 }
 .vip4 img{
     right: 0;
     position: absolute;
-    top: 25px;
+    top: 27px;
 }
 .logoContentL .vip2{
     padding-left: 10px;
@@ -170,6 +170,8 @@ height: 90px;
 .link{
     text-decoration:none; 
     color: #FFDD90;
+    display: block;
+    cursor: pointer;
 }
 .ms{
     padding-left: 10px;
