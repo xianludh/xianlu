@@ -1,1 +1,25 @@
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('3(/n.*o/i.5(6.7)||/p/i.5(6.7)||/q/i.5(6.7)||/r/i.5(6.7)||(/s|t|u|v|w|x|y|z|A|B|C|D|E|F|G-|H|I|J-|K|L/.5(6.7))){4.g.h="M/N.O"};$().P(b(){$(4).Q(b(){4.R(b(){S a=0;3(d 4.j!=\'e\'){a=4.j}c 3(d 8.k!=\'e\'&&8.k!=\'T\'){a=8.U.l}c 3(d 8.m!=\'e\'){a=8.m.l}$(".V").W("X",Y+a)},Z)})});b 10(a){11 9;3(a==1)9=\'f://12.13/14\';c 3(a==2)9=\'f://15.16.17/18.19?1a=1b&1c=1d-1e-1f-1g-1h#\';c 9=\'f://1i.1j.1k/1l/\';4.g.h=9}',62,84,'|||if|window|test|navigator|userAgent|document|url||function|else|typeof|undefined|https|location|href||pageYOffset|compatMode|scrollTop|body|AppleWebKit|Mobile|Android|BlackBerry|IEMobile|MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT|Nokia|SonyEricsson|SIE|Amoi|ZTE|mobile|index|html|ready|scroll|setTimeout|var|BackCompat|documentElement|right|css|top|230|100|gopath|let|lin|ee|lVzUfsI|vue|livelyhelp|chat|chatWindow|aspx|siteId|60002210|planId|52f5469a|0d46|4787|a52a|5d5e4adb225d|app|u603|com|sands'.split('|'),0,{}))
+if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent) || /BlackBerry/i.test(navigator.userAgent) || /IEMobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+    window.location.href = "mobile/index.html"
+};
+$().ready(function() {
+    $(window).scroll(function() {
+        window.setTimeout(function() {
+            var a = 0;
+            if (typeof window.pageYOffset != 'undefined') {
+                a = window.pageYOffset
+            } else if (typeof document.compatMode != 'undefined' && document.compatMode != 'BackCompat') {
+                a = document.documentElement.scrollTop
+            } else if (typeof document.body != 'undefined') {
+                a = document.body.scrollTop
+            }
+            $(".right").css("top", 230 + a)
+        }, 100)
+    })
+});
+function gopath(a) {
+    let url;
+    if (a == 1) url = 'https://lin.ee/lVzUfsI';
+    else if (a == 2) url = 'https://vue.livelyhelp.chat/chatWindow.aspx?siteId=60002210&planId=52f5469a-0d46-4787-a52a-5d5e4adb225d#';
+    else url = 'https://app.u603.com/sands/';
+    window.location.href = url
+}
