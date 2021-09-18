@@ -1,0 +1,453 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width ,initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+    <title>开元棋牌</title>
+    <link rel="stylesheet icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<script type="text/javascript" src="js/flexible.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/vant_min.js"></script>
+    <script src="./js/inobounce.js"></script>
+    <script src="./js/noZoom.js"></script>
+    
+    <link rel="stylesheet" href="./css/vant.css">
+    <style>
+	.swiper-container {
+      width: 100%;
+      height: 2.8rem;
+      /* top:43%; */
+		}
+		
+		.swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      transform: scale(0.9);
+      
+    }
+    .swiper-slide-active,.swiper-slide-duplicate-active{
+      transform: scale(1.1);
+      z-index: 10;
+    }
+    .swiper-slide-next {
+        z-index: 2;
+    }
+    .swiper-slide img{
+        width:5.2rem;
+        height: 2.2rem;
+        transform:translate3d(0,0,0)
+    }
+			.header{
+				background-color: #000000;
+				height: 1.173rem;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.header-left{
+				padding-left: 0.346rem;
+				
+			}
+			.header-left img{
+                width:3.5rem;
+				height: 1.1rem;
+                
+			}
+			.header-right{
+				display: flex;
+				align-items: center;
+				align-items: center;
+				padding-right: 0.346rem;
+            }
+            .header-right img {
+                width: 2.92rem;
+				height: 0.67rem;
+            }
+      
+            .middleP{
+                width: 100%;
+                height: 3.71rem;
+                background:url(./images/middle.png);
+                background-size: 100% 100%;
+            }
+			.titleTop{
+				height: 0.85rem;
+				padding-top: 1rem;
+		  
+			}
+            .titleTop p{
+                height: 0.425rem;
+               
+            }
+			.titleTopY{
+                position:absolute;
+                top:0;    
+                left:50%;
+                transform: translate(-50%, -50%);
+				border: 0px solid #4E4E4E;
+				border-radius: 0.5rem;
+			    margin: auto;
+            }
+            .titleTopY img{
+                width: 3.03rem;  
+                height: 0.85rem;
+            }
+			
+			.speedlist{
+                position: relative;
+                padding-top: 0.82rem;
+				padding-bottom:1.06rem;
+				
+                /* border: 1px solid #4E4E4E; */
+            }
+            .cxlc{
+                position: absolute;
+                width: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .cxlc img{
+                width: 4.67rem;
+                height: 1.07rem;
+            }
+            
+            .gg {
+            color: white;
+            display: flex;
+            line-height: 0.85rem;
+            background: #343434;
+            }
+            .gg .zx {
+                color: #F8BE83;
+                width: 2.5rem;
+                font-size: 0.37rem;
+                padding-left:0.1rem;
+            }
+            .gg img {
+                vertical-align: middle;
+                width: 0.43rem;
+                height: 0.4rem;
+            }
+      </style>
+   
+</head>
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">
+                当前浏览器版本太低,建议升级道最新版本
+            </p>
+        <![endif]-->
+  <div class="content" id="Vue">
+      <div class="main">
+        <a href="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5000775&planId=279#"  class="zxkf" target="_blank"><img src="./images/zxkf.png" alt=""></a>
+		<div class="header">
+			<div class="header-left">
+				<img  src="./images/logo.png">
+			</div>
+			<div class="header-right">
+				<a href="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5000775&planId=279#" target="_blank"><img  src="./images/kf.png"></a>
+			</div>
+		</div>
+		<div class="middleP"></div>
+        <div class="gg" style="display:flex">
+            <span class="zx" style="font-size: 0.36rem; text-indent: 0.1rem;"><img src="./images/message.png" />&nbsp;最新消息：</span>
+            <van-notice-bar delay='0' style="overflow: hidden;">
+                <span style="
+                font-size: 0.32rem;
+                display: inline-block;
+                ;">欢迎莅临开元棋牌【k43.com】我们秉承“服务至上，客户第一”的经营理念！竭诚为每一位玩家提供专业、高效、优质的服务！以诚信树立品牌，良心铸就经典，看得到的贴心，领得到的实惠，邀请您的朋友一起加入我们吧！！</span>
+            
+            </van-notice-bar>
+        </div>
+        <div class="banner">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="./images/banner1.png" alt=""></div>
+								<div class="swiper-slide"><img src="./images/banner2.png" alt=""></div>
+								<div class="swiper-slide"><img src="./images/banner3.png" alt=""></div>
+							</div>
+					</div>
+		</div>
+		<div class="bk" style="width: 100%;">
+			<ul class="speedlist">
+                <div class="titleTopY"><img  src="./images/xianlu.png"/></div>
+				<li class="clearfix">
+						<span class="ms" id="sudu1">检测中</span>
+						<span class="lj"><img src="./images/bq.png" alt=""></span>
+						<span class="url">
+						</span>
+						<span class="jt"><img src="./images/bq.png" alt=""></span>
+						<span class="btn-open">
+                                <a href="" >
+                                    <span>进入游戏</span>
+								</a>
+						</span>
+				</li>
+				<li class="clearfix">
+						<span class="ms" id="sudu2">检测中</span>
+						<span class="lj"><img src="./images/bq.png" alt=""></span>
+						<span class="url">
+						</span>
+						<span class="jt"><img src="./images/bq.png" alt=""></span>
+						<span class="btn-open">
+                                <a href="" >
+                                    <span>进入游戏</span>
+								</a>
+						</span>
+				</li>
+				<li class="clearfix">
+						<span class="ms" id="sudu3">检测中</span>
+						<span class="lj"><img src="./images/bq.png" alt=""></span>
+						<span class="url">
+						</span>
+						<span class="jt"><img src="./images/bq.png" alt=""></span>
+						<span class="btn-open">
+                                <a href="" >
+                                    <span>进入游戏</span>
+								</a>
+						</span>
+				</li>
+				<li class="clearfix">
+						<span class="ms" id="sudu4">检测中</span>
+						<span class="lj"><img src="./images/bq.png" alt=""></span>
+						<span class="url">
+						</span>
+						<span class="jt"><img src="./images/bq.png" alt=""></span>
+						<span class="btn-open">
+                                <a href="" >
+                                    <span>进入游戏</span>
+								</a>
+						</span>
+				</li>
+				<li class="clearfix">
+						<span class="ms" id="sudu5">检测中</span>
+						<span class="lj"><img src="./images/bq.png" alt=""></span>
+						<span class="url">
+						</span>
+						<span class="jt"><img src="./images/bq.png" alt=""></span>
+						<span class="btn-open">
+                                <a href="" >
+                                    <span>进入游戏</span>
+								</a>
+						</span>
+                </li>
+            </ul>
+            <div class="cxlc" id="refresh"><img src="./images/jc.png" alt=""></div>
+		</div>
+        <div class="kq">
+            <a href="https://k661.com/m/#/home?register=1" ><img src="./images/ljkq.png" alt="" /></a>
+        </div>
+        <div class="often">
+            <table>
+                <tr>
+                    <td>
+                        <div>
+                            <a href="https://k661.com/m/#/home?homeGameType=10004" >
+                                <img src="./images/qp.png" alt="">
+                                <span>棋牌游戏</span>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <a href="https://k661.com/m/#/home?homeGameType=10001" >
+                                <img src="./images/dz.png" alt="">
+                                <span>电子游戏</span>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <a href="https://k661.com/m/#/home?homeGameType=10005" >
+                                <img src="./images/py.png" alt="">
+                                <span>捕鱼游戏</span>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <a href="https://k661.com/m/#/activity" >
+                                <img src="./images/actity.png" alt="">
+                                <span>活动大厅</span> 
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <a href="https://k661.com/m/#/activity?activityId=1" >
+                                <img src="./images/jlb.png" alt="">
+                                <span>VIP俱乐部</span>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <a href="https://k661.com/m/#/admin/login" >
+                                <img src="./images/jiebei.png" alt="">
+                                <span>借呗</span>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <a href="https://k661.com/m/#/admin/login" >
+                                <img src="./images/meg.png" alt="">
+                                <span>最新消息</span>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <a href="javascript:void (0)" onclick="downApp()">
+                                <img src="./images/mapp.png" alt="">
+                                <span>APP下载</span>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div> 
+      </div>
+  </div>
+  <div class="footer">
+    <a id="download"><img src="./images/down_bottom.gif" alt="" onclick="downApp()"/></a>
+ </div>
+  <script>
+     new Vue({
+            el:"#Vue",
+            data:{
+                    active: 0
+            },
+            methods:{
+
+            },
+            created(){
+            }
+    })
+
+    var swiper = new Swiper('.swiper-container', {
+      watchSlidesProgress: true,
+      slidesPerView: 3,
+      spaceBetween: 50,
+	  centeredSlides: true,
+      loop: true,
+      autoplay:{
+        delay:3000,
+       disableOnInteraction:false
+        },
+    });
+
+    var autourl = new Array()
+    autourl[0] = 'https://k661.com'
+    autourl[1] = 'https://k0553.com'
+    autourl[2] = 'https://k0663.com'
+    autourl[3] = 'https://k0771.com'
+    autourl[4] = 'https://k0776.com'
+
+    document.querySelectorAll('.speedlist li').forEach(function (item, index) {
+        item.children[4].children[0].href = autourl[index]
+        item.children[2].innerText ='www.' + autourl[index].split('//')[1]
+    })
+
+  function speed (element) {
+        for (var i of  document.querySelectorAll(element)) {
+            i.innerText ='检测中'
+        }  
+
+      setTimeout(function(){
+        var tim = 1;
+        for (var i of  document.querySelectorAll(element)) {
+        i.innerText = 3 + tim + Math.ceil(Math.random() * 2) + 'ms'
+        tim += 2
+        }
+      },500)
+    
+  }
+  speed('.ms');
+    document.getElementById('refresh').onclick = function () {
+        speed('.ms');
+    } 
+
+    
+    // document.getElementById('download').onclick= function(){
+    //             downApp()
+    //             // var u = navigator.userAgent;
+    //             // var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    //             // var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    //             // if(isiOS){
+    //             //     // window.open("https://k644.com/m/#/home?down=1",'_blank');
+    //             //     window.location.href = "https://k661.com/m/#/home?down=1";
+    //             // }else if(isAndroid){
+    //             //     // window.open("https://k644.com/m/#/home?register=1",'_blank');
+    //             //     window.location.href = "https://k661.com/m/#/home?register=1";
+    //             // }
+    // }
+  </script>
+<script src="https://res.sharetrace.com/sharetrace.min.js"></script>
+<script type="text/javascript">
+  function GetQueryString (name) {
+      var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
+      var r = window.location.search.substr(1).match(reg)
+      if (r != null) return unescape(r[2])
+      return null
+    }
+    let str=window.location.href;
+    let code = GetQueryString('channelCode');
+    let codeMum = code ? "channelCode="+code : "channelCode=488849";
+    ShareTrace.init({
+        appkey: "85cf493a8c8a56ae", // 此值必填
+        param: codeMum,
+    });
+
+    function downApp (type) {
+    //   ShareTrace.download();
+         var u = navigator.userAgent;
+         var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+         if(isiOS)  window.location.href = "http://site.xianyutrading.com/app/zh/GmWNpfBM3"
+         else window.location.href = "https://qpqpqpqpqp.oss-cn-hongkong.aliyuncs.com/k44-release.apk"
+    }
+</script>
+
+</body>
+
+</html>
+<style>
+    .van-notice-bar {
+        background: #343434;
+        height: 0.85rem;
+        flex:1;
+        padding:0;
+    }
+    .van-notice-bar__content {
+        color:white;
+        font-size: 0.37rem;
+        padding-left: 80vw !important;
+    }
+    .van-notice-bar__wrap {
+        height: 100%;
+        line-height: 0.85rem;
+    }
+    
+</style>
