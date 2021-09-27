@@ -1,0 +1,90 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    font-family: "Microsoft YaHei", Arial, Verdana, SimSun, SimHei, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/bg.png") no-repeat;
+    background-size: cover;
+}
+.container {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.left{
+    width:30%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.left .app{
+   width: 504px;
+   height: 536px;
+}
+.left .bot img{
+    width: 379px;
+    height: 65px;
+}
+.left .line{
+    display: flex;
+    cursor: pointer;
+}
+.right{
+    width:70%;
+    height: 100vh;
+    position: relative;
+}
+.right img{
+    width: 1208px;
+    height: 100vh;
+}
+.right .btn{
+    width: 606px;
+    height: 187px;
+    position: absolute;
+    left: 20px;
+    top: 72%;
+    cursor: pointer;
+}
+
+
+
+
+
