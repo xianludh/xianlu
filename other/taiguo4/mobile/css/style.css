@@ -70,11 +70,10 @@ a:link {
   clear: both;
 }
 .main{
-  padding: 0.31rem 0.6rem 0 0.6rem; 
+  padding: 0.31rem 0.25rem 0 0.25rem; 
 }
 .wm{
-  width: 6.29rem;
-  height: 8.66rem;
+  width: 7rem;
 }
 .btn{
   width: 100%;
