@@ -1,36 +1,108 @@
-﻿<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-        content="width=device-width ,initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
-    <title>澳门威尼斯人</title>
-    <link rel="stylesheet icon" href="images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>welcome</title>
+    <meta name="description" content="">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="js/flexible.js"></script>
-    <script type="text/javascript" src="js/inobounce.js"></script>
-    <script type="text/javascript" src="js/noZoom.js"></script>
+    <script>
+        if (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
+            window.location.href = './h5.html';
+        }
+    </script>
+    <style>
+        .page {
+            width: 100%;
+            max-width: 750px;
+            margin: 0 auto;
+        } 
+        .page .banner {
+            width: 100%;
+            height: 927px;
+            background: url('./images/bg.jpg');
+            background-size: 100% 100%;
+            position: relative;
+        }
+        .page .downbtn {
+            cursor: pointer;
+            width: 100%;
+            position: absolute;
+            width: 67%;
+            left: 16.5%;
+            top: 70px;
+            animation: heart_beat .8s infinite linear;
+        }
+        .page .downbtn img {
+           vertical-align: middle;
+        }
+        .page .hot {
+            width: 100%;
+            position: relative;
+            background: url(./images/hotgame.jpg);
+            background-size: 100% 100%;
+            height: 1153px;
+        }
+        @keyframes heart_beat {
+            0% {
+                transform: scale(.95)
+            }
+
+            50% {
+                transform: scale(1.05)
+            }
+
+            100% {
+                transform: scale(.95)
+            }
+        }
+        .page .often {
+             width: 100%;
+        }
+
+        .page .often img {
+            width: 100%;
+            vertical-align: middle;
+        }
+        .footer-box{
+            width: 100%;
+            cursor: pointer;
+        }
+        .kf{
+            width: 127px;
+            height: 137px;
+            background: url(./images/kf.png);
+            position: fixed;
+            top: 200px;
+            right: calc(((100% - 750px)/1.99));
+            z-index: 10000;
+            cursor: pointer;
+        }
+        .kf a{
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <div id="main">
-        <div class="content">
-            <div class="banner">
-            </div>
-            <div class="hot">
-                <div class="downbtn" id="download" onclick="downApp()"><img src="./images/downbtn.png" alt=""></div>
-            </div>
-            <div class="often">
-                <img src="./images/tj.jpg" alt="">
-            </div>
+    <div class="page">
+        <div class="kf">
+            <a href="https://vue.livelyhelp.chat/63dd77443cd4de707a4jkfle-keli3dd9d070704080b0f030c0a040202030801060405080f81eb030045c540eb08a" target="_blank" id="bindKefu"></a>
         </div>
+        <div class="banner">
+        </div>
+        <div class="hot">
+            <div class="downbtn" id="download" onclick="downApp()"><img src="./images/downbtn.png" alt=""></div>
+        </div>
+        <div class="often">
+            <img src="./images/tj.jpg" alt="">
+        </div>
+        <footer class="footer-box">
+            <a><img src="./images/footer.gif" alt="" id="download" onclick="downApp()"></a>
+        </footer>
     </div>
-    <footer class="footer-box">
-        <a><img src="./images/footer.gif" alt="" id="download" onclick="downApp()"></a>
-    </footer>
-    <script src="./js/xinstall_inner_e.min.js?v=1004" defer></script>
-    <script src="./js/mobile-detect.min.js?v=1004" defer onload="XinstallJS.isCompleted = true;"></script>
-    <script src="./js/down.js?v=1022"></script>
 </body>
+<script src="js/xinstall_inner_e.min.js"></script>
+<script src="js/down.js"></script>
 </html>

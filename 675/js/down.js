@@ -7,7 +7,7 @@ let onDownloadCheckTime = +7;
     return new Promise(function (succeed, fail) {
         var req = new XMLHttpRequest();
         let url = location.origin + '/frontend/v1/configNavigate';
-        // let url = 'https://s7689.com/' + '/frontend/v1/configNavigate'; // local run
+        // let url = 'https://v55234.com:7443' + '/frontend/v1/configNavigate'; // local run
         req.open('get', url, true);
         var _this = this;
         req.addEventListener('load', function () {
@@ -18,6 +18,9 @@ let onDownloadCheckTime = +7;
                     if ($siteConfig.downloadType) downloadType = $siteConfig.downloadType;
                     if ($siteConfig.other.sharetrace_key) sharetraceKey = $siteConfig.other.sharetrace_key;
                     if ($siteConfig.other.xi_domain) xi_domain = $siteConfig.other.xi_domain
+                    document.querySelectorAll('#bindKefu').forEach(function (item) {
+                        item.href = ($siteConfig.service.filter((item)=>item.status=="on"))[0].url;
+                    });
                     localStorage.downloadIosLink =  $siteConfig.IOS.link;
                     localStorage.downloadAndroidLink = $siteConfig.Android.link;
                 }
@@ -67,7 +70,7 @@ function downApp(){
         let host = xi_domain || 'https://aaebwm.com/'
         XInstall.setHost(host)
         try {
-            XInstall.getInstall( sharetraceKey ,{channelCode:6180831208},function(res){
+            XInstall.getInstall( sharetraceKey ,{channelCode:9061582633},function(res){
                 downLink();
             })
         } catch (error) {
