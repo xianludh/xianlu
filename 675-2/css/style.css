@@ -7,16 +7,10 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-  -moz-tap-highlight-color: transparent;
-  -ms-tap-highlight-color: transparent;
-  -o-tap-highlight-color: transparent;
-  tap-highlight-color: transparent
 }
 
 #download {
   opacity: 0.2;
-  /* position: relative; */
   pointer-events: none;
   cursor: default;
 }
