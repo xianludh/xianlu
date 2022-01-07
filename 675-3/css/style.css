@@ -1,12 +1,14 @@
+html {
+  background-color: #000;
+  overflow-x: hidden;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
 body {
-  background: #000;
-  font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
-  /* height: 100%; */
+  overflow-x: hidden;
 }
 #download {
   opacity: 0.2;
-  /* position: relative; */
   pointer-events: none;
   cursor: default;
 }
@@ -30,31 +32,18 @@ body {
 #download.hideLoading::after {
   content: none;
 }
-
-.page {
-  position: absolute;
+html, body, .page {
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-  -webkit-overflow-scrolling: touch;/* ios 平滑滚动*/
-  overflow-scrolling: touch;
+  
+  background-size:cover ;
 }
 
 .content {
   width: 100%;
+  position: relative;
   height: calc(100% - 1.73rem);
   box-sizing: border-box;
-  position: absolute;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-  -webkit-overflow-scrolling: touch;
-  overflow-scrolling: touch;
 }
 
 .content .banner {
@@ -62,7 +51,6 @@ body {
   height: 12.36rem;
   background: url('../images/bg.jpg');
   background-size: 100% 100%;
-  position: relative;
 }
 
 .content .downbtn {
