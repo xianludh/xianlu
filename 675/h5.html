@@ -12,7 +12,8 @@
     <script type="text/javascript" src="js/flexible.js"></script>
     <script type="text/javascript" src="js/inobounce.js"></script>
     <script type="text/javascript" src="js/noZoom.js"></script>
-    <script type="text/javascript" src="js/jroll-lite.js"></script>
+    <!-- <script type="text/javascript" src="js/jroll-lite.js"></script> -->
+    <script src="js/bscroll.min.js"></script>
 </head>
 <body>
     <div class="page">
@@ -39,11 +40,13 @@
     <script src="./js/mobile-detect.min.js?v=1004" defer onload="XinstallJS.isCompleted = true;"></script>
     <script src="./js/down.js?v=1022"></script>
     <script>
-        var jroll = new JRoll('#scroll')
-        jroll.refresh()
-        setInterval(function () {
-        jroll.refresh()
-        }, 500)
+         let scroll = new BScroll('#scroll', {
+            click: true,
+            useTransition: false //解决ios13.4以上回弹问题
+        })
+        window.onload=function(){
+            scroll.refresh()
+        }
     </script>
 </body>
 </html>
