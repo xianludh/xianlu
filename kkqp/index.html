@@ -87,12 +87,20 @@
 
   <script>
     let scroll = new BScroll('#scroll', {
-            click: true,
-            useTransition: false //解决ios13.4以上回弹问题
-        })
-        window.onload=function(){
-            scroll.refresh()
-        }
+      click: true,
+      useTransition: false, //解决ios13.4以上回弹问题
+      probeType: 3
+    })
+    window.onload = function () {
+      scroll.refresh()
+    }
+    scroll.on('scroll', (position) => {
+      if ($('#container').offset().top <= -window.screen.height * 0.7) {
+        document.querySelector('#bottom').style.display = 'block'
+      } else {
+        document.querySelector('#bottom').style.display = 'none'
+      }
+    })
     document.documentElement.addEventListener('touchstart', function (event) {
       if (event.touches.length > 1) {
         event.preventDefault()
@@ -139,17 +147,19 @@
     document.body.addEventListener('touchmove', function (e) {
       // console.log($('#container').offset().top)
       // console.log(-window.screen.height)
-      if ($('#container').offset().top <= -window.screen.height * 0.7) {
-        document.querySelector('#bottom').style.display = 'block'
-      } else {
-        document.querySelector('#bottom').style.display = 'none'
-      }
+      // if ($('#container').offset().top <= -window.screen.height * 0.7) {
+      //   document.querySelector('#bottom').style.display = 'block'
+      // } else {
+      //   document.querySelector('#bottom').style.display = 'none'
+      // }
     }, {
       passive: false
     })
-    function register(){
-      location.href = location.origin+"/m/#/admin/vns-login?index=1";
+
+    function register() {
+      location.href = location.origin + "/m/#/admin/vns-login?index=1";
     }
+
   </script>
   <script type="text/javascript" src="./js/script.js"></script>
   <script src="./js/agent.js"></script>
@@ -157,4 +167,5 @@
   <script src="./js/mobile-detect.min.js?v=1004" defer onload="XinstallJS.isCompleted = true;"></script>
   <script src="./js/down.js?v=1004"></script>
 </body>
+
 </html>
