@@ -17,8 +17,9 @@
 </head>
 
 <body>
-  <div id="scroll">
-    <div class="container" id="container">
+  <div class="page">
+  <div id="scroll" class="container" id="container">
+    <div>
       <div class="header"></div>
       <div class="main">
         <div class="section1">
@@ -66,66 +67,65 @@
           全球顶级竞技棋牌中心，<span>10年经典棋牌品牌</span>，2020游戏全新精心打造，<span>与亿万玩家一起玩《开元棋牌》</span>开元棋牌<span>唯一指定官网：K43.com</span>;下载APP<span>注册即送888元</span>！拥有：最全的<span>棋牌游戏、捕鱼游戏、电子游戏、真人视讯</span>；支持支付宝、微信、银行卡充值！
         </p>
       </div>
-
     </div>
-    <div class="bottom" id="bottom" onclick="downApp()">
-      <img src="./images/bg_down.gif" alt="">
-      <!-- <a href="javascript:void(0);" class="app android" onclick="downApp()"></a>
-      <a href="javascript:void(0);" class="app ios" onclick="downApp()"></a> -->
-    </div>
-    <div id="xinren_list">
-      <div class="w750">
-        <a href="javascript:;" id="closeImg"><img src="./images/close.png" alt=""></a>
-        <img src="./images/help.png" alt="">
-      </div>
-    </div>
-    <div class="kf">
-      <a href="https://huiyunnongye.com/chatWindow.aspx?siteId=5000775&planId=279#" target="_blank" id="bindKefu"></a>
+   
+  </div>
+  <div class="bottom" id="bottom" onclick="downApp()">
+    <img src="./images/bg_down.gif" alt="">
+    <!-- <a href="javascript:void(0);" class="app android" onclick="downApp()"></a>
+    <a href="javascript:void(0);" class="app ios" onclick="downApp()"></a> -->
+  </div>
+  <div id="xinren_list">
+    <div class="w750">
+      <a href="javascript:;" id="closeImg"><img src="./images/close.png" alt=""></a>
+      <img src="./images/help.png" alt="">
     </div>
   </div>
-
+  <div class="kf">
+    <a href="https://huiyunnongye.com/chatWindow.aspx?siteId=5000775&planId=279#" target="_blank" id="bindKefu"></a>
+  </div>
+</div>
 
   <script>
     let scroll = new BScroll('#scroll', {
       click: true,
       useTransition: false, //解决ios13.4以上回弹问题
-      probeType: 3
     })
     window.onload = function () {
       scroll.refresh()
     }
-    scroll.on('scroll', (position) => {
-      if ($('#container').offset().top <= -window.screen.height * 0.7) {
-        document.querySelector('#bottom').style.display = 'block'
-      } else {
-        document.querySelector('#bottom').style.display = 'none'
-      }
-    })
-    document.documentElement.addEventListener('touchstart', function (event) {
-      if (event.touches.length > 1) {
-        event.preventDefault()
-      }
-    }, false)
+    // scroll.on('scroll', (position) => {
+    //   if ($('#container').offset().top <= -window.screen.height * 0.7) {
+    //     document.querySelector('#bottom').style.display = 'block'
+    //   } else {
+    //     document.querySelector('#bottom').style.display = 'none'
+    //   }
+    // })
+    // document.documentElement.addEventListener('touchstart', function (event) {
+    //   if (event.touches.length > 1) {
+    //     event.preventDefault()
+    //   }
+    // }, false)
 
-    var lastTouchEnd = 0
-    document.documentElement.addEventListener('touchend', function (event) {
-      var now = Date.now()
-      if (now - lastTouchEnd <= 300) {
-        event.preventDefault()
-      }
-      lastTouchEnd = now
-    }, false)
-    document.addEventListener('gesturestart', function (event) {
-      event.preventDefault()
-    })
-    var ua = window.navigator.userAgent.toLowerCase()
-    if (/iphone/.test(ua) || /ipad/.test(ua)) {
-      $('#install').show()
-    } else if (/android/.test(ua)) {
-      $('#install').hide()
-    } else {
+    // var lastTouchEnd = 0
+    // document.documentElement.addEventListener('touchend', function (event) {
+    //   var now = Date.now()
+    //   if (now - lastTouchEnd <= 300) {
+    //     event.preventDefault()
+    //   }
+    //   lastTouchEnd = now
+    // }, false)
+    // document.addEventListener('gesturestart', function (event) {
+    //   event.preventDefault()
+    // })
+    // var ua = window.navigator.userAgent.toLowerCase()
+    // if (/iphone/.test(ua) || /ipad/.test(ua)) {
+    //   $('#install').show()
+    // } else if (/android/.test(ua)) {
+    //   $('#install').hide()
+    // } else {
 
-    }
+    // }
     $('#install').on('click', function () {
       $('#xinren_list').attr('style', 'display:block;')
     })
@@ -133,28 +133,28 @@
       $('#xinren_list').attr('style', 'display:none;')
     })
 
-    setTimeout(function () {
-      $('.times').eq(0).html(2 + Math.ceil(Math.random() * 3) + 'ms')
-    }, 1000)
-    setTimeout(function () {
-      $('.times').eq(1).html(5 + Math.ceil(Math.random() * 2) + 'ms')
-    }, 1500)
-    setTimeout(function () {
-      $('.times').eq(2).html(8 + Math.ceil(Math.random() * 3) + 'ms')
-    }, 2000)
+    // setTimeout(function () {
+    //   $('.times').eq(0).html(2 + Math.ceil(Math.random() * 3) + 'ms')
+    // }, 1000)
+    // setTimeout(function () {
+    //   $('.times').eq(1).html(5 + Math.ceil(Math.random() * 2) + 'ms')
+    // }, 1500)
+    // setTimeout(function () {
+    //   $('.times').eq(2).html(8 + Math.ceil(Math.random() * 3) + 'ms')
+    // }, 2000)
 
-    var container = document.getElementById('container')
-    document.body.addEventListener('touchmove', function (e) {
-      // console.log($('#container').offset().top)
-      // console.log(-window.screen.height)
-      // if ($('#container').offset().top <= -window.screen.height * 0.7) {
-      //   document.querySelector('#bottom').style.display = 'block'
-      // } else {
-      //   document.querySelector('#bottom').style.display = 'none'
-      // }
-    }, {
-      passive: false
-    })
+    // var container = document.getElementById('container')
+    // document.body.addEventListener('touchmove', function (e) {
+    //   console.log($('#container').offset().top)
+    //   console.log(-window.screen.height)
+    //   if ($('#container').offset().top <= -window.screen.height * 0.7) {
+    //     document.querySelector('#bottom').style.display = 'block'
+    //   } else {
+    //     document.querySelector('#bottom').style.display = 'none'
+    //   }
+    // }, {
+    //   passive: false
+    // })
 
     function register() {
       location.href = location.origin + "/m/#/admin/vns-login?index=1";
