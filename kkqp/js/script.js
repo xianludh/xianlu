@@ -38,7 +38,7 @@ var certifySwiper = new Swiper('#certify .swiper-container', {
   centeredSlides: true,
   loop: true,
   loopedSlides: 4,
-  autoplay: false,
+  autoplay: true,
   on: {
     progress: function (progress) {
       for (i = 0; i < this.slides.length; i++) {
