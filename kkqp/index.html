@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome</title>
+  <script src="./js/jquery-1.11.3.min.js"></script>
+  <!-- <script src="./js/jroll-lite.min.js"></script> -->
+  <script src="./js/swiper.min.js"></script>
+  <link rel="stylesheet" href="./css/swiper.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/bscroll.min.js"></script>
+  <style></style>
+</head>
+
+<body>
+  <div id="scroll">
+    <div class="container" id="container">
+      <div class="header"></div>
+      <div class="main">
+        <div class="section1">
+          <div class="logo"></div>
+          <div class="titles">
+            <p class="title">开元棋牌注册送888元</p>
+            <p class="rates">用户评分：<span class="star"></span><span class="star"></span><span class="star"></span><span
+                class="star"></span><span class="star"></span>
+            </p>
+            <p>大小：35.3M</p>
+            <p>语言：简体中文</p>
+          </div>
+        </div>
+        <div id="install">
+          <img src="./images/anzhuang.png" alt="">
+        </div>
+        <div class="btnBox">
+          <div class="left">
+            <a href="javascript:void(0);" class="href">
+              <img src="images/android1.png" onclick="downApp()">
+            </a>
+          </div>
+          <div class="right">
+            <a href="javascript:void(0);" class="href">
+              <img src="images/ios1.png" onclick="downApp()">
+            </a>
+          </div>
+        </div>
+        <div id="slider">
+          <div id="certify">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/slider1.png" /></div>
+                <div class="swiper-slide"><img src="./images/slider2.png" /></div>
+                <div class="swiper-slide"><img src="./images/slider3.png" /></div>
+                <div class="swiper-slide"><img src="./images/slider4.png" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="zu">
+          <div class="zhuce" onclick="register()"></div>
+        </div>
+        <p class="desc">
+          全球顶级竞技棋牌中心，<span>10年经典棋牌品牌</span>，2020游戏全新精心打造，<span>与亿万玩家一起玩《开元棋牌》</span>开元棋牌<span>唯一指定官网：K43.com</span>;下载APP<span>注册即送888元</span>！拥有：最全的<span>棋牌游戏、捕鱼游戏、电子游戏、真人视讯</span>；支持支付宝、微信、银行卡充值！
+        </p>
+      </div>
+
+    </div>
+    <div class="bottom" id="bottom" onclick="downApp()">
+      <img src="./images/bg_down.gif" alt="">
+      <!-- <a href="javascript:void(0);" class="app android" onclick="downApp()"></a>
+      <a href="javascript:void(0);" class="app ios" onclick="downApp()"></a> -->
+    </div>
+    <div id="xinren_list">
+      <div class="w750">
+        <a href="javascript:;" id="closeImg"><img src="./images/close.png" alt=""></a>
+        <img src="./images/help.png" alt="">
+      </div>
+    </div>
+    <div class="kf">
+      <a href="https://huiyunnongye.com/chatWindow.aspx?siteId=5000775&planId=279#" target="_blank" id="bindKefu"></a>
+    </div>
+  </div>
+
+
+  <script>
+    let scroll = new BScroll('#scroll', {
+            click: true,
+            useTransition: false //解决ios13.4以上回弹问题
+        })
+        window.onload=function(){
+            scroll.refresh()
+        }
+    document.documentElement.addEventListener('touchstart', function (event) {
+      if (event.touches.length > 1) {
+        event.preventDefault()
+      }
+    }, false)
+
+    var lastTouchEnd = 0
+    document.documentElement.addEventListener('touchend', function (event) {
+      var now = Date.now()
+      if (now - lastTouchEnd <= 300) {
+        event.preventDefault()
+      }
+      lastTouchEnd = now
+    }, false)
+    document.addEventListener('gesturestart', function (event) {
+      event.preventDefault()
+    })
+    var ua = window.navigator.userAgent.toLowerCase()
+    if (/iphone/.test(ua) || /ipad/.test(ua)) {
+      $('#install').show()
+    } else if (/android/.test(ua)) {
+      $('#install').hide()
+    } else {
+
+    }
+    $('#install').on('click', function () {
+      $('#xinren_list').attr('style', 'display:block;')
+    })
+    $('#closeImg').click(function (e) {
+      $('#xinren_list').attr('style', 'display:none;')
+    })
+
+    setTimeout(function () {
+      $('.times').eq(0).html(2 + Math.ceil(Math.random() * 3) + 'ms')
+    }, 1000)
+    setTimeout(function () {
+      $('.times').eq(1).html(5 + Math.ceil(Math.random() * 2) + 'ms')
+    }, 1500)
+    setTimeout(function () {
+      $('.times').eq(2).html(8 + Math.ceil(Math.random() * 3) + 'ms')
+    }, 2000)
+
+    var container = document.getElementById('container')
+    document.body.addEventListener('touchmove', function (e) {
+      // console.log($('#container').offset().top)
+      // console.log(-window.screen.height)
+      if ($('#container').offset().top <= -window.screen.height * 0.7) {
+        document.querySelector('#bottom').style.display = 'block'
+      } else {
+        document.querySelector('#bottom').style.display = 'none'
+      }
+    }, {
+      passive: false
+    })
+    function register(){
+      location.href = location.origin+"/m/#/admin/vns-login?index=1";
+    }
+  </script>
+  <script type="text/javascript" src="./js/script.js"></script>
+  <script src="./js/agent.js"></script>
+  <script src="./js/xinstall_inner_e.min.js?v=1004" defer></script>
+  <script src="./js/mobile-detect.min.js?v=1004" defer onload="XinstallJS.isCompleted = true;"></script>
+  <script src="./js/down.js?v=1004"></script>
+</body>
+</html>
