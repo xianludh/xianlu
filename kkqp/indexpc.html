@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>welcome</title>
+  <meta name="description" content="">
+  <script src="./js/swiper.min.js"></script>
+  <script src="./js/jquery-1.11.3.min.js"></script>
+  <link rel="stylesheet" href="./css/swiper.min.css">
+  <script>
+    if (navigator.userAgent.match(
+        /(phone|pad|pod|iPhone|iPod|ios|iPad|android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+      )) {
+      window.location.href = './index.html';
+    }
+
+  </script>
+  <style>
+    .page {
+      width: 100%;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .header {
+      width: 100%;
+      height: 623px;
+      background-image: url(images/head.png);
+      background-size: 100% 100%;
+    }
+
+    .main {
+      position: relative;
+      width: 100%;
+      height: 1852px;
+      background-image: url(images/main.png);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+
+    .main .section1 {
+      width: 100%;
+      height: 307px;
+      background-image: url(images/do.png);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      margin-bottom: 50px;
+    }
+
+    .btnBox {
+      width: 100%;
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: space-around;
+
+    }
+
+    .btnBox .left,
+    .btnBox .right {
+      animation: heart_beat .8s infinite linear;
+    }
+
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: right;
+    }
+
+    @keyframes heart_beat {
+      0% {
+        transform: scale(.95)
+      }
+
+      50% {
+        transform: scale(1.05)
+      }
+
+      100% {
+        transform: scale(.95)
+      }
+    }
+
+    .main #install {
+      margin: 0 auto 80px;
+      width: 689px;
+    }
+
+    .main #install img {
+      width: 100%;
+    }
+
+    .main #dw {
+      width: 708px;
+      margin: 0 auto 90px;
+      cursor: pointer;
+    }
+
+    .main #dw img {
+      width: 100%;
+    }
+
+    #slider {
+      z-index: 9999;
+      width: 585px;
+      margin: 0 auto;
+    }
+
+    #certify .swiper-slide {
+      width: 193px;
+      text-align: center;
+    }
+
+    #slider img {
+      border: 0;
+      max-width: 100%;
+      vertical-align: middle;
+    }
+
+    .bottom {
+      cursor: pointer;
+    }
+
+    .kf {
+      position: fixed;
+      width: 122px;
+      height: 178px;
+      background: url(images/kf.png);
+      background-size: 100% 100%;
+      top: 200px;
+      right: calc(((100% - 750px)/1.99));
+      z-index: 1000;
+      cursor: pointer;
+    }
+
+    .kf a {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    #xinren_list {
+      background: rgba(58, 41, 23, 0.9);
+      position: fixed;
+      width: 100%;
+      max-width: 750px;
+      margin: 0 auto;
+      height: 100%;
+      overflow-y: auto;
+      right: calc(((100% - 750px)/2));
+      top: 0;
+      display: none;
+      z-index: 10000;
+    }
+
+    #xinren_list .w750 {
+      position: relative;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    #xinren_list .w750 a {
+      color: #666;
+      text-decoration: none;
+      outline: 0;
+    }
+
+    #xinren_list .w750 img,
+    #xinren_list .w750 a img {
+      border: 0;
+      max-width: 100%;
+      vertical-align: middle;
+      margin: 0;
+      padding: 0;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="header">
+    </div>
+    <div class="kf">
+      <a href="https://huiyunnongye.com/chatWindow.aspx?siteId=5000775&planId=279#" target="_blank" id="kf-link"></a>
+    </div>
+    <div class="main">
+      <div class="section1">
+      </div>
+      <div class="btnBox">
+        <div class="left">
+          <a href="javascript:void(0);" class="href">
+            <img src="images/android1.png" onclick="downApp()">
+          </a>
+        </div>
+        <div class="right">
+          <a href="javascript:void(0);" class="href">
+            <img src="images/ios1.png" onclick="downApp()">
+          </a>
+        </div>
+      </div>
+      <div id="install">
+        <a href="" id="Toh5"><img src="images/wy.png" alt=""></a>
+      </div>
+      <div id="dw">
+        <img src="images/down.png" alt="">
+      </div>
+      <div id="slider">
+        <div id="certify">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./images/slider1.png" /></div>
+              <div class="swiper-slide"><img src="./images/slider2.png" /></div>
+              <div class="swiper-slide"><img src="./images/slider3.png" /></div>
+              <div class="swiper-slide"><img src="./images/slider4.png" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom" id="bottom" onclick="downApp()">
+      <img src="./images/bg_down.gif" alt="">
+    </div>
+    <div id="xinren_list">
+      <div class="w750">
+        <a href="javascript:;" id="closeImg"><img src="./images/close.png" alt=""></a>
+        <img src="./images/help.png" alt="">
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="./js/pc.js"></script>
+<script src="js/xinstall_inner_e.min.js"></script>
+<script src="js/mobile-detect.min.js?v=1004"></script>
+<script src="js/down.js"></script>
+<script>
+    $('#dw').on('click', function () {
+      $('#xinren_list').attr('style', 'display:block;')
+    })
+    $('#closeImg').click(function (e) {
+      $('#xinren_list').attr('style', 'display:none;')
+    })
+</script>
+</html>
