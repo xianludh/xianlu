@@ -1,91 +1,92 @@
-let downloadType;
-let sharetraceKey;
-let xi_domain;
-let isDownloaded = false;
-let onDownloadCheckTime = +7;
-(function () {
-    return new Promise(function (succeed, fail) {
-        var req = new XMLHttpRequest();
-        let url = location.origin + '/frontend/v1/configNavigate';
-        // let url = 'https://v55234.com:7443' + '/frontend/v1/configNavigate'; // local run
-        req.open('get', url, true);
-        var _this = this;
-        req.addEventListener('load', function () {
-            if (req.readyState == 4 && req.status == 200) {
-                let res = JSON.parse(req.responseText);
-                if (res.code == 200) {
-                    const $siteConfig = res.data['siteConfig'];
-                    if ($siteConfig.downloadType) downloadType = $siteConfig.downloadType;
-                    if ($siteConfig.other.sharetrace_key) sharetraceKey = $siteConfig.other.sharetrace_key;
-                    if ($siteConfig.other.xi_domain) xi_domain = $siteConfig.other.xi_domain
-                    document.querySelectorAll('#bindKefu').forEach(function (item) {
-                        item.href = ($siteConfig.service.filter((item)=>item.status=="on"))[0].url;
-                    });
-                    localStorage.downloadIosLink =  $siteConfig.IOS.link;
-                    localStorage.downloadAndroidLink = $siteConfig.Android.link;
-                }
-                succeed(res);
-            } else {
-            }
-        });
-        req.addEventListener('error', function () {
-            fail(new Error('Network error'));
-        });
-        req.send(null);
-    });
-})()
-
-function isAndroid () {
-    let u = navigator.userAgent
-    return u.indexOf('Android') > -1 || u.indexOf('Adr') > -1
+let downloadType, sharetraceKey, xi_domain;
+function isAndroid() {
+  let o = navigator.userAgent;
+  return o.indexOf("Android") > -1 || o.indexOf("Adr") > -1;
 }
-function iosDownload(iosUrl) {
-    setTimeout(function () {
-        window.location.href = iosUrl;
-    }, 0);
+function isIOS() {
+  return /iphone|ipad/.test(navigator.userAgent.toLowerCase())
+}
+
+function iosDownload(o) {
+  setTimeout(function() {
+    window.location.href = o;
+  }, 0);
 }
 function downLink() {
-    if (!isAndroid()) iosDownload(localStorage.downloadIosLink);
-    else iosDownload(localStorage.downloadAndroidLink);
-    isDownloaded = true;
+  isAndroid()
+    ? iosDownload(localStorage.downloadAndroidLink)
+    : iosDownload(localStorage.downloadIosLink);
 }
-function onDownloadCheck() {
-    XInstall.toggleLoading('show');
-    console.log('onDownloadCheck');
-    let timer = setTimeout(() => {
-        console.log(onDownloadCheckTime);
-        if (isDownloaded || onDownloadCheckTime === 1) {
-            downLink();
-            XInstall.toggleLoading('hide');
-            clearTimeout(timer);
-            onDownloadCheckTime = 7 * 1;
-        } else {
-            onDownloadCheckTime--;
-            downApp();
+function downApp() {
+  let channelParams = { channelDomain: location.origin }
+  let channelCode = new URL(window.location.href).searchParams.get("channelCode") || new URL(window.location.href).searchParams.get("agent")
+  if (channelCode) channelParams["channelCode"] = channelCode
+
+  if (sharetraceKey) {
+    let o = xi_domain || "https://aaebwm.com/";
+    XInstall.setHost(o);
+    try {
+      XInstall.getInstall(
+        sharetraceKey,
+        channelParams,
+        function(o) {
+          downLink();
         }
-    }, 1000);
+      );
+    } catch (o) {
+      this.downLink();
+    }
+  } else downLink();
 }
-function  find (str, cha, num) {
-    var x = str.indexOf(cha);
-    for(var i = 0; i < num; i++) {
-            x = str.indexOf(cha, x+1);
-    }
-    return x;
-};
-function downApp(){
-    if(downloadType && sharetraceKey){
-        let host = xi_domain || 'https://aaebwm.com/'
-        let str = window.location.href;
-        XInstall.setHost(host)
-        try {
-            XInstall.getInstall( sharetraceKey ,{ channelDomain:str.substring(0, find(str, '/', 2))},function(res){
-                downLink();
-            })
-        } catch (error) {
-            if (!isDownloaded) onDownloadCheck();
-            downLink();
+new Promise(function(o, n) {
+  var e = new XMLHttpRequest();
+  // let t = location.origin + "/frontend/v1/configNavigate";
+  let t = "http://tg.n9963.com/frontend/v1/configNavigate";
+  e.open("get", t, !0),
+    e.addEventListener("load", function() {
+      if (4 == e.readyState && 200 == e.status) {
+        let n = JSON.parse(e.responseText);
+        if (200 == n.code) {
+          const o = n.data.siteConfig;
+          o.downloadType && (downloadType = o.downloadType),
+            o.other.sharetrace_key && (sharetraceKey = o.other.sharetrace_key),
+            o.other.xi_domain && (xi_domain = o.other.xi_domain),
+            (localStorage.downloadIosLink = o.IOS.link),
+            (localStorage.downloadAndroidLink = o.Android.link),
+            console.log(o.service[0].url),
+            (document.getElementById("kf-link").href = o.service[0].url),
+            (document.getElementById("Toh5").href = o.other.landing_to_h5);
+            postPageView(sharetraceKey, xi_domain)
         }
-    } else {
-        downLink();
-    }
+        o(n);
+      }
+    }),
+    e.addEventListener("error", function() {
+      n(new Error("Network error"));
+    }),
+    e.send(null);
+});
+function postPageView (appid, xi_domain = "https://aaebwm.com/") {
+  let channelParams = { channelDomain: location.origin }
+  let channelCode = new URL(window.location.href).searchParams.get("channelCode") || new URL(window.location.href).searchParams.get("agent")
+  if (channelCode) channelParams["channelCode"] = channelCode
+  const uri = `${xi_domain}/index.php/api/index/viewPage`
+  let params = {
+    os: "H5",
+    appid: appid,
+    params: JSON.stringify(channelParams)
+  }
+  // 改成判斷是 Android 就傳 AndroidOS, iOS 就傳 iOS , 判斷不出這兩者的話, 就傳 H5
+  if (isIOS()) params.os = "iOS"
+  if (isAndroid()) params.os = "AndroidOS"
+
+  fetch(uri, {
+    method:'POST',
+    body:JSON.stringify(params),
+    headers: {
+      'content-type': 'application/json;charset=utf-8'
+    },
+  })
+  .then(res => {
+  });
 }

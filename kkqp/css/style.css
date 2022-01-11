@@ -72,7 +72,7 @@ li {
   /*position: absolute;*/
   /*top: 136.53vw;*/
   width: 100%;
-  margin-bottom: 23vw;
+  margin-bottom: 5vw;
   display: flex;
   justify-content: space-around;
 
@@ -197,17 +197,24 @@ li {
 .main {
   position: relative;
   width: 100vw;
-  height: 261.86vw;
+  height: 255.87vw;
   background-image: url(../images/main.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   overflow: hidden;
 }
 .main .section1 {
-  margin: 3.6vw auto 4.9vw;
+  /* margin: 3.6vw auto 4.9vw; */
+  width: 100vw;
+  height: 40.93vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(../images/do.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin-bottom: 5vw;
 }
 .main .section1 .logo {
   width: 27.6vw;
@@ -217,7 +224,7 @@ li {
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-.main .section1 .titles {
+/* .main .section1 .titles {
   color: #9FC3A9;
   font-size: 3vw;
 }.main .section1 .titles p {
@@ -239,7 +246,7 @@ li {
   height: 3.06vw;
   background-image: url(../images/star.png);
   background-size: 100% 100%;
-}
+} */
 
 
 .title .icon {
@@ -397,10 +404,17 @@ video {
   background-color: #000;
 }
 .main #install {
-  margin: 0 auto 4.9vw;
-  width: 93.4vw;
+  margin: 0 auto 10vw;
+  width: 91.87vw;
 }
 .main #install img {
+  width: 100%;
+}
+.main #dw {
+  width: 94.4vw;
+  margin: 0 auto 11vw;
+}
+.main #dw img {
   width: 100%;
 }
 
