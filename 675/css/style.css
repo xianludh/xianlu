@@ -4,13 +4,11 @@ body {
   width: 100%;
   /* height: 100%; */
 }
-#download {
-  opacity: 0.2;
-  /* position: relative; */
+/* #download {
   pointer-events: none;
   cursor: default;
-}
-#download::after {
+} */
+/* #download::after {
   content: '';
   display: inline-block;
   height: 90%;
@@ -29,7 +27,7 @@ body {
 
 #download.hideLoading::after {
   content: none;
-}
+} */
 
 .page {
   position: absolute;
@@ -78,6 +76,24 @@ body {
   vertical-align: middle;
 }
 
+.content .wz {
+  width: 100%;
+  position: absolute;
+  width: 92%;
+  left: 4%;
+  top: 3rem;
+}
+  
+.content .wz a{
+  width: 100%;
+  height:100%;
+  display: block;
+}
+.content .wz img {
+  width: 100%;
+  vertical-align: middle;
+}
+
 @keyframes heart_beat {
   0% {
     transform: scale(.95)
@@ -95,16 +111,32 @@ body {
 .content .hot {
   width: 100%;
   position: relative;
-  background: url(../images/hotgame.jpg);
+  background: url(../images/hot.png);
   background-size: 100% 100%;
-  height: 15.37rem;
+  height: 19.574rem;
 }
 
 .content .hot img {
   width: 100%;
   vertical-align: middle;
 }
-
+#slider {
+  position: absolute;
+  left: 5.6%;
+  top: 6.8rem;
+  z-index: 9999;
+  width: 8.88rem;
+  overflow: hidden;
+}
+#certify .swiper-slide {
+  width: 8.88rem;
+  text-align: center;
+}
+#slider img {
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+}
 .content .often {
   width: 100%;
 }
