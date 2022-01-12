@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>金沙娱乐场</title>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no" name="viewport" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="full-screen" content="yes" />
+		<meta name="x5-fullscreen" content="true" />
+		<meta name="screen-orientation" content="portrait" />
+		<meta name="x5-orientation" content="portrait" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="theme-color" content="#4c516a" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="MobileOptimized" content="320" />
+		<meta name="screen-orientation" content="portrait" />
+		<meta name="x5-orientation" content="portrait" />
+		<meta name="full-screen" content="yes" />
+		<meta name="x5-fullscreen" content="true" />
+		<meta name="browsermode" content="application" />
+		<meta name="x5-page-mode" content="app" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<link rel="icon" href="data:image/ico;">
+	
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" href="css/layout.css">
+		<script src="js/jquery.js"></script>
+		<!-- <script type="text/javascript" src="//www.shareinstall.com.cn/js/page/jshareinstall.min.js"></script> -->
+		<script src="https://res.sharetrace.com/sharetrace.min.js"></script>
+		<!-- <script type="text/javascript" src="http://api.huanyuaurora.com/j_start.php?site_id=10000023_10040"></script> -->
+		<script type="text/javascript">
+			
+				//判断访问终端
+			var browser = {
+				versions: function() {
+					var u = navigator.userAgent,
+						app = navigator.appVersion;
+					return {
+						trident: u.indexOf('Trident') > -1, //IE内核
+						presto: u.indexOf('Presto') > -1, //opera内核
+						webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+						gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+						mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+						ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+						android: u.indexOf('Android') > -1 || u.indexOf('Adr') > -1, //android终端
+						iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+						iPad: u.indexOf('iPad') > -1, //是否iPad
+						webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+						weixin: u.indexOf('MicroMessenger') > -1, //是否微信 （2015-01-22新增）
+						qq: u.match(/\sQQ/i) == " qq" //是否QQ
+					};
+				}(),
+				language: (navigator.browserLanguage || navigator.language).toLowerCase()
+			}
+
+			function is_weixin() {
+				var ua = navigator.userAgent.toLowerCase();
+				if(ua.match(/MicroMessenger/i) == "micromessenger") {
+					return true;
+				} else {
+					return false;
+				}
+			}
+			var isWeixin = is_weixin();
+			var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+			var weixinTip = $('<div id="weixinTip" style="z-index: 10000;position: absolute;top:0;left:0;background-color: #FFF;height:' + $(window).height() + 'px;filter:alpha(opacity=90);-moz-opacity:0.90; opacity:0.90;"><p><img src="' + ((isPIA() == 1) ? "./images/ios_tips.png" : "./images/android_tips.png") + '" alt=""/></p></div>');
+
+			$(".down-img").click(function(){
+				DownSoft();
+			})
+			//js判断终端是安卓还是苹果
+			function isPIA() {
+				var u = navigator.userAgent,
+					app = navigator.appVersion;
+				var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+				var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+				if(isiOS) {
+					return 1;
+				}
+				if(isAndroid) {
+					return 2
+				};
+			}
+			function DownSoft() {
+				if(isWeixin) {
+					$("body").append(weixinTip);
+				}
+				if(browser.versions.iPhone || browser.versions.iPad || browser.versions.ios) {
+                    showXR1();
+					get_down(2);
+				} else if(browser.versions.android) {
+					get_down(1);
+				} else {
+					var isok = confirm("是否用电脑下载app？");
+					if(isok) {
+						get_down(1);
+					} else {
+						return;
+					}
+				}
+			}
+			// var data = ShareInstall.parseUrlParams()//openinstall.js中提供的工具函数，解析url中的所有查询参数
+			// var openInstall = new ShareInstall({
+			// 	/*appKey必选参数，openinstall平台为每个应用分配的ID*/
+			// 	appKey: 'FHBK66627ERRA6',
+			// 	timeout: 1,
+			// 	apkFileName: 'kyqp.apk',
+			// 	onready: function () {
+			// 	var m = this
+			// 	m.schemeWakeup()
+			// 	}
+			// }, data)
+			// function GetQueryString (name) {
+			// 	var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
+			// 	var r = window.location.search.substr(1).match(reg)
+			// 	if (r != null) return unescape(r[2])
+			// 	return null
+	        // }
+			// b = GetQueryString('agent') || GetQueryString('channelCode')
+			// let str=window.location.href;
+			// // let par = "channelCode="+ b +"&channelDomain="+str.substring(0,find(str,'/',2))
+			// let par1 = "channelCode="+ b +"&channelDomain=https://k4401.com"
+			// let par2 = "channelDomain=https://k4401.com"
+
+			// ShareTrace.init({
+			// 	appkey: "596b39eaec5d7fb6", // 此值必填
+			// 	param: par,
+			// });
+
+			function get_down(type) {
+				if(isWeixin) {
+					return false;
+				}
+				if(type == 1) {
+					ShareTrace.download();
+				} else {
+					ShareTrace.download();
+				}
+			}
+		</script>
+	</head>
+	<body style="margin: 0;">
+		<div style="position: relative;max-width: 640px;    margin: 0 auto;">
+				
+			<div>
+				<div style="position: relative;">
+					<!-- <img src="images/bg1.png" style="width: 100%;z-index: 2;position: relative;"> -->
+					<img src="images/bg2.png" style="width: 94%;z-index: 2;position: relative; margin-top: 2%;margin-left: 12px;">
+					<img src="images/bg3.png" style="width: 100%;margin-top: -41%;height: 50%;" >
+				</div>
+				
+				<div class="slider" style="position: relative;z-index: 5;margin-top: -166%">
+					<div id="slider" style="text-align: center;">
+						<div id="certify">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><img src="images/slider1.png"  style="max-width: 100%;" /></div>
+									<div class="swiper-slide"><img src="images/slider2.png"  style="max-width: 100%;" /></div>
+									<div class="swiper-slide"><img src="images/slider3.png"  style="max-width: 100%;" /></div>
+									<div class="swiper-slide"><img src="images/slider4.png"  style="max-width: 100%;" /></div>
+									<div class="swiper-slide"><img src="images/slider5.png"  style="max-width: 100%;" /></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="javascript:DownSoft();" onclick="DownSoft();" class="ios-btn" style="position: absolute;width: 100%;text-align: center;margin-top: 3%;">
+          <img src="images/downbtn.gif" alt="" style="width: 90%;z-index: 6">
+        </a>
+        <a href="javascript:showXR();" class="ios-btn ios-tips" style="position: absolute;width: 100%;text-align: center;margin-top: 19%;">
+          <img src="images/img2.png" style="width: 30%;margin-left: 35%; display: block;  padding-top: .5rem;z-index: 6" onclick="showXR()"/>
+        </a>
+			
+
+				<img src="images/bg4.png" style="width: 100%;margin-top: 25%;z-index: 2;position: relative;">
+
+				<div style="width: 100%;text-align: center;position: relative;margin-top: 5%;">
+				</div>
+
+
+				<div style="    margin-top: 10%;">
+					<img src="images/bg7.png" style="width: 96%;z-index: 2;position: absolute;margin-left: 2%;">
+					<img src="images/bg8.png" style="width: 50%;z-index: 2;position: absolute;margin-left: 25%; margin-top: -3%;">
+					<img src="images/bg9.png" style="width: 45%;z-index: 3;position: absolute; margin-left: 27.5%;  margin-top: -1.5%;">
+					<img src="images/bg6.png" style="width: 80%;z-index: 2;position: absolute;    margin-top: 7%;margin-left: 10%">
+				</div>
+				
+				<div style="    margin-top: 65%;">
+					<img src="images/bg7.png" style="width: 96%;height:16.5%;z-index: 2;position: absolute;margin-left: 2%;">
+					<img src="images/bg8.png" style="width: 50%;z-index: 2;position: absolute;margin-left: 25%; margin-top: -3%;">
+					<img src="images/bg10.png" style="width: 35%;z-index: 3;position: absolute; margin-left: 32.5%;  margin-top: -1.5%;">
+					
+					<div id="slider2 slider2-top" style="width: 80%;margin-left: 10%; margin-top: 9%;position: absolute;z-index: 5">
+						<div id="certify2">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><img src="images/banr1.png" style="width: 100%;height: 80%"  /></div>
+									<div class="swiper-slide"><img src="images/banr2.png" style="width: 100%;height: 80%"  /></div>
+									<div class="swiper-slide"><img src="images/banr3.png" style="width: 100%;height: 80%"  /></div>
+									<div class="swiper-slide"><img src="images/banr4.png" style="width: 100%;height: 80%"  /></div>
+									<div class="swiper-slide"><img src="images/banr5.png" style="width: 100%;height: 80%"  /></div>
+									<div class="swiper-slide"><img src="images/banr6.png" style="width: 100%;height: 80%"  /></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<img src="images/bg5.png" style="width: 100%;margin-top: -85%;position: relative;">
+			</div>
+
+			<img src="images/bg1.png" onclick="javascript:DownSoft();" style="width: 100%;z-index: 999;position: fixed;bottom: 0px;max-width: 640px;">
+			<div id="cs">
+					<img src="images/cs.png" alt=""  style="width:35vw;height:37vw;z-index: 888" usemap="#Map">
+					<map name="Map">
+					  <area shape="rect" coords="0,3,128,200" href="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=60000502&planId=e297305b-5ad5-4718-8865-6933f8a21993" target="_blank" class="service1">
+					  <area shape="rect" coords="3,201,133,248" href="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=60000502&planId=e297305b-5ad5-4718-8865-6933f8a21993" target="_blank" class="service2">
+					</map>
+			</div>
+			<!-- <div style="position: fixed;bottom: 0;z-index: 99;width: 100%;;text-align: center;max-width: 640px;">
+				<img src="images/bg1.png" style="width: 100%;z-index: 999;position: fixed;bottom: 0px;">
+			</div> -->
+			
+		</div>
+		
+		<!-- 提示 -->
+		<div id="xrBox" style="background:#000000;">
+			<div>
+				<div onclick="hideXrBox()" style="position: fixed;">
+					<img src="images/jc_close.jpg" alt="" style=" border: 0;max-width: 100%;vertical-align: middle;margin: 0;padding: 0;">
+				</div>
+				<img src="images/jc.png" alt="" style=" border: 0; max-width: 100%; vertical-align: middle; margin: 0; padding: 0;">
+			</div>
+		</div>
+		
+
+	</body>
+	<script src="js/jquery-confirm.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="https://res.sharetrace.com/sharetrace.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			if(browser.versions.android) {
+				$(".ios-tips").hide();
+			}
+		})
+		function find(str,cha,num){
+			var x=str.indexOf(cha);
+			for(var i=0;i<num;i++){
+					x=str.indexOf(cha,x+1);
+			}
+			return x;
+        }
+	    function GetQueryString (name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
+            var r = window.location.search.substr(1).match(reg)
+            if (r != null) return unescape(r[2])
+            return null
+		}
+
+		b = GetQueryString('agent') || GetQueryString('channelCode');
+        let str=window.location.href;
+		let par1 = "channelCode="+ b +"&channelDomain=https://q1822.com";
+	    let par2 = "channelDomain=https://q1822.com";
+		// if (b == null) {
+		// url = window.location.href;
+		// a = url + '?'+par;
+		// window.location.href = a;
+		// }
+        // 初始化
+		ShareTrace.init({
+			appkey: "bec5d1b55fae6bbd", // 此值必填
+			param: b ? par1 : par2,
+        });
+		function DownSoft(){
+			ShareTrace.download();
+		}
+	</script>
+</html>
