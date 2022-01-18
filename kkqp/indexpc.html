@@ -8,6 +8,8 @@
   <meta name="description" content="">
   <script src="./js/swiper.min.js"></script>
   <script src="./js/jquery-1.11.3.min.js"></script>
+  <script src="./js/mt-tabpage.js"></script>
+  <script src="./js/qrcode.js"></script>
   <link rel="stylesheet" href="./css/swiper.min.css">
   <script>
     if (navigator.userAgent.match(
@@ -18,102 +20,178 @@
 
   </script>
   <style>
-    .page {
-      width: 100%;
-      max-width: 750px;
-      margin: 0 auto;
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Microsoft YaHei", Arial, Verdana, SimSun, SimHei, STHeiti, Helvetica, sans-serif;
     }
 
-    .header {
+    a {
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    img {
+      display: block;
       width: 100%;
-      height: 623px;
-      background-image: url(images/head.png);
-      background-size: 100% 100%;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    body {
+      width: 100%;
+      background: #fff;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      margin: 0 auto;
+      background-image: url(./images/bg.png);
+      overflow: hidden;
+      background-size: cover;
+    }
+
+    .top {
+      width: 1920px;
+      max-width: 1920px;
+      height: 627px;
+      position: relative;
+    }
+
+    .logo {
+      width: 265px;
+      height: 134px;
+      top: 0;
+      left: 463px;
+      background-image: url(./images/pc.png);
+      position: absolute;
+    }
+
+    .top-ban {
+      width: 972px;
+      height: 432px;
+      background-image: url(./images/top.png);
+      position: absolute;
+      top: 83px;
+      right: 146px;
+    }
+
+    .off-website {
+      width: 308px;
+      height: 78px;
+      position: absolute;
+      top: 525px;
+      right: 422px;
+    }
+
+    .off-website a {
+      width: 308px;
+      height: 78px;
+      display: block;
     }
 
     .main {
-      position: relative;
-      width: 100%;
-      height: 1852px;
-      background-image: url(images/main.png);
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      overflow: hidden;
+      width: 1920px;
+      max-width: 1920px;
+      margin: 0 auto;
+      /* margin-top: 627px; */
     }
 
-    .main .section1 {
-      width: 100%;
-      height: 307px;
-      background-image: url(images/do.png);
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      overflow: hidden;
-      margin-bottom: 50px;
+    .mt-tabpage {
+      width: 1155px;
+      margin: 0 auto;
     }
 
-    .btnBox {
-      width: 100%;
-      margin-bottom: 50px;
+    .mt-tabpage-title {
+      width: 1155px;
+      height: 113px;
+      background-color: #3690c1;
+      margin: 0 auto 25px;
       display: flex;
-      justify-content: space-around;
-
-    }
-
-    .btnBox .left,
-    .btnBox .right {
-      animation: heart_beat .8s infinite linear;
-    }
-
-    .left {
-      float: left;
-    }
-
-    .right {
-      float: right;
-    }
-
-    @keyframes heart_beat {
-      0% {
-        transform: scale(.95)
-      }
-
-      50% {
-        transform: scale(1.05)
-      }
-
-      100% {
-        transform: scale(.95)
-      }
-    }
-
-    .main #install {
-      margin: 0 auto 80px;
-      width: 689px;
-    }
-
-    .main #install img {
-      width: 100%;
-    }
-
-    .main #dw {
-      width: 708px;
-      margin: 0 auto 90px;
       cursor: pointer;
     }
 
-    .main #dw img {
-      width: 100%;
+    .mt-tabpage-title .mt-tabpage-item {
+      display: inline-block;
+      width: 231px;
+      height: 113px;
+    }
+
+    .mt-tabpage-title .mt-tabpage-item p {
+      text-align: center;
+      font-family: PingFang SC;
+    }
+
+    .mt-tabpage-title .mt-tabpage-item .desc {
+      padding: 19px 25px;
+    }
+
+    .mt-tabpage-title .mt-tabpage-item p:first-child {
+      font-size: 26px;
+      font-weight: 500;
+      color: #FFFFFF;
+      line-height: 17px;
+      margin-bottom: 12px;
+    }
+
+    .mt-tabpage-title {
+      font-size: 18px;
+      color: #ACD4EB;
+    }
+
+    .mt-tabpage-title .mt-tabpage-item-cur {
+      background-image: url(./images/active.png);
+      background-size: 100% 100%;
+      color: #FFFFFF;
+    }
+
+    .mt-tabpage-count {
+      position: relative;
+      width: 1100px;
+      height: 542px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+
+    .mt-tabpage-cont__wrap {
+      position: absolute;
+    }
+
+    .mt-tabpage-count .mt-tabpage-item {
+      width: 1100px;
+      height: 542px;
+      text-align: center;
+    }
+
+    .main .ban {
+      width: 1100px;
+      height: 542px;
+      margin: 0 auto;
     }
 
     #slider {
       z-index: 9999;
-      width: 585px;
+      width: 1200px;
+      height: 583px;
       margin: 0 auto;
+      margin-top: 56px;
+      position: relative;
+    }
+
+    .swiper-container {
+      width: 1156px;
     }
 
     #certify .swiper-slide {
-      width: 193px;
+      width: 336px;
+      height: 563px;
       text-align: center;
+      padding: 10px;
     }
 
     #slider img {
@@ -122,26 +200,52 @@
       vertical-align: middle;
     }
 
-    .bottom {
-      cursor: pointer;
-    }
-
-    .kf {
-      position: fixed;
-      width: 122px;
-      height: 178px;
-      background: url(images/kf.png);
+    .swiper-button-prev {
+      width: 48px;
+      height: 69px;
+      background-image: url(./images/btn-prev.png);
       background-size: 100% 100%;
-      top: 200px;
-      right: calc(((100% - 750px)/1.99));
-      z-index: 1000;
+      left: -30px;
+    }
+
+    .swiper-button-next {
+      width: 48px;
+      height: 69px;
+      background-image: url(./images/btn-next.png);
+      background-size: 100% 100%;
+      right: -30px;
+    }
+
+    .down {
+      position: relative;
+      width: 1359px;
+      height: 529px;
+      margin: 0 auto;
+      background-image: url(./images/dm.png);
+      background-size: 100% 100%;
+      margin-top: 50px;
+    }
+
+    .downjc {
+      width: 193px;
+      height: 56px;
+      background-image: url(./images/downjc.png);
+      background-size: 100% 100%;
+      position: absolute;
+      right: 156px;
+      bottom: 52px;
       cursor: pointer;
     }
 
-    .kf a {
+    #xinren {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      display: block;
+      background: rgba(0, 0, 0, .3);
+      z-index: 9999;
     }
 
     #xinren_list {
@@ -154,7 +258,6 @@
       overflow-y: auto;
       right: calc(((100% - 750px)/2));
       top: 0;
-      display: none;
       z-index: 10000;
     }
 
@@ -183,49 +286,87 @@
 </head>
 
 <body>
-  <div class="page">
-    <div class="header">
-    </div>
-    <div class="kf">
-      <a href="https://huiyunnongye.com/chatWindow.aspx?siteId=5000775&planId=279#" target="_blank" id="kf-link"></a>
+  <div class="container">
+    <div class="top">
+      <div class="logo"></div>
+      <div class="top-ban"></div>
+      <div class="off-website"><a href="" id="Toh5"><img src="./images/gw.png" alt=""></a></div>
     </div>
     <div class="main">
-      <div class="section1">
-      </div>
-      <div class="btnBox">
-        <div class="left">
-          <a href="javascript:void(0);" class="href">
-            <img src="images/android1.png" onclick="downApp()">
-          </a>
+      <div class="mt-tabpage" js-tab="3">
+        <ul class="mt-tabpage-title">
+          <li class="mt-tabpage-item mt-tabpage-item-cur">
+            <div class="desc">
+              <p>抢庄牛牛</p>
+              <p>多种花样，绚丽多彩</p>
+              <p>奖金丰厚</p>
+            </div>
+          </li>
+          <li class="mt-tabpage-item">
+            <div class="desc">
+              <p>炸金花</p>
+              <p>赛制丰富，老少皆宜的</p>
+              <p>益智游戏</p>
+            </div>
+          </li>
+          <li class="mt-tabpage-item">
+            <div class="desc">
+              <p>斗地主</p>
+              <p>经典和地方玩法的合集</p>
+              <p>独有竞技模式</p>
+            </div>
+          </li>
+          <li class="mt-tabpage-item">
+            <div class="desc">
+              <p>捕鱼</p>
+              <p>和好友一起捕鱼</p>
+              <p>海底捕鱼福利大升级</p>
+            </div>
+          </li>
+          <li class="mt-tabpage-item">
+            <div class="desc">
+              <p>德州扑克</p>
+              <p>晋级比赛，完整赛程</p>
+              <p>领取豪礼</p>
+            </div>
+          </li>
+        </ul>
+        <div class="mt-tabpage-count">
+          <ul class="mt-tabpage-cont__wrap" style="width: 3300px; left: -1100px;">
+            <li class="mt-tabpage-item" style="float: left;"><img src="./images/1.png" alt=""></li>
+            <li class="mt-tabpage-item" style="float: left;"><img src="./images/2.png" alt=""></li>
+            <li class="mt-tabpage-item" style="float: left;"><img src="./images/3.png" alt=""></li>
+            <li class="mt-tabpage-item" style="float: left;"><img src="./images/4.png" alt=""></li>
+            <li class="mt-tabpage-item" style="float: left;"><img src="./images/5.png" alt=""></li>
+          </ul>
         </div>
-        <div class="right">
-          <a href="javascript:void(0);" class="href">
-            <img src="images/ios1.png" onclick="downApp()">
-          </a>
-        </div>
-      </div>
-      <div id="install">
-        <a href="" id="Toh5"><img src="images/wy.png" alt=""></a>
-      </div>
-      <div id="dw">
-        <img src="images/down.png" alt="">
       </div>
       <div id="slider">
         <div id="certify">
           <div class="swiper-container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="./images/slider1.png" /></div>
-              <div class="swiper-slide"><img src="./images/slider2.png" /></div>
-              <div class="swiper-slide"><img src="./images/slider3.png" /></div>
-              <div class="swiper-slide"><img src="./images/slider4.png" /></div>
+              <div class="swiper-slide"><img src="./images/s1.png" /></div>
+              <div class="swiper-slide"><img src="./images/s2.png" /></div>
+              <div class="swiper-slide"><img src="./images/s3.png" /></div>
+              <div class="swiper-slide"><img src="./images/s4.png" /></div>
             </div>
+          </div>
+          <div class="button">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </div>
       </div>
+      <div class="down">
+        <div class="code" id="code1"
+          style="position: absolute;right: 181px;top: 90px;z-index: 2;padding: 3px;background-color: #fff;"></div>
+        <div class="code" id="code2"
+          style="position: absolute;right: 514px;top: 90px;z-index: 2;padding: 3px;background-color: #fff;"></div>
+        <div class="downjc" id="dw"></div>
+      </div>
     </div>
-    <div class="bottom" id="bottom" onclick="downApp()">
-      <img src="./images/bg_down.gif" alt="">
-    </div>
+  </div>
+  <div id="xinren">
     <div id="xinren_list">
       <div class="w750">
         <a href="javascript:;" id="closeImg"><img src="./images/close.png" alt=""></a>
@@ -239,11 +380,56 @@
 <script src="js/mobile-detect.min.js?v=1004"></script>
 <script src="js/down.js"></script>
 <script>
-    $('#dw').on('click', function () {
-      $('#xinren_list').attr('style', 'display:block;')
+  $('#dw').on('click', function () {
+    $('#xinren').attr('style', 'display:block;')
+  })
+  $('#closeImg').click(function (e) {
+    $('#xinren').attr('style', 'display:none;')
+  })
+  $('[js-tab=3]').tab({
+    curDisplay: 1,
+    changeMethod: 'horizontal'
+  });
+
+  function createDownloadQRCode(arr) {
+    let el = arr.el1;
+    let url = arr.url1;
+    let size = arr.size1;
+    if (Object.prototype.toString.call(el) === '[object HTMLDivElement]') {
+
+    } else if (Object.prototype.toString.call(document.getElementById[el]) === '[object HTMLDivElement]') {
+      el = document.getElementById[el]
+    } else {
+      el = document.querySelector(el)
+      if (Object.prototype.toString.call(el) !== '[object HTMLDivElement]') {
+        return false
+      }
+    }
+    return new QRCode(el, {
+      text: url,
+      width: size,
+      height: size,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
     })
-    $('#closeImg').click(function (e) {
-      $('#xinren_list').attr('style', 'display:none;')
-    })
+  }
+  var el1 = document.getElementById('code1');
+  var el2 = document.getElementById('code2');
+
+  var json1 = {
+    el1: el1,
+    url1: location.origin + '/index.html',
+    size1: 189
+  }
+  var json2 = {
+    el1: el2,
+    url1: location.origin + 'index.html',
+    size1: 189
+  }
+  createDownloadQRCode(json1)
+  createDownloadQRCode(json2)
+
 </script>
+
 </html>
