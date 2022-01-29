@@ -709,9 +709,9 @@ a {
     width: 127px;
     height: 137px;
     display: block;
-    position:  absolute;
-    right: 134px;
-    top: -90px;
+    position:  fixed;
+    right: 20px;
+    top: 200px;
 }
 .gameimg_box{
     margin-top: 33px;

@@ -170,9 +170,7 @@
         <img src="./images/pc/pf_777.png" alt="pf_777" class="_pf pf_777">
         <img src="./images/pc/pf_sb.png" alt="pf_sb" class="_pf pf_sb">
         
-        <a href="" class="kf" id="kf-link">
-          <img src="./images/pc/kf.png">
-        </a>
+        
       </div>
     </div>
   </div>
@@ -189,12 +187,12 @@
          <li>
            <img src="./images/pc/g1.png" alt="">
            <p class="gamename">抢庄牛牛</p>
-           <p class="desc">多种花样，绚丽多彩，奖金 丰厚</p>
+           <p class="desc">多种花样，绚丽多彩，奖金丰厚</p>
          </li>
          <li>
           <img src="./images/pc/g2.png" alt="">
           <p class="gamename">炸金花</p>
-          <p class="desc">赛制丰富，老少皆宜的益 智游戏</p>
+          <p class="desc">赛制丰富，老少皆宜的益智游戏</p>
         </li>
         <li>
           <img src="./images/pc/g3.png" alt="">
@@ -204,12 +202,15 @@
         <li>
           <img src="./images/pc/g4.png" alt="">
           <p class="gamename">21点</p>
-          <p class="desc">支持好友约战、破残局、旁 观对战</p>
+          <p class="desc">支持好友约战、破残局、旁观对战</p>
         </li>
        </ul>
     </div>
   </div>
   <div class="footer"></div>
+  <a href="" class="kf" id="kf-link">
+    <img src="./images/pc/kf.png">
+  </a>
 </body>
 <script src="js/xinstall_inner_e.min.js"></script>
 <script src="js/down.js"></script>
@@ -297,11 +298,11 @@
     clickable: true,
     observeParents: true,
     autoplayDisableOnInteraction: false,
-    // autoplay: true,
-    // autoplay: {
-    //   disableOnInteraction: false, // 鼠标滑动后继续自动播放
-    //   delay: 2000, //4秒切换一次
-    // },
+    autoplay: true,
+    autoplay: {
+      disableOnInteraction: false, // 鼠标滑动后继续自动播放
+      delay: 3000, //4秒切换一次
+    },
     pagination: {
       el: '.swiper-pagination',
       paginationClickable: true,
@@ -388,8 +389,6 @@
       if(swiperIndex==3) index=2
       else index=8
     }
-    // var swiperIndex = mySwiper.activeIndex // 定义swiper.activeIndex          
-    // index = swiperIndex
     mySwiper.slideTo(index)
   })
   function _path(type){

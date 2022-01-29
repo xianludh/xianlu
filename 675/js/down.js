@@ -27,8 +27,8 @@ function downLink() {
 function getconfig() {
   new Promise(function (o, n) {
     var e = new XMLHttpRequest();
-    // let t = location.origin + "/frontend/v1/configNavigate";
-    let t = "https://v9582.com:7443/frontend/v1/configNavigate";
+    let t = location.origin + "/frontend/v1/configNavigate";
+    // let t = "https://v9582.com:7443/frontend/v1/configNavigate";
     e.open("get", t, !0),
       e.addEventListener("load", function () {
         if (4 == e.readyState && 200 == e.status) {
