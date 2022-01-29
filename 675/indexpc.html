@@ -6,9 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>welcome</title>
   <meta name="description" content="">
-  <link rel="stylesheet" href="css/reset.css">
   <script src="./js/swiper.min.js"></script>
   <link rel="stylesheet" href="./css/swiper.min.css">
+  <link rel="stylesheet" href="css/pc.css">
+  <script src="./js/jquery-1.11.3.min.js"></script>
   <script>
     if (navigator.userAgent.match(
         /(phone|pad|pod|iPhone|iPod|ios|iPad|android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
@@ -17,179 +18,388 @@
     }
 
   </script>
-  <style>
-    .page {
-      width: 100%;
-      max-width: 750px;
-      margin: 0 auto;
-    }
-
-    .page .banner {
-      width: 100%;
-      height: 927px;
-      background: url('./images/bg.jpg');
-      background-size: 100% 100%;
-      position: relative;
-    }
-
-    .page .downbtn {
-      cursor: pointer;
-      width: 100%;
-      position: absolute;
-      width: 67%;
-      left: 16.5%;
-      top: 70px;
-      animation: heart_beat .8s infinite linear;
-    }
-
-    .page .downbtn img {
-      vertical-align: middle;
-    }
-
-    .page .hot {
-      width: 100%;
-      position: relative;
-      background: url(./images/hot.png);
-      background-size: 100% 100%;
-      height: 1468px;
-    }
-
-    @keyframes heart_beat {
-      0% {
-        transform: scale(.95)
-      }
-
-      50% {
-        transform: scale(1.05)
-      }
-
-      100% {
-        transform: scale(.95)
-      }
-    }
-
-    .page .wz {
-      width: 100%;
-      position: absolute;
-      width: 92%;
-      left: 4%;
-      top: 225px;
-      cursor: pointer;
-    }
-
-    .page .wz a {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-
-    .page .wz img {
-      width: 100%;
-      vertical-align: middle;
-    }
-
-    .page .often {
-      width: 100%;
-    }
-
-    .page .often img {
-      width: 100%;
-      vertical-align: middle;
-    }
-
-    .footer-box {
-      width: 100%;
-      cursor: pointer;
-    }
-
-    .kf {
-      width: 127px;
-      height: 137px;
-      background: url(./images/kf.png);
-      position: fixed;
-      top: 200px;
-      right: calc(((100% - 750px)/1.99));
-      z-index: 10000;
-      cursor: pointer;
-    }
-
-    .kf a {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-
-    #slider {
-      position: absolute;
-      left: 5.6%;
-      top: 510px;
-      z-index: 9999;
-      width: 666px;
-      overflow: hidden;
-    }
-
-    #certify .swiper-slide {
-      width: 666px;
-      text-align: center;
-    }
-
-    #slider img {
-      border: 0;
-      max-width: 100%;
-      vertical-align: middle;
-    }
-
-  </style>
 </head>
 
-<body>
-  <div class="page">
-    <div class="kf">
-      <a href="https://vue.livelyhelp.chat/63dd77443cd4de707a4jkfle-keli3dd9d070704080b0f030c0a040202030801060405080f81eb030045c540eb08a"
-        target="_blank" id="kf-link"></a>
-    </div>
-    <div class="banner">
-    </div>
-    <div class="hot">
-      <div class="downbtn" id="download" onclick="downApp()"><img src="./images/downbtn.png" alt=""></div>
-      <div class="wz">
-        <a href="" id="Toh5"><img src="./images/wz.png" alt=""></a>
+<body class="fn-hide-scrollbar">
+  <div class="header">
+    <div class="w1200">
+      <div class="logo"><img src="./images/pc/675.png" alt=""></div>
+      <div class="nave">
+        <ul>
+          <li onclick="_path(1)">
+              <img src="./images/pc/10002.png" alt="">
+              <span>网页版进入</span>
+          </li>
+          <li onclick="_path(2)">
+              <img src="./images/pc/10003.png" alt="">
+              <span>App下载</span>
+          </li>
+          <li onclick="_path(1)">
+              <img src="./images/pc/10004.png" alt="">
+              <span>威尼斯官网</span>
+          </li>
+        </ul>
       </div>
-      <div id="slider">
-        <div id="certify">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="./images/slider1.png" /></div>
-              <div class="swiper-slide"><img src="./images/slider2.png" /></div>
-              <div class="swiper-slide"><img src="./images/slider3.png" /></div>
+    </div>
+  </div>
+  <div class="ban">
+    <img src="./images/pc/ban.png" alt="">
+  </div>
+  <div class="top_game">
+    <div class="titleimg_box">
+      <img src="./images/pc/titleimg_top_game.png" alt="titleimg_top_game" class="fn-m0a titleimg">
+    </div>
+    <p class="titletext">热门游戏</p>
+    <div class="fn-tc summary">您想要的威尼斯都有，带给您丰富的游戏体验</div>
+    <div class="fn-wf fn-pr top_game_effect">
+      <div class="top_game_tabs">
+        <ul class="top_game_tab_list swiper-pagination  swiper-pagination-clickable swiper-pagination-bullets">
+        </ul>
+      </div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <h5>
+              <i style="overflow: hidden; opacity: 0.6;">
+                <img src="./images/pc/hotgame_dj.png" alt="hotgame_dj">
+              </i>
+            </h5>
+          </div>
+          <div class="swiper-slide">
+            <h5>
+              <i style="overflow: hidden; opacity: 0.6;">
+                <img src="./images/pc/hotgame_qp.png" alt="hotgame_dj">
+              </i>
+            </h5>
+          </div>
+          <div class="swiper-slide">
+            <h5>
+              <i style="overflow: hidden; opacity: 0.6;">
+                <img src="./images/pc/hotgame_dz.png" alt="hotgame_dj">
+              </i>
+            </h5>
+          </div>
+          <div class="swiper-slide">
+            <h5>
+              <i style="overflow: hidden; opacity: 0.6;">
+                <img src="./images/pc/hotgame_zr.png" alt="hotgame_dj">
+              </i>
+            </h5>
+          </div>
+          <div class="swiper-slide">
+            <h5>
+              <i style="overflow: hidden; opacity: 0.6;">
+                <img src="./images/pc/hotgame_cp.png" alt="hotgame_dj">
+              </i>
+            </h5>
+          </div>
+          <div class="swiper-slide">
+            <h5>
+              <i style="overflow: hidden; opacity: 0.6;">
+                <img src="./images/pc/hotgame_ty.png" alt="hotgame_dj">
+              </i>
+            </h5>
+          </div>
+
+        </div>
+      </div>
+      <div class="top_game_bottom_btns">
+        <div class="top_game_bottom_btns_item" onclick="_Reg()">乐鱼体育</div>
+        <div class="top_game_bottom_btns_item" onclick="_Reg()">IM体育</div>
+        <div class="top_game_bottom_btns_item" onclick="_Reg()">IM体育</div>
+      </div>
+    </div>
+  </div>
+  <div class="fn-wf fn-pr w1200 plate contact" id="contact">
+    <div class="fn-pr titleimg_box">
+      <div class="_md" id="md_contact"></div>
+      <img src="./images/pc/titleimg_contact.png" alt="titleimg_contact" class="fn-m0a titleimg">
+    </div>
+
+    <p class="titletext">联系我们</p>
+
+    <div class="fn-tc summary">观五大联赛，拿亿万豪礼，我们全心全意为您提供最优质的服务</div>
+    <div class="fn-wf flex flex-jc-sb contact_innerbox">
+      <div class="fn-pr contact_left">
+        <div class="contact_title">专属客服</div>
+        <p class="contact_describe">
+          点击按钮下载专属客服，添加专属客服，领取彩金：<br>
+          专属客服: <span class="fgNumber1">威尼斯官网</span> <br>
+          专属客服: <span class="fgNumber2">威尼斯官网</span>
+        </p>
+        <div class="contact_app_box">
+          <!-- 1.app下载 -->
+          <div class="contact_app_item contact_app_item_left">
+            <div class="contact_app_item_inner">
+              <div class="app_logo app_logo1"></div>
+              <p class="app_title">威尼斯人APP</p>
+              <span class="app_line"></span>
+
+              <div class="user-select-no bubbly-button downloadbtn flex flex-jc-c flex-ai-c" onclick="_path(2)">立即下载
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 2.flygram下载 -->
+          <div class="contact_app_item">
+            <div class="contact_app_item_inner">
+              <div class="app_logo app_logo2"></div>
+              <p class="app_title">专属客服</p>
+              <span class="app_line"></span>
+
+              <div class="user-select-no bubbly-button downloadbtn flex flex-jc-c flex-ai-c" onclick="_path(3)">立即进入
+              </div>
+
             </div>
           </div>
         </div>
+
+        <img src="./images/pc/download_bottom_img.png" alt="download_bottom_img" class="download_bottom">
+
+        <img src="./images/pc/pf_sz.png" alt="pf_sz" class="_pf pf_sz">
+
+      </div>
+      <div class="contact_right">
+        <!-- 3.活动图 -->
+        <img src="./images/pc/hd.png" alt="hd" class="hd">
+
+        <img src="./images/pc/pf_fc.png" alt="pf_fc" class="_pf pf_fc">
+        <img src="./images/pc/pf_zq.png" alt="pf_zq" class="_pf pf_zq">
+        <img src="./images/pc/pf_tq.png" alt="pf_tq" class="_pf pf_tq">
+        <img src="./images/pc/pf_777.png" alt="pf_777" class="_pf pf_777">
+        <img src="./images/pc/pf_sb.png" alt="pf_sb" class="_pf pf_sb">
+        
+        <a href="" class="kf" id="kf-link">
+          <img src="./images/pc/kf.png">
+        </a>
       </div>
     </div>
-    <!-- <div class="often">
-            <img src="./images/tj.jpg" alt="">
-        </div> -->
-    <footer class="footer-box">
-      <a><img src="./images/footer.gif" alt="" id="download" onclick="downApp()"></a>
-    </footer>
   </div>
+  <div class="fn-wf fn-pr w1200">
+    <div class="fn-pr titleimg_box">
+      <div class="_md" id="md_contact"></div>
+      <img src="./images/pc/titleimg_contact.png" alt="titleimg_contact" class="fn-m0a titleimg">
+    </div>
+
+    <p class="titletext">游戏特点</p>
+    <div class="fn-tc summary">各种玩法，多种体验，无需等待，欢乐开赛</div>
+    <div class= "gameimg_box">
+       <ul>
+         <li>
+           <img src="./images/pc/g1.png" alt="">
+           <p class="gamename">抢庄牛牛</p>
+           <p class="desc">多种花样，绚丽多彩，奖金 丰厚</p>
+         </li>
+         <li>
+          <img src="./images/pc/g2.png" alt="">
+          <p class="gamename">炸金花</p>
+          <p class="desc">赛制丰富，老少皆宜的益 智游戏</p>
+        </li>
+        <li>
+          <img src="./images/pc/g3.png" alt="">
+          <p class="gamename">斗地主</p>
+          <p class="desc">地方玩法集合，独有竞技模式</p>
+        </li>
+        <li>
+          <img src="./images/pc/g4.png" alt="">
+          <p class="gamename">21点</p>
+          <p class="desc">支持好友约战、破残局、旁 观对战</p>
+        </li>
+       </ul>
+    </div>
+  </div>
+  <div class="footer"></div>
 </body>
 <script src="js/xinstall_inner_e.min.js"></script>
 <script src="js/down.js"></script>
 <script>
-  var certifySwiper2 = new Swiper('#certify .swiper-container', {
+  var swiperPagination = [{
+      name: "电子",
+      url: "url(./images/pc/hotgame_tab_icon_sprite.png) -523px 0px / 729px 50px no-repeat",
+      hover: "url(./images/pc/hotgame_tab_icon_sprite.png) -575px 0px / 729px 50px no-repeat",
+      tag: [
+        {name:"MG电子",url:"/#/home/slot?navid=9&id=10022"}, 
+        {name:"CQ9电子",url:"/#/home/slot?navid=9&id=10018"}, 
+        {name:"PG电子",url:"/#/home/slot?navid=9&id=11320"}, 
+        {name:"JDB电子",url:"/#/home/slot?navid=9&id=10021"},
+        {name:"AG电子",url:"/#/home/slot?navid=9&id=10015"}
+      ]
+    },
+    {
+      name: "棋牌",
+      url: "url(./images/pc/hotgame_tab_icon_sprite.png) -208px 0px / 729px 50px no-repeat",
+      hover: "url(./images/pc/hotgame_tab_icon_sprite.png) -260px 0px / 729px 50px no-repeat",
+      tag: [
+        {name:"开元棋牌",url:"/#/home/chess?navid=9&id=10042"}, 
+        {name:"乐游棋牌",url:"/#/home/chess?navid=9&id=10612"}, 
+        {name:"MT棋牌",url:"/#/home/chess?navid=9&id=11775"}, 
+        {name:"天游棋牌",url:"/#/home/chess?navid=9&id=10694"},
+        {name:"美博棋牌",url:"#/home/chess?navid=9&id=12465"}
+      ]
+    },
+    {
+      name: "捕鱼",
+      url: "url(./images/pc/hotgame_tab_icon_sprite.png) -312px 0px / 729px 50px no-repeat",
+      hover: "url(./images/pc/hotgame_tab_icon_sprite.png) -367px 0px / 729px 50px no-repeat",
+      tag: [
+        {name:"JDB捕鱼",url:"/#/home/fish?navid=9&id=10021"}, 
+        {name:"BG捕鱼",url:"/#/home/fish?navid=9&id=10058"}, 
+        {name:"MT捕鱼",url:"/#/home/fish?navid=9&id=11775"}, 
+        {name:"AG捕鱼",url:"/#/home/fish?navid=9&id=10015"},
+        {name:"FG捕鱼",url:"/#/home/fish?navid=9&id=10020"}
+      ]
+    },
+    {
+      name: "视讯",
+      url: "url(./images/pc/hotgame_tab_icon_sprite.png) -104px 0px / 729px 50px no-repeat",
+      hover: "url(./images/pc/hotgame_tab_icon_sprite.png) -156px 0px / 729px 50px no-repeat",
+      tag: [
+        {name:"AG视讯厅",url:"/#/home/live"}, 
+        {name:"BG视讯厅",url:"/#/home/live"}, 
+        {name:"DG视讯厅",url:"/#/home/live"}, 
+        {name:"BBIN视讯厅",url:"/#/home/live"},
+        {name:"WM视讯",url:"/#/home/live"}
+      ]
+    },
+    {
+      name: "彩票",
+      url: "url(./images/pc/hotgame_tab_icon_sprite.png) -419px 0px / 729px 50px no-repeat",
+      hover: "url(./images/pc/hotgame_tab_icon_sprite.png) -471px 0px / 729px 50px no-repeat",
+      tag: [
+        {name:"香港六合彩",url:"/#/plays/hall"}, 
+        {name:"幸运飞艇",url:"/#/plays/hall"}, 
+        {name:"香港赛马",url:"/#/plays/hall"}, 
+        {name:"1分快3",url:"/#/plays/hall"},
+        {name:"5分赛车",url:"/#/plays/hall"}
+      ]
+    },
+    {
+      name: "体育",
+      url: "url(./images/pc/hotgame_tab_icon_sprite.png)  0px 0px / 729px 50px no-repeat",
+      hover: "url(./images/pc/hotgame_tab_icon_sprite.png) -52px 0px / 729px 50px no-repeat",
+      tag: [
+        {name:"沙巴体育",url:"/#/plays/hall"}, 
+        {name:"幸运飞艇",url:"/#/plays/hall"}, 
+        {name:"香港赛马",url:"/#/plays/hall"}, 
+        {name:"1分快3",url:"/#/plays/hall"},
+        {name:"5分赛车",url:"/#/plays/hall"}
+      ]
+    }
+  ]
+  var mySwiper = new Swiper('.swiper-container', {
     watchSlidesProgress: true,
     slidesPerView: 'auto',
     centeredSlides: true,
     loop: true,
-    autoplay: true,
-    autoplay: {
-      disableOnInteraction: false, // 鼠标滑动后继续自动播放
-      delay: 2000, //4秒切换一次
-    },
-  })
+    loopedSlides: 3,
+    observer: true,
+    clickable: true,
+    observeParents: true,
+    autoplayDisableOnInteraction: false,
+    // autoplay: true,
+    // autoplay: {
+    //   disableOnInteraction: false, // 鼠标滑动后继续自动播放
+    //   delay: 2000, //4秒切换一次
+    // },
+    pagination: {
+      el: '.swiper-pagination',
+      paginationClickable: true,
+      type: 'custom',
+      renderCustom: function (swiper, current, total) {
+        $(".top_game_bottom_btns").empty();
+        var _bottomHtml = "";
 
+        swiperPagination[current - 1].tag.forEach(element => {
+          _bottomHtml += "<div class='top_game_bottom_btns_item' onclick='preview(\"" + element.url + "\")' >"+element.name+"</div>"
+        });
+        $(".top_game_bottom_btns").append(_bottomHtml);
+        var _html = '';
+        for (var i = 1; i <= total; i++) {
+          if (current == i) {
+            _html += `<li class="top_game_tab_item top_game_tab_active"><i style="background: ${swiperPagination[i-1].hover}"></i><span>${swiperPagination[i-1].name}</span>
+          </li>`;
+          } else {
+            _html += `<li class="top_game_tab_item"><i style="background: ${swiperPagination[i-1].url}"></i><span>${swiperPagination[i-1].name}</span>
+          </li>`;
+          }
+        }
+        return _html; //返回所有的页码html
+      },
+    },
+    on: {
+      transitionStart: function () {
+        for (i = 0; i < this.slides.length; i++) {
+          this.slides.eq(i).find("i").css('overflow', "hidden")
+          this.slides.eq(i).find("i").css('opacity', 0.6)
+        }
+
+        imgActive = this.slides.eq(this.activeIndex).find('i')
+        imgActive.css('opacity', 1)
+        imgActive.css('overflow', "visible")
+      },
+      progress: function (progress) {
+        for (i = 0; i < this.slides.length; i++) {
+          var slide = this.slides.eq(i);
+          var slideProgress = this.slides[i].progress;
+          modify = 1;
+          if (Math.abs(slideProgress) > 1) {
+            modify = (Math.abs(slideProgress) - .7) * 0.4 + .6;
+          }
+          translate = slideProgress * modify * 320 + 'px';
+          scale = 1 - Math.abs(slideProgress) / 9;
+          zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+          slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+          slide.css('zIndex', zIndex);
+          slide.css('opacity', 1);
+          if (Math.abs(slideProgress) > 3) {
+            slide.css('opacity', 0);
+          }
+        }
+      },
+      setTransition: function (transition) {
+        for (var i = 0; i < this.slides.length; i++) {
+          var slide = this.slides.eq(i)
+          slide.transition(transition);
+        }
+
+      }
+    }
+
+  })
+  //点击分页器跳转到对应页面
+  $(".swiper-pagination").on("click", "li", function () {
+    var index = $(this).index();
+    var swiperIndex = mySwiper.activeIndex // 定义swiper.activeIndex
+    console.log(swiperIndex)        
+    // index = index == 1 ? 4 : (index == 0 ? 3 : (index == 2 ? 5 : (index == 3 ? 6 : (index == 4 ? 1 : 2))))
+    if(index==0){
+      if(swiperIndex==8) index=9
+      else index=3 
+    } else if(index==1){
+      index=4
+    } else if(index==2){
+      index=5  
+    } else if(index==3){
+      index=6
+    } else if(index==4){
+      index=7
+    } else if(index==5){
+      if(swiperIndex==3) index=2
+      else index=8
+    }
+    // var swiperIndex = mySwiper.activeIndex // 定义swiper.activeIndex          
+    // index = swiperIndex
+    mySwiper.slideTo(index)
+  })
+  function _path(type){
+    if(type==1) window.location.href=siteConfig.landing_to_h5
+    else if(type==2) window.location.href = siteConfig.landing_to_h5 + "/static/vns81/html/download/index.html"
+    else window.location.href=siteConfig.href;
+  }
+  function preview(e){
+    window.location.href=siteConfig.landing_to_h5+e
+  }
 </script>
 
 </html>
