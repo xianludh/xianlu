@@ -204,7 +204,7 @@ body {
 .hotdesc{
   width: 8.41rem;
   height: 0.45rem;
-  margin: 1rem auto 0.31rem;
+  margin: 1.1rem auto 0.35rem;
 }
 .descriptive{
   width: 8.4rem;
@@ -223,6 +223,7 @@ body {
   height: 6.17rem;
   overflow: hidden;
   margin: 0 auto;
+  z-index: 888;
 }
 
 .mt-tabpage-cont__wrap {
