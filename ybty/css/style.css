@@ -48,7 +48,7 @@ body {
 }
 .scroller{
   width: 100%;
-  height: 33.75rem;
+  height: 32.45rem;
   background-image: url(../images/bg.png);
   background-size: 100% 100%;
   padding-top: 0.86rem;
@@ -217,7 +217,7 @@ body {
   margin: 0 auto;
 }
 
-.mt-tabpage-count {
+/* .mt-tabpage-count {
   position: relative;
   width: 7.8rem;
   height: 6.17rem;
@@ -234,4 +234,25 @@ body {
   width: 7.8rem;
   height: 6.17rem;
   text-align: center;
+} */
+
+ .carousel_active{
+  opacity: 1 ;
+  -webkit-transform: scale(1) ;
+  transform: scale(1);
+}
+
+.carousel_noactive {
+  opacity: 0;
+  -webkit-transform: scale(.5);
+  transform: scale(.5)
+}
+.carousel_carouselItem{
+  -webkit-transition: all .9s ease-in-out;
+  transition: all .9s ease-in-out
+}
+
+.mt-tabpage .swiper-pagination-custom{
+   top:0;
+   left: 0.51rem;
 }

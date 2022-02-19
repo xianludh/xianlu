@@ -6,7 +6,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport"
     content="width=device-width ,initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
-  <title>澳门威尼斯人</title>
+  <title>必博体育</title>
   <link rel="stylesheet icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
@@ -14,7 +14,6 @@
   <script type="text/javascript" src="js/inobounce.js"></script>
   <script type="text/javascript" src="js/noZoom.js"></script>
   <script src="./js/jquery-1.11.3.min.js"></script>
-  <script src="./js/mt-tabpage.js"></script>
   <script src="./js/swiper.min.js"></script>
   <link rel="stylesheet" href="./css/swiper.min.css">
   <script src="js/bscroll.min.js"></script>
@@ -37,10 +36,25 @@
           <div id="certify">
             <div class="swiper-container">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="./images/s1.png" /></div>
-                <div class="swiper-slide"><img src="./images/s2.png" /></div>
-                <div class="swiper-slide"><img src="./images/s3.png" /></div>
-                <div class="swiper-slide"><img src="./images/s4.png" /></div>
+                <div class="swiper-slide">
+                  <div class="carousel_carouselItem">
+                    <img src="./images/s1.png" /></div>
+                  </div>
+                <div class="swiper-slide">
+                  <div class="carousel_carouselItem">
+                    <img src="./images/s2.png" />
+                  </div>
+                </div>
+                <div class="swiper-slide"> 
+                  <div class="carousel_carouselItem">
+                    <img src="./images/s3.png" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="carousel_carouselItem">
+                    <img src="./images/s4.png" />
+                  </div>
+                </div>
               </div>
             </div>
             <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"></div>
@@ -56,49 +70,9 @@
         </div>
         <img class="hot" src="./images/hot.png" alt="">
         <div class="mt-tabpage" js-tab="3">
-          <ul class="mt-tabpage-title">
-            <li class="mt-tabpage-item mt-tabpage-item-cur">
-              <div class="desc">
-                <p>体育赛事</p>
-              </div>
-            </li>
-            <li class="mt-tabpage-item">
-              <div class="desc">
-                <p>真人娱乐</p>
-              </div>
-            </li>
-            <li class="mt-tabpage-item">
-              <div class="desc">
-                <p>棋牌游戏</p>
-              </div>
-            </li>
-            <li class="mt-tabpage-item">
-              <div class="desc">
-                <p>电子竞技</p>
-              </div>
-            </li>
-            <li class="mt-tabpage-item">
-              <div class="desc">
-                <p>彩票投注</p>
-              </div>
-            </li>
-            <li class="mt-tabpage-item">
-              <div class="desc">
-                <p>电子游艺</p>
-              </div>
-            </li>
+          <ul class="mt-tabpage-title swiper-pagination  swiper-pagination-clickable swiper-pagination-bullets">
           </ul>
-          <div class="mt-tabpage-count">
-            <ul class="mt-tabpage-cont__wrap">
-              <li class="mt-tabpage-item" style="float: left;"><img src="./images/b1.png"></li>
-              <li class="mt-tabpage-item" style="float: left;"><img src="./images/b2.png"></li>
-              <li class="mt-tabpage-item" style="float: left;"><img src="./images/b3.png"></li>
-              <li class="mt-tabpage-item" style="float: left;"><img src="./images/b4.png"></li>
-              <li class="mt-tabpage-item" style="float: left;"><img src="./images/b5.png"></li>
-              <li class="mt-tabpage-item" style="float: left;"><img src="./images/b6.png"></li>
-            </ul>
-          </div>
-          <!-- <div id="game">
+        <div id="game">
             <div class="swiper-container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="./images/b1.png" /></div>
@@ -106,9 +80,10 @@
                 <div class="swiper-slide"><img src="./images/b3.png" /></div>
                 <div class="swiper-slide"><img src="./images/b4.png" /></div>
                 <div class="swiper-slide"><img src="./images/b5.png" /></div>
+                <div class="swiper-slide"><img src="./images/b6.png" /></div>
               </div>
           </div>
-        </div> -->
+        </div>
         <img class="ped" src="./images/10011.png" alt="">
         </div>
         <img class="hotdesc" src="./images/desc.png" alt="">
@@ -117,18 +92,12 @@
         </p>
       </div>
     </div>
-    <!-- <div class="kf">
-      <a href="https://vue.livelyhelp.chat/63dd77443cd4de707a4jkfle-keli3dd9d070704080b0f030c0a040202030801060405080f81eb030045c540eb08a"
-        target="_blank" id="kf-link"></a>
-    </div>
-    <footer class="footer-box">
-      <a><img src="./images/footer.gif" alt="" id="download" onclick="downApp()"></a>
-    </footer> -->
   </div>
   <script src="./js/xinstall_inner_e.min.js?v=1004" defer></script>
   <script src="./js/mobile-detect.min.js?v=1004"></script>
   <script src="./js/down.js?v=1022"></script>
   <script>
+    const swiperPagination =["体育赛事","真人娱乐","棋牌游戏","电子竞技","彩票投注","捕鱼游戏"]
     let scroll = new BScroll('#scroll', {
       click: true,
       useTransition: false //解决ios13.4以上回弹问题
@@ -153,6 +122,19 @@
       pagination: {
        el: '.swiper-pagination',
      },
+     on: {
+      transitionStart: function () {
+        for (i = 0; i < this.slides.length; i++) {
+          if(i==this.activeIndex){
+             this.slides.eq(i).find("div").removeClass('carousel_noactive')
+             this.slides.eq(i).find("div").addClass("carousel_active")
+          } else{
+            this.slides.eq(i).find("div").removeClass("carousel_noactive")
+            this.slides.eq(i).find("div").addClass("carousel_noactive")
+          }
+        }
+      },
+     }
     })
     var certifySwiper1 = new Swiper('#game .swiper-container', {
       watchSlidesProgress: true,
@@ -163,13 +145,32 @@
       autoplay: {
         disableOnInteraction: false, // 鼠标滑动后继续自动播放
         delay: 2000, //4秒切换一次
-      }
+      },
+      pagination: {
+      el: '.mt-tabpage-title',
+      paginationClickable: true,
+      type: 'custom',
+      renderCustom: function (swiper, current, total) {
+        var _html = '';
+        for (var i = 1; i <= total; i++) {
+          if (current == i) {
+            _html += ` <li class="mt-tabpage-item mt-tabpage-item-cur">
+              <div class="desc">
+                <p>${swiperPagination[i-1]}</p>
+              </div>
+              </li>`;
+          } else {
+            _html += ` <li class="mt-tabpage-item "><div class="desc"><p>${swiperPagination[i-1]}</p></div></li>`;
+          }
+        }
+        return _html; //返回所有的页码html
+      },
+    },
     })
-    $('[js-tab=3]').tab({
-    curDisplay: 1,
-    autoPlay: true, 
-    changeMethod: 'horizontal'
-  });
+    $(".mt-tabpage-title").on("click","li",function(){
+    		var index = $(this).index();
+    		certifySwiper1.slideTo(index);
+    	})
   </script>
 </body>
 
