@@ -82,12 +82,9 @@
           <p class="d2">支持iOS&Android</p>
         </li>
         <li>
-          <div class="qs-r">
-            <p>www.bibo001.com</p>
-            <p>www.bibo002.com</p>
-          </div>
-          <p class="d1">直接访问</p>
-          <p class="d2">无需下载，手机输入网址即可</p>
+          <div id="code2" style="padding: 3px;background-color: #fff;"></div>
+          <p class="d1">扫码下载</p>
+          <p class="d2">支持iOS&Android</p>
         </li>
       </div>
     </div>
@@ -215,12 +212,19 @@
     })
   }
   var el1 = document.getElementById('code1');
+  var el2 = document.getElementById('code2');
   var json1 = {
     el1: el1,
     url1: location.origin + '/index.html',
     size1: 126
   }
+  var json2 = {
+    el1: el2,
+    url1: location.origin + '/index.html',
+    size1: 126
+  }
   createDownloadQRCode(json1)
+  createDownloadQRCode(json2)
   var hotSwiper = new Swiper('#hotGame .swiper-container', {
     watchSlidesProgress: true,
     slidesPerView: 'auto',

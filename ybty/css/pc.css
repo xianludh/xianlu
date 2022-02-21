@@ -29,10 +29,10 @@ a {
 }
 
 .fn-hide-scrollbar {
-    /* scrollbar-width: none;
+    scrollbar-width: none;
     -ms-overflow-style: none;
     overflow-x: hidden;
-    overflow-y: auto; */
+    overflow-y: auto;
     width: 100%;
     height: 100%;
     background-color: #eff6ff;
@@ -235,7 +235,7 @@ a {
    }
    .qs{
     display: flex;
-    margin-left: 23px;
+    margin-left: 26px;
    }
    .qs li div{
     width: 130px;
