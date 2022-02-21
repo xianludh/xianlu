@@ -280,9 +280,9 @@ a {
        margin:49px auto 28px;
    }
    .tabpage-title {
-    width: 700px;
-    height: 37px;
-    line-height: 37px;
+    width: 900px;
+    height: 40px;
+    line-height: 40px;
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-evenly;
@@ -291,20 +291,20 @@ a {
   
   .tabpage-title .tabpage-item {
     display: inline-block;
-    /* margin: 0 6px; */
-    width: 91px;
-    height: 37px;
+    width: 120px;
+    height: 40px;
     background-image: url(../images/pc/button.png);
     background-size: 100% 100%;
     color: #6C7BA8;
     cursor: pointer;
+   
   }
   
   .tabpage-title .tabpage-item p {
     text-align: center;
-    font-size: 12px;
-    font-family: PingFang SC;
+    font-size: 16px;
     font-weight: 500;
+   font-family: PingFang SC;
   }
   
   .tabpage-title .tabpage-item-cur {
