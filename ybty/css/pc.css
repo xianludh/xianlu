@@ -280,9 +280,9 @@ a {
        margin:49px auto 28px;
    }
    .tabpage-title {
-    width: 350px;
-    height: 31px;
-    line-height: 31px;
+    width: 700px;
+    height: 37px;
+    line-height: 37px;
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-evenly;
@@ -291,9 +291,9 @@ a {
   
   .tabpage-title .tabpage-item {
     display: inline-block;
-    margin: 0 6px;
-    width: 77px;
-    height: 31px;
+    /* margin: 0 6px; */
+    width: 91px;
+    height: 37px;
     background-image: url(../images/pc/button.png);
     background-size: 100% 100%;
     color: #6C7BA8;
@@ -315,19 +315,18 @@ a {
 
   #hotGame {
     z-index: 9999;
-    width: 900px;
-    height: 443px;
+    width: 1080px;
     margin: 20px auto 0;
     position: relative;
   }
   
   #hotGame .swiper-container {
-    width: 900px;
+    width: 1080px;
   }
   
   #hotGame .swiper-slide {
-    width: 900px;
-    height: 443px;
+    width: 1080px;
+    /* height: 443px; */
     text-align: center;
   }
   #hotGame img {
@@ -339,7 +338,7 @@ a {
    .bot{
        width: 961px;
        height:76px;
-       margin: 50px auto 0;
+       margin: 0 auto;
    }
    .yb-bottom{
        width: 1000px;
