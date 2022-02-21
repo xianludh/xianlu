@@ -51,6 +51,7 @@ a {
 }
 .ban{
     width: 100%;
+    max-width: 1920px;
     height: 700px;
     background: url(../images/pc/10017.png) no-repeat center center;
     background-size: 100% 100%;
