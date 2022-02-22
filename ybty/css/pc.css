@@ -52,7 +52,7 @@ a {
 .ban{
     width: 100%;
     max-width: 1920px;
-    height: 700px;
+    height: 620px;
     background: url(../images/pc/10017.png) no-repeat center center;
     background-size: 100% 100%;
 }
@@ -114,6 +114,8 @@ a {
     width: 945px;
     margin: 36px auto 0;
     display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
 }
 .yb-sport li{
     width: 295px;
@@ -142,7 +144,6 @@ a {
 }
 .sport2{
     background-image: url(../images/pc/a2.png);
-    margin: 0 20px;
 }
 .sport3{
     background-image: url(../images/pc/a3.png);
