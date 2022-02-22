@@ -1,0 +1,120 @@
+html {
+  font-size: 13.3333333vw;
+  /* 1rem = 80px */
+}
+body{
+  scroll-behavior: smooth;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size: 0.28rem;
+  color: #000;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+/* ------ content */
+.content {
+  background-color: #fff;
+  background: url(../../images/bg.png) no-repeat;
+  background-size: cover;
+  padding-bottom:  0.6rem;
+}
+.step {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.step-title {
+  margin-top: 0.6rem;
+}
+.logo{
+  width: 1.28rem;
+  height: 1.75rem;
+}
+
+#slider {
+  z-index: 9999;
+  width: 5.90rem;
+  height: 7.84rem;
+  margin: 0.2rem auto 0;
+  position: relative;
+}
+
+.swiper-container {
+  width: 5.90rem;
+}
+
+#certify .swiper-slide {
+  width: 5.90rem;
+  height: 7.84rem;
+  text-align: center;
+}
+
+#slider img {
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.swiper-button-prev {
+  left: -40px !important;
+}
+
+.swiper-button-next {
+  right: -40px !important;
+}
+
+#slider .swiper-pagination {
+	width: 100%;
+}
+
+#slider .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0.04rem !important;
+  width: 0.16rem;
+  height: 0.08rem;
+  background:  #cbced8;
+  border-radius: .08rem;
+	opacity: 0.6;
+  transition: all .3s linear;
+}
+
+#slider .swiper-pagination-bullets .swiper-pagination-bullet-active {
+	display: inline-block;
+  border-radius: .08rem;
+	transition: width .4s cubic-bezier(.4, 0, .2, 1);
+	width: 0.32rem;
+  height: 0.08rem;
+  background: #cbced8;
+	opacity: 1;
+}
+.carousel_active{
+  opacity: 1 ;
+  -webkit-transform: scale(1) ;
+  transform: scale(1);
+}
+
+.carousel_noactive {
+  opacity: 0;
+  -webkit-transform: scale(.5);
+  transform: scale(.5)
+}
+.carousel_carouselItem{
+  -webkit-transition: all .9s ease-in-out;
+  transition: all .9s ease-in-out
+}
+
+.downbtn{
+  width: 4.78rem;
+  height: 0.63rem;
+  margin: 0.6rem auto 0.23rem;
+}
+.ios{
+  width: 7.04rem;
+  height: 0.81rem;
+  margin: 0.38rem auto 0.38rem;
+}
+
+.iosjc{
+  width: 5.95rem;
+  height: 10.89rem;
+  margin: 0 auto;
+}

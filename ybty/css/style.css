@@ -30,7 +30,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
   -webkit-overflow-scrolling: touch;/* ios 平滑滚动*/
@@ -51,7 +51,7 @@ body {
   height: 33.48rem;
   background-image: url(../images/bg.png);
   background-size: 100% 100%;
-  padding-top: 0.86rem;
+  padding-top: 0.01rem;
 }
 .logo{
    width: 1.70rem;

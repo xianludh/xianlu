@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport"
+    content="width=device-width ,initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+  <title>必博体育</title>
+  <link rel="stylesheet icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/flexible.js"></script>
+  <script type="text/javascript" src="js/inobounce.js"></script>
+  <script type="text/javascript" src="js/noZoom.js"></script>
+  <script src="./js/jquery-1.11.3.min.js"></script>
+  <script src="./js/swiper.min.js"></script>
+  <link rel="stylesheet" href="./css/swiper.min.css">
+  <script src="js/bscroll.min.js"></script>
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://s9.cnzz.com/z_stat.php?id=1280875449&web_id=1280875449";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+    })();
+    if (!navigator.userAgent.match(
+        /(phone|pad|pod|iPhone|iPod|ios|iPad|android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+        )) {
+      window.location.href = './indexpc.html';
+    }
+  </script>
+</head>
+<body>
+  <div class="page">
+    <div class="content" id="scroll">
+      <div class="scroller">
+        <img class="logo" src="./images/logo.png" alt="">
+        <!-- <img class="title" src="./images/title.png" alt=""> -->
+        <div id="slider">
+          <div id="certify">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="carousel_carouselItem">
+                    <img src="./images/s1.png" /></div>
+                  </div>
+                <div class="swiper-slide">
+                  <div class="carousel_carouselItem">
+                    <img src="./images/s2.png" />
+                  </div>
+                </div>
+                <div class="swiper-slide"> 
+                  <div class="carousel_carouselItem">
+                    <img src="./images/s3.png" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="carousel_carouselItem">
+                    <img src="./images/s4.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"></div>
+            <div class="button">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+        <div class="downbtn" id="download" onclick="downApp()"><img src="./images/downbtn.png" alt=""></div>
+        <!-- <div class="wz">
+          <a href="" id="Toh5"><img src="./images/wz.png" alt=""></a>
+        </div> -->
+        <!-- <img class="hot" src="./images/hot.png" alt="">
+        <div class="mt-tabpage" js-tab="3">
+          <ul class="mt-tabpage-title swiper-pagination  swiper-pagination-clickable swiper-pagination-bullets">
+          </ul>
+        <div id="game">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/b1.png" /></div>
+                <div class="swiper-slide"><img src="./images/b2.png" /></div>
+                <div class="swiper-slide"><img src="./images/b3.png" /></div>
+                <div class="swiper-slide"><img src="./images/b4.png" /></div>
+                <div class="swiper-slide"><img src="./images/b5.png" /></div>
+                <div class="swiper-slide"><img src="./images/b6.png" /></div>
+              </div>
+          </div>
+        </div>
+        <img class="ped" src="./images/10011.png" alt="">
+        </div> -->
+        <!-- <img class="hotdesc" src="./images/desc.png" alt=""> -->
+        <!-- <p class="descriptive">
+          全球首家一体化娱乐原生APP，尽显流畅，完美 操作。海量体育，电竞顶尖赛事，真人娱乐，彩 票投注及电子游艺等，最新最全娱乐项目尽在掌 中体验扫码下载，即刻拥有！
+        </p> -->
+        <img class="ios" src="./images/ios.png" alt="">
+        <img class="iosjc" src="./images/iosjc.png" alt="">
+      </div>
+    </div>
+  </div>
+  <script src="./js/xinstall_inner_e.min.js?v=1004" defer></script>
+  <script src="./js/mobile-detect.min.js?v=1004"></script>
+  <script src="./js/down.js?v=1022"></script>
+  <script>
+    const swiperPagination =["体育赛事","真人娱乐","棋牌游戏","电子竞技","彩票投注","捕鱼游戏"]
+    let scroll = new BScroll('#scroll', {
+      click: true,
+      useTransition: false //解决ios13.4以上回弹问题
+    })
+    window.onload = function () {
+      scroll.refresh()
+    }
+    var certifySwiper2 = new Swiper('#certify .swiper-container', {
+      watchSlidesProgress: true,
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      loop: true,
+      autoplay: true,
+      autoplay: {
+        disableOnInteraction: false, // 鼠标滑动后继续自动播放
+        delay: 2000, //4秒切换一次
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+       el: '.swiper-pagination',
+     },
+     on: {
+      transitionStart: function () {
+        for (i = 0; i < this.slides.length; i++) {
+          if(i==this.activeIndex){
+             this.slides.eq(i).find("div").removeClass('carousel_noactive')
+             this.slides.eq(i).find("div").addClass("carousel_active")
+          } else{
+            this.slides.eq(i).find("div").removeClass("carousel_noactive")
+            this.slides.eq(i).find("div").addClass("carousel_noactive")
+          }
+        }
+      },
+     }
+    })
+    var certifySwiper1 = new Swiper('#game .swiper-container', {
+      watchSlidesProgress: true,
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      loop: true,
+      autoplay: true,
+      autoplay: {
+        disableOnInteraction: false, // 鼠标滑动后继续自动播放
+        delay: 2000, //4秒切换一次
+      },
+      pagination: {
+      el: '.mt-tabpage-title',
+      paginationClickable: true,
+      type: 'custom',
+      renderCustom: function (swiper, current, total) {
+        var _html = '';
+        for (var i = 1; i <= total; i++) {
+          if (current == i) {
+            _html += ` <li class="mt-tabpage-item mt-tabpage-item-cur">
+              <div class="desc">
+                <p>${swiperPagination[i-1]}</p>
+              </div>
+              </li>`;
+          } else {
+            _html += ` <li class="mt-tabpage-item "><div class="desc"><p>${swiperPagination[i-1]}</p></div></li>`;
+          }
+        }
+        return _html; //返回所有的页码html
+      },
+    },
+    })
+    $(".mt-tabpage-title").on("click","li",function(){
+    		var index = $(this).index();
+    		certifySwiper1.slideTo(index);
+    	})
+  </script>
+</body>
+
+</html>
