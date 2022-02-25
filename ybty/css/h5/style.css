@@ -30,7 +30,11 @@ body{
   width: 1.28rem;
   height: 1.75rem;
 }
-
+.banner{
+  width: 5.90rem;
+  height: 7.84rem;
+  margin: 0.2rem auto 0;
+}
 #slider {
   z-index: 9999;
   width: 5.90rem;
@@ -105,7 +109,7 @@ body{
 .downbtn{
   width: 4.78rem;
   height: 0.63rem;
-  margin: 0.6rem auto 0.23rem;
+  margin: 0 auto 0.23rem;
 }
 .ios{
   width: 7.04rem;
