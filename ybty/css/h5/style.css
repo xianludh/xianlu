@@ -25,14 +25,14 @@ body{
   display: -webkit-box; /*Safari*/
   display: -webkit-flex; /*Chrome*/
   flex-flow: column;
-  align-items: center;
+  /* align-items: center;
   -webkit-align-items:center;
   box-align:center;
   -moz-box-align:center;
-  -webkit-box-align:center;
+  -webkit-box-align:center; */
 }
 .step-title {
-  margin-top: 0.6rem;
+  margin: 0.6rem auto 0;
 }
 .logo{
   width: 1.28rem;
