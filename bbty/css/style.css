@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei", Arial, Verdana, SimSun, SimHei, STHeiti, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  background: #fff;
+}
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* overflow: hidden; */
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-overflow-scrolling: touch;/* ios 平滑滚动*/
+  overflow-scrolling: touch;
+}
+.content {
+  width: 100%;
+  height: calc(100% - 1px);
+  box-sizing: border-box;
+  position: absolute;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+.scroller{
+  width: 100%;
+  height: 33.48rem;
+  background-image: url(../images/bg.png);
+  background-size: 100% 100%;
+  padding-top: 0.01rem;
+}
+.logo{
+   width: 1.70rem;
+   height: 2.33rem;
+   margin: 0.68rem auto 0.33rem;
+}
+.title{
+  width: 6.13rem;
+  height: 1.15rem;
+  margin: 0 auto 0.1rem;
+}
+
+#slider {
+  z-index: 9999;
+  width: 7.87rem;
+  height: 10.45rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.swiper-container {
+  width: 7.87rem;
+}
+
+#certify .swiper-slide {
+  width: 7.87rem;
+  height: 10.45rem;
+  text-align: center;
+}
+
+#slider img {
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.swiper-button-prev {
+  left: -30px !important;
+}
+
+.swiper-button-next {
+  right: -30px !important;
+}
+
+#slider .swiper-pagination {
+	width: 100%;
+}
+
+#slider .swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0 5px;
+  width: 0.22rem;
+  height: 0.11rem;
+  background: #E1E2E6;
+	opacity: 1;
+}
+
+#slider .swiper-pagination-bullets .swiper-pagination-bullet-active {
+	display: inline-block;
+	border-radius: 10px;
+	transition: width .4s cubic-bezier(.4, 0, .2, 1);
+	width: 0.43rem;
+  height: 0.11rem;
+  background: #CBCED7;
+	opacity: 1;
+}
+.downbtn{
+  width: 6.37rem;
+  height: 0.84rem;
+  margin: 0.8rem auto 0.3rem;
+}
+.wz{
+  width: 6.37rem;
+  height: 0.84rem;
+  margin: 0 auto;
+}
+.hot{
+  width: 100%;
+  margin: 0.75rem auto 0.39rem;
+}
+
+.mt-tabpage {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.mt-tabpage-title {
+  height: 0.5rem;
+  line-height: 0.5rem;
+  margin: 0 auto;
+  display: flex;
+}
+
+.mt-tabpage-title .mt-tabpage-item {
+  display: inline-block;
+  margin: 0 0.08rem;
+  width: 1.22rem;
+  height: 0.5rem;
+  /* box-shadow: 0rem 0rem 0rem 0rem rgba(215, 227, 255, 0.67); */
+  background-image: url(../images/button.png);
+  background-size: 100% 100%;
+  color: #6C7BA8;
+}
+
+.mt-tabpage-title .mt-tabpage-item p {
+  text-align: center;
+  font-size: 0.17rem;
+  font-family: PingFang SC;
+  font-weight: bold;
+}
+
+.mt-tabpage-title .mt-tabpage-item-cur {
+  background-image: url(../images/butactivite.png);
+  background-size: 100% 100%;
+  color: #FFFFFF;
+}
+
+#game {
+  z-index: 9999;
+  width: 7.81rem;
+  height: 6.17rem;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 0.58rem;
+}
+
+#game .swiper-container {
+  width: 7.8rem;
+}
+
+#game .swiper-slide {
+  width: 7.8rem;
+  height: 6.17rem;
+  text-align: center;
+}
+#game img {
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.ped{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 5.6rem;
+}
+
+.hotdesc{
+  width: 8.41rem;
+  height: 0.45rem;
+  margin: 1.1rem auto 0.35rem;
+}
+.descriptive{
+  width: 8.4rem;
+  height: 2.51rem;
+  font-size: 0.4rem;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #6C7BA8;
+  line-height: 0.7rem;
+  margin: 0 auto;
+}
+
+/* .mt-tabpage-count {
+  position: relative;
+  width: 7.8rem;
+  height: 6.17rem;
+  overflow: hidden;
+  margin: 0 auto;
+  z-index: 888;
+}
+
+.mt-tabpage-cont__wrap {
+  position: absolute;
+}
+
+.mt-tabpage-count .mt-tabpage-item {
+  width: 7.8rem;
+  height: 6.17rem;
+  text-align: center;
+} */
+
+ .carousel_active{
+  opacity: 1 ;
+  -webkit-transform: scale(1) ;
+  transform: scale(1);
+}
+
+.carousel_noactive {
+  opacity: 0;
+  -webkit-transform: scale(.5);
+  transform: scale(.5)
+}
+.carousel_carouselItem{
+  -webkit-transition: all .9s ease-in-out;
+  transition: all .9s ease-in-out
+}
+
+.mt-tabpage .swiper-pagination-custom{
+   top:0;
+   left: 0.88rem;
+}
+.ios{
+  width: 9.39rem;
+  height: 1.08rem;
+  margin: 0.5rem auto 0.5rem;
+}
+
+.iosjc{
+  width: 7.93rem;
+  height: 14.52rem;
+  margin: 0 auto;
+}

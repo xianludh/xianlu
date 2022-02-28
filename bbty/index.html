@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width ,initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no"
+    />
+    <title>必博体育</title>
+    <link rel="stylesheet" href="css/h5/reset.css" />
+    <link rel="stylesheet" href="css/h5/style.css" />
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="js/noZoom.js"></script>
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://s9.cnzz.com/z_stat.php?id=1280875449&web_id=1280875449";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+      })();
+      if (!navigator.userAgent.match(
+          /(phone|pad|pod|iPhone|iPod|ios|iPad|android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+          )) {
+        window.location.href = './indexpc.html';
+      }
+    </script>
+  </head>
+  <body>
+    <section class="content" id="content">
+      <div class="step">
+        <div id="stepNum" class="step-title"><img class="logo" src="./images/logo.png" alt=""></div>
+        <img class="banner" src="./images/s3.png" alt="">
+        <div class="downbtn" id="download" onclick="downApp()"><img src="./images/downbtn.png" alt=""></div>
+        <img class="ios" src="./images/ios.png" alt="">
+        <img class="iosjc" src="./images/iosjc.png" alt="">
+      </div>
+    </section>
+  </body>
+  <script src="./js/xinstall_inner_e.min.js?v=1004" defer></script>
+  <script src="./js/mobile-detect.min.js?v=1004"></script>
+  <script src="./js/down.js?v=1022"></script>
+  <script>
+    new Swiper('#certify .swiper-container', {
+      watchSlidesProgress: true,
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      loop: true,
+      autoplay: true,
+      autoplay: {
+        disableOnInteraction: false, // 鼠标滑动后继续自动播放
+        delay: 2000, //4秒切换一次
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+       el: '.swiper-pagination',
+     },
+     on: {
+      transitionStart: function () {
+        for (i = 0; i < this.slides.length; i++) {
+          if(i==this.activeIndex){
+             this.slides.eq(i).find("div").removeClass('carousel_noactive')
+             this.slides.eq(i).find("div").addClass("carousel_active")
+          } else{
+            this.slides.eq(i).find("div").removeClass("carousel_noactive")
+            this.slides.eq(i).find("div").addClass("carousel_noactive")
+          }
+        }
+      },
+     }
+    })
+  </script>
+</html>

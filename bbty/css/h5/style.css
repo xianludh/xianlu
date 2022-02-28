@@ -1,0 +1,135 @@
+html {
+  font-size: 13.3333333vw;
+  /* 1rem = 80px */
+}
+body{
+  scroll-behavior: smooth;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size: 0.28rem;
+  color: #000;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+/* ------ content */
+.content {
+  background-color: #fff;
+  background: url(../../images/bg.png) no-repeat;
+  background-size: cover;
+  padding-bottom:  0.6rem;
+}
+.step {
+  display: flex;
+  display: -moz-box; /*firefox*/
+  display: -ms-flexbox; /*IE10*/
+  display: -webkit-box; /*Safari*/
+  display: -webkit-flex; /*Chrome*/
+  flex-flow: column;
+  align-items: center;
+  -webkit-align-items:center;
+  box-align:center;
+  -moz-box-align:center;
+  -webkit-box-align:center;
+}
+.step-title {
+  margin: 0.6rem auto 0;
+}
+.logo{
+  width: 1.28rem;
+  height: 1.75rem;
+}
+.banner{
+  width: 5.90rem;
+  height: 7.84rem;
+  margin: 0.2rem auto 0;
+}
+#slider {
+  z-index: 9999;
+  width: 5.90rem;
+  height: 7.84rem;
+  margin: 0.2rem auto 0;
+  position: relative;
+}
+
+.swiper-container {
+  width: 5.90rem;
+}
+
+#certify .swiper-slide {
+  width: 5.90rem;
+  height: 7.84rem;
+  text-align: center;
+}
+
+#slider img {
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.swiper-button-prev {
+  left: -40px !important;
+}
+
+.swiper-button-next {
+  right: -40px !important;
+}
+
+#slider .swiper-pagination {
+	width: 100%;
+}
+
+#slider .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0.04rem !important;
+  width: 0.16rem;
+  height: 0.08rem;
+  background:  #cbced8;
+  border-radius: .08rem;
+	opacity: 0.6;
+  transition: all .3s linear;
+}
+
+#slider .swiper-pagination-bullets .swiper-pagination-bullet-active {
+	display: inline-block;
+  border-radius: .08rem;
+	transition: width .4s cubic-bezier(.4, 0, .2, 1);
+	width: 0.32rem;
+  height: 0.08rem;
+  background: #cbced8;
+	opacity: 1;
+}
+.carousel_active{
+  opacity: 1 ;
+  -webkit-transform: scale(1) ;
+  transform: scale(1);
+}
+
+.carousel_noactive {
+  opacity: 0;
+  -webkit-transform: scale(.5);
+  transform: scale(.5)
+}
+.carousel_carouselItem{
+  -webkit-transition: all .9s ease-in-out;
+  transition: all .9s ease-in-out
+}
+
+.downbtn{
+  width: 4.78rem;
+  height: 0.63rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ios{
+  width: 7.04rem;
+  height: 0.81rem;
+  margin: 0.66rem auto 0.38rem;
+}
+
+.iosjc{
+  width: 5.95rem;
+  height: 10.89rem;
+  margin: 0 auto;
+}

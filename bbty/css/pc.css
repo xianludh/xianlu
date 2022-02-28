@@ -1,0 +1,420 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+ol,ul,li {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    -webkit-backface-visibility: hidden
+}
+
+.fn-hide-scrollbar::-webkit-scrollbar {
+    display: none
+}
+
+.fn-hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    background-color: #eff6ff;
+}
+.w1200{
+    width: 1200px;
+    margin: 0 auto;
+}
+.logo{
+    width: 245px;
+    height: 69px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+.ban{
+    width: 100%;
+    max-width: 1920px;
+    height: 500px;
+    background: url(../images/pc/10017.png) no-repeat center center;
+    background-size: 100% 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.logo{
+    position: absolute;
+    width: 188px;
+    height: 71px;
+    top:50px;
+}
+@media screen and (min-width: 1708px) {
+    .logo{
+        left: 29%;
+    }
+}
+
+@media screen and (min-width: 1366px) and (max-width: 1708px) { 
+    .logo{
+        left: 28%;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1366px) { 
+    .logo{
+        left: 26%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .logo{
+        left: 24%;
+    }
+}
+.yb-lantern{
+    width: 933px;
+    height: 44px;
+    background-image: url(../images/pc/10018.png);
+    margin: 30px auto 0;
+    position: relative;
+}
+
+.lantern-img{
+    width: 40px;
+    height: 46px;
+    position: absolute;
+    left: 20px;
+    top: 5px;
+}
+.lantern-right{
+    width: 56px;
+    height: 18px;
+    border: 1px solid #3780FE;
+    border-radius: 9px;
+    position: absolute;
+    right: 25px;
+    top:12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lantern-right span{
+    font-size: 11px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #3780FE;
+  
+}
+.lantern-marquee{
+    width: 780px;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #919BBF;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: absolute;
+    left: 70px;
+    top: 12px;
+}
+.top_game{
+    margin-top: 18px;
+}
+
+.yb-sport{
+    width: 945px;
+    margin: 36px auto 0;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+}
+.yb-sport li{
+    width: 295px;
+    height: 108px;
+    padding:  11px 0 0 19px;
+}
+.yb-sport li img{
+    width: 38px;
+    height: 38px;
+}
+.yb-sport li .title{
+    font-size: 14px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #444655;
+    margin: 3px 0 5px 0;
+}
+.yb-sport li .desc{
+    font-size: 11px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #6C7BA8;
+}
+.sport1{
+    background-image: url(../images/pc/a1.png);
+}
+.sport2{
+    background-image: url(../images/pc/a2.png);
+}
+.sport3{
+    background-image: url(../images/pc/a3.png);
+}
+.yb-down{
+    width: 911px;
+    height: 72px;
+    background-image: url(../images/pc/10020.png);
+    margin: 44px auto 27px;
+}
+.down{
+   width: 989px;
+   display: flex;
+   margin: 0 auto;
+}
+.app{
+    width: 350px;
+    height: 445px;
+    background-image: url(../images/pc/app.png);
+    margin-left: 16px;
+    position: relative;
+} 
+#game {
+    z-index: 9999;
+    width: 619px;
+    height: 443px;
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  #game .swiper-container {
+    width: 619px;
+  }
+  
+  #game .swiper-slide {
+    width: 619px;
+    height: 443px;
+    text-align: center;
+  }
+  #game img {
+    border: 0;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  .mt-tabpage-title {
+    width: 350px;
+    height: 31px;
+    line-height: 31px;
+    margin: 26px auto 30px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+  }
+  
+  .mt-tabpage-title .mt-tabpage-item {
+    display: inline-block;
+    margin: 0 6px;
+    width: 77px;
+    height: 31px;
+    background-image: url(../images/pc/button.png);
+    background-size: 100% 100%;
+    color: #6C7BA8;
+  }
+  
+  .mt-tabpage-title .mt-tabpage-item p {
+    text-align: center;
+    font-size: 12px;
+    font-family: PingFang SC;
+    font-weight: 500;
+  }
+  
+  .mt-tabpage-title .mt-tabpage-item-cur {
+    background-image: url(../images/pc/butactivite.png);
+    background-size: 100% 100%;
+    color: #fff;
+  }
+   .p1{
+    font-size: 31px;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    color: #6C7BA8;
+    margin-left:29px ;
+    margin-top: 70px;
+   }
+   .p2{
+    width: 290px;
+    font-size: 14px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #6C7BA8;
+    margin: 12px auto 34px;
+   }
+   .qs{
+    display: flex;
+    margin-left: 26px;
+   }
+   .qs li div{
+    width: 130px;
+    height: 130px;
+   }
+   .qs-r{
+    background-image: url(../images/pc/qs.png);
+    background-size: 100% 100%;
+    padding-top:10px;
+    height: 120px;
+   }
+   .qs-r p{
+    font-size: 11px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    text-decoration: underline;
+    color: #4B98EE;
+    text-align: center;
+    margin-top: 10px;
+   }
+   .qs li:nth-child(1){
+       margin-right: 36px;
+   }
+   .qs li .d1{
+    font-size: 14px;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: #6C7BA8;
+    text-align: center;
+    margin: 5px 0 5px 0;
+   }
+   .qs li .d2{
+    font-size: 11px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #6C7BA8;
+    text-align: center;
+   }
+   .yb-hot{
+       width: 922px;
+       height: 73px;
+       margin:49px auto 28px;
+   }
+   .tabpage-title {
+    width: 900px;
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    margin: 0 auto;
+  }
+  
+  .tabpage-title .tabpage-item {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    background-image: url(../images/pc/button.png);
+    background-size: 100% 100%;
+    color: #6C7BA8;
+    cursor: pointer;
+   
+  }
+  
+  .tabpage-title .tabpage-item p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+   font-family: PingFang SC;
+  }
+  
+  .tabpage-title .tabpage-item-cur {
+    background-image: url(../images/pc/butactivite.png);
+    background-size: 100% 100%;
+    color: #fff;
+  }
+
+  #hotGame {
+    z-index: 9999;
+    width: 1080px;
+    margin: 20px auto 0;
+    position: relative;
+  }
+  
+  #hotGame .swiper-container {
+    width: 1080px;
+  }
+  
+  #hotGame .swiper-slide {
+    width: 1080px;
+    /* height: 443px; */
+    text-align: center;
+  }
+  #hotGame img {
+    border: 0;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+   .bot{
+       width: 961px;
+       height:76px;
+       margin: 0 auto;
+   }
+   .yb-bottom{
+       width: 1000px;
+       margin: 0 auto 52px;
+   }
+   .yb-bottom ul {
+       width: 100%;
+       display: flex;
+       flex-wrap: wrap; 
+       justify-content: space-evenly;
+   }
+   .yb-bottom li{
+       width: 130px;
+   }
+   .yb-bottom li div{
+       width: 129px;
+       height: 111px;
+       background-image: url(../images/pc/width.png);
+       background-size: 100% 100%;
+       margin: 47px  0 25px 0;
+       padding-top: 38px;
+   }
+   .yb-bottom li  p{
+    text-align: center;
+   }
+   .yb-bottom li div p:nth-child(1) {
+    font-size: 46px;
+    font-family: Bahnschrift Static;
+    font-weight: 400;
+    color: #4688FB;
+   }
+   .yb-bottom li div p:nth-child(2){
+    font-size: 10px;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: #6C7BA8;
+   }
+   .footer{
+    width: 100%;
+    height: 164px;
+    background: url(../images/pc/footer.png) no-repeat center center;
+    background-size: 100% 100%;
+   }
+
+   .app .swiper-pagination-custom{
+    top: -4px;
+ }
