@@ -25,11 +25,11 @@ body{
   display: -webkit-box; /*Safari*/
   display: -webkit-flex; /*Chrome*/
   flex-flow: column;
-  /* align-items: center;
+  align-items: center;
   -webkit-align-items:center;
   box-align:center;
   -moz-box-align:center;
-  -webkit-box-align:center; */
+  -webkit-box-align:center;
 }
 .step-title {
   margin: 0.6rem auto 0;
@@ -118,6 +118,9 @@ body{
   width: 4.78rem;
   height: 0.63rem;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .ios{
   width: 7.04rem;
