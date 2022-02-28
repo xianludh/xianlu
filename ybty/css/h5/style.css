@@ -20,8 +20,16 @@ body{
 }
 .step {
   display: flex;
+  display: -moz-box; /*firefox*/
+  display: -ms-flexbox; /*IE10*/
+  display: -webkit-box; /*Safari*/
+  display: -webkit-flex; /*Chrome*/
   flex-flow: column;
   align-items: center;
+  -webkit-align-items:center;
+  box-align:center;
+  -moz-box-align:center;
+  -webkit-box-align:center;
 }
 .step-title {
   margin-top: 0.6rem;
@@ -109,12 +117,12 @@ body{
 .downbtn{
   width: 4.78rem;
   height: 0.63rem;
-  margin: 0 auto 0.23rem;
+  margin: 0 auto;
 }
 .ios{
   width: 7.04rem;
   height: 0.81rem;
-  margin: 0.38rem auto 0.38rem;
+  margin: 0.66rem auto 0.38rem;
 }
 
 .iosjc{
