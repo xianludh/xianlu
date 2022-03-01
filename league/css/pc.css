@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+ol,ul,li {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    -webkit-backface-visibility: hidden
+}
+
+.fn-hide-scrollbar::-webkit-scrollbar {
+    display: none
+}
+
+.fn-hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    background-color: #ecf0fe;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background: url(../images/pc/bg.png) no-repeat center center;
+    background-size: 100% 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content:center;
+}
+.bet{
+   display: flex;
+   align-items: center; 
+}
+.bet img{
+    width: 807px;
+}
+.league{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.league .desc{
+    width: 905px;
+    height: 182px;
+    font-size: 30px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #3F3F3F;
+    margin-top: 20px;
+}
+.league .desc1{
+    font-size: 30px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #2D7FF2;
+    margin: 20px 0;
+}
+.league ul li{
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+.league ul li .label{
+    font-size: 29px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #3F3F3F;
+    width: 142px;
+    text-align: center;
+}
+.league ul li .tele{
+    width: 408px;
+    height: 55px;
+    background: url(../images/pc/tele.png) no-repeat center center;
+    margin-left: 10px;
+    text-align: center;
+}
+ul li .tele a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #FFFFFF;
+    font-family: PingFang SC;
+    font-weight: 500;
+    font-size: 38px;
+  }
+.league ul li:last-child{
+    margin-top: 20px;
+}
+.league ul li:last-child .label{
+    color: #2D7FF2;
+} 
