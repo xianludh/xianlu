@@ -120,7 +120,7 @@ ul li .tele a{
 ul li:last-child .tele a{
     padding-left: 0;
 } 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width:  1366px) {
     .bet img{
         width: 639px;
     }
