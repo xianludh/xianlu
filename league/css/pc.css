@@ -72,6 +72,7 @@ a {
     line-height: 33px;
     color: #3F3F3F;
     margin-top: 39px;
+    text-indent: 40px;
 }
 .league .desc1{
     font-size: 24px;
@@ -119,26 +120,11 @@ ul li .tele a{
 ul li:last-child .tele a{
     padding-left: 0;
 } 
-/* @media screen and (min-width: 1024px) and (max-width: 1708px) { 
+@media screen and (max-width: 1200px) {
     .bet img{
-        width: 707px;
+        width: 639px;
     }
     .league{
-        transform: scale(0.8);
-    }
-    .league .desc{
-        width: 800px;
+       transform: scale(0.8);
     }
 }
-
-@media screen and (max-width: 1024px) {
-    .bet img{
-        width: 607px;
-    }
-    .league{
-       transform: scale(0.7);
-    }
-    .league .desc{
-        width: 700px;
-    }
-} */
