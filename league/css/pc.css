@@ -57,23 +57,6 @@ a {
 .bet img{
     width: 807px;
 }
-@media screen and (min-width: 1024px) and (max-width: 1708px) { 
-    .bet img{
-        width: 707px;
-    }
-    .league{
-        transform: scale(0.8);
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .bet img{
-        width: 607px;
-    }
-    .league{
-       transform: scale(0.7);
-    }
-}
 .league{
     display: flex;
     flex-flow: column;
@@ -82,7 +65,7 @@ a {
 .league .desc{
     width: 905px;
     height: 182px;
-    font-size: 30px;
+    font-size: 29px;
     font-family: Microsoft YaHei;
     font-weight: 400;
     color: #3F3F3F;
@@ -130,3 +113,26 @@ ul li .tele a{
 .league ul li:last-child .label{
     color: #2D7FF2;
 } 
+@media screen and (min-width: 1024px) and (max-width: 1708px) { 
+    .bet img{
+        width: 707px;
+    }
+    .league{
+        transform: scale(0.8);
+    }
+    .league .desc{
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .bet img{
+        width: 607px;
+    }
+    .league{
+       transform: scale(0.7);
+    }
+    .league .desc{
+        width: 700px;
+    }
+}
