@@ -46,7 +46,7 @@ a {
     background: url(../images/pc/bg.png) no-repeat center center;
     background-size: 100% 100%;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
     align-content:center;
 }
 .bet{
@@ -55,7 +55,7 @@ a {
    justify-content: flex-start;
 }
 .bet img{
-    width: 807px;
+    width: 799px;
 }
 .league{
     display: flex;
@@ -63,57 +63,63 @@ a {
     align-items: center;
 }
 .league .desc{
-    width: 905px;
-    height: 182px;
-    font-size: 29px;
+    width: 611px;
+    height: 121px;
+    font-size: 22px;
     font-family: Microsoft YaHei;
     font-weight: 400;
+    color: #6C7BA8;
+    line-height: 33px;
     color: #3F3F3F;
-    margin-top: 20px;
+    margin-top: 39px;
 }
 .league .desc1{
-    font-size: 30px;
+    font-size: 24px;
     font-family: Microsoft YaHei;
     font-weight: 400;
     color: #2D7FF2;
-    margin: 20px 0;
+    margin: 39px 0 10px 0;
 }
 .league ul li{
     display: flex;
     align-items: center;
-    margin-top: 16px;
+    margin-top: 15px;
 }
 .league ul li .label{
-    font-size: 29px;
+    font-size: 20px;
     font-family: PingFang SC;
     font-weight: 500;
     color: #3F3F3F;
-    width: 142px;
+    width: 101px;
     text-align: center;
 }
 .league ul li .tele{
-    width: 408px;
-    height: 55px;
+    width: 270px;
+    height: 36px;
     background: url(../images/pc/tele.png) no-repeat center center;
     margin-left: 10px;
-    text-align: center;
 }
+
 ul li .tele a{
-    width: 100%;
     height: 100%;
     display: block;
     color: #FFFFFF;
     font-family: PingFang SC;
     font-weight: 500;
-    font-size: 38px;
+    font-size: 23px;
+    padding-left: 80px;
   }
 .league ul li:last-child{
-    margin-top: 20px;
+    margin-top: 44px;
+    text-align: center;
 }
 .league ul li:last-child .label{
     color: #2D7FF2;
+}
+ul li:last-child .tele a{
+    padding-left: 0;
 } 
-@media screen and (min-width: 1024px) and (max-width: 1708px) { 
+/* @media screen and (min-width: 1024px) and (max-width: 1708px) { 
     .bet img{
         width: 707px;
     }
@@ -135,4 +141,4 @@ ul li .tele a{
     .league .desc{
         width: 700px;
     }
-}
+} */
