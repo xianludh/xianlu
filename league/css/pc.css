@@ -46,15 +46,33 @@ a {
     background: url(../images/pc/bg.png) no-repeat center center;
     background-size: 100% 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 50% 50%;
     align-content:center;
 }
 .bet{
    display: flex;
    align-items: center; 
+   justify-content: flex-start;
 }
 .bet img{
     width: 807px;
+}
+@media screen and (min-width: 1024px) and (max-width: 1708px) { 
+    .bet img{
+        width: 707px;
+    }
+    .league{
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .bet img{
+        width: 607px;
+    }
+    .league{
+       transform: scale(0.7);
+    }
 }
 .league{
     display: flex;
