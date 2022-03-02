@@ -122,9 +122,9 @@ ul li:last-child .tele a{
 } 
 @media screen and (max-width:  1366px) {
     .bet img{
-        width: 639px;
+        width: 719px;
     }
     .league{
-       transform: scale(0.8);
+       transform: scale(0.9);
     }
 }
