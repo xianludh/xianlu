@@ -41,44 +41,49 @@ body{
 }
 .desc{
   width: 6.17rem;
-  height: 1.15rem;
-  font-size: 0.22rem;
+  /* height: 1.15rem; */
+  font-size: 0.26rem;
   font-family: PingFang SC;
   font-weight: 500;
   color: #3F3F3F;
-  line-height: 0.31rem;
+  line-height: 0.33rem;
   margin-top: 0.61rem;
   margin-bottom: 0.46rem;
-  text-indent: 0.41rem;
+  text-indent: 0.45rem;
 }
 .desc1{
-  font-size: 0.24rem;
+  font-size: 0.27rem;
   font-family: Microsoft YaHei;
   font-weight: 400;
   color: #2D7FF2;
   line-height: 0.38rem;
   margin-bottom: 0.15rem;
+  /* width: 5.56rem; */
 }
  ul li{
   display: flex;
   align-items: center;
   margin-top: 0.13rem;
+  width: 5.46rem;
 }
  ul li .label{
-  width: 1.01rem;
-  height: 0.36rem;
-  font-size: 0.2rem;
+  width: 1.21rem;
+  height: 0.42rem;
+  font-size: 0.24rem;
   font-family: PingFang SC;
   font-weight: 500;
   color: #3F3F3F;
-  text-align: center;
-  line-height: 0.36rem;
+  text-align: left;
+  line-height: 0.42rem;
 }
  ul li .tele{
-  width: 2.7rem;
-  height: 0.36rem;
-  background: url(../../images/tele.png) no-repeat center center;
-  margin-left: 0.13rem;
+  /* width: 3.9rem; */
+  height: 0.42rem;
+  /* background: url(../../images/tele.png) no-repeat center center; */
+  margin-left: 0.16rem;
+  background-color: #F53031;
+  flex:0.98;
+  border-radius: 0.2rem;
 }
 ul li .tele a{
   height: 100%;
@@ -86,8 +91,9 @@ ul li .tele a{
   color: #FFFFFF;
   font-family: PingFang SC;
   font-weight: 500;
-  font-size: 0.24rem;
-  padding-left: 0.7rem;
+  font-size: 0.25rem;
+  padding-left: 1.3rem;
+  line-height: 0.42rem;
 }
 ul li:last-child{
   margin-top: 0.3rem;
